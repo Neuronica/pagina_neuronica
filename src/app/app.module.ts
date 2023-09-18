@@ -9,11 +9,13 @@ import {MatIconModule} from '@angular/material/icon'
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NmenuComponent } from './nmenu/nmenu.component';
+import { LinkPaginasComponent } from './link-paginas/link-paginas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NmenuComponent
+    NmenuComponent,
+    LinkPaginasComponent
   ],
   imports: [
     BrowserModule,
