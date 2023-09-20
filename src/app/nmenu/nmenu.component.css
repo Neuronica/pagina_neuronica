@@ -151,7 +151,8 @@ a{
 
 input{
     background-color: #005f75;
-    color: black;
+    font-family: 'Nunito', sans-serif;
+    color:#750049;
     border-color: black;
     border-radius: 10px;
     height: 70%;
