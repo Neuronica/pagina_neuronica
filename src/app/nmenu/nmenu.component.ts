@@ -11,7 +11,6 @@ export class NmenuComponent{
   ngOnInit(){
     AOS.init()
     window.addEventListener('load', AOS.refresh)
-
   }
 
 }
