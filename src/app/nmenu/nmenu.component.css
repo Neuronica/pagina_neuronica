@@ -115,39 +115,29 @@ h1{
     font-family: 'Nunito', sans-serif;
     color: #005f75;
     font-size: 100px; 
-    animation-duration: 2s;
-    animation-name: slidein;    
 }
 
 h2{
     font-family: 'Nunito', sans-serif;
     color: #005f75;
     font-size: 40px;
-    animation-duration: 3s;
-    animation-name: slidein;
 }
 
 h3{
     font-family: 'Nunito', sans-serif;
     color: #750049;
-    font-size: 30px;
-    animation-duration: 3s;
-    animation-name: slidein;
+    font-size: 30px; 
 }
 
 h4{
     font-family: 'Nunito Sans', sans-serif;
     font-size: 22px;
-    animation-duration: 3s;
-    animation-name: slidein;
     line-height: 150%;
 }
 
 h5{
     font-family: 'Nunito Sans', sans-serif;
     font-size: 22px;
-    animation-duration: 3s;
-    animation-name: slidein;
     line-height: 150%;
     margin-bottom: 10%;
 }
