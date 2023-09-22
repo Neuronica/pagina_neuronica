@@ -81,7 +81,7 @@
 
 .leerMas{
     background-color: #005f75;
-    color: #750049;
+    color: white;
     font-family: 'Nunito', sans-serif;
     transition: all 0.2s linear 0s;
         
@@ -110,6 +110,16 @@
         }
     }
     
+}
+
+.margen{
+    margin-bottom:25% ;
+}
+
+.cuadrado{
+    width: 90%; 
+    height: 0.1%; 
+    background: black;
 }
 h1{
     font-family: 'Nunito', sans-serif;

@@ -65,6 +65,30 @@
     margin-right: 5%;
 }
 
+.mision{
+    border:1px solid #750049;
+    text-align: justify;
+    display: 50%;
+    flex: 50%;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 10%;
+}
+
+.vision{
+    border:1px solid #750049;
+    text-align: justify;
+    display: 50%;
+    flex: 50%;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 5%;
+}
+
 .effect {
     text-align: center;
     display: inline-block;
@@ -111,6 +135,37 @@
     }
     
 }
+
+.video{
+    display: inline-block;
+    border-radius: 10%;
+    margin:0;
+    padding:0;  
+    background-size: cover;
+}
+
+.cuadrado {
+    width: 90%; 
+    height: 0.1%; 
+    background: black;
+}
+
+.cuadrado2{
+    width: 10%; 
+    height: 0.1%; 
+    background: #750049;
+    margin-left:5% ;
+    margin-right:5% ;
+}
+
+
+
+.margen{
+    line-height: 150%;
+    margin-left:5% ;
+    margin-right:5% ;
+}
+
 h1{
     font-family: 'Nunito', sans-serif;
     color: #005f75;
@@ -133,6 +188,15 @@ h4{
     font-family: 'Nunito Sans', sans-serif;
     font-size: 22px;
     line-height: 150%;
+}
+
+
+h6{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 22px;
+    line-height: 150%;
+    margin-left:5% ;
+    margin-right:5% ;
 }
 
 h5{
