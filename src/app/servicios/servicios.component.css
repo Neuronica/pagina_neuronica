@@ -80,10 +80,13 @@
   }
 
 .leerMas{
-    background-color: #005f75;
-    color: #750049;
+    background-color: black;
+    color: white;
     font-family: 'Nunito', sans-serif;
     transition: all 0.2s linear 0s;
+    margin-left: 40%;
+    width: 30%;
+    border-radius: 10%;
         
     &:before {
         content: "\f178";
@@ -111,6 +114,24 @@
     }
     
 }
+
+.cuadrado{
+    width: 90%; 
+    height: 0.1%; 
+    background: #750049;
+    margin-left: 7%;
+}
+
+.ing{
+   border: 1px solid #750049;
+   text-align: justify;
+   display: 50%;
+   flex: 50%;
+   height: 90%;
+   border-radius: 5%;
+   margin-bottom: 5%;
+}
+
 h1{
     font-family: 'Nunito', sans-serif;
     color: #005f75;
@@ -118,9 +139,11 @@ h1{
 }
 
 h2{
-    font-family: 'Nunito', sans-serif;
+
+    font-family: 'Nunito-sans', sans-serif;
     color: #005f75;
     font-size: 40px;
+    line-height: 150%; 
 }
 
 h3{
@@ -140,6 +163,14 @@ h5{
     font-size: 22px;
     line-height: 150%;
     margin-bottom: 10%;
+}
+
+h6{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 22px;
+    line-height: 150%;
+    margin-left: 7%;
+    margin-right: 7%;
 }
 
 a{
