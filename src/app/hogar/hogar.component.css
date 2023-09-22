@@ -1,0 +1,229 @@
+.spacer{
+    flex: 0.5;
+    height: 380px;
+}
+
+.spacer2{
+    height: 40px;
+}
+
+.backimg{
+    background: url(hogar.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    text-align: center;
+}
+
+
+.fondo{
+    background: url(fondo.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+}
+
+.isla{
+    background-color: #ffff;
+    display: flex;
+    margin-top: 0px;
+    margin-left: 145px;
+    margin-right: 145px;
+    border-radius: 25px;
+    border-color: #750049;
+}
+
+.pieDePagina{
+    background-color: #005f75;
+    display: flex;
+    margin-top: 0px;
+    margin-left: 145px;
+    margin-right: 145px;
+    border-radius: 25px;
+    border-color: #750049;
+}
+
+.container{
+    display: flex;
+
+}
+.columnaDerecha{
+    text-align: justify;
+    display: 50%;
+    flex: 50%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.columnaIzquierda{
+    text-align: justify;
+    display: 50%;
+    flex: 50%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.p1{
+    text-align: justify;
+    display: 50%;
+    flex: 50%;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+
+}
+
+
+.effect {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: #005f75;
+    text-transform: capitalize;
+    /* background-color: - add your own background-color */
+    padding: 3% 0px;
+    width: 30%;
+    border-radius: 10%;
+    overflow: hidden;
+  }
+
+.leerMas{
+    background-color: #005f75;
+    color: #750049;
+    font-family: 'Nunito', sans-serif;
+    transition: all 0.2s linear 0s;
+        
+    &:before {
+        content: "\f178";
+        font-family: 'Nunito', sans-serif;
+        font-size: 20px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        height: 100%;
+        width: 40px;
+        transition: all 0.2s linear 0s;
+    }
+        
+    &:hover {
+        text-indent: -20px;
+          
+        &:before {
+            opacity: 1;
+            text-indent: 0px;
+        }
+    }
+    
+}
+
+.video{
+    display: inline-block;
+    border-radius: 10%;
+    margin:0;
+    padding:0;  
+    background-size: cover;
+}
+
+.cuadrado {
+    width: 90%; 
+    height: 0.1%; 
+    background: #005f75;
+}
+
+.cuadrado2{
+    width: 10%; 
+    height: 0.1%; 
+    background: #750049;
+    margin-left:5% ;
+    margin-right:5% ;
+}
+
+
+
+.margen{
+    line-height: 150%;
+    margin-left:5% ;
+    margin-right:5% ;
+}
+
+h1{
+    font-family: 'Nunito', sans-serif;
+    color: #005f75;
+    font-size: 100px; 
+}
+
+h2{
+    font-family: 'Nunito', sans-serif;
+    color: #005f75;
+    font-size: 40px;
+}
+
+h3{
+    font-family: 'Nunito', sans-serif;
+    color: #750049;
+    font-size: 30px; 
+}
+
+h4{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 22px;
+    line-height: 150%;
+}
+
+
+h6{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 22px;
+    line-height: 150%;
+    margin-left:5% ;
+    margin-right:5% ;
+}
+
+h5{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 22px;
+    line-height: 150%;
+    margin-bottom: 10%;
+}
+
+a{
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+
+input{
+    background-color: #005f75;
+    font-family: 'Nunito', sans-serif;
+    color:#750049;
+    border-color: black;
+    border-radius: 10px;
+    height: 70%;
+    width: 40%;
+}
+
+mat-toolbar{
+    height: 110px;
+}
+
+@keyframes slidein {
+    from {
+        margin-right: 100%;
+
+    }
+
+    to {
+        margin-right: 0%;
+    }
+}

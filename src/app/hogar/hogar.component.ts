@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-hogar',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./hogar.component.css']
 })
 export class HogarComponent {
-
+  ngOnInit(){
+    AOS.init();
+    window.addEventListener('load', AOS.refresh);
+  }
 }
