@@ -111,6 +111,17 @@
     }
     
 }
+
+.deplegable{
+  display: inline flex;  
+  align-items: center;
+}
+
+.submenu{
+    animation-duration: none;
+    animation-name: none; 
+}
+
 h1{
     font-family: 'Nunito', sans-serif;
     color: #005f75;

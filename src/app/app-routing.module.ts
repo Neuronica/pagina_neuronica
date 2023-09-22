@@ -5,6 +5,8 @@ import {InicioComponent} from './inicio/inicio.component';
 import { EmpresaComponent } from './empresa/empresa.component';
 import {ServiciosComponent} from './servicios/servicios.component';
 import {EscogenosComponent} from './escogenos/escogenos.component';
+import { HogarComponent } from './hogar/hogar.component';
+import { EmpresarialComponent} from './empresarial/empresarial.component';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -13,6 +15,8 @@ const routes: Routes = [
   {path: 'Empresa' , component: EmpresaComponent},
   {path: 'Servicios' , component: ServiciosComponent},  
   {path: '¿Porque escogernos?' , component: EscogenosComponent},
+  {path: 'Hogar' , component: HogarComponent},
+  {path: 'Empresarial', component: EmpresarialComponent},
   {path: '', redirectTo: 'Inicio', pathMatch: 'full'}
 ];
 
