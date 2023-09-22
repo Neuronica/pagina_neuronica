@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-empresarial',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./empresarial.component.css']
 })
 export class EmpresarialComponent {
+
+  ngOnInit(){
+    AOS.init();
+    window.addEventListener('load', AOS.refresh);
+  }
 
 }
