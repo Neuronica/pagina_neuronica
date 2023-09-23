@@ -111,6 +111,29 @@
     }
     
 }
+
+.cuadrado{
+    width: 90%;
+    height: 0.1%;
+    background: #005f75;
+    margin-left:5%;
+    margin-right: 5%;
+}
+
+.p1{
+    text-align: justify;
+    margin-left:5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    margin-top:5%;
+}
+
+.video{
+    display: inline-block;
+    margin: 0;
+    background-size: cover;
+}
+
 h1{
     font-family: 'Nunito', sans-serif;
     color: #005f75;
