@@ -46,7 +46,17 @@
 
 .container{
     display: flex;
+}
 
+.borde{
+    display: flex;
+    border:1px solid #005f75;
+    text-align: justify;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 3%;
 }
 .columnaDerecha{
     text-align: justify;
@@ -66,7 +76,7 @@
 }
 
 .mision{
-    border:1px solid #750049;
+    border:1px solid #005f75;
     text-align: justify;
     display: 50%;
     flex: 50%;
@@ -78,7 +88,7 @@
 }
 
 .vision{
-    border:1px solid #750049;
+    border:1px solid #005f75;
     text-align: justify;
     display: 50%;
     flex: 50%;
@@ -147,7 +157,7 @@
 .cuadrado {
     width: 90%; 
     height: 0.1%; 
-    background: #005f75;
+    background: #750049;
 }
 
 .cuadrado2{
