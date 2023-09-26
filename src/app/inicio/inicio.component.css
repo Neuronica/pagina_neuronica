@@ -31,7 +31,7 @@
     margin-top: 0%;
     margin-left: 10%;
     margin-right: 10%;
-    border-radius: 2%;
+    border-radius: 7%;
     border-color: #750049;
 }
 
@@ -55,10 +55,28 @@
     margin-right: 7%;
     margin-top: 3%;
     margin-bottom: 3%;
-    border-radius: 3%;
+    border-radius: 7%;
 
 }
 .columnaDerecha{
+    text-align: justify;
+    display: 50%;
+    flex: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.columnaDerecha1{
+    text-align: justify;
+    display: 50%;
+    flex: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.columnaDerecha2{
     text-align: justify;
     display: 50%;
     flex: 50%;
@@ -77,6 +95,22 @@
 }
 
 .columnaIzquierda{
+    text-align: justify;
+    display: 50%;
+    flex: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.columnaIzquierda1{
+    text-align: justify;
+    display: 50%;
+    flex: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.columnaIzquierda2{
     text-align: justify;
     display: 50%;
     flex: 50%;
@@ -254,10 +288,8 @@ mat-toolbar{
     
 
     h4{
-
         font-size: 1.3em;
         line-height: 150%;
-        text-align: center;
     }
 
     .imagen1_1{
@@ -267,8 +299,8 @@ mat-toolbar{
     }
 
     .imagen1_1Cel{
-        width:80%;
-        height:15%;
+        width:10rem;;
+        height:10rem;
         border-radius: 0%
     }
 
@@ -279,9 +311,9 @@ mat-toolbar{
     }
 
     .imagen1_2Cel{
-        width:90%;
-        height:10%;
-        border-radius: 0%
+        width:15rem;
+        height:15rem;
+        align-items: center;
     }
 
     .columnaIzquierda{
@@ -289,6 +321,13 @@ mat-toolbar{
         display: 100%;
         flex: 100%;
         margin-left: 5%;
+    }
+    .columnaIzquierda2{
+        display: none;
+    }
+
+    .columnaDerecha1{
+        display: none;
     }
 
     .columnaDerecha_pie{
@@ -298,15 +337,10 @@ mat-toolbar{
     
     }
     .omitir{
-        font-size: 0%;
+        display: none;
     }
     .omitir2{
-        width: 0px;
-        height: 0px;
-        font-size: 0%;
-        background: #005f75;
-        color: #005f75;
-        border-color: #005f75 solid;
+        display: none;
     }
     
 
