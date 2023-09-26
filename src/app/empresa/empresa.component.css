@@ -9,8 +9,8 @@
 
 .backimg{
     background: url(empresa.jpg);
-    width: 100%;
-    height: 100%;
+    width: getwidth;
+    height: getheight;
     background-size: cover;
     text-align: center;
 }
@@ -18,8 +18,8 @@
 
 .fondo{
     background: url(fondo.jpg);
-    width: 100%;
-    height: 100%;
+    width: getwidth;
+    height: getheight;
     background-size: cover;
 
 }
@@ -27,10 +27,10 @@
 .isla{
     background-color: #ffff;
     display: flex;
-    margin-top: 0px;
-    margin-left: 145px;
-    margin-right: 145px;
-    border-radius: 25px;
+    margin-top: 0%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 2%;
     border-color: #750049;
 }
 
@@ -38,9 +38,9 @@
     background-color: #005f75;
     display: flex;
     margin-top: 0px;
-    margin-left: 145px;
-    margin-right: 145px;
-    border-radius: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 7%;
     border-color: #750049;
 }
 
@@ -174,6 +174,25 @@
     line-height: 150%;
     margin-left:5% ;
     margin-right:5% ;
+
+}
+
+.omitir{
+    width:100%;
+    height:50%;
+    border-radius: 25px;
+}
+
+.video2{
+    width:0%;
+    height:0%;
+    border-radius: 0%
+}
+
+.video{
+    width:80%;
+    height:80%;
+    border-radius: 0%
 }
 
 h1{
@@ -246,4 +265,70 @@ mat-toolbar{
     to {
         margin-right: 0%;
     }
+}
+
+@media only screen and (max-width: 415px){
+    h1{
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        color: #005f75;
+        font-size: 50px;
+        line-height: 100%; 
+    }
+
+    .h2Cel{
+        font-size: 2em;
+    }
+
+    h4{
+
+        font-size: 1.3em;
+        line-height: 150%;
+    }
+
+    .spacer{
+        flex: 0.5;
+        height: 80px;
+    }
+
+    .video{
+        width:0%;
+        height:0%;
+        border-radius: 0%
+    }
+
+    .video2{
+        width:80%;
+        height:15%;
+        border-radius: 0%
+    }
+
+
+    .columnaIzquierda{
+        text-align: justify;
+        display: 100%;
+        flex: 100%;
+        margin-left: 5%;
+    }
+
+    .columnaDerecha_pie{
+        text-align: justify;
+        display: 0%;
+        flex: 0%;
+    
+    }
+    .omitir{
+        width: 0px;
+        height: 0px;
+    }
+    .omitir2{
+        width: 0px;
+        height: 0px;
+        font-size: 0%;
+        background: #005f75;
+        color: #005f75;
+        border-color: #005f75 solid;
+    }
+    
+
 }

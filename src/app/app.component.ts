@@ -11,8 +11,10 @@ export class AppComponent {
   public getwidth: any;
   public getheight: any;
   public menuCel: boolean = false;
+  public iconoVariable: boolean = false;
   abrirMenu(){
     this.menuCel =! this.menuCel;
+    this.iconoVariable =! this.iconoVariable;
   }
 
   ngOnInit(){

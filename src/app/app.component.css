@@ -8,8 +8,8 @@
 }
 
 .backimg{
-    width: getwidth;
-    height: getheight;
+    width: auto;
+    height: auto;
     background-size: cover;
     text-align: center;
 }
@@ -200,15 +200,16 @@ mat-toolbar{
     }
 }
 
-@media only screen and (max-width: 415px){
+@media only screen and (max-width: 1000px){
 
     .menu{
-        position: absolute;
-        right: -280px;
-        top: 64px;
+        position: fixed;
+        top: -200px;
         width: getwidth;
         height: getheight;
         background: none;
+        animation-duration: 2s;
+        animation-name: slidein;
     }
 
     a{
@@ -224,8 +225,8 @@ mat-toolbar{
     }
     
     .backimg{
-        width: getwidth;
-        height: getheight;
+        width: auto;
+        height: auto;
         background-size: cover;
         text-align: center;
     }
@@ -233,6 +234,8 @@ mat-toolbar{
     .icono_menu {
         display: inline-block;
         position: relative;
+        margin-right: 5%;
+        margin-left: 55%;
     }
 
     .icono_menu span{
@@ -243,11 +246,27 @@ mat-toolbar{
     }
 
     .icono_menu span:nth-child(2){
-        margin: 4px 0;
+        margin: 15% 0;
+    }
+
+    .icono_menu_Class span:nth-child(2){
+        display: none;
+    }
+
+    .icono_menu_Class span:nth-child(1){
+        transform: rotate(-40deg);
+        margin: -2px;
+    }
+
+    .icono_menu_Class span:nth-child(3){
+        transform: rotate(40deg);
     }
 
     .menuClass{
         right: 0px;
+        top: 64px;
         background: #005f75;
+        animation-duration: 2s;
+        animation-name: slidein;
     }
 }
