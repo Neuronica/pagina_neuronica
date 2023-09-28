@@ -9,8 +9,9 @@
 
 .backimg{
     background: url(servicios.jpg);
-    width: 100%;
-    height: 100%;
+    width: getwidth;
+    height: getheight;
+    background-position: center;
     background-size: cover;
     text-align: center;
 }
@@ -18,19 +19,18 @@
 
 .fondo{
     background: url(fondo.jpg);
-    width: 100%;
-    height: 100%;
+    width: getwidth;
+    height: getheight;
     background-size: cover;
-
 }
 
 .isla{
     background-color: #ffff;
     display: flex;
-    margin-top: 0px;
-    margin-left: 145px;
-    margin-right: 145px;
-    border-radius: 25px;
+    margin-top: 0%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 7%;
     border-color: #750049;
 }
 
@@ -38,15 +38,25 @@
     background-color: #005f75;
     display: flex;
     margin-top: 0px;
-    margin-left: 145px;
-    margin-right: 145px;
-    border-radius: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 7%;
     border-color: #750049;
 }
 
 .container{
     display: flex;
-
+    width:getwidth;
+    height: getheight;
+    text-align: justify;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 7%;
+}
+.containerCel{
+    display: none;
 }
 .columnaDerecha{
     text-align: justify;
@@ -115,6 +125,10 @@
     
 }
 
+.leerMas2{
+    display: none; 
+}
+
 .cuadrado{
     width: 90%; 
     height: 0.1%; 
@@ -123,7 +137,7 @@
 }
 
 .ing{
-   border: 1px solid #750049;
+   border: 1px solid #005f75;
    text-align: justify;
    display: 50%;
    flex: 50%;
@@ -131,6 +145,10 @@
    border-radius: 5%;
    margin-bottom: 5%;
 }
+
+.ing2{
+    display: none;
+ }
 
 .borde{
     display: flex;
@@ -141,6 +159,22 @@
     margin-top: 3%;
     margin-bottom: 3%;
     border-radius: 3%;
+}
+
+.texCel{
+    display: none;
+}
+
+.espacioCel{
+    display: none;
+}
+
+.cuadradoCel{
+    display: none;
+}
+
+.islaCel{
+    display: none;
 }
 
 h1{
@@ -213,5 +247,157 @@ mat-toolbar{
 
     to {
         margin-right: 0%;
+    }
+}
+
+@media only screen and (max-width: 1050px){
+    h1{
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        color: #005f75;
+        font-size: 50px;
+        line-height: 100%; 
+    }
+    h2{
+
+        font-family: 'Nunito-sans', sans-serif;
+        color: #005f75;
+        font-size: 38px;
+        line-height: 150%; 
+    }
+
+    .texCel{
+        display: block;
+    }
+
+    .cuadradoCel{
+        display: block;
+        width: 90%; 
+        height: 0.1%; 
+        background: #750049;
+        margin-left: 7%;
+    }
+
+    h4{
+
+        font-size: 1.3em;
+        line-height: 150%;
+    }
+
+    .spacer{
+        flex: 0.5;
+        height: 80px;
+    }
+    
+    .espacioCel{
+        display: block;
+        height: 40px;
+    }
+
+    .columnaIzquierda{
+        text-align: justify;
+        display: 100%;
+        flex: 100%;
+        margin-left: 5%;
+    }
+
+    .columnaDerecha{
+        display: none;
+    }
+
+    .columnaDerecha_pie{
+        text-align: justify;
+        display: 0%;
+        flex: 0%;
+    
+    }
+    .omitir{
+        display: none;
+    }
+    .omitir2{
+        width: 0px;
+        height: 0px;
+        font-size: 0%;
+        background: #005f75;
+        color: #005f75;
+        border-color: #005f75 solid;
+    }
+
+    .leerMas2{
+        display: block;
+        background-color: black;
+        color: white;
+        font-family: 'Nunito', sans-serif;
+        transition: all 0.2s linear 0s;
+        margin-left: 40%;
+        width: 30%;
+        border-radius: 10%;
+            
+        &:before {
+            content: "\f178";
+            font-family: 'Nunito', sans-serif;
+            font-size: 20px;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            right: 0;
+            top: 0;
+            opacity: 0;
+            height: 100%;
+            width: 40px;
+            transition: all 0.2s linear 0s;
+        }
+            
+        &:hover {
+            text-indent: -20px;
+              
+            &:before {
+                opacity: 1;
+                text-indent: 0px;
+            }
+        }
+        
+    }
+
+    .ing2{
+        display: block; 
+        border: 1px solid #005f75;
+        text-align: justify;
+        display: 50%;
+        flex: 50%;
+        height: 90%;
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        border-radius: 7%;
+        text-align: justify;
+     }
+
+     .espacioCelGrande{
+        height: 80px;
+     }
+
+     .islaCel{
+        background-color: #ffff;
+        display: flex;
+        margin-top: 0%;
+        margin-left: 10%;
+        margin-right: 10%;
+        border-radius: 7%;
+        border-color: #750049;
+    }
+
+    .containerCel{
+        display: block;
+        width:getwidth;
+        height: getheight;
+        text-align: justify;
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        border-radius: 7%;
     }
 }
