@@ -205,6 +205,7 @@ mat-toolbar{
     .menu{
         position: fixed;
         top: -200px;
+        right: 50px;
         width: getwidth;
         height: getheight;
         background: none;
@@ -216,6 +217,7 @@ mat-toolbar{
         display: block;
         text-align: left;
         margin: 0;
+        font-size: 14px;
         
     }
 
@@ -227,15 +229,15 @@ mat-toolbar{
     .backimg{
         width: auto;
         height: auto;
-        background-size: cover;
+        background-size: contain;
         text-align: center;
     }
 
     .icono_menu {
         display: inline-block;
-        position: relative;
-        margin-right: 5%;
-        margin-left: 55%;
+        position: relative;;
+        margin-right: 70%;
+        margin-left: 20%;
     }
 
     .icono_menu span{
@@ -263,7 +265,7 @@ mat-toolbar{
     }
 
     .menuClass{
-        right: 0px;
+        right: 30%;
         top: 64px;
         background: #005f75;
         animation-duration: 2s;

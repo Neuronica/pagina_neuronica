@@ -17,7 +17,7 @@ import { ServiciosComponent } from './servicios/servicios.component';
 import { EscogenosComponent } from './escogenos/escogenos.component';
 import { HogarComponent } from './hogar/hogar.component';
 import { EmpresarialComponent } from './empresarial/empresarial.component';
-
+import * as AOS from 'aos';
 
 @NgModule({
   declarations: [
@@ -43,4 +43,12 @@ import { EmpresarialComponent } from './empresarial/empresarial.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor() {
+    console.log(AOS); // loaded script
+  }
+
+  ngOnInit() {
+    AOS.init();
+  }
+}

@@ -24,3 +24,4 @@ export class InicioComponent {
     this.getheight = window.innerHeight;
   }
 }
+

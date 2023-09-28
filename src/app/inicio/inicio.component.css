@@ -1,3 +1,6 @@
+body{
+    background-color: #005f75;
+}
 .spacer{
     flex: 0.5;
     height: 380px;
@@ -19,8 +22,6 @@
 
 .fondo{
     background: url(fondo.jpg);
-    width: getwidth;
-    height: getheight;
     background-size: cover;
 
 }
@@ -221,6 +222,7 @@ h2{
     font-family: 'Nunito', sans-serif;
     color: #005f75;
     font-size: 40px;
+    line-height: 100%;
 }
 
 h3{
@@ -288,7 +290,7 @@ mat-toolbar{
     
 
     h4{
-        font-size: 1.3em;
+        font-size: 1em;
         line-height: 150%;
     }
 
@@ -342,6 +344,14 @@ mat-toolbar{
     .omitir2{
         display: none;
     }
+
+    .container{
+
+        margin-left: 3%;
+        margin-right: 3%;
     
+    }
+    body { box-sizing: border-box; }
+    body *, body *:before, body *:after { box-sizing: inherit; }
 
 }

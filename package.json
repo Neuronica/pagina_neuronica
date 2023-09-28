@@ -22,6 +22,9 @@
     "@angular/router": "^16.2.0",
     "@font/nunito": "^1.0.3",
     "aos": "^2.3.4",
+    "classlist-polyfill": "^1.2.0",
+    "lodash.debounce": "^4.0.8",
+    "lodash.throttle": "^4.1.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
@@ -30,7 +33,7 @@
     "@angular-devkit/build-angular": "^16.2.2",
     "@angular/cli": "~16.2.2",
     "@angular/compiler-cli": "^16.2.0",
-    "@types/aos": "^3.0.4",
+    "@types/aos": "^3.0.5",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
