@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'Inicio' , component: InicioComponent},
   {path: 'Empresa' , component: EmpresaComponent},
   {path: 'Servicios' , component: ServiciosComponent},  
-  {path: '¿Porque escogernos?' , component: EscogenosComponent},
+  {path: 'escogernos' , component: EscogenosComponent},
   {path: 'Hogar' , component: HogarComponent},
   {path: 'Empresarial', component: EmpresarialComponent},
   {path: '', redirectTo: 'Inicio', pathMatch: 'full'}
