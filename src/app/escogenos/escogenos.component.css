@@ -9,8 +9,9 @@
 
 .backimg{
     background: url(escogernos.jpg);
-    width: 100%;
-    height: 100%;
+    width: getwidth;
+    height: getheight;
+    background-position: center;
     background-size: cover;
     text-align: center;
 }
@@ -27,10 +28,10 @@
 .isla{
     background-color: #ffff;
     display: flex;
-    margin-top: 0px;
-    margin-left: 145px;
-    margin-right: 145px;
-    border-radius: 25px;
+    margin-top: 0%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 7%;
     border-color: #750049;
 }
 
@@ -38,20 +39,18 @@
     background-color: #005f75;
     display: flex;
     margin-top: 0px;
-    margin-left: 145px;
-    margin-right: 145px;
-    border-radius: 25px;
-    border-color: #750049;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 7%;
+    border-color: #750049
 }
 
 .container{
     display: flex;
     border:1px solid #005f75;
-    text-align: justify;
     margin-left: 7%;
     margin-right: 7%;
-    margin-top: 3%;
-    margin-bottom: 3%;
+
     border-radius: 10%;
 }
 .columnaDerecha{
@@ -147,6 +146,10 @@
     background-size: cover;
 }
 
+.texCel{
+    display: none;
+}
+
 h1{
     font-family: 'Nunito', sans-serif;
     color: #005f75;
@@ -208,4 +211,63 @@ mat-toolbar{
     to {
         margin-right: 0%;
     }
+}
+
+
+@media only screen and (max-width: 1050px){
+    h1{
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        color: #005f75;
+        font-size: 50px;
+        line-height: 100%; 
+    }
+
+    .texCel{
+        display: block;
+    }
+    h4{
+        font-size: 1em;
+        line-height: 150%;
+    }   
+
+    .spacer{
+        flex: 0.5;
+        height: 80px;
+    }
+
+
+    .columnaIzquierda{
+        text-align: justify;
+        display: 100%;
+        flex: 100%;
+        margin-left: 5%;
+    }
+
+    .columnaDerecha{
+        display: none;
+    }
+
+    .columnaDerecha_pie{
+        text-align: justify;
+        display: 0%;
+        flex: 0%;
+    
+    }
+    .omitir{
+        display: none;
+    }
+    .omitir2{
+        width: 0px;
+        height: 0px;
+        font-size: 0%;
+        background: #005f75;
+        color: #005f75;
+        border-color: #005f75 solid;
+    }
+    .cambiarTexto{
+        font-size: 11vw;
+    }
+    
+
 }

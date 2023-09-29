@@ -353,5 +353,7 @@ mat-toolbar{
     }
     body { box-sizing: border-box; }
     body *, body *:before, body *:after { box-sizing: inherit; }
-
+    .columnaDerecha{
+        display: none;
+    }
 }
