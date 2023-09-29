@@ -47,14 +47,14 @@
 
 .container{
     display: flex;
-    display: flex;
-    border:1px solid #005f75;
+    width:getwidth;
+    height: getheight;
     text-align: justify;
     margin-left: 7%;
     margin-right: 7%;
     margin-top: 3%;
     margin-bottom: 3%;
-    border-radius: 3%;
+    border-radius: 7%;
 }
 .columnaDerecha{
     text-align: justify;
