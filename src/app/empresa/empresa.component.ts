@@ -9,6 +9,8 @@ import * as AOS from 'aos';
 export class EmpresaComponent {
   public getwidth: any;
   public getheight: any;
+  iconoVariable: boolean = false;
+
   ngOnInit(){
     AOS.init();
     window.addEventListener('load', AOS.refresh);

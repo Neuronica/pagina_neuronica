@@ -18,15 +18,15 @@
         </div>
         <div class="menu" [class.menuClass] = "menuCel">
             <ul>
-                <a mat-button routerLink = "Inicio">Inicio</a>
-                <a mat-button routerLink = "Empresa" routerLinkactive="active">Empresa</a>
-                <a mat-button [matMenuTriggerFor]="Servicios" routerLink = "Servicios">
+                <a mat-button routerLink = "Inicio" (click)="abrirMenu()">Inicio</a>
+                <a mat-button routerLink = "Empresa" routerLinkactive="active" (click)="abrirMenu()">Empresa</a>
+                <a mat-button [matMenuTriggerFor]="Servicios" routerLink = "Servicios" >
                     <div class="deplegable">
                         <span>Servicios</span>
                         <i class="material-icons">arrow_drop_down</i>
                     </div>
                 </a>
-                <a mat-button routerLink = "escogernos">¿Por qué escogernos?</a>
+                <a mat-button routerLink = "escogernos" (click)="abrirMenu()">¿Por qué escogernos?</a>
             </ul>
         </div>
 
@@ -36,13 +36,13 @@
 <router-outlet></router-outlet>
 
 <mat-menu #Servicios="matMenu" >
-    <button mat-menu-item class="submenu">
+    <button mat-menu-item class="submenu" (click)="abrirMenu()">
         <a  mat-button routerLink = "Hogar" class="submenu" routerLinkactive="active">
             Ingeniería par hogar
         </a>
     </button>
 
-    <button mat-menu-item class="submenu">
+    <button mat-menu-item class="submenu" (click)="abrirMenu()">
         <a  mat-button routerLink = "Empresarial" class="submenu" routerLinkactive="active">
             Ingeniería Empresarial
         </a>      

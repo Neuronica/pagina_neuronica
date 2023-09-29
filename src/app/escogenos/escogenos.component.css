@@ -160,6 +160,7 @@ h2{
     font-family: 'Nunito', sans-serif;
     color: #005f75;
     font-size: 40px;
+    line-height: 90%;
 }
 
 h3{
@@ -233,7 +234,7 @@ mat-toolbar{
 
     .spacer{
         flex: 0.5;
-        height: 80px;
+        height: 150px;
     }
 
 
