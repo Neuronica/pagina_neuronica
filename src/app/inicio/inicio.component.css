@@ -137,6 +137,7 @@ body{
     background-color: #005f75;
     color: white;
     border-color: white;
+    border-radius: 2rem;
     font-family: 'Nunito', sans-serif;
     transition: all 0.2s linear 0s;
         
@@ -173,7 +174,7 @@ body{
 
 .cuadrado{
     width: 90%; 
-    height: 0.1%; 
+    height: 1px; 
     background: #750049;
 }
 
@@ -284,14 +285,17 @@ mat-toolbar{
         font-size: 50px; 
     }
 
-    .h2Cel{
-        font-size: 2em;
+    h2{
+        font-size: 1.2rem;
     }
     
 
     h4{
-        font-size: 1em;
+        font-size: 0.9rem;
         line-height: 150%;
+    }
+    h3{
+        font-size: 1.2rem;
     }
 
     .imagen1_1{
@@ -346,10 +350,8 @@ mat-toolbar{
     }
 
     .container{
-
         margin-left: 3%;
         margin-right: 3%;
-    
     }
     body { box-sizing: border-box; }
     body *, body *:before, body *:after { box-sizing: inherit; }
