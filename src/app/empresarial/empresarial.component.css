@@ -31,7 +31,7 @@
     margin-top: 0%;
     margin-left: 10%;
     margin-right: 10%;
-    border-radius: 7%;
+    border-radius: 3rem;
     border-color: #750049;
 }
 
@@ -41,7 +41,7 @@
     margin-top: 0px;
     margin-left: 10%;
     margin-right: 10%;
-    border-radius: 7%;
+    border-radius: 3rem;
     border-color: #750049;
 }
 
@@ -54,7 +54,7 @@
     margin-right: 7%;
     margin-top: 3%;
     margin-bottom: 3%;
-    border-radius: 7%;
+    border-radius: 3rem;
 }
 .columnaDerecha{
     text-align: justify;
@@ -84,7 +84,7 @@
     margin-right: 7%;
     margin-top: 3%;
     margin-bottom: 3%;
-    border-radius: 10%;
+    border-radius: 3rem;
 }
 
 .p2{
@@ -93,7 +93,7 @@
     display: block;
     flex: 45%;
     height: 47%;
-    border-radius: 5%;
+    border-radius: 3rem;
     margin-bottom: 5%;
  }
 
@@ -180,7 +180,7 @@
     display: 50%;
     flex: 50%;
     height: 90%;
-    border-radius: 5%;
+    border-radius: 3rem;
     margin-bottom: 5%;
  }
 
@@ -377,7 +377,7 @@ mat-toolbar{
         margin-right: 7%;
         margin-top: 3%;
         margin-bottom: 3%;
-        border-radius: 7%;
+        border-radius: 3rem;
         text-align: justify;
      }
 
@@ -441,7 +441,7 @@ mat-toolbar{
         margin-right: 5%;
         margin-top: 5%;
         margin-bottom: 3%;
-        border-radius: 10%; 
+        border-radius: 3rem; 
      }
      .espacioCel{
         display: block;

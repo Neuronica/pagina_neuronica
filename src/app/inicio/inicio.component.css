@@ -15,7 +15,7 @@ body{
     width: getwidth;
     height: getheight;
     background-position: center;
-    background-size: contain, getwidth;
+    background-size: cover;
     text-align: center;
 }
 
@@ -32,7 +32,7 @@ body{
     margin-top: 0%;
     margin-left: 10%;
     margin-right: 10%;
-    border-radius: 7%;
+    border-radius: 3rem;
     border-color: #750049;
 }
 
@@ -42,7 +42,7 @@ body{
     margin-top: 0px;
     margin-left: 10%;
     margin-right: 10%;
-    border-radius: 7%;
+    border-radius: 3rem;
     border-color: #750049;
 }
 
@@ -56,7 +56,7 @@ body{
     margin-right: 7%;
     margin-top: 3%;
     margin-bottom: 3%;
-    border-radius: 7%;
+    border-radius: 3rem;
 }
 
 .columnaDerecha{
@@ -355,5 +355,9 @@ mat-toolbar{
     body *, body *:before, body *:after { box-sizing: inherit; }
     .columnaDerecha{
         display: none;
+    }
+    .spacer{
+        flex: 0.5;
+        height: 150px;
     }
 }

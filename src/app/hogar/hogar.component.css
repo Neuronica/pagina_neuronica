@@ -31,7 +31,7 @@
     margin-top: 0%;
     margin-left: 10%;
     margin-right: 10%;
-    border-radius: 7%;
+    border-radius: 3rem;
     border-color: #750049;
 }
 
@@ -41,7 +41,7 @@
     margin-top: 0px;
     margin-left: 10%;
     margin-right: 10%;
-    border-radius: 7%;
+    border-radius: 3rem;
     border-color: #750049;
 }
 
@@ -391,7 +391,7 @@ mat-toolbar{
         margin-top: 0%;
         margin-left: 10%;
         margin-right: 10%;
-        border-radius: 7%;
+        border-radius: 3rem;
         border-color: #750049;
     }
 

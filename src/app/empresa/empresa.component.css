@@ -30,7 +30,7 @@
     margin-top: 0%;
     margin-left: 10%;
     margin-right: 10%;
-    border-radius: 7%;
+    border-radius: 3rem;
     border-color: #750049;
 }
 
@@ -40,7 +40,7 @@
     margin-top: 0px;
     margin-left: 10%;
     margin-right: 10%;
-    border-radius: 7%;
+    border-radius: 3rem;
     border-color: #750049;
 }
 
@@ -56,7 +56,7 @@
     margin-right: 7%;
     margin-top: 3%;
     margin-bottom: 3%;
-    border-radius: 6%;
+    border-radius: 3rem;
 }
 .columnaDerecha{
     text-align: justify;
@@ -84,7 +84,7 @@
     margin-right: 7%;
     margin-top: 3%;
     margin-bottom: 3%;
-    border-radius: 10%;
+    border-radius: 3rem;
 }
 
 .vision{
@@ -96,7 +96,7 @@
     margin-right: 7%;
     margin-top: 3%;
     margin-bottom: 3%;
-    border-radius: 5%;
+    border-radius: 3rem;
 }
 
 .effect {
