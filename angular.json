@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "allowedCommonJsDependencies": ["classlist-polyfill", "lodash.debounce", "lodash.throttle"],
-            "outputPath": "dist/neuronica",
+            "outputPath": "dist/neuronica/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -95,6 +95,60 @@
             ],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/neuronica/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "neuronica:build:development",
+              "serverTarget": "neuronica:server:development"
+            },
+            "production": {
+              "browserTarget": "neuronica:build:production",
+              "serverTarget": "neuronica:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "neuronica:build:production",
+              "serverTarget": "neuronica:server:production"
+            },
+            "development": {
+              "browserTarget": "neuronica:build:development",
+              "serverTarget": "neuronica:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

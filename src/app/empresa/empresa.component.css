@@ -33,7 +33,15 @@
     border-radius: 3rem;
     border-color: #750049;
 }
-
+.islaTitulo{
+    background-color: #005f75;
+    display: block;
+    margin-top: 0%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 3rem;
+    border-color: #750049;
+}
 .pieDePagina{
     background-color: #005f75;
     display: flex;
