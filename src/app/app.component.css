@@ -166,8 +166,6 @@ h5{
 a{
     font-family: 'Nunito', sans-serif;
     font-size: 1rem;
-    animation-duration: 2s;
-    animation-name: slidein;
     margin-left: 8%;
 }
 
@@ -209,8 +207,6 @@ mat-toolbar{
         width: getwidth;
         height: getheight;
         background: none;
-        animation-duration: 2s;
-        animation-name: slidein;
     }
 
     a{
