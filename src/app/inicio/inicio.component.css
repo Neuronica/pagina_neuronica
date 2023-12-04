@@ -21,7 +21,7 @@ body{
 
 
 .fondo{
-    background: url(fondo.jpg);
+    background: url(Fondo.png);
     background-size: cover;
 
 }
@@ -36,8 +36,30 @@ body{
     border-color: #750049;
 }
 
+.islaTitulo{
+
+    display: block;
+    margin-top: 0%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: getheight;
+    border-radius: 3rem;
+    border-color: #750049;
+}
+
+.islaTitulo2{
+    background-color: rgba(255, 255, 255, 0.45);
+    display: block;
+    text-align: center;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+
+    border-radius: 3rem;
+}
 .pieDePagina{
-    background-color: #005f75;
+    background-color: white;
     display: flex;
     margin-top: 0px;
     margin-left: 10%;
@@ -144,7 +166,7 @@ body{
     &:before {
         content: "\f178";
         font-family: 'Nunito', sans-serif;
-        font-size: 20px;
+        font-size: 1.5rem;
         position: absolute;
         display: flex;
         align-items: center;
@@ -226,25 +248,25 @@ h1{
     font-family: 'Nunito', sans-serif;
     text-align: center;
     color: #005f75;
-    font-size: 100px; 
+    font-size: 6rem; 
 }
 
 h2{
     font-family: 'Nunito', sans-serif;
     color: #005f75;
-    font-size: 40px;
+    font-size: 3rem;
     line-height: 100%;
 }
 
 h3{
     font-family: 'Nunito', sans-serif;
     color: #750049;
-    font-size: 2em; 
+    font-size: 3rem; 
 }
 
 h4{
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 22px;
+    font-size: 1.4rem;
     line-height: 150%;
 }
 
