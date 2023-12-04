@@ -7,8 +7,13 @@
   }
 
   .mat-toolbar.mat-primary {
+    background: white;
+    color: #005f75;
+  }
+
+  .mat-toolbar.mat-secundary {
     background: #005f75;
-    color: #fff;
+    color: white;
   }
 
   .icon-button{
@@ -18,9 +23,30 @@
     cursor: pointer;
     width: 120px;
   }
+
+  .sticker{
+    background: none;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    width: 100px;
+  }
   
   .icon-button .icon {
     width: 120px;
+  }
+  .sticker .icon{
+    width: 120px;
+  }
+
+  a{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    margin-left: 8%;
+  }
+
+  a:hover{
+      color: #750049;
   }
 
   @media only screen and (max-width: 1000px){
@@ -35,6 +61,6 @@
 
     .mat-toolbar.mat-primary {
       background: #005f75;
-      color: #fff;
+      color: #FFFF;
     }
 }

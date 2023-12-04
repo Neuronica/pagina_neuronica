@@ -1,11 +1,8 @@
-<div class="backimg" style="background-color: white;">
+<div class="imagenFondo">
     <mat-toolbar color = "primary" class="mat-elevation-z8">
         <span>
             <button class="icon-button">
-                <img
-                class="icon"
-                src="assets/Imagenes/Logo_Blanco.png"
-                />
+                <img class="icon" src="assets/Imagenes/Logo_Azul.jpg"/>
             </button>
         </span>   
         
@@ -22,13 +19,16 @@
                 <a mat-button routerLink = "Empresa" routerLinkactive="active" (click)="abrirMenu()">Empresa</a>
                 <a mat-button [matMenuTriggerFor]="Servicios" routerLink = "Servicios" >
                     <div class="deplegable">
-                        <span>Servicios</span>
+                        <span>Productos y Servicios</span>
                         <i class="material-icons">arrow_drop_down</i>
                     </div>
                 </a>
                 <a mat-button routerLink = "escogernos" (click)="abrirMenu()">¿Por qué escogernos?</a>
+                
+                <span class="material-symbols-outlined">shopping_cart_checkout</span>
             </ul>
         </div>
+
 
     </mat-toolbar>
 </div>
@@ -49,10 +49,10 @@
     </button>
 </mat-menu>
 
-<div style="background-color: #005f75;">
-    <h3 style="color: white;">
-        <div class="spacer2"></div>
-        Diseñado por Neurónica S.A.S
-        <div class="spacer2"></div>
+<mat-toolbar color = "secundary">
+    <img class="sticker" src="assets/Imagenes/Sticker.png" style=" background: none;padding: 0;border: 0;"/>
+    <h3 style="color: white; font-family: 'Nunito Sans', sans-serif;margin-left: 25%;" >
+         © 2023. Diseñado y desarrollado por Neurónica S.A.S
     </h3>
-</div>
+    <img class="sticker" src="assets/Imagenes/Sticker.png" style=" background: none;padding: 0;border: 0; margin-left: 22%"/>
+</mat-toolbar>

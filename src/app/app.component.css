@@ -7,7 +7,7 @@
     height: 40px;
 }
 
-.backimg{
+.imagenFondo{
     width: auto;
     height: auto;
     background-size: cover;
@@ -131,6 +131,10 @@
     border: 0;
 }
 
+.material-symbols-outlined{
+    margin-left: 30px;
+}
+
 h1{
     font-family: 'Nunito', sans-serif;
     color: #005f75;
@@ -167,6 +171,7 @@ a{
     font-family: 'Nunito', sans-serif;
     font-size: 1rem;
     margin-left: 8%;
+    color: #005f75;
 }
 
 a:hover{
@@ -222,11 +227,12 @@ mat-toolbar{
         width: getwidth;
     }
     
-    .backimg{
+    .imagenFondo{
         width: auto;
         height: auto;
         background-size: contain;
         text-align: center;
+        background-color: white;
     }
 
     .icono_menu {
