@@ -1,3 +1,6 @@
+body{
+    background-color: #005f75;
+}
 .spacer{
     flex: 0.5;
     height: 380px;
@@ -19,11 +22,43 @@
 
 .fondo{
     background: url(Fondo.png);
-    width: getwidth;
-    height: getheight;
     background-size: cover;
+
 }
 
+.contenedorColumnas{
+    background-color: #ffff;
+    border-radius: 3rem;
+    position: relative;
+    margin: auto;
+    width: 80%;
+    height: 100%;
+}
+
+.filas{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+.unaColumna{
+    width: 100%;
+}
+
+.dosColumnas{
+    width: 50%;
+    float: left;
+}
+
+.bordeAzul{
+    position: relative;
+    margin: auto;
+    height: auto;
+    width: 85%;
+    border-radius: 3rem;
+    border: 1px solid #005f75;
+}
 .isla{
     background-color: #ffff;
     display: flex;
@@ -33,7 +68,9 @@
     border-radius: 3rem;
     border-color: #750049;
 }
+
 .islaTitulo{
+
     display: block;
     margin-top: 0%;
     margin-left: 10%;
@@ -51,6 +88,7 @@
     margin-right: 0%;
     margin-top: 0%;
     margin-bottom: 0%;
+
     border-radius: 3rem;
 }
 .pieDePagina{
@@ -76,17 +114,34 @@
     border-radius: 3rem;
 }
 
-.borde{
-    display: flex;
-    border:1px solid #005f75;
-    text-align: justify;
-    margin-left: 7%;
-    margin-right: 7%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    border-radius: 3rem;
-}
 .columnaDerecha{
+    text-align: justify;
+    display: 50%;
+    flex: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.columnaDerecha1{
+    text-align: justify;
+    display: 50%;
+    flex: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.columnaDerecha2{
+    text-align: justify;
+    display: 50%;
+    flex: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.columnaDerecha_pie{
     text-align: justify;
     display: 50%;
     flex: 50%;
@@ -103,28 +158,20 @@
     margin-right: 5%;
 }
 
-.mision{
-    border:1px solid #005f75;
+.columnaIzquierda1{
     text-align: justify;
     display: 50%;
     flex: 50%;
-    margin-left: 7%;
-    margin-right: 7%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    border-radius: 3rem;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
-.vision{
-    border:1px solid #005f75;
+.columnaIzquierda2{
     text-align: justify;
     display: 50%;
     flex: 50%;
-    margin-left: 7%;
-    margin-right: 7%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    border-radius: 3rem;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .effect {
@@ -139,29 +186,20 @@
     width: 30%;
     border-radius: 10%;
     overflow: hidden;
-}
-.containerPie{
-    display: flex;
-    width:getwidth;
-    height: getheight;
-    text-align: justify;
-    margin-left: 7%;
-    margin-right: 7%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    border-radius: 3rem;
-}
+  }
 
 .leerMas{
     background-color: #005f75;
-    color: #750049;
+    color: white;
+    border-color: white;
+    border-radius: 2rem;
     font-family: 'Nunito', sans-serif;
     transition: all 0.2s linear 0s;
         
     &:before {
         content: "\f178";
         font-family: 'Nunito', sans-serif;
-        font-size: 20px;
+        font-size: 1.5rem;
         position: absolute;
         display: flex;
         align-items: center;
@@ -170,7 +208,7 @@
         top: 0;
         opacity: 0;
         height: 100%;
-        width: 40px;
+        width: 5%;
         transition: all 0.2s linear 0s;
     }
         
@@ -185,56 +223,74 @@
     
 }
 
-.video{
-    display: inline-block;
-    border-radius: 10%;
-    margin:0;
-    padding:0;  
-    background-size: cover;
+.margen{
+    margin-bottom:25% ;
 }
 
-.cuadrado {
+.cuadrado{
     width: 90%; 
+    margin: auto;
     height: 1px; 
     background: #750049;
+    text-align: center;
 }
 
-.cuadrado2{
-    width: 10%; 
-    height: 0.1%; 
-    background: #750049;
-    margin-left:5% ;
-    margin-right:5%;
+.textCEL{
+    visibility: collapse;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    color: #005f75;
+    font-size: 50px; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
-
-.margen{
-    line-height: 150%;
-    margin-left:5% ;
-    margin-right:5% ;
+.imagen1_1{
+    width:25rem;
+    height:25rem;
+    border-radius: 5%
 }
 
-.video{
-    width:80%;
-    height:80%;
+.imagen1_1Cel{
+    width:0%;
+    height:0%;
     border-radius: 0%
 }
 
-.texCel{
-    display: none;
+.imagen1_2{
+    width:25rem;
+    height:25rem;
+    border-radius: 5%
+}
+
+.imagen1_2Cel{
+    width:0%;
+    height:0%;
+    border-radius: 0%
+}
+.containerPie{
+    display: flex;
+    width:getwidth;
+    height: getheight;
+    text-align: justify;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 h1{
     font-family: 'Nunito', sans-serif;
+    text-align: center;
     color: #005f75;
-    font-size: 6rem;
+    font-size: 6rem; 
 }
 
 h2{
     font-family: 'Nunito', sans-serif;
     color: #005f75;
     font-size: 3rem;
+    line-height: 100%;
 }
 
 h3{
@@ -245,17 +301,8 @@ h3{
 
 h4{
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 22px;
+    font-size: 1.4rem;
     line-height: 150%;
-}
-
-
-h6{
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 22px;
-    line-height: 150%;
-    margin-left:5% ;
-    margin-right:5% ;
 }
 
 h5{
@@ -302,33 +349,45 @@ mat-toolbar{
         font-family: 'Nunito', sans-serif;
         text-align: center;
         color: #005f75;
-        font-size: 50px;
-        line-height: 100%; 
+        font-size: 50px; 
     }
+
     h2{
         font-size: 1.2rem;
     }
-    h3{
-        font-size: 1.2rem;
-    }
+    
+
     h4{
         font-size: 0.9rem;
         line-height: 150%;
     }
-    .texCel{
-        display: block;
+    h3{
+        font-size: 1.2rem;
     }
 
-    h4{
-        font-size: 1em;
-        line-height: 150%;
+    .imagen1_1{
+        width:0%;
+        height:0%;
+        border-radius: 0%
     }
 
-    .spacer{
-        flex: 0.5;
-        height: 150px;
+    .imagen1_1Cel{
+        width:10rem;;
+        height:10rem;
+        border-radius: 0%
     }
 
+    .imagen1_2{
+        width:0%;
+        height:0%;
+        border-radius: 0%
+    }
+
+    .imagen1_2Cel{
+        width:15rem;
+        height:15rem;
+        align-items: center;
+    }
 
     .columnaIzquierda{
         text-align: justify;
@@ -336,8 +395,11 @@ mat-toolbar{
         flex: 100%;
         margin-left: 5%;
     }
+    .columnaIzquierda2{
+        display: none;
+    }
 
-    .columnaDerecha{
+    .columnaDerecha1{
         display: none;
     }
 
@@ -351,12 +413,21 @@ mat-toolbar{
         display: none;
     }
     .omitir2{
-        width: 0px;
-        height: 0px;
-        font-size: 0%;
-        background: #005f75;
-        color: #005f75;
-        border-color: #005f75 solid;
+        display: none;
+    }
+
+    .container{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    body { box-sizing: border-box; }
+    body *, body *:before, body *:after { box-sizing: inherit; }
+    .columnaDerecha{
+        display: none;
+    }
+    .spacer{
+        flex: 0.5;
+        height: 150px;
     }
     .containerPie{
         display: flex;
@@ -370,5 +441,4 @@ mat-toolbar{
         margin-bottom: 3%;
         border-radius: 3rem;
     }
-    
 }
