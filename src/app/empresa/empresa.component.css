@@ -37,6 +37,7 @@ body{
 
 .filas{
     position: relative;
+    display: inline-block;
     margin: auto;
     width: 100%;
     height: auto;
@@ -58,15 +59,6 @@ body{
     width: 85%;
     border-radius: 3rem;
     border: 1px solid #005f75;
-}
-.isla{
-    background-color: #ffff;
-    display: flex;
-    margin-top: 0%;
-    margin-left: 10%;
-    margin-right: 10%;
-    border-radius: 3rem;
-    border-color: #750049;
 }
 
 .islaTitulo{
@@ -90,88 +82,6 @@ body{
     margin-bottom: 0%;
 
     border-radius: 3rem;
-}
-.pieDePagina{
-    background-color: white;
-    display: flex;
-    margin-top: 0px;
-    margin-left: 10%;
-    margin-right: 10%;
-    border-radius: 3rem;
-    border-color: #750049;
-}
-
-.container{
-    display: flex;
-    width:getwidth;
-    height: getheight;
-    border:1px solid #005f75;
-    text-align: justify;
-    margin-left: 7%;
-    margin-right: 7%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    border-radius: 3rem;
-}
-
-.columnaDerecha{
-    text-align: justify;
-    display: 50%;
-    flex: 50%;
-    margin-left: 5%;
-    margin-right: 5%;
-
-}
-
-.columnaDerecha1{
-    text-align: justify;
-    display: 50%;
-    flex: 50%;
-    margin-left: 5%;
-    margin-right: 5%;
-
-}
-
-.columnaDerecha2{
-    text-align: justify;
-    display: 50%;
-    flex: 50%;
-    margin-left: 5%;
-    margin-right: 5%;
-
-}
-
-.columnaDerecha_pie{
-    text-align: justify;
-    display: 50%;
-    flex: 50%;
-    margin-left: 5%;
-    margin-right: 5%;
-
-}
-
-.columnaIzquierda{
-    text-align: justify;
-    display: 50%;
-    flex: 50%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-.columnaIzquierda1{
-    text-align: justify;
-    display: 50%;
-    flex: 50%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-.columnaIzquierda2{
-    text-align: justify;
-    display: 50%;
-    flex: 50%;
-    margin-left: 5%;
-    margin-right: 5%;
 }
 
 .effect {
@@ -223,27 +133,12 @@ body{
     
 }
 
-.margen{
-    margin-bottom:25% ;
-}
-
 .cuadrado{
     width: 90%; 
-    margin: auto;
     height: 1px; 
     background: #750049;
-    text-align: center;
 }
 
-.textCEL{
-    visibility: collapse;
-    font-family: 'Nunito', sans-serif;
-    text-align: center;
-    color: #005f75;
-    font-size: 50px; 
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .imagen1_1{
     width:25rem;
@@ -251,32 +146,10 @@ body{
     border-radius: 5%
 }
 
-.imagen1_1Cel{
-    width:0%;
-    height:0%;
-    border-radius: 0%
-}
-
 .imagen1_2{
     width:25rem;
     height:25rem;
     border-radius: 5%
-}
-
-.imagen1_2Cel{
-    width:0%;
-    height:0%;
-    border-radius: 0%
-}
-.containerPie{
-    display: flex;
-    width:getwidth;
-    height: getheight;
-    text-align: justify;
-    margin-left: 7%;
-    margin-right: 7%;
-    margin-top: 3%;
-    margin-bottom: 3%;
 }
 
 h1{
@@ -303,13 +176,6 @@ h4{
     font-family: 'Nunito Sans', sans-serif;
     font-size: 1.4rem;
     line-height: 150%;
-}
-
-h5{
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 22px;
-    line-height: 150%;
-    margin-bottom: 10%;
 }
 
 a{
