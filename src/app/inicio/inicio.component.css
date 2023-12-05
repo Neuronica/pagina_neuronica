@@ -26,6 +26,41 @@ body{
 
 }
 
+.contenedorColumnas{
+    background-color: #ffff;
+    border-radius: 3rem;
+    position: relative;
+    margin: auto;
+    width: 80%;
+    height: 100%;
+}
+
+.filas{
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+.unaColumna{
+    width: 100%;
+}
+
+.dosColumnas{
+    width: 50%;
+    float: left;
+}
+
+.bordeAzul{
+    position: relative;
+    margin: auto;
+    height: auto;
+    width: 85%;
+    border-radius: 3rem;
+    border: 1px solid #005f75;
+}
+
 .isla{
     background-color: #ffff;
     display: flex;
