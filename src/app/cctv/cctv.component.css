@@ -11,7 +11,7 @@ body{
 }
 
 .backimg{
-    background: url(hogar.jpg);
+    background: url(CCTV.jpg);
     width: getwidth;
     height: getheight;
     background-position: center;
@@ -61,22 +61,6 @@ body{
     border: 1px solid #005f75;
 }
 
-.subcuadro{
-    border: 1px solid #005f75;
-    text-align: justify;
-    display: 50%;
-    flex: 50%;
-    height: 90%;
-    border-radius: 3rem;
-    margin-bottom: 5%;
- }
-
- .imagen{
-   width: 60%;
-   margin-left: 20%;
-   margin-right: 20%;
-   border-radius: 3rem;
- }
 .islaTitulo{
 
     display: block;
@@ -100,7 +84,6 @@ body{
     border-radius: 3rem;
 }
 
-
 .effect {
     text-align: center;
     display: inline-block;
@@ -115,19 +98,39 @@ body{
     overflow: hidden;
   }
 
-.boton{
+.leerMas{
     background-color: #005f75;
     color: white;
+    border-color: white;
     border-radius: 2rem;
-    border: 2px solid #005f75;
-    width: 8rem;
-    height: 3rem;
     font-family: 'Nunito', sans-serif;
-}
-
-.boton:hover{
-    background-color: white;
-    color: black;
+    transition: all 0.2s linear 0s;
+        
+    &:before {
+        content: "\f178";
+        font-family: 'Nunito', sans-serif;
+        font-size: 1.5rem;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        height: 100%;
+        width: 5%;
+        transition: all 0.2s linear 0s;
+    }
+        
+    &:hover {
+        text-indent: -20px;
+          
+        &:before {
+            opacity: 1;
+            text-indent: 0px;
+        }
+    }
+    
 }
 
 .cuadrado{
@@ -305,4 +308,3 @@ mat-toolbar{
         border-radius: 3rem;
     }
 }
-

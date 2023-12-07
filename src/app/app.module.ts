@@ -17,6 +17,7 @@ import { ServiciosComponent } from './servicios/servicios.component';
 import { EscogenosComponent } from './escogenos/escogenos.component';
 import { HogarComponent } from './hogar/hogar.component';
 import { EmpresarialComponent } from './empresarial/empresarial.component';
+import { CctvComponent } from './cctv/cctv.component';
 import * as AOS from 'aos';
 
 @NgModule({
@@ -29,7 +30,9 @@ import * as AOS from 'aos';
     ServiciosComponent,
     EscogenosComponent,
     HogarComponent,
-    EmpresarialComponent
+    EmpresarialComponent,
+    CctvComponent
+
   ],
   imports: [
     BrowserModule,

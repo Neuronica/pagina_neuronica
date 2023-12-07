@@ -7,6 +7,7 @@ import {ServiciosComponent} from './servicios/servicios.component';
 import {EscogenosComponent} from './escogenos/escogenos.component';
 import { HogarComponent } from './hogar/hogar.component';
 import { EmpresarialComponent} from './empresarial/empresarial.component';
+import { CctvComponent } from './cctv/cctv.component';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'escogernos' , component: EscogenosComponent},
   {path: 'Hogar' , component: HogarComponent},
   {path: 'Empresarial', component: EmpresarialComponent},
+  {path: 'Cctv', component:CctvComponent},
   {path: '', redirectTo: 'Inicio', pathMatch: 'full'}
 ];
 
