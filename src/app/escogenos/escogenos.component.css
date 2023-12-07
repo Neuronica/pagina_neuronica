@@ -1,3 +1,6 @@
+body{
+    background-color: #005f75;
+}
 .spacer{
     flex: 0.5;
     height: 380px;
@@ -18,60 +21,85 @@
 
 
 .fondo{
-    background: url(fondo.jpg);
-    width: 100%;
-    height: 100%;
+    background: url(Fondo.png);
     background-size: cover;
+
 }
 
-.isla{
+.contenedorColumnas{
     background-color: #ffff;
-    display: flex;
+    border-radius: 3rem;
+    position: relative;
+    margin: auto;
+    width: 80%;
+    height: 100%;
+}
+
+.filas{
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+.unaColumna{
+    width: 100%;
+}
+
+.dosColumnas{
+    width: 50%;
+    float: left;
+}
+
+.bordeAzul{
+    position: relative;
+    margin: auto;
+    height: auto;
+    width: 85%;
+    border-radius: 3rem;
+    border: 1px solid #005f75;
+}
+
+.subcuadro{
+    border: 1px solid #005f75;
+    text-align: justify;
+    display: 50%;
+    flex: 50%;
+    height: 90%;
+    border-radius: 3rem;
+    margin-bottom: 5%;
+ }
+
+ .imagen{
+   width: 60%;
+   margin-left: 20%;
+   margin-right: 20%;
+   border-radius: 3rem;
+ }
+.islaTitulo{
+
+    display: block;
     margin-top: 0%;
     margin-left: 10%;
     margin-right: 10%;
+    height: getheight;
     border-radius: 3rem;
     border-color: #750049;
 }
 
-.pieDePagina{
-    background-color: #005f75;
-    display: flex;
-    margin-top: 0px;
-    margin-left: 10%;
-    margin-right: 10%;
-    border-radius: 3rem;
-    border-color: #750049
-}
+.islaTitulo2{
+    background-color: rgba(255, 255, 255, 0.45);
+    display: block;
+    text-align: center;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 0%;
+    margin-bottom: 0%;
 
-.container{
-    display: flex;
-    width:getwidth;
-    height: getheight;
-    border:1px solid #005f75;
-    text-align: justify;
-    margin-left: 7%;
-    margin-right: 7%;
-    margin-top: 3%;
-    margin-bottom: 3%;
     border-radius: 3rem;
 }
-.columnaDerecha{
-    text-align: justify;
-    display: 50%;
-    flex: 50%;
-    margin-left: 5%;
-    margin-right: 5%;
 
-}
-
-.columnaIzquierda{
-    text-align: justify;
-    display: 50%;
-    flex: 50%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
 
 .effect {
     text-align: center;
@@ -89,14 +117,16 @@
 
 .leerMas{
     background-color: #005f75;
-    color: #750049;
+    color: white;
+    border-color: white;
+    border-radius: 2rem;
     font-family: 'Nunito', sans-serif;
     transition: all 0.2s linear 0s;
         
     &:before {
         content: "\f178";
         font-family: 'Nunito', sans-serif;
-        font-size: 20px;
+        font-size: 1.5rem;
         position: absolute;
         display: flex;
         align-items: center;
@@ -105,7 +135,7 @@
         top: 0;
         opacity: 0;
         height: 100%;
-        width: 40px;
+        width: 5%;
         transition: all 0.2s linear 0s;
     }
         
@@ -121,73 +151,48 @@
 }
 
 .cuadrado{
-    width: 90%;
-    height: 0.1%;
+    width: 90%; 
+    height: 1px; 
     background: #750049;
-    margin-left:5%;
-    margin-right: 5%;
 }
 
-.p1{
-    text-align: justify;
-    display: 50%;
-    flex: 50%;
-    margin-left: 7%;
-    margin-right: 7%;
-    margin-top: 3%;
-    margin-bottom: 3%;
+
+.imagen1_1{
+    width:25rem;
+    height:25rem;
+    border-radius: 5%
 }
 
-.video{
-    display: inline-block;
-    margin: 0;
-    background-size: cover;
-}
-
-.texCel{
-    display: none;
-}
-.containerPie{
-    display: flex;
-    width:getwidth;
-    height: getheight;
-    text-align: justify;
-    margin-left: 7%;
-    margin-right: 7%;
-    margin-top: 3%;
-    margin-bottom: 3%;
+.imagen1_2{
+    width:25rem;
+    height:25rem;
+    border-radius: 5%
 }
 
 h1{
     font-family: 'Nunito', sans-serif;
+    text-align: center;
     color: #005f75;
-    font-size: 100px; 
+    font-size: 6rem; 
 }
 
 h2{
     font-family: 'Nunito', sans-serif;
     color: #005f75;
-    font-size: 40px;
-    line-height: 90%;
+    font-size: 3rem;
+    line-height: 100%;
 }
 
 h3{
     font-family: 'Nunito', sans-serif;
     color: #750049;
-    font-size: 30px; 
+    font-size: 3rem; 
 }
 
 h4{
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 22px;
+    font-size: 1.4rem;
     line-height: 150%;
-}
-
-h5{
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 22px;
-    line-height: 150%;
-    margin-bottom: 10%;
 }
 
 a{
@@ -222,38 +227,50 @@ mat-toolbar{
     }
 }
 
-
 @media only screen and (max-width: 1050px){
     h1{
         font-family: 'Nunito', sans-serif;
         text-align: center;
         color: #005f75;
-        font-size: 50px;
-        line-height: 100%; 
+        font-size: 50px; 
     }
 
-    .texCel{
-        display: block;
-    }
     h2{
         font-size: 1.2rem;
-        font-family: 'Nunito-sans', sans-serif;
-        line-height: 150%; 
     }
-    h3{
-        font-size: 1.2rem;
-    }
+    
 
     h4{
         font-size: 0.9rem;
         line-height: 150%;
     }
-
-    .spacer{
-        flex: 0.5;
-        height: 150px;
+    h3{
+        font-size: 1.2rem;
     }
 
+    .imagen1_1{
+        width:0%;
+        height:0%;
+        border-radius: 0%
+    }
+
+    .imagen1_1Cel{
+        width:10rem;;
+        height:10rem;
+        border-radius: 0%
+    }
+
+    .imagen1_2{
+        width:0%;
+        height:0%;
+        border-radius: 0%
+    }
+
+    .imagen1_2Cel{
+        width:15rem;
+        height:15rem;
+        align-items: center;
+    }
 
     .columnaIzquierda{
         text-align: justify;
@@ -261,8 +278,11 @@ mat-toolbar{
         flex: 100%;
         margin-left: 5%;
     }
+    .columnaIzquierda2{
+        display: none;
+    }
 
-    .columnaDerecha{
+    .columnaDerecha1{
         display: none;
     }
 
@@ -276,15 +296,21 @@ mat-toolbar{
         display: none;
     }
     .omitir2{
-        width: 0px;
-        height: 0px;
-        font-size: 0%;
-        background: #005f75;
-        color: #005f75;
-        border-color: #005f75 solid;
+        display: none;
     }
-    .cambiarTexto{
-        font-size: 11vw;
+
+    .container{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    body { box-sizing: border-box; }
+    body *, body *:before, body *:after { box-sizing: inherit; }
+    .columnaDerecha{
+        display: none;
+    }
+    .spacer{
+        flex: 0.5;
+        height: 150px;
     }
     .containerPie{
         display: flex;
@@ -297,6 +323,5 @@ mat-toolbar{
         margin-top: 3%;
         margin-bottom: 3%;
         border-radius: 3rem;
-    }    
-
+    }
 }
