@@ -98,39 +98,21 @@ body{
     overflow: hidden;
   }
 
-.leerMas{
+  .boton{
     background-color: #005f75;
     color: white;
-    border-color: white;
     border-radius: 2rem;
+    border: 2px solid #005f75;
+    width: 8rem;
+    height: 3rem;
     font-family: 'Nunito', sans-serif;
-    transition: all 0.2s linear 0s;
-        
-    &:before {
-        content: "\f178";
-        font-family: 'Nunito', sans-serif;
-        font-size: 1.5rem;
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        right: 0;
-        top: 0;
-        opacity: 0;
-        height: 100%;
-        width: 5%;
-        transition: all 0.2s linear 0s;
-    }
-        
-    &:hover {
-        text-indent: -20px;
-          
-        &:before {
-            opacity: 1;
-            text-indent: 0px;
-        }
-    }
-    
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.boton:hover{
+    background-color: white;
+    color: black;
 }
 
 .cuadrado{
@@ -147,8 +129,16 @@ body{
 }
 
 .imagen1_2{
-    width:25rem;
-    height:25rem;
+    width:20rem;
+    height:auto;
+    border-radius: 5%
+}
+
+.imagen1_3{
+    margin-top: 30%;
+    margin-bottom: 30%;
+    width:20rem;
+    height:auto;
     border-radius: 5%
 }
 

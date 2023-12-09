@@ -8,6 +8,7 @@ import {EscogenosComponent} from './escogenos/escogenos.component';
 import { HogarComponent } from './hogar/hogar.component';
 import { EmpresarialComponent} from './empresarial/empresarial.component';
 import { CctvComponent } from './cctv/cctv.component';
+import { DomoticaComponent } from './domotica/domotica.component';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'Hogar' , component: HogarComponent},
   {path: 'Empresarial', component: EmpresarialComponent},
   {path: 'Cctv', component:CctvComponent},
+  {path: 'Domotica', component:DomoticaComponent},
   {path: '', redirectTo: 'Inicio', pathMatch: 'full'}
 ];
 

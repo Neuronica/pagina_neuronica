@@ -12,8 +12,8 @@
   }
 
   .mat-toolbar.mat-secundary {
-    background: #005f75;
-    color: white;
+    background: white;
+    color: black;
   }
 
   .icon-button{
@@ -30,6 +30,7 @@
     border: 0;
     cursor: pointer;
     width: 100px;
+    transform: rotate(330deg);
   }
   
   .icon-button .icon {
