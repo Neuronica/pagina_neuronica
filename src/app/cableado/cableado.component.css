@@ -1,0 +1,300 @@
+body{
+    background-color: #005f75;
+}
+.spacer{
+    flex: 0.5;
+    height: 380px;
+}
+
+.spacer2{
+    height: 40px;
+}
+
+.backimg{
+    background: url(Cableado.jpg);
+    width: getwidth;
+    height: getheight;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+
+.fondo{
+    background: url(Fondo.png);
+    background-size: cover;
+
+}
+
+.contenedorColumnas{
+    background-color: #ffff;
+    border-radius: 3rem;
+    position: relative;
+    margin: auto;
+    width: 80%;
+    height: 100%;
+}
+
+.filas{
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+.unaColumna{
+    width: 100%;
+}
+
+.dosColumnas{
+    width: 50%;
+    float: left;
+}
+
+.bordeAzul{
+    position: relative;
+    margin: auto;
+    height: auto;
+    width: 85%;
+    border-radius: 3rem;
+    border: 1px solid #005f75;
+}
+
+.islaTitulo{
+
+    display: block;
+    margin-top: 0%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: getheight;
+    border-radius: 3rem;
+    border-color: #750049;
+}
+
+.islaTitulo2{
+    background-color: rgba(255, 255, 255, 0.45);
+    display: block;
+    text-align: center;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+
+    border-radius: 3rem;
+}
+
+.effect {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: #005f75;
+    text-transform: capitalize;
+    /* background-color: - add your own background-color */
+    padding: 3% 0px;
+    width: 30%;
+    border-radius: 10%;
+    overflow: hidden;
+  }
+
+  .boton{
+    background-color: #005f75;
+    color: white;
+    border-radius: 2rem;
+    border: 2px solid #005f75;
+    width: 8rem;
+    height: 3rem;
+    font-family: 'Nunito', sans-serif;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.boton:hover{
+    background-color: white;
+    color: black;
+}
+
+.cuadrado{
+    width: 90%; 
+    height: 1px; 
+    background: #750049;
+}
+
+
+.imagen1_1{
+    width:25rem;
+    height:25rem;
+    border-radius: 5%
+}
+
+.imagen1_2{
+    width:20rem;
+    height:auto;
+    border-radius: 5%
+}
+
+.imagen1_3{
+    margin-top: 30%;
+    margin-bottom: 30%;
+    width:20rem;
+    height:auto;
+    border-radius: 5%
+}
+
+h1{
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    color: #005f75;
+    font-size: 6rem; 
+}
+
+h2{
+    font-family: 'Nunito', sans-serif;
+    color: #005f75;
+    font-size: 3rem;
+    line-height: 100%;
+}
+
+h3{
+    font-family: 'Nunito', sans-serif;
+    color: #750049;
+    font-size: 3rem; 
+}
+
+h4{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.4rem;
+    line-height: 150%;
+}
+
+a{
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+
+input{
+    background-color: #005f75;
+    font-family: 'Nunito', sans-serif;
+    color:#750049;
+    border-color: black;
+    border-radius: 10px;
+    height: 70%;
+    width: 40%;
+}
+
+mat-toolbar{
+    height: 110px;
+}
+
+@keyframes slidein {
+    from {
+        margin-right: 100%;
+
+    }
+
+    to {
+        margin-right: 0%;
+    }
+}
+
+@media only screen and (max-width: 1050px){
+    h1{
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        color: #005f75;
+        font-size: 50px; 
+    }
+
+    h2{
+        font-size: 1.2rem;
+    }
+    
+
+    h4{
+        font-size: 0.9rem;
+        line-height: 150%;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+
+    .imagen1_1{
+        width:0%;
+        height:0%;
+        border-radius: 0%
+    }
+
+    .imagen1_1Cel{
+        width:10rem;;
+        height:10rem;
+        border-radius: 0%
+    }
+
+    .imagen1_2{
+        width:0%;
+        height:0%;
+        border-radius: 0%
+    }
+
+    .imagen1_2Cel{
+        width:15rem;
+        height:15rem;
+        align-items: center;
+    }
+
+    .columnaIzquierda{
+        text-align: justify;
+        display: 100%;
+        flex: 100%;
+        margin-left: 5%;
+    }
+    .columnaIzquierda2{
+        display: none;
+    }
+
+    .columnaDerecha1{
+        display: none;
+    }
+
+    .columnaDerecha_pie{
+        text-align: justify;
+        display: 0%;
+        flex: 0%;
+    
+    }
+    .omitir{
+        display: none;
+    }
+    .omitir2{
+        display: none;
+    }
+
+    .container{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    body { box-sizing: border-box; }
+    body *, body *:before, body *:after { box-sizing: inherit; }
+    .columnaDerecha{
+        display: none;
+    }
+    .spacer{
+        flex: 0.5;
+        height: 150px;
+    }
+    .containerPie{
+        display: flex;
+        width:getwidth;
+        height: getheight;
+        border:1px solid #005f75;
+        text-align: justify;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        border-radius: 3rem;
+    }
+}

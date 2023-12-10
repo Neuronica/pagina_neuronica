@@ -19,6 +19,7 @@ import { HogarComponent } from './hogar/hogar.component';
 import { EmpresarialComponent } from './empresarial/empresarial.component';
 import { CctvComponent } from './cctv/cctv.component';
 import { DomoticaComponent } from './domotica/domotica.component';
+import { CableadoComponent } from './cableado/cableado.component';
 import * as AOS from 'aos';
 
 @NgModule({
@@ -33,7 +34,8 @@ import * as AOS from 'aos';
     HogarComponent,
     EmpresarialComponent,
     CctvComponent,
-    DomoticaComponent
+    DomoticaComponent,
+    CableadoComponent
 
   ],
   imports: [
