@@ -24,4 +24,6 @@ export class HardwareComponent {
     this.getwidth = window.innerWidth;
     this.getheight = window.innerHeight;
   }
+
 }
+
