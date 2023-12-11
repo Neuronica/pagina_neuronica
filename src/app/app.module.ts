@@ -22,11 +22,7 @@ import { DomoticaComponent } from './domotica/domotica.component';
 import { CableadoComponent } from './cableado/cableado.component';
 import { SoftwareComponent } from './software/software.component';
 import { HardwareComponent } from './hardware/hardware.component';
-<<<<<<< HEAD
-=======
 import * as AOS from 'aos';
-
->>>>>>> refs/remotes/origin/master
 
 @NgModule({
   declarations: [
@@ -43,12 +39,7 @@ import * as AOS from 'aos';
     DomoticaComponent,
     CableadoComponent,
     SoftwareComponent,
-<<<<<<< HEAD
-    HardwareComponent
-=======
     HardwareComponent,
->>>>>>> refs/remotes/origin/master
-
   ],
   imports: [
     BrowserModule,
