@@ -1,153 +1,6 @@
 body{
     background-color: #005f75;
 }
-.spacer{
-    flex: 0.5;
-    height: 380px;
-}
-
-.spacer2{
-    height: 40px;
-}
-
-.backimg{
-    background: url(empresarial.jpg);
-    width: getwidth;
-    height: getheight;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-}
-
-
-.fondo{
-    background: url(Fondo.png);
-    background-size: cover;
-
-}
-
-.contenedorColumnas{
-    background-color: #ffff;
-    border-radius: 3rem;
-    position: relative;
-    margin: auto;
-    width: 80%;
-    height: 100%;
-}
-
-.filas{
-    position: relative;
-    display: inline-block;
-    margin: auto;
-    width: 100%;
-    height: auto;
-}
-
-.unaColumna{
-    width: 100%;
-}
-
-.dosColumnas{
-    width: 50%;
-    float: left;
-}
-
-.bordeAzul{
-    position: relative;
-    margin: auto;
-    height: auto;
-    width: 85%;
-    border-radius: 3rem;
-    border: 1px solid #005f75;
-}
-
-.subcuadro{
-    border: 1px solid #005f75;
-    text-align: justify;
-    display: 50%;
-    flex: 50%;
-    height: 90%;
-    border-radius: 3rem;
-    margin-bottom: 5%;
- }
-
- .imagen{
-   width: 60%;
-   margin-left: 20%;
-   margin-right: 20%;
-   border-radius: 3rem;
- }
-.islaTitulo{
-
-    display: block;
-    margin-top: 0%;
-    margin-left: 10%;
-    margin-right: 10%;
-    height: getheight;
-    border-radius: 3rem;
-    border-color: #750049;
-}
-
-.islaTitulo2{
-    background-color: rgba(255, 255, 255, 0.45);
-    display: block;
-    text-align: center;
-    margin-left: 0%;
-    margin-right: 0%;
-    margin-top: 0%;
-    margin-bottom: 0%;
-
-    border-radius: 3rem;
-}
-
-
-.effect {
-    text-align: center;
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-    color: #005f75;
-    text-transform: capitalize;
-    /* background-color: - add your own background-color */
-    padding: 3% 0px;
-    width: 30%;
-    border-radius: 10%;
-    overflow: hidden;
-  }
-
-  .boton{
-    background-color: #005f75;
-    color: white;
-    border-radius: 2rem;
-    border: 2px solid #005f75;
-    width: 8rem;
-    height: 3rem;
-    font-family: 'Nunito', sans-serif;
-}
-
-.boton:hover{
-    background-color: white;
-    color: black;
-}
-
-.cuadrado{
-    width: 90%; 
-    height: 1px; 
-    background: #750049;
-}
-
-
-.imagen1_1{
-    width:25rem;
-    height:25rem;
-    border-radius: 5%
-}
-
-.imagen1_2{
-    width:25rem;
-    height:25rem;
-    border-radius: 5%
-}
 
 h1{
     font-family: 'Nunito', sans-serif;
@@ -192,19 +45,13 @@ input{
     width: 40%;
 }
 
-mat-toolbar{
-    height: 110px;
-}
-
-@keyframes slidein {
-    from {
-        margin-right: 100%;
-
-    }
-
-    to {
-        margin-right: 0%;
-    }
+.backimg{
+    background: url(empresarial.jpg);
+    width: getwidth;
+    height: getheight;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
 }
 
 @media only screen and (max-width: 1050px){
