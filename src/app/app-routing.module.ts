@@ -11,6 +11,7 @@ import { CctvComponent } from './cctv/cctv.component';
 import { DomoticaComponent } from './domotica/domotica.component';
 import { CableadoComponent } from './cableado/cableado.component';
 import { SoftwareComponent } from './software/software.component';
+import { HardwareComponent } from './hardware/hardware.component';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'Domotica', component:DomoticaComponent},
   {path: 'Cableado', component:CableadoComponent},
   {path: 'Software', component:SoftwareComponent},
+  {path: 'Hardware', component:HardwareComponent},
   {path: '', redirectTo: 'Inicio', pathMatch: 'full'},
 ];
 
