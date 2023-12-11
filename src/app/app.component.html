@@ -13,7 +13,7 @@
             <span></span>
             <span></span>
         </div>
-        <div class="menu" [class.menuClass] = "menuCel">
+        <div class="menu" [class.menuClass] = "menuCel" style="margin-left: 30%; transform: translateX(-50%);">
             <ul>
                 <a mat-button routerLink = "Inicio" (click)="abrirMenu()">Inicio</a>
                 <a mat-button routerLink = "Empresa" routerLinkactive="active" (click)="abrirMenu()">Empresa</a>
@@ -25,7 +25,9 @@
                 </a>
                 <a mat-button routerLink = "escogernos" (click)="abrirMenu()">¿Por qué escogernos?</a>
                 
-                <span class="material-symbols-outlined">shopping_cart_checkout</span>
+                <!-- <a mat-button routerLink = "escogernos" (click)="abrirMenu()">
+                    <span class="material-symbols-outlined">shopping_cart_checkout</span>
+                </a> -->
             </ul>
         </div>
 

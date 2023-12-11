@@ -176,7 +176,7 @@ body {
     }
 
     .mat-toolbar.mat-primary {
-      background: #005f75;
-      color: #FFFF;
+      background: white;
+      color: #005f75;
     }
 }
