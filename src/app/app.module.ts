@@ -22,6 +22,7 @@ import { DomoticaComponent } from './domotica/domotica.component';
 import { CableadoComponent } from './cableado/cableado.component';
 import * as AOS from 'aos';
 import { SoftwareComponent } from './software/software.component';
+import { HardwareComponent } from './hardware/hardware.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { SoftwareComponent } from './software/software.component';
     CctvComponent,
     DomoticaComponent,
     CableadoComponent,
-    SoftwareComponent
+    SoftwareComponent,
+    HardwareComponent
 
   ],
   imports: [
