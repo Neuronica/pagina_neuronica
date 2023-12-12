@@ -1,3 +1,6 @@
+body{
+    background-color: white;
+}
 
 .imagenFondo{
     width: auto;
@@ -34,9 +37,10 @@ h2{
 
 h3{
     font-family: 'Nunito', sans-serif;
-    text-align: center;
     color: black;
-    font-size: 20px; 
+    font-size: 1.2rem; 
+    text-align: center;
+    transform: translateY(-4rem);
 }
 
 h4{
@@ -120,7 +124,7 @@ mat-toolbar{
     .icono_menu span{
         width: 40px;
         height: 2px;
-        background: #005f75;
+        background: white;
         display: block;
     }
 

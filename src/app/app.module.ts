@@ -9,8 +9,6 @@ import {MatMenuModule} from '@angular/material/menu';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NmenuComponent } from './nmenu/nmenu.component';
-import { LinkPaginasComponent } from './link-paginas/link-paginas.component';
 import { EmpresaComponent } from './empresa/empresa.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ServiciosComponent } from './servicios/servicios.component';
@@ -27,8 +25,6 @@ import * as AOS from 'aos';
 @NgModule({
   declarations: [
     AppComponent,
-    NmenuComponent,
-    LinkPaginasComponent,
     EmpresaComponent,
     InicioComponent,
     ServiciosComponent,
