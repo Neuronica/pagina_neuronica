@@ -177,10 +177,26 @@ body {
   }
 
   @media only screen and (max-width: 699px){
+    .boton{
+      background-color: #005f75;
+      color: white;
+      border-radius: 3vw;
+      border: 2px solid #005f75;
+      width: 6rem;
+      height: 2rem;
+      font-family: 'Nunito', sans-serif;
+    }
+
     .imagen{
       width:50vw;
       height:auto;
       border-radius: 5%
+    }
+
+    .imagen2{
+      width:40vw;
+      height:auto;
+      border-radius: 5%;
     }
     
     .imagen3{
