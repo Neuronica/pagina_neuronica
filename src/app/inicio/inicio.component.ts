@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import * as Aos from 'aos';
 import * as AOS from 'aos';
 
 @Component({

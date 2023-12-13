@@ -7,11 +7,11 @@ body {
 }
 
 .spacer{
-  height: 22rem;
+  height: 20vw;
 }
 
 .spacer2{
-  height: 2.5rem;
+  height: 2.2vw;
 }
 
 .fondo{
@@ -22,7 +22,7 @@ body {
   
 .contenedorColumnas{
   background-color: #ffff;
-  border-radius: 3rem;
+  border-radius: 3vw;
   position: relative;
   margin: auto;
   width: 80%;
@@ -51,8 +51,8 @@ body {
   margin: auto;
   height: auto;
   width: 85%;
-  border-radius: 3rem;
-  border: 1px solid #005f75;
+  border-radius: 3vw;
+  border: 0.1rem solid #005f75;
 }
 
 .islaTitulo{
@@ -62,7 +62,7 @@ body {
   margin-left: 10%;
   margin-right: 10%;
   height: getheight;
-  border-radius: 3rem;
+  border-radius: 3vw;
   border-color: #750049;
 }
 
@@ -74,14 +74,13 @@ body {
   margin-right: 0%;
   margin-top: 0%;
   margin-bottom: 0%;
-
-  border-radius: 3rem;
+  border-radius: 3vw;
 }
 
 .boton{
   background-color: #005f75;
   color: white;
-  border-radius: 2rem;
+  border-radius: 3vw;
   border: 2px solid #005f75;
   width: 8rem;
   height: 3rem;
@@ -95,12 +94,12 @@ body {
 
 .cuadrado{
   width: 90%; 
-  height: 1px; 
+  height: 0.1rem; 
   background: #750049;
 }
 
 .subcuadro{
-  border: 1px solid #005f75;
+  border: 0.1rem solid #005f75;
   text-align: justify;
   display: 50%;
   flex: 50%;
@@ -110,13 +109,19 @@ body {
 }
 
 .imagen{
-  width:25rem;
+  width:25vw;
   height:auto;
   border-radius: 5%
 }
 
 .imagen2{
-  width:15rem;
+  width:15vw;
+  height:auto;
+  border-radius: 5%;
+}
+
+.imagen3{
+  width:40vw;
   height:auto;
   border-radius: 5%;
 }
@@ -136,7 +141,7 @@ body {
     padding: 0;
     border: 0;
     cursor: pointer;
-    width: 120px;
+    width: 0rem;
   }
 
   .sticker{
@@ -144,15 +149,15 @@ body {
     padding: 0;
     border: 0;
     cursor: pointer;
-    width: 100px;
+    width: 7vw;
     transform: rotate(330deg);
   }
   
   .icon-button .icon {
-    width: 120px;
+    width: 9vw;
   }
   .sticker .icon{
-    width: 120px;
+    width: 9vw;
   }
 
   a{
@@ -165,7 +170,23 @@ body {
       color: #750049;
   }
 
-  @media only screen and (max-width: 1000px){
+  @media only screen and (max-width: 699px){
+    .imagen{
+      width:50vw;
+      height:auto;
+      border-radius: 5%
+    }
+    
+    .imagen3{
+      width:75vw;
+      height:auto;
+      border-radius: 5%;
+    }
+
+    .sticker{
+      display: none;
+    }
+
     .icon-button .icon {
       width: 100px;
       align-items: center;
@@ -178,5 +199,10 @@ body {
     .mat-toolbar.mat-primary {
       background: white;
       color: #005f75;
+    }
+
+    .dosColumnas{
+      width: 100%;
+      float: none;
     }
 }

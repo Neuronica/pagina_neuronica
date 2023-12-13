@@ -13,8 +13,8 @@
             <span></span>
             <span></span>
         </div>
-        <div class="menu" [class.menuClass] = "menuCel" style="margin-left: 35%; transform: translateX(-50%);">
-            <ul>
+        <div class="menu" [class.menuClass] = "menuCel" style="margin-left: 20vw; margin-right: 5vw">
+            <ul >
                 <a mat-button routerLink = "Inicio" (click)="abrirMenu()">Inicio</a>
                 <a mat-button routerLink = "Empresa" routerLinkactive="active" (click)="abrirMenu()">Empresa</a>
                 <a mat-button [matMenuTriggerFor]="Servicios" routerLink = "Servicios" >
@@ -51,14 +51,14 @@
     </button>
 </mat-menu>
 
-<div class="contenedorcolumnas" color = "secundary" style="width: 100%; height: 50%;">
-        <div class="spacer2"></div>
-            <div class="filas" style="height: 50%;">
-                <div class="dosColumna">
+<div class="contenedorcolumnas" color = "secundary" style="width: 100%;">
+            <div class="filas" style="height: 5vw;">
+                <div class="dosColumnas">
                     <img class="sticker" src="assets/Imagenes/Sticker.png"/>
                 </div>
-                <div class="dosColumna">
-                    <h3 style="margin-right: 10%; margin-left: 10%;">
+                <div class="dosColumnas">
+                    <h3>
+                        <div class="spacer2"></div>
                         © 2023. Diseñado y desarrollado por Neurónica S.A.S
                    </h3>
                 </div>

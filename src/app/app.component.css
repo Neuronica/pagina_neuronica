@@ -39,8 +39,7 @@ h3{
     font-family: 'Nunito', sans-serif;
     color: black;
     font-size: 1.2rem; 
-    text-align: center;
-    transform: translateY(-4rem);
+    text-align: left;
 }
 
 h4{
@@ -58,8 +57,8 @@ h5{
 
 a{
     font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
-    margin-left: 8%;
+    font-size: 1.5vw;
+    margin-left: 2vw;
     color: #005f75;
 }
 
@@ -81,13 +80,20 @@ mat-toolbar{
     height: 7rem;
 }
 
+@media only screen and (min-width: 700px) and (max-width: 1000px){
+    h3{
+        font-family: 'Nunito', sans-serif;
+        color: black;
+        font-size: 1rem; 
+        text-align: center;
+    }
+}
 
-@media only screen and (max-width: 1000px){
-
+@media only screen and (max-width: 699px){
     .menu{
         position: absolute;
         top: -200px;
-        right: 50px;
+        right: 15vw;
         width: getwidth;
         height: getheight;
         background: none;
@@ -106,25 +112,16 @@ mat-toolbar{
         width: getwidth;
     }
     
-    .imagenFondo{
-        width: auto;
-        height: auto;
-        background-size: contain;
-        text-align: center;
-        background-color: white;
-    }
-
     .icono_menu {
         display: inline-block;
         position: relative;;
-        margin-right: 70%;
-        margin-left: 20%;
+        margin-left: 60vw;
     }
 
     .icono_menu span{
         width: 40px;
         height: 2px;
-        background: white;
+        background: #005f75;
         display: block;
     }
 
@@ -146,10 +143,16 @@ mat-toolbar{
     }
 
     .menuClass{
-        right: 30%;
+        right: 0%;
         top: 64px;
         background: white;
         animation-duration: 2s;
         animation-name: slidein;
+    }
+    h3{
+        font-family: 'Nunito', sans-serif;
+        color: black;
+        font-size: 1rem; 
+        text-align: center;
     }
 }
