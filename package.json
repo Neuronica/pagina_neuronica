@@ -25,6 +25,7 @@
     "@angular/platform-browser-dynamic": "^16.2.8",
     "@angular/platform-server": "^16.2.8",
     "@angular/router": "^16.2.8",
+    "@angular/ssr": "^17.0.7",
     "@font/nunito": "^1.0.3",
     "@nguniversal/express-engine": "^16.2.0",
     "aos": "^2.3.4",

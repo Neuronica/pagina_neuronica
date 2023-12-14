@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, PLATFORM_ID, Inject, OnInit} from '@angular/core';
+import { isPlatformBrowser, isPlatformServer} from '@angular/common';
 
 
 @Component({
@@ -6,27 +7,41 @@ import { Component, HostListener } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'neuronica';
   public getwidth: any;
   public getheight: any;
   public menuCel: boolean = false;
   public iconoVariable: boolean = false;
+
+  isBrowser: boolean;
+
+  constructor( @Inject(PLATFORM_ID) platformId: Object) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
+  
   abrirMenu(){
-    this.menuCel =! this.menuCel;
-    this.iconoVariable =! this.iconoVariable;
+    if (this.isBrowser){
+      this.menuCel =! this.menuCel;
+      this.iconoVariable =! this.iconoVariable;
+    }
   }
 
+
   ngOnInit(){
-    this.getwidth = window.innerWidth;
-    this.getheight = window.innerHeight;
+    if (this.isBrowser){
+      this.getwidth = window.innerWidth;
+      this.getheight = window.innerHeight;
+    }
   }
 
   @HostListener('window:resize', ['$event'])
 
   onWindowResize(){
-    this.getwidth = window.innerWidth;
-    this.getheight = window.innerHeight;
+    if (this.isBrowser){
+      this.getwidth = window.innerWidth;
+      this.getheight = window.innerHeight;
+    }
   }
 }
 
