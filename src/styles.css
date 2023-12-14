@@ -126,6 +126,12 @@ body {
   border-radius: 5%;
 }
 
+.imagen4{
+  width:25vw;
+  height:auto;
+  border-radius: 5%;
+}
+
 .video{
   margin-left: 15%;
   border-radius: 3vh; 
@@ -176,7 +182,7 @@ body {
       color: #750049;
   }
 
-  @media only screen and (max-width: 699px){
+  @media only screen and (max-width: 700px){
     .boton{
       background-color: #005f75;
       color: white;
@@ -203,6 +209,9 @@ body {
       width:75vw;
       height:auto;
       border-radius: 5%;
+    }
+    .imagen4{
+      display: none;
     }
 
     .video{
