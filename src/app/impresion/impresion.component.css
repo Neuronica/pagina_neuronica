@@ -1,0 +1,120 @@
+body{
+    background-color: white;
+}
+
+h1{
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    color: #005f75;
+    font-size: 6rem; 
+}
+
+h2{
+    font-family: 'Nunito', sans-serif;
+    color: #005f75;
+    font-size: 3rem;
+    line-height: 100%;
+}
+
+h3{
+    font-family: 'Nunito', sans-serif;
+    color: #750049;
+    font-size: 3rem; 
+}
+
+h4{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.4rem;
+    line-height: 150%;
+}
+
+a{
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+
+input{
+    background-color: #005f75;
+    font-family: 'Nunito', sans-serif;
+    color:#750049;
+    border-color: black;
+    border-radius: 10px;
+    height: 70%;
+    width: 40%;
+}
+
+.backimg{
+    background: url(impresion.png);
+    width: getwidth;
+    height: getheight;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+@media only screen and (min-width: 700px) and (max-width: 1000px){
+    h1{
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        color: #005f75;
+        font-size: 5rem; 
+    }
+
+    h2{
+        font-size: 2.5rem;
+    }
+
+    h3{
+        font-size: 2.2rem;
+    }
+
+    h4{
+        font-size: 0.9rem;
+        line-height: 150%;
+    }
+}
+@media only screen and (max-width: 700px){
+    h1{
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        color: #005f75;
+        font-size: 4rem; 
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    h3{
+        font-size: 1.8rem;
+    }
+
+    h4{
+        font-size: 0.9rem;
+        line-height: 150%;
+    }
+}
+@media only screen and (max-width: 470px){
+    h1{
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        color: #005f75;
+        font-size: 2.5rem; 
+    }
+}
+@media only screen and (max-width: 400px){
+    h1{
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        color: #005f75;
+        font-size: 2.5rem; 
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+    
+    h3{
+        font-size: 1rem;
+    }
+}

@@ -11,6 +11,7 @@ import { DomoticaComponent } from './domotica/domotica.component';
 import { CableadoComponent } from './cableado/cableado.component';
 import { SoftwareComponent } from './software/software.component';
 import { HardwareComponent } from './hardware/hardware.component';
+import { ImpresionComponent } from './impresion/impresion.component';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'Cableado', component:CableadoComponent},
   {path: 'Software', component:SoftwareComponent},
   {path: 'Hardware', component:HardwareComponent},
+  {path: 'Impresion', component:ImpresionComponent},
   {path: '', redirectTo: 'Inicio', pathMatch: 'full'},
 ];
 

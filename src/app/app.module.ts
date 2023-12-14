@@ -20,6 +20,7 @@ import { DomoticaComponent } from './domotica/domotica.component';
 import { CableadoComponent } from './cableado/cableado.component';
 import { SoftwareComponent } from './software/software.component';
 import { HardwareComponent } from './hardware/hardware.component';
+import { ImpresionComponent } from './impresion/impresion.component';
 import * as AOS from 'aos';
 
 @NgModule({
@@ -36,6 +37,7 @@ import * as AOS from 'aos';
     CableadoComponent,
     SoftwareComponent,
     HardwareComponent,
+    ImpresionComponent,
   ],
   imports: [
     BrowserModule,
