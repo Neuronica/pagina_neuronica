@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/neuronica/",
+    "public": "dist/neuronica/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
