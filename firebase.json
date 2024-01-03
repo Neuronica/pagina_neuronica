@@ -1,20 +1,23 @@
 {
-  "hosting": {
-    "public": "dist/neuronica/browser",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites":[
-      {
-        "source": "/robots.txt",
-        "destination":"/robots.txt"
-      },
-      {
-        "source": "**",
-        "destination":"/index.html"
+  "hosting": [
+    {
+      "target": "neuronica",
+      "public": "./dist/neuronica/browser",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "us-west1"
       }
-    ]
-  }
+    },
+    {
+      "target": "neuronica",
+      "source": ".",
+      "frameworksBackend": {
+        "region": "us-west1"
+      }
+    }
+  ]
 }

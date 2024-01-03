@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "pagina-neuronica"
+  },
+  "targets": {
+    "pagina-neuronica": {
+      "hosting": {
+        "neuronica": [
+          "pagina-neuronica"
+        ]
+      }
+    }
   }
 }

@@ -22,6 +22,8 @@ import { SoftwareComponent } from './software/software.component';
 import { HardwareComponent } from './hardware/hardware.component';
 import { ImpresionComponent } from './impresion/impresion.component';
 import * as AOS from 'aos';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getFunctions, provideFunctions } from '@angular/fire/functions';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import * as AOS from 'aos';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    provideFirebaseApp(() => initializeApp({"projectId":"pagina-neuronica","appId":"1:490354620288:web:4b47b4a3bf8292b27e3365","storageBucket":"pagina-neuronica.appspot.com","apiKey":"AIzaSyCehxyCwkvTQalStC5dS73oNNvOtKFOvVE","authDomain":"pagina-neuronica.firebaseapp.com","messagingSenderId":"490354620288"})),
+    provideFunctions(() => getFunctions())
   ],
   providers: [],
   bootstrap: [AppComponent]

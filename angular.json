@@ -13,7 +13,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "allowedCommonJsDependencies": ["classlist-polyfill", "lodash.debounce", "lodash.throttle"],
+            "allowedCommonJsDependencies": [
+              "classlist-polyfill",
+              "lodash.debounce",
+              "lodash.throttle"
+            ],
             "outputPath": "dist/neuronica/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -30,7 +34,9 @@
               "node_modules/aos/dist/aos.css",
               "src/styles.css"
             ],
-            "scripts": ["node_modules/aos/dist/aos.js"]
+            "scripts": [
+              "node_modules/aos/dist/aos.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -135,7 +141,19 @@
           "builder": "@nguniversal/builders:prerender",
           "options": {
             "routes": [
-              "/"
+              "/",
+              "/Inicio",
+              "/Empresa",
+              "/Servicios",
+              "/escogernos",
+              "/Hogar",
+              "/Empresarial",
+              "/Cctv",
+              "/Domotica",
+              "/Cableado",
+              "/Software",
+              "/Hardware",
+              "Impresion"
             ]
           },
           "configurations": {
@@ -149,6 +167,15 @@
             }
           },
           "defaultConfiguration": "production"
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2,
+            "browserTarget": "neuronica:build:production",
+            "serverTarget": "neuronica:server:production",
+            "prerenderTarget": "neuronica:prerender:production"
+          }
         }
       }
     }
