@@ -2,6 +2,23 @@ body{
     background-color: white;
 }
 
+.boton_flotante{
+    width: 80px;
+    height: 80px;
+    background-color: #005f75;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 40px;
+    box-shadow: 2px 2px 5px rgb(0,0,0, 0.25);
+    position: fixed;
+    right: 20px;
+    bottom: 65px;
+}   
+
 .imagenFondo{
     width: auto;
     height: auto;

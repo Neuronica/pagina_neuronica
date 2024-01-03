@@ -20,9 +20,9 @@ export class CableadoComponent {
     window.addEventListener('load', AOS.refresh);
     this.getwidth = window.innerWidth;
     this.getheight = window.innerHeight;
-    this.title.setTitle("Cableado Estructurado para Empresas en Bogotá | Neurónica Ingeniería");
-    this.meta.addTag({name: 'description', content: 'Conecta tu empresa al futuro con las soluciones de cableado estructurado de Neurónica Ingeniería en Bogotá. Descubre qué es el cableado estructurado, sus elementos clave, y cómo nuestros proyectos garantizan redes eficientes y confiables. Desde el medio de transmisión hasta los armarios de comunicación, utilizamos cables UTP de alta calidad. Explora las diferentes categorías, desde Cat5e hasta Cat8, y los beneficios que ofrecemos: escalabilidad, fiabilidad, organización y mejora de la productividad. Optimiza tu infraestructura de red con nosotros.'});
-    this.meta.addTag({name: 'keywords', content: 'Cableado estructurado Bogotá, Soluciones de cableado para empresas, Redes eficientes y confiables, Elementos de cableado estructurado, Medio de transmisión UTP, Puntos de acceso WiFi, Paneles de conexión en telecomunicaciones, Armarios de comunicación, Tipos de cable UTP, Beneficios del cableado estructurado.'});
+    this.title.setTitle("Neurónica: Especialistas en Cableado Estructurado para Empresas en Bogotá");
+    this.meta.addTag({name: 'description', content: 'Mejore la conectividad empresarial en Bogotá con Neurónica, expertos en cableado estructurado. Servicios de instalación y certificación de redes de voz, datos y video para empresas con modelos de trabajo presencial o híbrido. Soluciones escalables y proyectos de mantenimiento. ¡Optimice su infraestructura hoy! #CableadoEstructurado #EmpresasBogotá #ConectividadEficiente'});
+    this.meta.addTag({name: 'keywords', content: 'instalación de redes de computadores, cableado estructurado en bogotá, cableado estructurado empresas, instalación de redes locales, cableado estructurado y redes'});
   }
 
   @HostListener('window:resize', ['$event'])

@@ -24,7 +24,7 @@ const routes: Routes = [
   {path: 'Empresarial', component: EmpresarialComponent},
   {path: 'Cctv', component:CctvComponent},
   {path: 'Domotica', component:DomoticaComponent},
-  {path: 'Cableado', component:CableadoComponent},
+  {path: 'cableado-estructurado', component:CableadoComponent},
   {path: 'Software', component:SoftwareComponent},
   {path: 'Hardware', component:HardwareComponent},
   {path: 'Impresion', component:ImpresionComponent},
