@@ -25,8 +25,8 @@ const routes: Routes = [
   {path: 'Cctv', component:CctvComponent},
   {path: 'Domotica', component:DomoticaComponent},
   {path: 'cableado-estructurado', component:CableadoComponent},
-  {path: 'Software', component:SoftwareComponent},
-  {path: 'Hardware', component:HardwareComponent},
+  {path: 'desarrollo-de-software-a-medida', component:SoftwareComponent},
+  {path: 'diseno-y-desarrollo-electronico', component:HardwareComponent},
   {path: 'Impresion', component:ImpresionComponent},
   {path: '', redirectTo: 'Inicio', pathMatch: 'full'},
 ];

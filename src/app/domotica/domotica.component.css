@@ -29,6 +29,12 @@ h4{
     line-height: 150%;
 }
 
+p{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.4rem;
+    line-height: 150%;
+}
+
 a{
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
@@ -74,6 +80,11 @@ input{
         font-size: 0.9rem;
         line-height: 150%;
     }
+
+    p{
+        font-size: 0.9rem;
+        line-height: 150%;
+    }
 }
 
 @media only screen and (max-width: 700px){
@@ -93,6 +104,11 @@ input{
     }
 
     h4{
+        font-size: 0.9rem;
+        line-height: 150%;
+    }
+
+    p{
         font-size: 0.9rem;
         line-height: 150%;
     }

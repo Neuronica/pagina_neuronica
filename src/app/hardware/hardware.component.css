@@ -17,12 +17,18 @@ h2{
 }
 
 h3{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.4rem;
+    line-height: 150%;
+}
+
+h4{
     font-family: 'Nunito', sans-serif;
     color: #750049;
     font-size: 3rem; 
 }
 
-h4{
+p{
     font-family: 'Nunito Sans', sans-serif;
     font-size: 1.4rem;
     line-height: 150%;
@@ -66,10 +72,15 @@ input{
     }
 
     h3{
-        font-size: 2.2rem;
+        font-size: 0.9rem;
+        line-height: 150%;
     }
 
     h4{
+        font-size: 2.2rem;
+    }
+
+    p{
         font-size: 0.9rem;
         line-height: 150%;
     }
@@ -87,10 +98,15 @@ input{
     }
 
     h3{
-        font-size: 1.8rem;
+        font-size: 0.9rem;
+        line-height: 150%;
     }
 
     h4{
+        font-size: 1.8rem;
+    }
+
+    p{
         font-size: 0.9rem;
         line-height: 150%;
     }
@@ -114,7 +130,7 @@ input{
         font-size: 1.2rem;
     }
     
-    h3{
+    h4{
         font-size: 1rem;
     }
 }
