@@ -35,6 +35,7 @@
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
     "rxjs": "~7.8.1",
+    "sitemap": "^7.1.1",
     "tslib": "^2.6.2",
     "zone.js": "~0.14.0"
   },
@@ -53,6 +54,8 @@
     "karma-coverage": "~2.2.1",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "next-sitemap": "^4.2.3",
+    "ngx-sitemap": "^1.0.0",
     "typescript": "^4.9.3"
   }
 }
