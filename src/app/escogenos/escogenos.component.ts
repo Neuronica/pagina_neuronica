@@ -18,8 +18,8 @@ export class EscogenosComponent {
     window.addEventListener('load', AOS.refresh);
     this.getwidth = window.innerWidth;
     this.getheight = window.innerHeight;
-    this.title.setTitle("Ingeniería a Medida en Bogotá | Neurónica S.A.S");
-    this.meta.addTag({name: 'description', content: 'Descubre por qué Neurónica S.A.S es la elección destacada en ingeniería a medida en Bogotá. Como pioneros en la cuarta revolución industrial, revitalizamos el sector empresarial y llevamos innovación a cada hogar. Nuestro equipo altamente capacitado en ingeniería mecánica y electrónica se compromete con la creación de productos y soluciones excepcionales. Ofrecemos un enfoque holístico centrado en el cliente, garantizando un funcionamiento óptimo, mantenimiento en conformidad con normativas e actualizaciones oportunas. Únete a Neurónica para formar parte de una fuerza impulsora que abraza el futuro con confianza y determinación.'});
+    this.title.setTitle("Neurónica S.A.S: Ingeniería a la Medida para Empresas y Hogares del Futuro");
+    this.meta.addTag({name: 'description', content: 'Descubre en Neurónica S.A.S un proyecto visionario dedicado a instaurar las tecnologías de la cuarta revolución industrial en el tejido empresarial actual. Con ingenieros altamente capacitados en ingeniería mecánica y electrónica, ofrecemos soluciones y productos que trascienden lo convencional. Desde la creación hasta el mantenimiento y las actualizaciones, nos comprometemos a brindar una experiencia excepcional, fusionando innovación, pasión y un compromiso indeclinable con la excelencia. Únete a nosotros en la creación de un futuro empresarial y doméstico confiado y determinado.'});
     this.meta.addTag({name: 'keywords', content: 'Ingeniería a medida Bogotá, Revolución industrial, Sector empresarial innovador, Ingeniería mecánica y electrónica, Enfoque holístico al cliente, Mantenimiento y actualizaciones, Relación calidad-valor, Innovación y pasión, Fuerza impulsora empresarial.'});
   }
 

@@ -2,11 +2,21 @@
   "hosting": [
     {
       "target": "neuronica",
-      "public": "./dist/neuronica/browser",
+      "public": "./dist/neuronica/browser/",
       "ignore": [
         "firebase.json",
         "**/.*",
         "**/node_modules/**"
+      ],
+      "rewrites":[
+        {
+          "source":"robots.txt",
+          "destination":"robots.txt"
+        },
+        {
+          "source":"**",
+          "destination":"index.html"
+        }
       ],
       "frameworksBackend": {
         "region": "us-west1"

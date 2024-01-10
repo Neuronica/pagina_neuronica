@@ -15,15 +15,15 @@
         </div>
         <div class="menu" [class.menuClass] = "menuCel" style="margin-left: 20vw; margin-right: 5vw">
             <ul >
-                <a mat-button routerLink = "Inicio" (click)="abrirMenu()">Inicio</a>
-                <a mat-button routerLink = "Empresa" routerLinkactive="active" (click)="abrirMenu()">Empresa</a>
-                <a mat-button [matMenuTriggerFor]="Servicios" routerLink = "Servicios" >
+                <a mat-button routerLink = "" (click)="abrirMenu()">Inicio</a>
+                <a mat-button routerLink = "quienes-somos-neuronica" routerLinkactive="active" (click)="abrirMenu()">Empresa</a>
+                <a mat-button [matMenuTriggerFor]="Servicios" routerLink = "servicios-de-ingenieria" >
                     <div class="deplegable">
                         <span>Productos y Servicios</span>
                         <i class="material-icons">arrow_drop_down</i>
                     </div>
                 </a>
-                <a mat-button routerLink = "escogernos" (click)="abrirMenu()">¿Por qué escogernos?</a>
+                <a mat-button routerLink = "por-que-escogernos-neuronica" (click)="abrirMenu()">¿Por qué escogernos?</a>
                 
                 <!-- <a mat-button routerLink = "escogernos" (click)="abrirMenu()">
                     <span class="material-symbols-outlined">shopping_cart_checkout</span>
@@ -39,13 +39,13 @@
 
 <mat-menu #Servicios="matMenu" >
     <button mat-menu-item class="submenu" (click)="abrirMenu()">
-        <a  mat-button routerLink = "Hogar" class="submenu" routerLinkactive="active">
+        <a  mat-button routerLink = "ingenieria-para-hogar" class="submenu" routerLinkactive="active">
             Ingeniería para hogar
         </a>
     </button>
 
     <button mat-menu-item class="submenu" (click)="abrirMenu()">
-        <a  mat-button routerLink = "Empresarial" class="submenu" routerLinkactive="active">
+        <a  mat-button routerLink = "ingenieria-empresarial" class="submenu" routerLinkactive="active">
             Ingeniería Empresarial
         </a>      
     </button>
@@ -57,7 +57,7 @@
 <div class="contenedorcolumnas" color = "secundary" style="width: 100%;">
             <div class="filas" style="height: 5vw;">
                 <div class="dosColumnas">
-                    <img class="sticker" src="assets/Imagenes/Sticker.png"/>
+                    <img class="sticker" src="assets/Imagenes/neuronica_software.png"/>
                 </div>
                 <div class="dosColumnas">
                     <h3>

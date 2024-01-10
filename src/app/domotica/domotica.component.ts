@@ -19,8 +19,8 @@ export class DomoticaComponent {
     window.addEventListener('load', AOS.refresh);
     this.getwidth = window.innerWidth;
     this.getheight = window.innerHeight;
-    this.title.setTitle("Domótica Personalizada en Bogotá | Neurónica - Tecnología e Innovación");
-    this.meta.addTag({name: 'description', content: 'Descubre la tecnología e innovación en tu hogar con los servicios de domótica personalizada de Neurónica en Bogotá. Exploramos qué es la domótica y cómo puede transformar tu hogar en un espacio inteligente y eficiente. Nuestro equipo de ingenieros expertos diseña proyectos a medida, brindando soluciones innovadoras para mejorar tu calidad de vida. Control remoto, eficiencia energética, seguridad avanzada y adaptabilidad personalizada son solo algunas de las ventajas que ofrecemos. ¡Transforma tu hogar con Neurónica y descubre el futuro de la ingeniería aplicada a tu vida diaria!.'});
+    this.title.setTitle("Vive el Futuro con Nuestra Domótica Personalizada en Bogotá");
+    this.meta.addTag({name: 'description', content: 'En Neurónica, llevamos la tecnología e innovación directamente a tu hogar con nuestra domótica personalizada en Bogotá. Descubre los beneficios de control remoto, eficiencia energética, seguridad avanzada y adaptabilidad personalizada. Desde iluminación inteligente hasta automatización de cortinas, diseñamos soluciones que se ajustan a tu estilo de vida. Transforma tu hogar en un espacio inteligente y eficiente con los proyectos a medida de Neurónica. ¡Contáctanos y experimenta el futuro de la ingeniería aplicada a tu vida diaria!'});
     this.meta.addTag({name: 'keywords', content: 'Domótica personalizada Bogotá, Tecnología e innovación en el hogar, Transformación a espacio inteligente, Ingeniería en Bogotá, Control remoto del hogar, Eficiencia energética domótica, Seguridad avanzada para hogares, Adaptabilidad personalizada en ingeniería, Ejemplos de domótica.'});
   }
 

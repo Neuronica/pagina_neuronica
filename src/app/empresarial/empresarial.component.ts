@@ -18,8 +18,8 @@ export class EmpresarialComponent {
     window.addEventListener('load', AOS.refresh);
     this.getwidth = window.innerWidth;
     this.getheight = window.innerHeight;
-    this.title.setTitle("Ingeniería Empresarial en Bogotá | Neurónica");
-    this.meta.addTag({name: 'description', content: 'Descubre la ingeniería empresarial de Neurónica en Bogotá, impulsando la eficiencia y el crecimiento de empresas. Conecta tu mundo con precisión a través de nuestro servicio de cableado estructurado. Desde el diseño electrónico y prototipado hasta software a medida, transformamos ideas en soluciones únicas. Revoluciona la manufactura con nuestra impresión 3D a medida. En cada proyecto, aplicamos tecnologías avanzadas para asegurar el éxito de nuestros clientes. ¡Innova con nosotros y crea el futuro empresarial con Neurónica.'});
+    this.title.setTitle("Ingeniería Empresarial en Neurónica: Potenciando la Eficiencia y Crecimiento Empresarial");
+    this.meta.addTag({name: 'description', content: 'Transformamos empresas en entidades más eficientes y vibrantes en Neurónica. Como tu socio estratégico, ponemos las tecnologías más avanzadas a tu disposición para solventar desafíos, optimizar operaciones y fomentar el crecimiento. Desde cableado estructurado hasta software a medida y servicios de impresión 3D, aplicamos innovación y precisión en cada proyecto. Descubre cómo Neurónica puede potenciar tu empresa con soluciones a la medida que impulsan el éxito empresarial.'});
     this.meta.addTag({name: 'keywords', content: 'Ingeniería empresarial Bogotá, Cableado estructurado Neurónica, Software a medida empresas, Diseño electrónico y prototipado, Impresión 3D personalizada, Eficiencia operativa, Innovación en empresas, Tecnologías avanzadas, Crecimiento empresarial.'});
   }
 

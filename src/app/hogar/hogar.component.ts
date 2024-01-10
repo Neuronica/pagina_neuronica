@@ -18,8 +18,8 @@ export class HogarComponent {
     window.addEventListener('load', AOS.refresh);
     this.getwidth = window.innerWidth;
     this.getheight = window.innerHeight;
-    this.title.setTitle("Ingeniería para Hogar en Bogotá | CCTV y Domótica");
-    this.meta.addTag({name: 'description', content: 'Explora la ingeniería para hogar de Neurónica en Bogotá, brindando servicios que mejoran la comodidad y seguridad de tu hogar. Descubre la excelencia en seguridad con nuestro servicio de CCTV, ofreciendo soluciones avanzadas para proteger lo que más valoras. Transforma tus ideas en realidad con nuestra domótica personalizada, convirtiendo tu hogar en un espacio innovador y cómodo. ¡Haz de Neurónica tu socio en la creación de un hogar más seguro y tecnológicamente avanzado!.'});
+    this.title.setTitle("Ingeniería para Hogar en Neurónica: Elevando Tu Experiencia con Servicios Personalizados");
+    this.meta.addTag({name: 'description', content: 'Experimenta hogares más cómodos y seguros con Neurónica. Nos comprometemos profundamente con la satisfacción de nuestros clientes, ofreciendo servicios personalizados que simplifican y mejoran tu entorno de vida. Desde avanzadas soluciones de CCTV hasta proyectos de domótica a medida, en Neurónica hacemos tus sueños tangibles. Descubre la innovación en cada rincón de tu hogar y hazlo más seguro, cómodo y tecnológicamente avanzado con nosotros.'});
     this.meta.addTag({name: 'keywords', content: 'Ingeniería para hogar Bogotá, Servicio CCTV Neurónica, Seguridad para hogares, Domótica personalizada Bogotá, Proyectos de domótica, Innovación en hogares, Comodidad y seguridad, Tecnología para el hogar.'});
   }
 

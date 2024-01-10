@@ -16,19 +16,19 @@ import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 
 const routes: Routes = [
-  {path: 'Inicio' , component: InicioComponent},
-  {path: 'Empresa' , component: EmpresaComponent},
-  {path: 'Servicios' , component: ServiciosComponent},  
-  {path: 'escogernos' , component: EscogenosComponent},
-  {path: 'Hogar' , component: HogarComponent},
-  {path: 'Empresarial', component: EmpresarialComponent},
-  {path: 'Cctv', component:CctvComponent},
-  {path: 'Domotica', component:DomoticaComponent},
-  {path: 'cableado-estructurado', component:CableadoComponent},
+  {path: '' , component: InicioComponent},
+  {path: 'quienes-somos-neuronica' , component: EmpresaComponent},
+  {path: 'servicios-de-ingenieria' , component: ServiciosComponent},  
+  {path: 'por-que-escogernos-neuronica' , component: EscogenosComponent},
+  {path: 'ingenieria-para-hogar' , component: HogarComponent},
+  {path: 'ingenieria-empresarial', component: EmpresarialComponent},
+  {path: 'cctv-bogota', component:CctvComponent},
+  {path: 'domotica-personalizada', component:DomoticaComponent},
+  {path: 'cableado-estructurado-bogota', component:CableadoComponent},
   {path: 'desarrollo-de-software-a-medida', component:SoftwareComponent},
   {path: 'diseno-y-desarrollo-electronico', component:HardwareComponent},
-  {path: 'Impresion', component:ImpresionComponent},
-  {path: '', redirectTo: 'Inicio', pathMatch: 'full'},
+  {path: 'impresion-3d-bogota', component:ImpresionComponent},
+  {path: '', redirectTo: '/', pathMatch: 'full'},
 ];
 
 @NgModule({
