@@ -140,40 +140,19 @@
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
           "options": {
-            "routes": [
-              "",
-              "/quienes-somos-neuronica",
-              "/servicios-de-ingenieria",
-              "/por-que-escogernos-neuronica",
-              "/ingenieria-para-hogar",
-              "/ingenieria-empresarial",
-              "/cctv-bogota",
-              "/domotica-personalizada",
-              "/cableado-estructurado-bogota",
-              "/desarrollo-de-software-a-medida",
-              "/diseno-y-desarrollo-electronico",
-              "impresion-3d-bogota"
-            ]
+            "routes": ["", "quienes-somos-neuronica", "AND_ANOTHER"]
           },
           "configurations": {
-            "production": {
-              "browserTarget": "neuronica:build:production",
-              "serverTarget": "neuronica:server:production"
-            },
-            "development": {
-              "browserTarget": "neuronica:build:development",
-              "serverTarget": "neuronica:server:development"
-            }
+
           },
           "defaultConfiguration": "production"
         },
         "deploy": {
           "builder": "@angular/fire:deploy",
           "options": {
-            "version": 2,
-            "browserTarget": "neuronica:build:production",
-            "serverTarget": "neuronica:server:production",
-            "prerenderTarget": "neuronica:prerender:production"
+            "browserTarget": "app:build:production",
+            "serverTarget": "app:server:production",
+            "prerenderTarget": "app:prerender:production"
           }
         }
       }
