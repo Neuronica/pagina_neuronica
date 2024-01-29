@@ -16,7 +16,7 @@ body {
 
 .fondo{
   background: url(Fondo.png);
-  background-size: cover;
+  background-size: auto;
 }
 
   

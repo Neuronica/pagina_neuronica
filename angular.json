@@ -143,16 +143,16 @@
           "options": {
             "routes": [
               "",
-              "/quienes-somos-neuronica",
-              "/servicios-de-ingenieria",
-              "/por-que-escogernos-neuronica",
-              "/ingenieria-para-hogar",
-              "/ingenieria-empresarial",
-              "/cctv-bogota",
-              "/domotica-personalizada",
-              "/cableado-estructurado-bogota",
-              "/desarrollo-de-software-a-medida",
-              "/diseno-y-desarrollo-electronico",
+              "quienes-somos-neuronica",
+              "servicios-de-ingenieria",
+              "por-que-escogernos-neuronica",
+              "ingenieria-para-hogar",
+              "ingenieria-empresarial",
+              "cctv-bogota",
+              "domotica-personalizada",
+              "cableado-estructurado-bogota",
+              "desarrollo-de-software-a-medida",
+              "diseno-y-desarrollo-electronico",
               "impresion-3d-bogota"
             ]
           },
