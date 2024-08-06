@@ -158,24 +158,16 @@
             ]
           },
           "configurations": {
-            "production": {
-              "browserTarget": "neuronica:build:production",
-              "serverTarget": "neuronica:server:production"
-            },
-            "development": {
-              "browserTarget": "neuronica:build:development",
-              "serverTarget": "neuronica:server:development"
-            }
+
           },
           "defaultConfiguration": "production"
         },
         "deploy": {
           "builder": "@angular/fire:deploy",
           "options": {
-            "version": 2,
-            "browserTarget": "neuronica:build:production",
-            "serverTarget": "neuronica:server:production",
-            "prerenderTarget": "neuronica:prerender:production"
+            "browserTarget": "app:build:production",
+            "serverTarget": "app:server:production",
+            "prerenderTarget": "app:prerender:production"
           }
         }
       }
