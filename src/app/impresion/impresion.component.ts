@@ -14,7 +14,7 @@ export class ImpresionComponent {
   iconoVariable: boolean = false;
 
   constructor(private title:Title, private meta:Meta){}
-
+  
   ngOnInit(){
     AOS.init();
     window.addEventListener('load', AOS.refresh);
