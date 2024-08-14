@@ -14,6 +14,10 @@ body {
   height: 2.2vw;
 }
 
+.spacerTopImage{
+  height: 10vw;
+}
+
 .fondo{
   background: url(Fondo.png);
   background-size: auto;
@@ -52,15 +56,15 @@ body {
   height: auto;
   width: 85%;
   border-radius: 3vw;
-  border: 0.1rem solid #005f75;
+  border: 0.1rem solid #D37600;
 }
 
 .islaTitulo{
 
   display: block;
   margin-top: 0%;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 0%;
+  margin-right: 0%;
   height: getheight;
   border-radius: 3vw;
   border-color: #750049;
@@ -70,20 +74,20 @@ body {
   background-color: rgba(255, 255, 255, 0.45);
   display: block;
   text-align: center;
-  margin-left: 0%;
-  margin-right: 0%;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 0%;
   margin-bottom: 0%;
   border-radius: 3vw;
 }
 
 .boton{
-  background-color: #005f75;
+  background-color: #D37600;
   color: white;
   border-radius: 3vw;
-  border: 2px solid #005f75;
+  border: 2px solid #D37600;
   width: 8rem;
-  height: 3rem;
+  height: 2rem;
   font-family: 'Nunito', sans-serif;
 }
 
@@ -95,11 +99,11 @@ body {
 .cuadrado{
   width: 90%; 
   height: 0.1rem; 
-  background: #750049;
+  background: #D37600;
 }
 
 .subcuadro{
-  border: 0.1rem solid #005f75;
+  border: 0.1rem solid #D37600;
   text-align: justify;
   display: 50%;
   flex: 50%;
@@ -109,7 +113,7 @@ body {
 }
 
 .imagen{
-  width:25vw;
+  width:18vw;
   height:auto;
   border-radius: 5%
 }
@@ -130,6 +134,11 @@ body {
   width:25vw;
   height:auto;
   border-radius: 5%;
+}
+
+.imagenLogo{
+  width: 8vw;
+  height: auto;
 }
 
 .video{
@@ -166,20 +175,20 @@ body {
   }
   
   .icon-button .icon {
-    width: 9vw;
+    width: 5vw;
   }
   .sticker .icon{
-    width: 9vw;
+    width: 7vw;
   }
 
   a{
     font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
+    font-size: 2px;
     margin-left: 8%;
   }
 
   a:hover{
-      color: #750049;
+      color: #005f75;
   }
 
   @media only screen and (max-width: 700px){
