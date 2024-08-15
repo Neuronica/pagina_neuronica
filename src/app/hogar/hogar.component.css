@@ -6,40 +6,33 @@ h1{
     font-family: 'Nunito', sans-serif;
     text-align: center;
     color: #005f75;
-    font-size: 6rem; 
+    font-size: 52px; 
     line-height: 95%;
 }
 
 h2{
     font-family: 'Nunito', sans-serif;
     color: #005f75;
-    font-size: 3rem;
+    font-size: 35px;
     line-height: 100%;
 }
 
 h4{
     font-family: 'Nunito', sans-serif;
     color: #750049;
-    font-size: 3rem; 
+    font-size: 35px; 
 }
 
 h3{
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1rem;
     line-height: 150%;
 }
 
 p{
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1rem;
     line-height: 150%;
-}
-
-h5{
-    font-family: 'Nunito', sans-serif;
-    color: #005f75;
-    font-size: 2.5rem;
-    line-height: 100%;
 }
 
 a{
@@ -63,7 +56,8 @@ input{
     background: url(hogar.jpg);
     width: getwidth;
     height: getheight;
-    background-position: center;
+    background-position: top;
+    background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
 }
