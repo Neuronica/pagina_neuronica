@@ -193,10 +193,10 @@ body {
 
   @media only screen and (max-width: 700px){
     .boton{
-      background-color: #005f75;
+      background-color: #D37600;
       color: white;
       border-radius: 3vw;
-      border: 2px solid #005f75;
+      border: 2px solid #D37600;
       width: 6rem;
       height: 2rem;
       font-family: 'Nunito', sans-serif;

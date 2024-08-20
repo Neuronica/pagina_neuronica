@@ -97,7 +97,7 @@ mat-toolbar{
     height: 5rem;
 }
 
-@media only screen and (min-width: 700px) and (max-width: 1000px){
+@media only screen and (min-width: 701px) and (max-width: 1000px){
     h3{
         font-family: 'Nunito', sans-serif;
         color: black;
@@ -106,19 +106,19 @@ mat-toolbar{
     }
 }
 
-@media only screen and (max-width: 699px){
+@media only screen and (max-width: 700px){
     .menu{
         position: absolute;
         top: -200px;
         right: 15vw;
-        width: getwidth;
+        width: 100%;
         height: getheight;
         background: none;
     }
 
     a{
         display: block;
-        text-align: left;
+        text-align: center;
         margin: 0;
         font-size: 14px;
         
@@ -172,4 +172,20 @@ mat-toolbar{
         font-size: 1rem; 
         text-align: center;
     }
+    .boton_flotante{
+        width: 60px;
+        height: 60px;
+        background-color: #005f75;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border-radius: 50%;
+        color: white;
+        font-size: 40px;
+        box-shadow: 2px 2px 5px rgb(0,0,0, 0.25);
+        position: fixed;
+        right: 20px;
+        bottom: 80px;
+    }  
 }
