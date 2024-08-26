@@ -52,7 +52,7 @@ input{
 }
 
 .backimg{
-    background: url(1.jpg);
+    background: url(servicios.jpg);
     width: getwidth;
     height: getheight;
     background-position: top;
@@ -71,10 +71,10 @@ input{
     margin-left: 5%; 
     margin-right: 5%;
     width: 30vw; 
-    height: 28vw;
+    height: 45vw;
 }
 
-@media only screen and (min-width: 900px) and (max-width: 1190px){
+@media only screen and (min-width: 991px) and (max-width: 1170px){
     .subcuadro{
         border: 0.1rem solid #D37600;
         text-align: justify;
@@ -85,10 +85,10 @@ input{
         margin-left: 5%; 
         margin-right: 5%;
         width: 30vw; 
-        height: 35vw;
+        height: 50vw;
     }
 }
-@media only screen and (min-width: 801px) and (max-width: 900px){
+@media only screen and (min-width: 831px) and (max-width: 990px){
     
     .subcuadro{
         border: 0.1rem solid #D37600;
@@ -100,7 +100,7 @@ input{
         margin-left: 5%; 
         margin-right: 5%;
         width: 30vw; 
-        height: 40vw;
+        height: 60vw;
     }
 
     h1{
@@ -124,7 +124,7 @@ input{
     }
 }
 
-@media only screen and (min-width: 701px) and (max-width: 800px){
+@media only screen and (min-width: 701px) and (max-width: 830px){
     .subcuadro{
         border: 0.1rem solid #D37600;
         text-align: justify;
@@ -135,7 +135,7 @@ input{
         margin-left: 5%; 
         margin-right: 5%;
         width: 30vw;
-        height: 40vw;
+        height: 63vw;
     }
 
     h1{
@@ -207,67 +207,65 @@ input{
         color: #750049;
         font-size: 23px; 
     }
+h3{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.8rem;
+    line-height: 150%;
+}
 
-    h3{
-        font-family: 'Nunito Sans', sans-serif;
-        font-size: 0.8rem;
-        line-height: 150%;
-    }
-
-    p{
-        font-family: 'Nunito Sans', sans-serif;
-        font-size: 0.8rem;
-        line-height: 150%;
-    }
+p{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.8rem;
+    line-height: 150%;
+}
 }
 
 @media only screen and (max-width: 500px){
-    .imagenLogo{
+.imagenLogo{
 
-        height: auto;
-    }
-
-    .subcuadro{
-        border: 0.1rem solid #D37600;
-        text-align: justify;
-        width: 90%;
-        border-radius: 3vw;
-        margin-bottom: 5%;
-        margin-left: 5%; 
-        margin-right: 5%;
-        height: 90%;
-    }
-
-    h1{
-        font-family: 'Nunito', sans-serif;
-        text-align: center;
-        color: #005f75;
-        font-size: 40px; 
-    }
-
-    h2{
-        font-family: 'Nunito', sans-serif;
-        color: #005f75;
-        font-size: 23px;
-        line-height: 100%;
-    }
-
-    h4{
-        font-family: 'Nunito', sans-serif;
-        color: #750049;
-        font-size: 23px; 
-    }
-
-    h3{
-        font-family: 'Nunito Sans', sans-serif;
-        font-size: 0.8rem;
-        line-height: 150%;
-    }
-
-    p{
-        font-family: 'Nunito Sans', sans-serif;
-        font-size: 0.8rem;
-        line-height: 150%;
-    }
+    height: auto;
 }
 
+.subcuadro{
+    border: 0.1rem solid #D37600;
+    text-align: justify;
+    width: 90%;
+    border-radius: 3vw;
+    margin-bottom: 5%;
+    margin-left: 5%; 
+    margin-right: 5%;
+    height: 90%;
+}
+
+h1{
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    color: #005f75;
+    font-size: 40px; 
+}
+
+h2{
+    font-family: 'Nunito', sans-serif;
+    color: #005f75;
+    font-size: 23px;
+    line-height: 100%;
+}
+
+h4{
+    font-family: 'Nunito', sans-serif;
+    color: #750049;
+    font-size: 23px; 
+}
+
+h3{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.8rem;
+    line-height: 150%;
+}
+
+p{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.8rem;
+    line-height: 150%;
+}
+}
