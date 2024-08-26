@@ -113,7 +113,7 @@ body {
 }
 
 .imagen{
-  width:18vw;
+  width:80%;
   height:auto;
   border-radius: 5%
 }
@@ -137,7 +137,7 @@ body {
 }
 
 .imagenLogo{
-  width: 8vw;
+  width: 80px;
   height: auto;
 }
 
@@ -170,15 +170,15 @@ body {
     padding: 0;
     border: 0;
     cursor: pointer;
-    width: 7vw;
+    width: 60px;
     transform: rotate(330deg);
   }
   
   .icon-button .icon {
-    width: 5vw;
+    width: 60px;
   }
   .sticker .icon{
-    width: 7vw;
+    width: 8vh;
   }
 
   a{
@@ -192,60 +192,6 @@ body {
   }
 
   @media only screen and (max-width: 700px){
-    .boton{
-      background-color: #D37600;
-      color: white;
-      border-radius: 3vw;
-      border: 2px solid #D37600;
-      width: 6rem;
-      height: 2rem;
-      font-family: 'Nunito', sans-serif;
-    }
-
-    .imagen{
-      width:50vw;
-      height:auto;
-      border-radius: 5%
-    }
-
-    .imagen2{
-      width:40vw;
-      height:auto;
-      border-radius: 5%;
-    }
-    
-    .imagen3{
-      width:75vw;
-      height:auto;
-      border-radius: 5%;
-    }
-    .imagen4{
-      display: none;
-    }
-
-    .video{
-      margin-left: 15%;
-      border-radius: 3vh; 
-      width: 35vw;
-    }
-
-    .sticker{
-      display: none;
-    }
-
-    .icon-button .icon {
-      width: 100px;
-      align-items: center;
-    }
-
-    .icon-button{
-      align-items: center;
-    }
-
-    .mat-toolbar.mat-primary {
-      background: white;
-      color: #005f75;
-    }
 
     .dosColumnas{
       width: 100%;

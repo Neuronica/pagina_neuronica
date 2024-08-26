@@ -16,7 +16,7 @@ body{
     box-shadow: 2px 2px 5px rgb(0,0,0, 0.25);
     position: fixed;
     right: 20px;
-    bottom: 65px;
+    bottom: 80px;
 }   
 
 .imagenFondo{
@@ -34,10 +34,15 @@ body{
 .submenu{
     animation-duration: none;
     animation-name: none; 
+    
 }
 
 .material-symbols-outlined{
     margin-left: 30px;
+}
+
+.material-icons{
+    display: block;
 }
 
 h1{
@@ -97,6 +102,16 @@ mat-toolbar{
     height: 5rem;
 }
 
+.menu{
+    background: none;
+    position: relative;
+    margin-left: 30%;
+}
+
+.material-icons{
+    display: none;
+}
+
 @media only screen and (min-width: 701px) and (max-width: 1000px){
     h3{
         font-family: 'Nunito', sans-serif;
@@ -104,9 +119,23 @@ mat-toolbar{
         font-size: 1rem; 
         text-align: center;
     }
+
+    .material-icons{
+        display: none;
+    }
+
+    .menu{
+        position: relative;
+        background: none;
+        margin-left: 30%
+    }
 }
 
 @media only screen and (max-width: 700px){
+    .material-icons{
+        display: block;
+    }
+
     .menu{
         position: absolute;
         top: -200px;
@@ -118,51 +147,44 @@ mat-toolbar{
 
     a{
         display: block;
-        text-align: center;
+        text-align: left;
         margin: 0;
         font-size: 14px;
-        
     }
 
     mat-toolbar{
         height: getheight;
         width: getwidth;
     }
-    
+
     .icono_menu {
-        display: inline-block;
-        position: relative;;
-        margin-left: 60vw;
-    }
-
-    .icono_menu span{
-        width: 40px;
-        height: 2px;
+        margin-left: 80%;
         background: #005f75;
-        display: block;
+        border-radius: 5px;
+        color: white;
+        align-items: center;
     }
 
-    .icono_menu span:nth-child(2){
-        margin: 15% 0;
+      
+    .icono_menu_open {
+        background: #D37600;
+        margin-left: 80%;
+        border-radius: 5px;
+        align-items: center;
     }
-
-    .icono_menu_Class span:nth-child(2){
-        display: none;
-    }
-
-    .icono_menu_Class span:nth-child(1){
-        transform: rotate(-40deg);
-        margin: -2px;
-    }
-
-    .icono_menu_Class span:nth-child(3){
-        transform: rotate(40deg);
+      
+      
+    .icono_menu_Class {
+        background: #D37600;
+        margin-left: 70%;
     }
 
     .menuClass{
+        z-index: 1;
+        position: absolute;
         right: 0%;
         top: 64px;
-        background: white;
+        background-color: white;
         animation-duration: 2s;
         animation-name: slidein;
     }
@@ -187,5 +209,9 @@ mat-toolbar{
         position: fixed;
         right: 20px;
         bottom: 80px;
-    }  
+    }
+
+    .matMenuTriggerFor{
+        color: #005f75;
+    }
 }
