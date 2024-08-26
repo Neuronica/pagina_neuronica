@@ -142,9 +142,11 @@ body {
 }
 
 .video{
-  margin-left: 30%;
-  border-radius: 3vh; 
-  width: 10vw;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 20%;
+  border-radius: 3vw; 
+  width: 40%;
 }
 
   .mat-toolbar.mat-primary {
