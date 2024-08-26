@@ -207,17 +207,17 @@ input{
         color: #750049;
         font-size: 23px; 
     }
-h3{
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 0.8rem;
-    line-height: 150%;
-}
+    h3{
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 0.8rem;
+        line-height: 150%;
+    }
 
-p{
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 0.8rem;
-    line-height: 150%;
-}
+    p{
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 0.8rem;
+        line-height: 150%;
+    }
 }
 
 @media only screen and (max-width: 500px){

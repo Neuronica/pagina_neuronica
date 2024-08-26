@@ -88,7 +88,23 @@ input{
         height: 50vw;
     }
 }
-@media only screen and (min-width: 831px) and (max-width: 990px){
+
+@media only screen and (min-width: 901px) and (max-width: 990px){
+    .subcuadro{
+        border: 0.1rem solid #D37600;
+        text-align: justify;
+        display: 50%;
+        flex: 50%;
+        border-radius: 3vw;
+        margin-bottom: 5%;
+        margin-left: 5%; 
+        margin-right: 5%;
+        width: 30vw; 
+        height: 57vw;
+    }
+}
+
+@media only screen and (min-width: 851px) and (max-width: 900px){
     
     .subcuadro{
         border: 0.1rem solid #D37600;
@@ -124,7 +140,23 @@ input{
     }
 }
 
-@media only screen and (min-width: 701px) and (max-width: 830px){
+@media only screen and (min-width: 816px) and (max-width: 850px){
+    
+    .subcuadro{
+        border: 0.1rem solid #D37600;
+        text-align: justify;
+        display: 50%;
+        flex: 50%;
+        border-radius: 3vw;
+        margin-bottom: 5%;
+        margin-left: 5%; 
+        margin-right: 5%;
+        width: 30vw; 
+        height: 67vw;
+    }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 815px){
     .subcuadro{
         border: 0.1rem solid #D37600;
         text-align: justify;
