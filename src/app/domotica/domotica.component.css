@@ -206,7 +206,7 @@ input{
     }
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (min-width: 351px) and (max-width: 500px){
 .imagenLogo{
 
     height: auto;
@@ -254,4 +254,56 @@ p{
     font-size: 0.8rem;
     line-height: 150%;
 }
+}
+
+@media only screen and (max-width: 350px){
+
+    h1{
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        color: #005f75;
+        font-size: 35px; 
+    }
+
+    h4{
+        font-family: 'Nunito', sans-serif;
+        color: #750049;
+        font-size: 20px; 
+    }
+
+    .imagenLogo{
+
+        height: auto;
+    }
+    
+    .subcuadro{
+        border: 0.1rem solid #D37600;
+        text-align: justify;
+        width: 90%;
+        border-radius: 3vw;
+        margin-bottom: 5%;
+        margin-left: 5%; 
+        margin-right: 5%;
+        height: 90%;
+    }
+    
+    h2{
+        font-family: 'Nunito', sans-serif;
+        color: #005f75;
+        font-size: 23px;
+        line-height: 100%;
+    }
+    
+    
+    h3{
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 0.8rem;
+        line-height: 150%;
+    }
+    
+    p{
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 0.8rem;
+        line-height: 150%;
+    }
 }
