@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "neuronica:build:production"
+              "browserTarget": "app:build:production"
             },
             "development": {
-              "browserTarget": "neuronica:build:development"
+              "browserTarget": "app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "neuronica:build"
+            "browserTarget": "app:build"
           }
         },
         "test": {
@@ -129,12 +129,12 @@
           "builder": "@nguniversal/builders:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "neuronica:build:development",
-              "serverTarget": "neuronica:server:development"
+              "browserTarget": "app:build:development",
+              "serverTarget": "app:server:development"
             },
             "production": {
-              "browserTarget": "neuronica:build:production",
-              "serverTarget": "neuronica:server:production"
+              "browserTarget": "app:build:production",
+              "serverTarget": "app:server:production"
             }
           },
           "defaultConfiguration": "development"
@@ -158,15 +158,21 @@
             ]
           },
           "configurations": {
-
+            "production": {
+              "browserTarget": "app:build:production",
+              "serverTarget": "app:server:production"
+            }
           },
           "defaultConfiguration": "production"
         },
         "deploy": {
           "builder": "@angular/fire:deploy",
           "options": {
+            "prerender": true,
+            "ssr": true,
             "browserTarget": "app:build:production",
-            "serverTarget": "app:server:production",
+            "firebaseProject": "app",
+            "firebaseHostingSite": "app",
             "prerenderTarget": "app:prerender:production"
           }
         }

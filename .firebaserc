@@ -1,5 +1,19 @@
 {
   "projects": {
     "default": "pagina-neuronica"
-  }
+  },
+  "targets": {
+    "pagina-neuronica": {
+      "hosting": {
+        "app": [
+          "neuronica"
+        ],
+        "pagina-neuronica": [
+          "app"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
