@@ -48,6 +48,15 @@ body {
 .dosColumnas{
   width: 50%;
   float: left;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
+.dosColumnasFormulario{
+  width: 50%;
+  float: left;
+  justify-content: center; 
+  align-items: center;
 }
 
 .bordeAzul{
@@ -137,12 +146,12 @@ body {
 }
 
 .imagenLogo{
-  width: 80px;
+  width: 40%;
   height: auto;
 }
 
 .video{
-  margin-top: 5%;
+
   margin-bottom: 5%;
   border-radius: 3vw; 
   width: 40%;
@@ -190,6 +199,12 @@ body {
 
   a:hover{
       color: #005f75;
+  }
+  @media only screen and (max-width: 950px){
+    .dosColumnasFormulario{
+      width: 100%;
+      float: none;
+    }
   }
 
   @media only screen and (max-width: 700px){

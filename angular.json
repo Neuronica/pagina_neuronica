@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "app:build:production"
+              "browserTarget": "neuronica:build:production"
             },
             "development": {
-              "browserTarget": "app:build:development"
+              "browserTarget": "neuronica:build:development"
             }
           },
           "defaultConfiguration": "development"
