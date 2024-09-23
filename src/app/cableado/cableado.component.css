@@ -1,0 +1,190 @@
+body{
+    background-color: white;
+}
+
+h1{
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    color: #005f75;
+    font-size: 52px; 
+}
+
+h2{
+    font-family: 'Nunito', sans-serif;
+    color: #005f75;
+    font-size: 35px;
+    line-height: 100%;
+}
+
+h4{
+    font-family: 'Nunito', sans-serif;
+    color: #750049;
+    font-size: 35px; 
+}
+
+h3{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 150%;
+}
+
+p{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 150%;
+}
+
+a{
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+
+input{
+    background-color: #005f75;
+    font-family: 'Nunito', sans-serif;
+    color:#750049;
+    border-color: black;
+    border-radius: 10px;
+    height: 70%;
+    width: 40%;
+}
+
+.backimg{
+    background: url("/assets/Imagenes/cableado-estructurado.jpg");
+    width: getwidth;
+    height: getheight;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 816px) and (max-width: 900px){
+
+    h1{
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        color: #005f75;
+        font-size: 45px; 
+    }
+
+    h2{
+        font-family: 'Nunito', sans-serif;
+        color: #005f75;
+        font-size: 28px;
+        line-height: 100%;
+    }
+
+    h4{
+        font-family: 'Nunito', sans-serif;
+        color: #750049;
+        font-size: 28px; 
+    }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 815px){
+
+    h1{
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        color: #005f75;
+        font-size: 45px; 
+    }
+
+    h2{
+        font-family: 'Nunito', sans-serif;
+        color: #005f75;
+        font-size: 28px;
+        line-height: 100%;
+    }
+
+    h4{
+        font-family: 'Nunito', sans-serif;
+        color: #750049;
+        font-size: 28px; 
+    }
+
+    h3{
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 0.8rem;
+        line-height: 150%;
+    }
+
+    p{
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 0.8rem;
+        line-height: 150%;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 700px){
+
+    h1{
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        color: #005f75;
+        font-size: 40px; 
+    }
+
+    h2{
+        font-family: 'Nunito', sans-serif;
+        color: #005f75;
+        font-size: 23px;
+        line-height: 100%;
+    }
+
+    h4{
+        font-family: 'Nunito', sans-serif;
+        color: #750049;
+        font-size: 23px; 
+    }
+    h3{
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 0.8rem;
+        line-height: 150%;
+    }
+
+    p{
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 0.8rem;
+        line-height: 150%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+
+h1{
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    color: #005f75;
+    font-size: 40px; 
+}
+
+h2{
+    font-family: 'Nunito', sans-serif;
+    color: #005f75;
+    font-size: 23px;
+    line-height: 100%;
+}
+
+h4{
+    font-family: 'Nunito', sans-serif;
+    color: #750049;
+    font-size: 23px; 
+}
+
+h3{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.8rem;
+    line-height: 150%;
+}
+
+p{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.8rem;
+    line-height: 150%;
+}
+}

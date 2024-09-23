@@ -1,1 +1,215 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  margin: 0;
+}
+
+.spacer{
+  height: 20rem;
+}
+
+.spacer2{
+  height: 2.2vw;
+}
+
+.spacer3{
+  height: 10px;
+}
+
+.spacerTopImage{
+  height: 10vw;
+}
+
+.fondo{
+  background: url("assets/Imagenes/Fondo.png");
+  background-size: auto;
+}
+
+.contenedorColumnas{
+  background-color: #ffff;
+  border-radius: 3vw;
+  position: relative;
+  margin: auto;
+  width: 80%;
+  height: 100%;
+}
+
+.filas{
+  position: relative;
+  display: inline-block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+.unaColumna{
+  width: 100%;
+}
+
+.dosColumnas{
+  width: 50%;
+  float: left;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
+.dosColumnasFormulario{
+  width: 50%;
+  float: left;
+  justify-content: center; 
+  align-items: center;
+}
+
+.bordeAzul{
+  position: relative;
+  margin: auto;
+  height: auto;
+  width: 85%;
+  border-radius: 3vw;
+  border: 0.1rem solid #D37600;
+}
+
+.islaTitulo{
+  display: block;
+  margin-top: 0%;
+  margin-left: 0%;
+  margin-right: 0%;
+  height: getheight;
+  border-radius: 3vw;
+  border-color: #750049;
+}
+
+.islaTitulo2{
+  background-color: rgba(255, 255, 255, 0.45);
+  display: block;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  border-radius: 3vw;
+}
+
+.boton{
+  background-color: #D37600;
+  color: white;
+  border-radius: 3vw;
+  border: 2px solid #D37600;
+  width: 8rem;
+  height: 2rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.boton:hover{
+  background-color: white;
+  color: black;
+}
+
+.cuadrado{
+  width: 90%; 
+  height: 0.1rem; 
+  background: #D37600;
+}
+
+.subcuadro{
+  border: 0.1rem solid #D37600;
+  text-align: justify;
+  display: 50%;
+  flex: 50%;
+  height: 90%;
+  border-radius: 3vw;
+  margin-bottom: 5%;
+}
+
+.imagen{
+  width:80%;
+  height:auto;
+  border-radius: 5%
+}
+
+.imagen2{
+  width:60%;
+  height:auto;
+  border-radius: 5%;
+}
+
+.imagen3{
+  width:40vw;
+  height:auto;
+  border-radius: 5%;
+}
+
+.imagen4{
+  width:55%;
+  height:auto;
+  border-radius: 5%;
+}
+
+.imagenLogo{
+  width: 40%;
+  height: auto;
+}
+
+.video{
+  margin-bottom: 5%;
+  border-radius: 3vw; 
+  width: 40%;
+}
+
+.mat-toolbar.mat-primary {
+  background: white;
+  color: #005f75;
+}
+
+.mat-toolbar.mat-secundary {
+  background: white;
+  color: black;
+}
+
+.icon-button{
+  background: none;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  width: 0rem;
+}
+
+.sticker{
+  background: none;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  width: 60px;
+  transform: rotate(330deg);
+}
+
+.icon-button .icon {
+  width: 60px;
+}
+
+.sticker .icon{
+  width: 8vh;
+}
+
+a{
+  font-family: 'Nunito', sans-serif;
+  font-size: 2px;
+  margin-left: 8%;
+}
+
+a:hover{
+  color: #005f75;
+}
+
+@media only screen and (max-width: 950px){
+  .dosColumnasFormulario{
+    width: 100%;
+    float: none;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  .dosColumnas{
+    width: 100%;
+    float: none;
+  }
+}
