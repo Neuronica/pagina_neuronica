@@ -20,7 +20,7 @@ body {
 }
 
 .fondo{
-  background: url("assets/Imagenes/Fondo.png");
+  background: url("/assets/Imagenes/Fondo.png");
   background-size: auto;
 }
 
