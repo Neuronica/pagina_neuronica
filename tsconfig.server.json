@@ -1,0 +1,15 @@
+{
+    "extends": "./tsconfig.app.json",
+    "compilerOptions": {
+      "outDir": "../out-tsc/app-server",
+      "target": "es2019",
+      "module": "commonjs"
+    },
+    "files": [
+      "main.server.ts"
+    ],
+    "angularCompilerOptions": {
+      "entryModule": "app/app.server.module#AppServerModule"
+    }
+  }
+  

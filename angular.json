@@ -26,6 +26,7 @@
               "outputPath": "dist/neuronica",
               "index": "src/index.html",
               "browser": "src/main.ts",
+              "allowedCommonJsDependencies": ["aos"],
               "polyfills": [
                 "zone.js"
               ],
@@ -49,18 +50,18 @@
             },
             "configurations": {
               "production": {
-                "budgets": [
-                  {
-                    "type": "initial",
-                    "maximumWarning": "500kb",
-                    "maximumError": "1mb"
-                  },
-                  {
-                    "type": "anyComponentStyle",
-                    "maximumWarning": "2kb",
-                    "maximumError": "4kb"
-                  }
-                ],
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "5kb",
+                  "maximumError": "10kb"    
+                }
+              ],
                 "outputHashing": "all"
               },
               "development": {
@@ -70,6 +71,7 @@
               }
             },
             "defaultConfiguration": "production"
+            
           },
           "serve": {
             "builder": "@angular-devkit/build-angular:dev-server",

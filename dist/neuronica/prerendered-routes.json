@@ -1,0 +1,15 @@
+{
+  "routes": [
+    "/",
+    "/cableado-estructurado-bogota",
+    "/cctv-bogota",
+    "/desarrollo-de-software-a-medida",
+    "/diseno-y-desarrollo-electronico",
+    "/domotica-personalizada",
+    "/impresion-3d-bogota",
+    "/ingenieria-empresarial",
+    "/ingenieria-para-hogar",
+    "/quienes-somos-neuronica",
+    "/servicios-de-ingenieria"
+  ]
+}
