@@ -75,12 +75,15 @@
           },
           "serve": {
             "builder": "@angular-devkit/build-angular:dev-server",
+            "options": {
+              "browserTarget": "neuronica:build"
+            },
             "configurations": {
               "production": {
-                "buildTarget": "neuronica:build:production"
+                "browserTarget": "neuronica:build:production"
               },
               "development": {
-                "buildTarget": "neuronica:build:development"
+                "browserTarget": "neuronica:build:development"
               }
             },
             "defaultConfiguration": "development"

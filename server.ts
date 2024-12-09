@@ -1,43 +1,45 @@
+import 'zone.js/node';
 import { APP_BASE_HREF } from '@angular/common';
-import { CommonEngine } from '@angular/ssr';
-import express from 'express';
+import { ngExpressEngine } from '@nguniversal/express-engine';
+import express, { Request, Response } from 'express';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import AppServerModule from './src/main.server';
 
-// The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
   const serverDistFolder = dirname(fileURLToPath(import.meta.url));
   const browserDistFolder = resolve(serverDistFolder, '../browser');
-  const indexHtml = join(serverDistFolder, 'index.server.html');
+  
+  // Configuramos el engine de Angular Universal
+  server.engine('html', (_, options: any, callback: any) => {
+    const req: Request = options.req;
 
-  const commonEngine = new CommonEngine();
+    ngExpressEngine({
+      bootstrap: AppServerModule,
+      // Aquí puedes colocar proveedores extras si lo requieres
+      providers: [
+        { provide: APP_BASE_HREF, useValue: req.baseUrl }
+      ]
+    })(_, options, callback);
+  });
 
   server.set('view engine', 'html');
   server.set('views', browserDistFolder);
 
-  // Example Express Rest API endpoints
-  // server.get('/api/**', (req, res) => { });
-  // Serve static files from /browser
+  // Servir archivos estáticos
   server.get('*.*', express.static(browserDistFolder, {
     maxAge: '1y'
   }));
 
-  // All regular routes use the Angular engine
-  server.get('*', (req, res, next) => {
-    const { protocol, originalUrl, baseUrl, headers } = req;
-
-    commonEngine
-      .render({
-        bootstrap: AppServerModule,
-        documentFilePath: indexHtml,
-        url: `${protocol}://${headers.host}${originalUrl}`,
-        publicPath: browserDistFolder,
-        providers: [{ provide: APP_BASE_HREF, useValue: baseUrl }],
-      })
-      .then((html) => res.send(html))
-      .catch((err) => next(err));
+  // Todas las rutas se sirven con Angular Universal
+  server.get('*', (req: Request, res: Response, next) => {
+    // 'index' corresponde a 'index.html' en la carpeta dist. 
+    // No hace falta poner '.html' ya que el engine ya está configurado.
+    res.render('index', { req }, (err, html) => {
+      if (err) return next(err);
+      res.send(html);
+    });
   });
 
   return server;
@@ -45,8 +47,6 @@ export function app(): express.Express {
 
 function run(): void {
   const port = process.env['PORT'] || 4000;
-
-  // Start up the Node server
   const server = app();
   server.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
