@@ -2,15 +2,15 @@ import {
   MatCommonModule,
   coerceBooleanProperty,
   mixinColor
-} from "./chunk-FKW44O2W.js";
-import "./chunk-TUE4TLTT.js";
+} from "./chunk-KFSUOAJB.js";
+import "./chunk-MV6MHWZA.js";
 import {
   DomSanitizer,
   HttpClient
-} from "./chunk-JZX4QKPV.js";
+} from "./chunk-EALTJLIU.js";
 import {
   DOCUMENT
-} from "./chunk-2M5O6NRQ.js";
+} from "./chunk-7EQPX5OT.js";
 import {
   Attribute,
   ChangeDetectionStrategy,
@@ -50,7 +50,8 @@ import {
   ɵɵinjectAttribute,
   ɵɵprojection,
   ɵɵprojectionDef
-} from "./chunk-YWQ2TPIT.js";
+} from "./chunk-I4D4RCUQ.js";
+import "./chunk-W44PFRPX.js";
 import "./chunk-KMNONVFS.js";
 
 // node_modules/@angular/material/fesm2022/icon.mjs
