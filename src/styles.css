@@ -205,9 +205,15 @@ input{
 }
 
 .video{
+  margin-right: 5%;
+  margin-left: 5%;
   margin-bottom: 5%;
-  border-radius: 3vw; 
-  width: 40%;
+  width: 20%;
+  height: 20%;
+  float: inline-end;
+  object-fit: cover;
+  object-position: bottom;
+  border-radius: 5%
 }
 
 .mat-toolbar.mat-primary {
@@ -298,4 +304,9 @@ input{
     float: none;
     border-radius: 5%
   }
+
+  .video{
+    display: none;
+  }
+
 }
