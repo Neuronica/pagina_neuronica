@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CableadoComponent } from './cableado.component';
+import { IotComponent } from './iot.component';
 
-describe('CableadoComponent', () => {
-  let component: CableadoComponent;
-  let fixture: ComponentFixture<CableadoComponent>;
+describe('IotComponent', () => {
+  let component: IotComponent;
+  let fixture: ComponentFixture<IotComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CableadoComponent]
+      declarations: [IotComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(CableadoComponent);
+    fixture = TestBed.createComponent(IotComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

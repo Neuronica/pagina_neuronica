@@ -5,10 +5,10 @@ import * as AOS from 'aos';
 
 @Component({
   selector: 'app-impresion',
-  templateUrl: './impresion.component.html',
-  styleUrls: ['./impresion.component.css']
+  templateUrl: './manufactura.component.html',
+  styleUrls: ['./manufactura.component.css']
 })
-export class ImpresionComponent implements OnInit{
+export class ManufacturaComponent implements OnInit{
   public getwidth: any;
   public getheight: any;
   iconoVariable: boolean = false;

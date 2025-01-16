@@ -5,10 +5,10 @@ import * as AOS from 'aos';
 
 @Component({
   selector: 'app-cableado',
-  templateUrl: './cableado.component.html',
-  styleUrls: ['./cableado.component.css']
+  templateUrl: './iot.component.html',
+  styleUrls: ['./iot.component.css']
 })
-export class CableadoComponent implements OnInit {
+export class IotComponent implements OnInit {
   public getwidth: any;
   public getheight: any;
   iconoVariable: boolean = false;

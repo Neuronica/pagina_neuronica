@@ -7,10 +7,15 @@ import { HogarComponent } from './hogar/hogar.component';
 import { EmpresarialComponent } from './empresarial/empresarial.component';
 import { CctvComponent } from './cctv/cctv.component';
 import { DomoticaComponent } from './domotica/domotica.component';
-import { CableadoComponent } from './cableado/cableado.component';
+import { IotComponent } from './iot/iot.component';
 import { SoftwareComponent } from './software/software.component';
 import { HardwareComponent } from './hardware/hardware.component';
-import { ImpresionComponent } from './impresion/impresion.component';
+import { ComponentesComponent } from './hardware/componentes/componentes.component';
+import { DisenoProductoComponent } from './hardware/diseno-producto/diseno-producto.component';
+import { IngenieriaInversaComponent } from './hardware/ingenieria-inversa/ingenieria-inversa.component';
+import { PCBComponent } from './hardware/pcb/pcb.component';
+import { PCBAComponent } from './hardware/pcba/pcba.component';
+import { ManufacturaComponent } from './manufactura/manufactura.component';
 
 const routes: Routes = [
   { path:'', component:InicioComponent},
@@ -20,10 +25,15 @@ const routes: Routes = [
   { path:'ingenieria-empresarial', component:EmpresarialComponent},
   { path:'cctv-bogota', component:CctvComponent},
   { path: 'domotica-personalizada', component:DomoticaComponent},
-  { path:'cableado-estructurado-bogota', component:CableadoComponent},
-  { path:'desarrollo-de-software-a-medida', component:SoftwareComponent},
-  { path:'diseno-y-desarrollo-electronico', component:HardwareComponent},
-  { path:'impresion-3d-bogota', component:ImpresionComponent},
+  { path:'linea-servicio-iot', component:IotComponent},
+  { path:'linea-servicio-software', component:SoftwareComponent},
+  { path:'linea-servicio-hardware', component:HardwareComponent},
+  { path:'importacion-componentes', component:ComponentesComponent},
+  { path:'ingenieria-inversa', component:IngenieriaInversaComponent},
+  { path:'diseno-producto', component:DisenoProductoComponent},
+  { path:'PCB', component:PCBComponent},
+  { path:'PCBA', component:PCBAComponent},
+  { path:'linea-servicio-manufactura', component:ManufacturaComponent},
 ];
 
 @NgModule({
