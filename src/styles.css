@@ -31,6 +31,15 @@ p{
   line-height: 150%;
 }
 
+ul{
+  margin-left: 5%; 
+  margin-right: 5%;
+  text-align: justify; 
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: clamp(0.4rem, 5vw ,1.1rem);
+  line-height: 150%;
+}
+
 a{
   text-decoration: none;
   font-family: 'Nunito', sans-serif;
@@ -182,6 +191,17 @@ input{
   border-radius: 5%
 }
 
+.imagenUbicacionInferior{
+  margin-right: 5%;
+  margin-left: 5%;
+  width: 40%;
+  height: 40%;
+  float: inline-end;
+  object-fit: cover;
+  object-position: bottom;
+  border-radius: 5%
+}
+
 .imagen2{
   width:60%;
   height:auto;
@@ -296,6 +316,17 @@ input{
   }
 
   .imagen{
+    margin-right: 5%;
+    margin-left: 5%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    float: none;
+    border-radius: 5%
+  }
+
+  .imagenUbicacionInferior{
     margin-right: 5%;
     margin-left: 5%;
     width: 100%;

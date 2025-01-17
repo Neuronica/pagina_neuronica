@@ -5,7 +5,7 @@ body{
 }
 
 .backimg{
-    background: url("/assets/Imagenes/cableado-estructurado.jpg");
+    background: url("/assets/Imagenes/IoT.jpg");
     width: getwidth;
     height: getheight;
     background-position: top;
