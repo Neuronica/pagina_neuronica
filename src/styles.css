@@ -315,6 +315,13 @@ input{
     float: none;
   }
 
+  .contenedorImagen{
+    display: flex ;
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 5%;
+  }
+
   .imagen{
     margin-right: 5%;
     margin-left: 5%;
