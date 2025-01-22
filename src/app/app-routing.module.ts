@@ -10,7 +10,6 @@ import { DomoticaComponent } from './domotica/domotica.component';
 import { IotComponent } from './iot/iot.component';
 import { SoftwareComponent } from './software/software.component'; //Linea
 import { AutomatizacionComponent } from './software/automatizacion/automatizacion.component';
-import { DashboardsComponent } from './software/dashboards/dashboards.component';
 import { FirmwareComponent } from './software/firmware/firmware.component';
 import { RecopilacionDatosComponent } from './software/recopilacion-datos/recopilacion-datos.component';
 import { HardwareComponent } from './hardware/hardware.component';//Linea
@@ -36,7 +35,6 @@ const routes: Routes = [
   { path:'linea-servicio-iot', component:IotComponent},
   { path:'linea-servicio-software', component:SoftwareComponent}, //Linea
   { path: 'automatizaciones', component:AutomatizacionComponent},
-  { path: 'dashboard', component:DashboardsComponent},
   { path: 'firmware', component:FirmwareComponent},
   { path: 'recopilacion-datos', component:RecopilacionDatosComponent},
   { path:'linea-servicio-hardware', component:HardwareComponent}, //Linea
