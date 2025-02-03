@@ -20,9 +20,9 @@ export class SoftwareComponent  implements OnInit{
       window.addEventListener('load', AOS.refresh);
       this.getwidth = window.innerWidth;
       this.getheight = window.innerHeight;
-      this.title.setTitle("Desarrollo de Software a la Medida en Bogotá: Soluciones Personalizadas para Potenciar tu Empresa");
-      this.meta.addTag({name: 'description', content: 'Descubre nuestro servicio de Desarrollo de Software a Medida en Bogotá. Creamos programas personalizados, ya sea aplicaciones web o de escritorio, cumpliendo con tus especificaciones. Especializados en JavaScript, Java, Python, C y C++. Además, para aplicaciones web, ofrecemos diseño, desarrollo, adquisición de dominio y despliegue. Para aplicaciones de escritorio, cubrimos diseño, desarrollo y despliegue en intranets o servidores locales. Tu socio local para soluciones tecnológicas personalizadas en Bogotá.'});
-      this.meta.addTag({name: 'keywords', content: 'desarrollo de software a la medida bogotá, desarrollo de aplicaciones a medida, software hecho a la medida desarrollo a la medida software, desarrollo de software personalizado'});
+      this.title.setTitle("Desarrollo de Software en Bogotá | Neurónica");
+      this.meta.addTag({name: 'description', content: 'Creamos programas personalizados, desde firmware y automatizaciones hasta recopilación de datos. Tu socio local para soluciones tecnológicas innovadoras.'});
+      this.meta.addTag({name: 'keywords', content: 'desarrollo de software a la medida Bogotá, desarrollo de software personalizado, software a medida'});
     }
   }
 

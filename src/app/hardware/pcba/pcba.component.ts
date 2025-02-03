@@ -22,9 +22,9 @@ export class PCBAComponent implements OnInit{
       window.addEventListener('load', AOS.refresh);
       this.getwidth = window.innerWidth;
       this.getheight = window.innerHeight
-      this.title.setTitle("Hardware a Medida y Diseño Electrónico en Bogotá: Transformamos Ideas en Realidad Tecnológica");
-      this.meta.addTag({name: 'description', content: 'Explora el fascinante mundo del diseño electrónico y prototipado con Neurónica en Bogotá. Descubre cómo convertimos tus ideas en soluciones tangibles mediante hardware a medida. Nuestra experiencia y creatividad se combinan para ofrecer personalización precisa, iteraciones eficientes y rendimiento destacado. Desde componentes simples hasta sistemas embebidos, somos tu socio de confianza en innovación y tecnología. Transforma tus ideas en realidad con Neurónica.'});
-      this.meta.addTag({name: 'keywords', content: 'Diseño electrónico y prototipado Bogotá, Hardware a medida, Soluciones de ingeniería electrónica, Beneficios del diseño electrónico personalizado, Iteraciones eficientes en prototipado, Eficiencia y rendimiento del hardware a medida.'});
+      this.title.setTitle("Ensamble de Placas de Circuito Impreso (PCBA) | Neurónica");
+      this.meta.addTag({name: 'description', content: 'Ofrecemos servicio integral de PCBA: ensamble de tarjetas, suministro de componentes y manufactura de PCB. Asegura fiabilidad en tus productos electrónicos.'});
+      this.meta.addTag({name: 'keywords', content: 'PCBA, Ensamble de tarjetas, Suministros electrónicos, PCB, Servicios integrales'});
     }
   }
 

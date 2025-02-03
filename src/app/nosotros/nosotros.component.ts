@@ -22,9 +22,9 @@ export class NosotrosComponent implements OnInit{
       window.addEventListener('load', AOS.refresh);
       this.getwidth = window.innerWidth;
       this.getheight = window.innerHeight;
-      this.title.setTitle("Descubre a Neurónica S.A.S: Soluciones de Ingeniería a la Medida");
-      this.meta.addTag({name: 'description', content: 'Conoce a Neurónica S.A.S, líderes en ingeniería a la medida. Nuestra empresa se destaca en la integración de tecnologías avanzadas como IoT, impresión 3D e inteligencia artificial. Descubre cómo nuestras soluciones personalizadas abordan tus necesidades específicas en software, hardware, telecomunicaciones y manufactura.'});
-      this.meta.addTag({name: 'keywords', content: 'Neurónica, Bogotá, Ingeniería a medida, Internet de las Cosas Bogotá, Impresión 3D, Inteligencia artificial, Soluciones personalizadas, Líderes en ingeniería Bogotá, Innovación en tecnología Adaptabilidad en ingeniería.'});
+      this.title.setTitle("Descubre a Neurónica S.A.S: Soluciones de Ingeniería a la Medida en Bogotá");
+      this.meta.addTag({name: 'description', content: 'Conoce a Neurónica S.A.S, líderes en ingeniería a la medida. Nuestra empresa se destaca en la integración de tecnologías avanzadas en áreas de hardware, software, IoT y manufactura. Descubre cómo nuestras soluciones personalizadas abordan tus necesidades específicas'});
+      this.meta.addTag({name: 'keywords', content: 'Ingeniería a la medida, Neurónica'});
     }
   }
 

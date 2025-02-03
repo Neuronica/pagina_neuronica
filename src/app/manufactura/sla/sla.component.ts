@@ -21,9 +21,9 @@ export class SlaComponent implements OnInit{
       window.addEventListener('load', AOS.refresh);
       this.getwidth = window.innerWidth;
       this.getheight = window.innerHeight;
-      this.title.setTitle("Impresión 3D en Bogotá: Transforma Ideas en Realidad con Neurónica Ingeniería");
-      this.meta.addTag({name: 'description', content: 'Descubre el futuro de la fabricación personalizada con Neurónica en Bogotá. Explora la tecnología revolucionaria de impresión 3D que transforma ideas en objetos tangibles. Ofrecemos dos tecnologías líderes, FDM y LCD, cada una con sus ventajas únicas. Personaliza tu creación con una variedad de materiales, desde el versátil PLA hasta el resistente ABS. Desde prototipos hasta producción a gran escala, nuestro equipo de ingenieros está comprometido a hacer realidad tus visiones con la precisión de la impresión 3D. ¡Impulsa tu innovación con Neurónica hoy!.'});
-      this.meta.addTag({name: 'keywords', content: 'Impresión 3D Bogotá, Tecnología de fabricación personalizada, FDM vs. LCD: Ventajas y desventajas, Materiales de impresión 3D: PLA, ABS, PETG, TPU, Ingeniería y fabricación personalizada, Prototipos y producción a gran escala, Transforma ideas en objetos tangibles con Neurónica.'});
+      this.title.setTitle("Impresión 3D en Bogotá con SLA | Neurónica");
+      this.meta.addTag({name: 'description', content: 'Descubre la precisión y detalle de la tecnología SLA. Ideal para prototipos complejos y producciones que requieran acabados de alta calidad.'});
+      this.meta.addTag({name: 'keywords', content: 'Impresión 3D Bogotá, SLA, Impresión resina, Ingeniería y fabricación personalizada'});
     }
   }
 

@@ -21,9 +21,9 @@ export class DisenoProductoComponent {
       window.addEventListener('load', AOS.refresh);
       this.getwidth = window.innerWidth;
       this.getheight = window.innerHeight
-      this.title.setTitle("Diseño de productos electrónicos: Convertimos tus ideas a realidades");
-      this.meta.addTag({name: 'description', content: 'Explora'});
-      this.meta.addTag({name: 'keywords', content: 'Diseño electrónico y prototipado Bogotá, Hardware a medida, Soluciones de ingeniería electrónica, Beneficios del diseño electrónico personalizado, Iteraciones eficientes en prototipado, Eficiencia y rendimiento del hardware a medida.'});
+      this.title.setTitle("Diseño de Producto Electrónico en Bogotá | Neurónica");
+      this.meta.addTag({name: 'description', content: 'Convierte tu idea en realidad con nuestro servicio integral. Acompañamos todo el proceso: requerimientos, prototipado, pruebas de campo y producción masiva.'});
+      this.meta.addTag({name: 'keywords', content: 'Diseño electrónico y prototipado Bogotá, Soluciones de ingeniería electrónica, Producción electrónica, Eficiencia y rendimiento del hardware'});
     }
   }
 
