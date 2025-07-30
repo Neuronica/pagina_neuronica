@@ -1,56 +1,68 @@
-import 'zone.js/node';
-import { APP_BASE_HREF } from '@angular/common';
-import { ngExpressEngine } from '@nguniversal/express-engine';
-import express, { Request, Response } from 'express';
-import { fileURLToPath } from 'node:url';
-import { dirname, join, resolve } from 'node:path';
-import AppServerModule from './src/main.server';
+import {
+  AngularNodeAppEngine, // Esta es la clave
+  createNodeRequestHandler,
+  isMainModule,
+  writeResponseToNodeResponse,
+} from '@angular/ssr/node'; // <-- ¡Esta es la importación correcta!
+import express from 'express';
+import { join } from 'node:path';
 
-export function app(): express.Express {
-  const server = express();
-  const serverDistFolder = dirname(fileURLToPath(import.meta.url));
-  const browserDistFolder = resolve(serverDistFolder, '../browser');
-  
-  // Configuramos el engine de Angular Universal
-  server.engine('html', (_, options: any, callback: any) => {
-    const req: Request = options.req;
+const browserDistFolder = join(import.meta.dirname, '../browser');
 
-    ngExpressEngine({
-      bootstrap: AppServerModule,
-      // Aquí puedes colocar proveedores extras si lo requieres
-      providers: [
-        { provide: APP_BASE_HREF, useValue: req.baseUrl }
-      ]
-    })(_, options, callback);
-  });
+const app = express();
+const angularApp = new AngularNodeAppEngine();
 
-  server.set('view engine', 'html');
-  server.set('views', browserDistFolder);
+/**
+ * Example Express Rest API endpoints can be defined here.
+ * Uncomment and define endpoints as necessary.
+ *
+ * Example:
+ * ```ts
+ * app.get('/api/{*splat}', (req, res) => {
+ * // Handle API request
+ * });
+ * ```
+ */
 
-  // Servir archivos estáticos
-  server.get('*.*', express.static(browserDistFolder, {
-    maxAge: '1y'
-  }));
+/**
+ * Serve static files from /browser
+ */
+app.use(
+  express.static(browserDistFolder, {
+    maxAge: '1y',
+    index: false,
+    redirect: false,
+  }),
+);
 
-  // Todas las rutas se sirven con Angular Universal
-  server.get('*', (req: Request, res: Response, next) => {
-    // 'index' corresponde a 'index.html' en la carpeta dist. 
-    // No hace falta poner '.html' ya que el engine ya está configurado.
-    res.render('index', { req }, (err, html) => {
-      if (err) return next(err);
-      res.send(html);
-    });
-  });
+/**
+ * Handle all other requests by rendering the Angular application.
+ */
+app.use((req, res, next) => {
+  angularApp
+    .handle(req)
+    .then((response) =>
+      response ? writeResponseToNodeResponse(response, res) : next(),
+    )
+    .catch(next);
+});
 
-  return server;
-}
-
-function run(): void {
+/**
+ * Start the server if this module is the main entry point.
+ * The server listens on the port defined by the `PORT` environment variable, or defaults to 4000.
+ */
+if (isMainModule(import.meta.url)) {
   const port = process.env['PORT'] || 4000;
-  const server = app();
-  server.listen(port, () => {
+  app.listen(port, (error) => {
+    if (error) {
+      throw error;
+    }
+
     console.log(`Node Express server listening on http://localhost:${port}`);
   });
 }
 
-run();
+/**
+ * Request handler used by the Angular CLI (for dev-server and during build) or Firebase Cloud Functions.
+ */
+export const reqHandler = createNodeRequestHandler(app);

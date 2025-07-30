@@ -1,4 +1,0 @@
-Sitemap: https://www.neuronica.co/sitemap.xml
-
-User-agent: *
-Disallow:

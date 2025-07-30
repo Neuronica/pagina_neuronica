@@ -1,15 +1,23 @@
 {
-  "routes": [
-    "/",
-    "/cableado-estructurado-bogota",
-    "/cctv-bogota",
-    "/desarrollo-de-software-a-medida",
-    "/diseno-y-desarrollo-electronico",
-    "/domotica-personalizada",
-    "/impresion-3d-bogota",
-    "/ingenieria-empresarial",
-    "/ingenieria-para-hogar",
-    "/quienes-somos-neuronica",
-    "/servicios-de-ingenieria"
-  ]
+  "routes": {
+    "/": {},
+    "/PCB": {},
+    "/PCBA": {},
+    "/automatizaciones": {},
+    "/cnc": {},
+    "/diseno-producto": {},
+    "/domotica-personalizada": {},
+    "/fdm": {},
+    "/firmware": {},
+    "/importacion-componentes": {},
+    "/ingenieria-inversa": {},
+    "/laser": {},
+    "/linea-servicio-hardware": {},
+    "/linea-servicio-iot": {},
+    "/linea-servicio-manufactura": {},
+    "/linea-servicio-software": {},
+    "/quienes-somos-neuronica": {},
+    "/recopilacion-datos": {},
+    "/sla": {}
+  }
 }
