@@ -4,9 +4,10 @@ import { isPlatformBrowser } from '@angular/common';
 import * as AOS from 'aos';
 
 @Component({
-  selector: 'app-domotica',
-  templateUrl: './domotica.component.html',
-  styleUrls: ['./domotica.component.css']
+    selector: 'app-domotica',
+    templateUrl: './domotica.component.html',
+    styleUrls: ['./domotica.component.css'],
+    standalone: false
 })
 export class DomoticaComponent  implements OnInit{
   public getwidth: any;

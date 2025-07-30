@@ -4,9 +4,10 @@ import { isPlatformBrowser } from '@angular/common';
 import * as AOS from 'aos';
 
 @Component({
-  selector: 'app-laser',
-  templateUrl: './laser.component.html',
-  styleUrls: ['./laser.component.css']
+    selector: 'app-laser',
+    templateUrl: './laser.component.html',
+    styleUrls: ['./laser.component.css'],
+    standalone: false
 })
 export class LaserComponent implements OnInit{
   public getwidth: any;

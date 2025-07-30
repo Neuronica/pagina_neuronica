@@ -5,9 +5,10 @@ import { isPlatformBrowser } from '@angular/common';
 import * as AOS from 'aos';
 
 @Component({
-  selector: 'app-nosotros',
-  templateUrl: './nosotros.component.html',
-  styleUrls: ['./nosotros.component.css']
+    selector: 'app-nosotros',
+    templateUrl: './nosotros.component.html',
+    styleUrls: ['./nosotros.component.css'],
+    standalone: false
 })
 export class NosotrosComponent implements OnInit{
   public getwidth: any;

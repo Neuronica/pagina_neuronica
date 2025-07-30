@@ -4,9 +4,10 @@ import { isPlatformBrowser } from '@angular/common';
 import * as AOS from 'aos';
 
 @Component({
-  selector: 'app-fdm',
-  templateUrl: './fdm.component.html',
-  styleUrls: ['./fdm.component.css']
+    selector: 'app-fdm',
+    templateUrl: './fdm.component.html',
+    styleUrls: ['./fdm.component.css'],
+    standalone: false
 })
 export class FdmComponent implements OnInit{
   public getwidth: any;

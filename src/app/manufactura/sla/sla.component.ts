@@ -4,9 +4,10 @@ import { isPlatformBrowser } from '@angular/common';
 import * as AOS from 'aos';
 
 @Component({
-  selector: 'app-sla',
-  templateUrl: './sla.component.html',
-  styleUrls: ['./sla.component.css']
+    selector: 'app-sla',
+    templateUrl: './sla.component.html',
+    styleUrls: ['./sla.component.css'],
+    standalone: false
 })
 export class SlaComponent implements OnInit{
   public getwidth: any;

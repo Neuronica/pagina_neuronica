@@ -4,9 +4,10 @@ import { isPlatformBrowser } from '@angular/common';
 import * as AOS from 'aos';
 
 @Component({
-  selector: 'app-componentes',
-  templateUrl: './componentes.component.html',
-  styleUrls: ['./componentes.component.css']
+    selector: 'app-componentes',
+    templateUrl: './componentes.component.html',
+    styleUrls: ['./componentes.component.css'],
+    standalone: false
 })
 export class ComponentesComponent implements OnInit{
 

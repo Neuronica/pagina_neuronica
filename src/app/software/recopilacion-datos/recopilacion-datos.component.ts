@@ -4,9 +4,10 @@ import { isPlatformBrowser } from '@angular/common';
 import * as AOS from 'aos';
 
 @Component({
-  selector: 'app-recopilacion-datos',
-  templateUrl: './recopilacion-datos.component.html',
-  styleUrls: ['./recopilacion-datos.component.css']
+    selector: 'app-recopilacion-datos',
+    templateUrl: './recopilacion-datos.component.html',
+    styleUrls: ['./recopilacion-datos.component.css'],
+    standalone: false
 })
 export class RecopilacionDatosComponent implements OnInit{
   public getwidth: any;

@@ -4,9 +4,10 @@ import { isPlatformBrowser } from '@angular/common';
 import * as AOS from 'aos';
 
 @Component({
-  selector: 'app-automatizacion',
-  templateUrl: './automatizacion.component.html',
-  styleUrls: ['./automatizacion.component.css']
+    selector: 'app-automatizacion',
+    templateUrl: './automatizacion.component.html',
+    styleUrls: ['./automatizacion.component.css'],
+    standalone: false
 })
 export class AutomatizacionComponent implements OnInit{
   public getwidth: any;

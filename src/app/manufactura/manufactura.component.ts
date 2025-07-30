@@ -4,9 +4,10 @@ import { isPlatformBrowser } from '@angular/common';
 import * as AOS from 'aos';
 
 @Component({
-  selector: 'app-impresion',
-  templateUrl: './manufactura.component.html',
-  styleUrls: ['./manufactura.component.css']
+    selector: 'app-impresion',
+    templateUrl: './manufactura.component.html',
+    styleUrls: ['./manufactura.component.css'],
+    standalone: false
 })
 export class ManufacturaComponent implements OnInit{
   public getwidth: any;

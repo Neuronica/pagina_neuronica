@@ -4,9 +4,10 @@ import { isPlatformBrowser } from '@angular/common';
 import * as AOS from 'aos';
 
 @Component({
-  selector: 'app-ingenieria-inversa',
-  templateUrl: './ingenieria-inversa.component.html',
-  styleUrls: ['./ingenieria-inversa.component.css']
+    selector: 'app-ingenieria-inversa',
+    templateUrl: './ingenieria-inversa.component.html',
+    styleUrls: ['./ingenieria-inversa.component.css'],
+    standalone: false
 })
 export class IngenieriaInversaComponent implements OnInit{
 

@@ -5,9 +5,10 @@ import * as AOS from 'aos';
 
 
 @Component({
-  selector: 'app-pcba',
-  templateUrl: './pcba.component.html',
-  styleUrls: ['./pcba.component.css']
+    selector: 'app-pcba',
+    templateUrl: './pcba.component.html',
+    styleUrls: ['./pcba.component.css'],
+    standalone: false
 })
 export class PCBAComponent implements OnInit{
   public getwidth: any;

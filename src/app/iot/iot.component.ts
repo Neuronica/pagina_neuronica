@@ -4,9 +4,10 @@ import { isPlatformBrowser } from '@angular/common';
 import * as AOS from 'aos';
 
 @Component({
-  selector: 'app-cableado',
-  templateUrl: './iot.component.html',
-  styleUrls: ['./iot.component.css']
+    selector: 'app-cableado',
+    templateUrl: './iot.component.html',
+    styleUrls: ['./iot.component.css'],
+    standalone: false
 })
 export class IotComponent implements OnInit {
   public getwidth: any;

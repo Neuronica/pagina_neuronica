@@ -4,9 +4,10 @@ import { isPlatformBrowser } from '@angular/common';
 import * as AOS from 'aos';
 
 @Component({
-  selector: 'app-cnc',
-  templateUrl: './cnc.component.html',
-  styleUrls: ['./cnc.component.css']
+    selector: 'app-cnc',
+    templateUrl: './cnc.component.html',
+    styleUrls: ['./cnc.component.css'],
+    standalone: false
 })
 export class CncComponent implements OnInit{
   public getwidth: any;

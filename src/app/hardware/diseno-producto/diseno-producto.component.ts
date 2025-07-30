@@ -4,9 +4,10 @@ import { isPlatformBrowser } from '@angular/common';
 import * as AOS from 'aos';
 
 @Component({
-  selector: 'app-diseno-producto',
-  templateUrl: './diseno-producto.component.html',
-  styleUrls: ['./diseno-producto.component.css']
+    selector: 'app-diseno-producto',
+    templateUrl: './diseno-producto.component.html',
+    styleUrls: ['./diseno-producto.component.css'],
+    standalone: false
 })
 export class DisenoProductoComponent {
   public getwidth: any;

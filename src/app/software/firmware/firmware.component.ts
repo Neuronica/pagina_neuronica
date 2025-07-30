@@ -4,9 +4,10 @@ import { isPlatformBrowser } from '@angular/common';
 import * as AOS from 'aos';
 
 @Component({
-  selector: 'app-firmware',
-  templateUrl: './firmware.component.html',
-  styleUrls: ['./firmware.component.css']
+    selector: 'app-firmware',
+    templateUrl: './firmware.component.html',
+    styleUrls: ['./firmware.component.css'],
+    standalone: false
 })
 export class FirmwareComponent implements OnInit{
   public getwidth: any;

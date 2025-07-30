@@ -4,9 +4,10 @@ import { isPlatformBrowser } from '@angular/common';
 import * as AOS from 'aos';
 
 @Component({
-  selector: 'app-pcb',
-  templateUrl: './pcb.component.html',
-  styleUrls: ['./pcb.component.css']
+    selector: 'app-pcb',
+    templateUrl: './pcb.component.html',
+    styleUrls: ['./pcb.component.css'],
+    standalone: false
 })
 export class PCBComponent implements OnInit{
   public getwidth: any;
