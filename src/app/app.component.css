@@ -23,8 +23,8 @@ body{
 
 a{
     font-family: 'Nunito', sans-serif;
-    font-size: clamp(0.9rem, 1.2vw, 1.4rem); 
-    margin-left: 5%;
+    font-size: clamp(0.3rem, 2vw ,1.1rem); 
+    margin-left: 2.3vw;
     color: #005f75;
 }
 
@@ -53,15 +53,11 @@ mat-toolbar{
     height: 5rem;
 }
 
-.menu {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 15%;
-    flex-grow: 1; /* Toma todo el espacio disponible después del logo */
+.menu{
+    background: none;
+    position: relative;
+    margin-left: 30%;
 }
-  
-  
 
 .material-icons{
     display: none;
@@ -71,6 +67,12 @@ mat-toolbar{
 
     .material-icons{
         display: none;
+    }
+
+    .menu{
+        position: relative;
+        background: none;
+        margin-left: 30%
     }
 }
 
