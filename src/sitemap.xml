@@ -2,62 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.neuronica.co/</loc>
-    <lastmod>2024-02-15T09:40:00+00:00</lastmod>
+    <lastmod>2025-02-3T13:00:00+00:00</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://www.neuronica.co/quienes-somos-neuronica</loc>
-    <lastmod>2024-02-15T09:40:00+00:00</lastmod>
+    <lastmod>2025-02-3T13:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.neuronica.co/servicios-de-ingenieria</loc>
-    <lastmod>2024-02-15T09:40:00+00:00</lastmod>
+    <loc>https://www.neuronica.co/linea-servicio-hardware</loc>
+    <lastmod>2025-02-3T13:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.neuronica.co/por-que-escogernos-neuronica</loc>
-    <lastmod>2024-02-15T09:40:00+00:00</lastmod>
+    <loc>https://www.neuronica.co/diseno-producto</loc>
+    <lastmod>2025-02-3T13:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.neuronica.co/ingenieria-para-hogar</loc>
-    <lastmod>2024-02-15T09:40:00+00:00</lastmod>
-    <priority>0.64</priority>
+    <loc>https://www.neuronica.co/PCBA</loc>
+    <lastmod>2025-02-3T13:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+    <url>
+    <loc>https://www.neuronica.co/PCB</loc>
+    <lastmod>2025-02-3T13:00:00+00:00</lastmod>
+    <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.neuronica.co/ingenieria-empresarial</loc>
-    <lastmod>2024-02-15T09:40:00+00:00</lastmod>
-    <priority>0.64</priority>
+    <loc>https://www.neuronica.co/importacion-componentes</loc>
+    <lastmod>2025-02-3T13:00:00+00:00</lastmod>
+    <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.neuronica.co/cctv-bogota</loc>
+    <loc>https://www.neuronica.co/ingenieria-inversa</loc>
     <lastmod>2024-02-15T09:40:00+00:00</lastmod>
-    <priority>0.51</priority>
+    <priority>0.80</priority>
+  </url>
+    <url>
+    <loc>https://www.neuronica.co/linea-servicio-manufactura</loc>
+    <lastmod>2025-02-3T13:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.neuronica.co/CNC</loc>
+    <lastmod>2025-02-3T13:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.neuronica.co/FDM</loc>
+    <lastmod>2025-02-3T13:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+    <url>
+    <loc>https://www.neuronica.co/SLA</loc>
+    <lastmod>2025-02-3T13:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.neuronica.co/laser</loc>
+    <lastmod>2025-02-3T13:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+      <url>
+    <loc>https://www.neuronica.co/linea-servicio-software</loc>
+    <lastmod>2025-02-3T13:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.neuronica.co/firmware</loc>
+    <lastmod>2025-02-3T13:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.neuronica.co/recopilacion-datos</loc>
+    <lastmod>2025-02-3T13:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+    <url>
+    <loc>https://www.neuronica.co/automatizaciones</loc>
+    <lastmod>2025-02-3T13:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.neuronica.co/linea-servicio-iot</loc>
+    <lastmod>2024-02-15T09:40:00+00:00</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.neuronica.co/domotica-personalizada</loc>
     <lastmod>2024-02-15T09:40:00+00:00</lastmod>
-    <priority>0.51</priority>
-  </url>
-  <url>
-    <loc>https://www.neuronica.co/cableado-estructurado-bogota</loc>
-    <lastmod>2024-02-15T09:40:00+00:00</lastmod>
-    <priority>0.51</priority>
-  </url>
-  <url>
-    <loc>https://www.neuronica.co/diseno-y-desarrollo-electronico</loc>
-    <lastmod>2024-02-15T09:40:00+00:00</lastmod>
-    <priority>0.51</priority>
-  </url>
-  <url>
-    <loc>https://www.neuronica.co/desarrollo-de-software-a-medida</loc>
-    <lastmod>2024-02-15T09:40:00+00:00</lastmod>
-    <priority>0.51</priority>
-  </url>
-  <url>
-    <loc>https://www.neuronica.co/impresion-3d-bogota</loc>
-    <lastmod>2024-02-15T09:40:00+00:00</lastmod>
-    <priority>0.51</priority>
+    <priority>0.8</priority>
   </url>
 </urlset>

@@ -53,14 +53,17 @@ a:hover{
 }
 
 
-input{
-  background-color: #005f75;
-  font-family: 'Nunito', sans-serif;
-  color:#750049;
-  border-color: black;
-  border-radius: 10px;
-  height: 70%;
-  width: 40%;
+.tresColumnas {
+  display: flex; /* ¡Este es el cambio clave! */
+  justify-content: space-around; /* Opcional: Para distribuir el espacio entre los items */
+  align-items: center; /* Centra verticalmente los items si tienen alturas diferentes */
+  width: 90%; /* Ajusta el ancho según lo necesites, por ejemplo, 90% para que no se pegue a los bordes */
+  margin-left: 5%; /* Mantén tus márgenes del HTML si los necesitas */
+  margin-right: 5%;
+  background-color: white; /* Mantén tu color de fondo */
+  /* Elimina 'float: right;' si quieres que ocupe todo el ancho y se comporte como un bloque flexbox normal */
+  /* Si necesitas que 'tresColumnas' se alinee a la derecha de un contenedor padre,
+     aplica 'justify-content: flex-end;' al padre si también es flex, o usa margin-left: auto; */
 }
 
 .spacer{
@@ -112,6 +115,14 @@ input{
   align-items: center; /* Centra verticalmente */
 }
 
+.tresColumnas{
+  display: flex;
+  width: 90%;
+  float: left;
+  justify-content: space-around; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
 .dosColumnasFormulario{
   width: 100%;
   float: none;
@@ -159,6 +170,18 @@ input{
 .boton:hover{
   background-color: white;
   color: black;
+}
+
+input {
+  background-color: #FFFFFF; /* Blanco puro */
+  border: 1px solid #C0C0C0; /* Gris claro para el borde inicial */
+  border-radius: 0.5rem; /* Usamos rem */
+  padding: 0.75rem 1rem; /* Usamos rem */
+  font-size: 1rem;
+  color: #333333; /* Texto oscuro pero no negro puro */
+  outline: none; /* Elimina el borde de enfoque por defecto del navegador */
+  transition: all 0.2s ease-in-out; 
+  width: 80%;
 }
 
 .cuadrado{
@@ -271,7 +294,6 @@ input{
 .sticker .icon{
   width: 8vh;
 }
-
 .subcuadro a {
   display: grid;
   place-items: center;
@@ -313,6 +335,10 @@ input{
   .dosColumnas{
     width: 100%;
     float: none;
+  }
+  .tresColumnas{
+    flex-direction: column; /* Apila los inputs verticalmente en pantallas pequeñas */
+    align-items: stretch;
   }
 
   .contenedorImagen{

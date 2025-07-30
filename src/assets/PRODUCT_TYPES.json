@@ -1,0 +1,14 @@
+[
+    {
+      "ID_PRODUCT_TYPE": "C-1",
+      "PRODUCT_TYPE": "MAQUINA"
+    },
+    {
+      "ID_PRODUCT_TYPE": "C-2",
+      "PRODUCT_TYPE": "REPUESTO"
+    },
+    {
+      "ID_PRODUCT_TYPE": "C-2",
+      "PRODUCT_TYPE": "MATERIAL"
+    }
+]

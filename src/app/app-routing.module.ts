@@ -19,6 +19,8 @@ import { CncComponent } from './manufactura/cnc/cnc.component';
 import { FdmComponent } from './manufactura/fdm/fdm.component';
 import { LaserComponent } from './manufactura/laser/laser.component';
 import { SlaComponent } from './manufactura/sla/sla.component';
+import { BlogComponent } from './blog/blog.component';
+import { ProductosComponent } from './productos/productos.component';
 
 const routes: Routes = [
   { path:'', component:InicioComponent},
@@ -36,10 +38,12 @@ const routes: Routes = [
   { path:'PCB', component:PCBComponent},
   { path:'PCBA', component:PCBAComponent},
   { path:'linea-servicio-manufactura', component:ManufacturaComponent}, //Linea
-  { path: 'cnc', component:CncComponent},
-  { path: 'fdm', component:FdmComponent},
+  { path: 'CNC', component:CncComponent},
+  { path: 'FDM', component:FdmComponent},
   { path: 'laser', component:LaserComponent},
-  { path: 'sla', component:SlaComponent},
+  { path: 'SLA', component:SlaComponent},
+  { path: 'blogs', component:BlogComponent},
+  { path: 'productos', component:ProductosComponent}
 ];
 
 @NgModule({
