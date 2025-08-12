@@ -3,6 +3,63 @@ body {
   margin: 0;
 }
 
+.lista-productos {
+  display: flex; /* Convierte el contenedor en un contenedor Flex */
+  flex-wrap: wrap; /* Permite que los ítems salten a la siguiente línea */
+  gap: 20px;      /* Espacio entre las tarjetas */
+  justify-content: space-between; /* Distribuye el espacio entre las tarjetas */
+  padding: 20px 0;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.detalle-producto {
+  display: flex; /* Convierte el contenedor en un contenedor Flex */
+  flex-wrap: wrap; /* Permite que los ítems salten a la siguiente línea */
+  gap: 10px;      /* Espacio entre las tarjetas */
+  justify-content: space-between; /* Distribuye el espacio entre las tarjetas */
+  padding: 20px 0;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* --- Estilos para cada tarjeta de producto --- */
+.tarjeta-producto {
+  width: calc(33.33% - 20px); /* Para 3 columnas: 100%/3, ajustado con el gap */
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+  text-align: center;
+  transition: width 0.3s ease; /* Suaviza la transición al cambiar el ancho */
+}
+
+.lista-tarjeta-productos {
+  width: calc(33.33% - 20px); /* Para 3 columnas: 100%/3, ajustado con el gap */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+  text-align: center;
+  transition: width 0.3s ease; /* Suaviza la transición al cambiar el ancho */
+}
+
+.contenedor-imagen {
+  display: flex;
+  position: relative;
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
+  height: auto; 
+  margin-bottom: 10px; 
+}
+  
+  .contenedor-imagen img {
+  max-width: 100%;
+  max-height: 200px; 
+  object-fit: contain; 
+  }
+
 h1{
   font-family: 'Nunito', sans-serif;
   text-align: center;
@@ -15,6 +72,13 @@ h2{
   text-align: center;
   color: #005f75;
   font-size: clamp(1.5rem, 2.5vw, 4.3rem);
+}
+
+h3{
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  color: #005f75;
+  font-size: clamp(0.3rem, 2.5vw, 1rem);
 }
 
 h4{
@@ -30,9 +94,12 @@ p{
 }
 
 ul{
-  margin-left: 5%; 
-  margin-right: 5%;
-  text-align: justify; 
+  margin-right: 10%;
+  text-align: left; 
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 0%;
   font-family: 'Nunito Sans', sans-serif;
   font-size: clamp(0.4rem, 5vw ,1.1rem);
   line-height: 150%;
@@ -40,15 +107,63 @@ ul{
 
 a{
   text-decoration: none;
+  display: block;
   font-family: 'Nunito', sans-serif;
   font-size: clamp(0.3rem, 2vw ,1.1rem);
   animation-duration: 2s;
   animation-name: slidein;
-}
-
-a:hover{
   color: #005f75;
 }
+
+/* Nuevo contenedor para los cuadros */
+.contenedor-servicios {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos salten de línea */
+  gap: 20px;       /* Espacio entre los cuadros (filas y columnas) */
+  justify-content: center; /* Centra los cuadros en el contenedor */
+  margin: 5%;      /* Margen para que no se pegue a los lados */
+}
+
+/* Estilos para cada cuadro de servicio */
+.contenedor-servicios .servicio-link {
+  flex: 1 1 calc(50% - 10px); /* 50% del ancho, ajustado por el gap */
+  max-width: calc(50% - 10px); /* Asegura que no se estire más de 50% */
+  display: block; /* Para que el 'a' sea un bloque y ocupe el espacio */
+  text-decoration: none;
+}
+
+.subcuadro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem solid #D37600;
+  border-radius: 3vw;
+  height: 100%; /* Ocupa la altura completa del contenedor del enlace */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Estilos para los elementos internos del subcuadro */
+.subcuadro-titulo {
+  margin: 0 0 10px 0; /* Espacio debajo del título */
+  text-align: center;
+}
+
+.subcuadro-parrafo {
+  margin: 10px 0 0 0; /* Espacio arriba del párrafo */
+  text-align: justify;
+}
+
+/* Media Query para pantallas pequeñas (menos de 700px) */
+@media only screen and (max-width: 700px) {
+  .contenedor-servicios .servicio-link {
+    flex: 1 1 100%; /* Ocupa el 100% del ancho para una sola columna */
+    max-width: 100%;
+  }
+}
+
 
 
 input{
@@ -110,11 +225,141 @@ input{
   align-items: center; /* Centra verticalmente */
 }
 
+.tresColumnas{
+  width: 100%;
+  float: inline-start;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
 .dosColumnasFormulario{
   width: 100%;
   float: none;
-  justify-content: center; 
+  display: flex;             /* Convierte el contenedor en Flexbox */
+  flex-direction: column;    /* Apila las filas verticalmente */
+  align-items: center;       /* Centra las filas horizontalmente */
+  justify-content: center;   /* Centra las filas verticalmente */
+  text-align: center;
+}
+
+
+.fila-imagenes{
+  display: flex;             
+  justify-content: center;   
+  align-items: center;       
+  gap: 10px;                 
+  margin-bottom: 5px;        
+}
+
+.fila-imagenes a {
+  display: inline-block;
+}
+
+/* Estilos para la fila de texto */
+.fila-texto{
+  margin: 0;
+  width: auto;
+}
+
+.fila-texto h5 {
+  /* Evita que el texto se rompa en varias líneas */
+  white-space: nowrap;
+  /* Elimina los márgenes predeterminados para evitar espaciado extra */
+  margin: 0;
+}
+
+/* Estilos para las imágenes, sin necesidad de style en línea */
+.fila-imagenes img{
+  /* Establece un tamaño mínimo para que nunca se vean demasiado pequeñas */
+  min-width: 40px; 
+  
+  /* El ancho puede ser un porcentaje para que se adapten a la pantalla */
+  width: 15%;
+
+  height: auto;
+  border-radius: 50%;
+}
+
+.carrusel-contenedor {
+  position: relative; /* Es importante para posicionar los botones de forma absoluta */
+  display: flex; /* Usamos Flexbox para alinear los elementos */
+  align-items: center; /* Centra los botones y la imagen verticalmente */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  width: 100%;
+}
+
+.carrusel-imagen {
+  flex-grow: 1;
+  text-align: center;
+  padding: 0 40px;
+  min-height: 300px;
+  min-width: 40px; 
+  display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+/* Estilos de la imagen dentro del carrusel */
+.carrusel-imagen img {
+  max-width: 500%;
+  max-height: 400px; 
+  object-fit: contain;
+}
+
+/* Estilos para los botones de navegación */
+.carrusel-boton-nav {
+  /* Posición y estilo para los botones de navegación */
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  z-index: 10; /* Asegura que los botones estén por encima de la imagen */
+}
+
+/* Agrega estos estilos a tu archivo CSS */
+
+.video-responsive-contenedor {
+  position: relative;
+  padding-bottom: 56.25%;
+  border-radius: 3vw;
+  height: 0;
+  width: 100%; /* Esto hace que el contenedor ocupe el 100% del ancho de su padre */
+}
+
+/* Y el iframe se estira dentro de ese contenedor */
+.video-responsive-contenedor iframe {
+  position: absolute;
+  border-radius: 3vw;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carrusel-boton-nav:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.botonDesplegable{
+  color: white;
+  background-color: #005f75;
+  border-color: white;
+}
+
+.paginator-container{
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+.mat-toolbar.mat-primary {
+  background-color: #005f75;
+  color: white;
 }
 
 .bordeAzul{
@@ -305,6 +550,10 @@ input{
     width: 100%;
     float: none;
   }
+
+  .tarjeta-producto {
+    width: calc(50% - 20px); /* 2 columnas en pantallas más estrechas */
+  }
 }
 
 @media only screen and (max-width: 700px){
@@ -312,6 +561,16 @@ input{
     width: 100%;
     float: none;
   }
+
+  .lista-productos {
+    justify-content: center; /* Centra las tarjetas cuando son 1 columna */
+  }
+  
+  .tarjeta-producto {
+    width: 100%; /* Una sola columna en pantallas muy pequeñas */
+  }
+
+  
 
   .contenedorImagen{
     display: flex ;
@@ -347,3 +606,6 @@ input{
   }
 
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

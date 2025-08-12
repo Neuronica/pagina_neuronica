@@ -1,0 +1,175 @@
+<ng-container *ngIf="!cargandoDatos && !errorAlCargar">  
+    <div class="fondo">
+        <div class="spacer2"></div>
+            <div class="contenedorColumnas">
+                <div class="spacer2"></div>
+                <div class="bordeAzul">
+                    <div class="spacer2"></div>
+                    <div class="unaColumna">
+                        <div class="filas">
+                            <div class="detalle-producto">
+                                <div class="tarjeta-producto" style="width: calc(50% - 10px);">
+                                    <div class="carrusel-contenedor">
+                                        <button class="carrusel-boton-nav" (click)="anteriorImagen()" [disabled]="images.length <= 1">
+                                            &#10094;
+                                        </button>
+                                        <div class="carrusel-imagen">
+                                            <img *ngIf="imagenActual" [src]="imagenActual.URL" alt="Imagen del producto {{ idProducto }}">
+                                        </div>
+                                        <button class="carrusel-boton-nav" (click)="siguienteImagen()" [disabled]="images.length <= 1">
+                                            &#10095;
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="detalle-producto" style="width: calc(40% - 0px);">
+                                    <h1>{{producto[0].ID_REFERENCES +' '+ producto[0].VERSION}}</h1>
+                                    <div class="precios">
+                                        <h3 *ngIf="producto[0].DISCOUNT != 0" style=" font-size: clamp(0.3rem, 3vw, 1.3rem); color: #D37600; font-weight: bold; text-decoration: line-through; opacity: 0.5;">{{producto[0].PRICE| currency:'USD':'symbol':'1.0-0'}}</h3>
+                                        <h3 style="font-size: clamp(0.3rem, 3vw, 1.3rem); color: #D37600; font-weight: bold;">{{producto[0].PRICE - producto[0].DISCOUNT| currency:'USD':'symbol':'1.0-0'}} IVA incluido</h3>
+                                    </div>
+                                    <div *ngIf="producto[0].ID_PRODUCT_TYPE === 'PTS-5DV1IHJS' && caracteristica[0].ID_TECHNOLOGY === 'FDM'" class="detalle-producto" style="display: block;" >
+                                        <h3 style="text-align: left; justify-content: center;">Peso: <span style="color: #000; font-weight: bold;">{{caracteristica[0].WEIGHT}}</span> kg</h3>
+                                        <h3 style="text-align: left;">Dimensiones: <span style="color: #000; font-weight: bold;">{{caracteristica[0].DIMENSIONS}}</span> mm</h3>
+                                        <h3 style="text-align: left;">Cerramiento: <span style="color: #000; font-weight: bold;">{{caracteristica[0].ENCLOSURE}}</span></h3>
+                                        <h3 style="text-align: left;">Volumen de trabajo: <span style="color: #000; font-weight: bold;">{{caracteristica[0].VOLUME}}</span> mm</h3>
+                                        <h3 style="text-align: left;">Tecnologia: <span style="color: #000; font-weight: bold;">{{caracteristica[0].ID_TECHNOLOGY}}</span></h3>
+                                        <h3 style="text-align: left;"> Velocidad desplasamiento:
+                                            <span style="color: #000; font-weight: bold;">
+                                                {{caracteristica[0].SPEED}}
+                                            </span>
+                                            mm/s
+                                        </h3>
+                                        <h3 style="text-align: left;"> Alto de capa minimo: 
+                                            <span style="color: #000; font-weight: bold;">
+                                                {{caracteristica[0].THICKNESS}}
+                                            </span>
+                                            mm
+                                        </h3>
+                                        <h3 style="text-align: left;">Disponibles <span class="stock-badge">{{producto[0].STOCK}}</span></h3>
+                                    </div>
+                                    <div *ngIf="producto[0].ID_PRODUCT_TYPE === 'PTS-5DV1IHJS' && (caracteristica[0].ID_TECHNOLOGY === 'DLP' || caracteristica[0].ID_TECHNOLOGY === 'SLA')" class="detalle-producto" style="display: block;" >
+                                        <h3 style="text-align: left; justify-content: center;">Peso: <span style="color: #000; font-weight: bold;">{{caracteristica[0].WEIGHT}}</span> kg</h3>
+                                        <h3 style="text-align: left;">Dimensiones: <span style="color: #000; font-weight: bold;">{{caracteristica[0].DIMENSIONS}}</span> mm</h3>
+                                        <h3 style="text-align: left;">Cerramiento: <span style="color: #000; font-weight: bold;">{{caracteristica[0].ENCLOSURE}}</span></h3>
+                                        <h3 style="text-align: left;">Volumen de trabajo: <span style="color: #000; font-weight: bold;">{{caracteristica[0].VOLUME}}</span> mm</h3>
+                                        <h3 style="text-align: left;">Tecnologia: <span style="color: #000; font-weight: bold;">{{caracteristica[0].ID_TECHNOLOGY}}</span></h3>
+                                        <h3 style="text-align: left;"> Velocidad de impresión:
+                                            <span style="color: #000; font-weight: bold;">
+                                                {{caracteristica[0].SPEED}}
+                                            </span>
+                                            mm/h
+                                        </h3>
+                                        <h3 style="text-align: left;"> Alto de capa minimo: 
+                                            <span style="color: #000; font-weight: bold;">
+                                                {{caracteristica[0].THICKNESS}}
+                                            </span>
+                                            mm
+                                        </h3>
+                                        <h3 style="text-align: left;">Disponibles <span class="stock-badge">{{producto[0].STOCK}}</span></h3>
+                                    </div>
+                                    <div *ngIf="producto[0].ID_PRODUCT_TYPE === 'PTS-5DV1IHJS' && caracteristica[0].ID_TECHNOLOGY === 'NO APLICA'" class="detalle-producto" style="display: block;" >
+                                        <h3 style="text-align: left; justify-content: center;">Peso: <span style="color: #000; font-weight: bold;">{{caracteristica[0].WEIGHT}}</span> kg</h3>
+                                        <h3 style="text-align: left;">Dimensiones: <span style="color: #000; font-weight: bold;">{{caracteristica[0].DIMENSIONS}}</span> mm</h3>
+                                        <h3 style="text-align: left;">Cerramiento: <span style="color: #000; font-weight: bold;">{{caracteristica[0].ENCLOSURE}}</span></h3>
+                                        <h3 style="text-align: left;">Volumen de trabajo: <span style="color: #000; font-weight: bold;">{{caracteristica[0].VOLUME}}</span> mm</h3>
+                                    </div>
+                                    <div *ngIf="producto[0].ID_PRODUCT_TYPE === 'PTS-KFQI7G6B' && caracteristica[0].WEIGHT === 'NO APLICA'" class="detalle-producto" style="display: block;" >
+                                        <h3 style="text-align: left; justify-content: center;">
+                                            Color: 
+                                            <span style="color: #000; font-weight: bold;">{{producto[0].COLOR}} 
+                                                <div class="color-bolita-test" [style.background-color]="getColorCode(producto[0].COLOR)" style="align-items: center;"></div>
+                                            </span> 
+                                        </h3>
+                                        <h3 style="text-align: left;">Volumen: <span style="color: #000; font-weight: bold;">{{caracteristica[0].VOLUME}}</span> ml</h3>
+                                        <h3 style="text-align: left;">Disponibles <span class="stock-badge">{{producto[0].STOCK}}</span></h3>
+                                    </div>
+                                    <div *ngIf="producto[0].ID_PRODUCT_TYPE === 'PTS-KFQI7G6B' && caracteristica[0].VOLUME === 'NO APLICA'" class="detalle-producto" style="display: block;" >
+                                        <h3 style="text-align: left; justify-content: center;">
+                                            Color: 
+                                            <span style="color: #000; font-weight: bold;">{{producto[0].COLOR}} 
+                                                <div class="color-bolita-test" [style.background-color]="getColorCode(producto[0].COLOR)" style="align-items: center;"></div>
+                                            </span> 
+                                        </h3>
+                                        <h3 style="text-align: left;">Peso: <span style="color: #000; font-weight: bold;">{{caracteristica[0].WEIGHT}}</span> kg</h3>
+                                        <h3 style="text-align: left;">Disponibles <span class="stock-badge">{{producto[0].STOCK}}</span></h3>
+                                    </div>
+
+                                    <a href="https://wa.me/573003003000?text=Hola, quiero comprar " 
+                                    class="whatsapp-button" target="_blank" style=" width: calc(100% - 0px);">
+                                        <h2 class="whatsapp-text">
+                                            <i class="fa-regular fa-cart-shopping"></i> Comprar en WhatsApp
+                                        </h2>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spacer2"></div>                  
+                    </div>                    
+                </div>
+            <div class="spacer2"></div>
+        </div>
+        <div class="spacer2"></div>
+
+        <div class="contenedorColumnas">
+            <div class="spacer2"></div>
+            <div class="bordeAzul">
+                <div class="filas">
+                    <div class="unaColumna">
+                        <div class="spacer2"></div>
+                        <h2 style="margin-left: 5%; margin-right: 5%; text-align: center;" data-aos="fade-right" data-aos-duration="2000">Descripción</h2>
+                        <div class="cuadrado" style="margin-right: 5%; margin-left: 5%;" data-aos="fade-right" data-aos-duration="2000"></div>
+                        <div class="spacer2"></div>
+                        <p style="margin-left: 5%; margin-right: 5%; text-align:justify" data-aos="fade-right" data-aos-duration="2000">
+                            {{producto[0].DESCRIPTION}}
+                        </p>
+                        <div class="spacer2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="spacer2"></div>
+        </div>
+        <div class="spacer2"></div>
+        <div class="contenedorColumnas">
+            <div class="spacer2"></div>
+            <div class="bordeAzul">
+                <div class="filas">
+                    <div class="unaColumna">
+                        <div class="video-responsive-contenedor"> 
+                            <iframe 
+                            *ngIf="videoUrl"
+                            [src]="videoUrl" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="spacer2"></div>
+        </div>
+        <div class="spacer2"></div>
+        <app-footer-container></app-footer-container>
+        <div class="spacer2"></div>
+    </div>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11327971754"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-11327971754');
+    </script>
+</ng-container>
+
+<div *ngIf="cargandoDatos" class="loading-overlay">
+  <app-loading></app-loading>
+</div>
+
+<div *ngIf="errorAlCargar" class="error-state">
+  <app-error
+    [titulo]="'Error de conexión'" 
+    [mensaje]="'No se pudo obtener la información del servidor.'"></app-error>
+</div>

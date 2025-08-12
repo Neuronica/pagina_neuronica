@@ -1,0 +1,68 @@
+/* ... tus estilos existentes ... */
+
+.color-bolita-test {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-top: 5%;
+  align-items: center;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  background-color: #FFFFFF; /* Bolita blanca fija */
+}
+
+h1{
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  color: #005f75;
+  font-size: clamp(1.5rem, 2.5vw, 4.3rem);
+  line-height: 100%;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h2 {
+  width: 100%;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+.whatsapp-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    background-color: #25D366; /* Color de fondo de WhatsApp */
+    color: white; /* Color del texto */
+    font-weight: bold;
+    padding: 15px; /* Relleno para que el botón sea más grande */
+    border-radius: 15px; /* Bordes redondeados para un aspecto moderno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease; /* Transición suave para el efecto de hover */
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E; /* Un tono más oscuro de verde al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px); /* Pequeño efecto para que el botón "salga" un poco */
+}
+.stock-badge {
+    background-color: #fff; /* Color naranja más sólido */
+    color: black; /* Texto blanco para mayor contraste */
+    font-weight: bold;
+    padding: 4px 12px; /* Relleno para que el badge no se vea tan pequeño */
+    border-radius: 20px; /* Bordes más redondeados para un aspecto moderno (puedes usar px en vez de vh) */
+    text-align: center;
+    min-width: 40px; /* Ancho mínimo para que el recuadro se vea uniforme */
+    box-shadow: 0 2px 4px rgba(211, 118, 0, 0.5); /* Sombra suave para un efecto 3D */
+}
+
+.precios {
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente */
+    gap: 10px; /* Espacio entre los elementos */
+}

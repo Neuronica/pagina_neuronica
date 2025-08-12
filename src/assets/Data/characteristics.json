@@ -1,0 +1,168 @@
+[
+    {
+      "ID_CHARACTERISTIC": "1",
+      "ID_PRODUCT": "1",
+      "WEIGHT": "7.5",
+      "DIMENSIONS": "281x281x460",
+      "ENCLOSURE": "SI",
+      "VOLUME": "143x89.6x185",
+      "ID_TECHNOLOGY": "SLA",
+      "SPEED": "150",
+      "THICKNESS": "0.015"
+    },
+    {
+      "ID_CHARACTERISTIC": "2",
+      "ID_PRODUCT": "2",
+      "WEIGHT": "16.1",
+      "DIMENSIONS": "327.4x329.2x54",
+      "ENCLOSURE": "SI",
+      "VOLUME": "211.68x118.37x22",
+      "ID_TECHNOLOGY": "SLA",
+      "SPEED": "150",
+      "THICKNESS": "0.01"
+    },
+    {
+      "ID_CHARACTERISTIC": "3",
+      "ID_PRODUCT": "3",
+      "WEIGHT": "6.8",
+      "DIMENSIONS": "246 x 230 x 453",
+      "ENCLOSURE": "SI",
+      "VOLUME": "132.8 x 74.7 x 150",
+      "ID_TECHNOLOGY": "DLP",
+      "SPEED": "70",
+      "THICKNESS": "0.01"
+    },
+    {
+      "ID_CHARACTERISTIC": "4",
+      "ID_PRODUCT": "4",
+      "WEIGHT": "4.67",
+      "DIMENSIONS": "246 x 230 x 363.5",
+      "ENCLOSURE": "SI",
+      "VOLUME": "180 x 121 x 153",
+      "ID_TECHNOLOGY": "NO APLICA",
+      "SPEED": "NO APLICA",
+      "THICKNESS": "NO APLICA"
+    },
+    {
+      "ID_CHARACTERISTIC": "5",
+      "ID_PRODUCT": "5",
+      "WEIGHT": "8.9",
+      "DIMENSIONS": "475 x 445 x 515",
+      "ENCLOSURE": "NO",
+      "VOLUME": "225 x 225 x 265",
+      "ID_TECHNOLOGY": "FDM",
+      "SPEED": "500",
+      "THICKNESS": "0.1"
+    },
+    {
+      "ID_CHARACTERISTIC": "6",
+      "ID_PRODUCT": "6",
+      "WEIGHT": "16",
+      "DIMENSIONS": "578 x 533 x 640",
+      "ENCLOSURE": "NO",
+      "VOLUME": "320 x 320 x 385",
+      "ID_TECHNOLOGY": "FDM",
+      "SPEED": "500",
+      "THICKNESS": "0.05"
+    },
+    {
+      "ID_CHARACTERISTIC": "7",
+      "ID_PRODUCT": "7",
+      "WEIGHT": "104",
+      "DIMENSIONS": "1224 x 1164 x 1425",
+      "ENCLOSURE": "NO",
+      "VOLUME": "800 x 800 x 1000",
+      "ID_TECHNOLOGY": "FDM",
+      "SPEED": "300",
+      "THICKNESS": "0.1"
+    },
+    {
+      "ID_CHARACTERISTIC": "8",
+      "ID_PRODUCT": "8",
+      "WEIGHT": "17.5",
+      "DIMENSIONS": "398 x 404 x 49",
+      "ENCLOSURE": "SI",
+      "VOLUME": "256 x 256 x 256",
+      "ID_TECHNOLOGY": "FDM",
+      "SPEED": "500",
+      "THICKNESS": "0.1"
+    },
+    {
+      "ID_CHARACTERISTIC": "9",
+      "ID_PRODUCT": "9",
+      "WEIGHT": "NO APLICA",
+      "DIMENSIONS": "NO APLICA",
+      "ENCLOSURE": "NO APLICA",
+      "VOLUME": "1000",
+      "ID_TECHNOLOGY": "NO APLICA",
+      "SPEED": "NO APLICA",
+      "THICKNESS": "NO APLICA"
+    },
+    {
+      "ID_CHARACTERISTIC": "10",
+      "ID_PRODUCT": "10",
+      "WEIGHT": "NO APLICA",
+      "DIMENSIONS": "NO APLICA",
+      "ENCLOSURE": "NO APLICA",
+      "VOLUME": "1000",
+      "ID_TECHNOLOGY": "NO APLICA",
+      "SPEED": "NO APLICA",
+      "THICKNESS": "NO APLICA"
+    },
+    {
+      "ID_CHARACTERISTIC": "11",
+      "ID_PRODUCT": "11",
+      "WEIGHT": "4.67",
+      "DIMENSIONS": "NO APLICA",
+      "ENCLOSURE": "NO APLICA",
+      "VOLUME": "NO APLICA",
+      "ID_TECHNOLOGY": "NO APLICA",
+      "SPEED": "NO APLICA",
+      "THICKNESS": "NO APLICA"
+    },
+    {
+      "ID_CHARACTERISTIC": "12",
+      "ID_PRODUCT": "12",
+      "WEIGHT": "NO APLICA",
+      "DIMENSIONS": "NO APLICA",
+      "ENCLOSURE": "NO APLICA",
+      "VOLUME": "500",
+      "ID_TECHNOLOGY": "NO APLICA",
+      "SPEED": "NO APLICA",
+      "THICKNESS": "NO APLICA"
+    },
+    {
+      "ID_CHARACTERISTIC": "13",
+      "ID_PRODUCT": "13",
+      "WEIGHT": "16",
+      "DIMENSIONS": "NO APLICA",
+      "ENCLOSURE": "NO APLICA",
+      "VOLUME": "NO APLICA",
+      "ID_TECHNOLOGY": "NO APLICA",
+      "SPEED": "NO APLICA",
+      "THICKNESS": "NO APLICA"
+    },
+    {
+      "ID_CHARACTERISTIC": "14",
+      "ID_PRODUCT": "14",
+      "WEIGHT": "NO APLICA",
+      "DIMENSIONS": "NO APLICA",
+      "ENCLOSURE": "NO APLICA",
+      "VOLUME": "NO APLICA",
+      "ID_TECHNOLOGY": "NO APLICA",
+      "SPEED": "NO APLICA",
+      "THICKNESS": "NO APLICA"
+    },
+    {
+      "ID_CHARACTERISTIC": "15",
+      "ID_PRODUCT": "15",
+      "WEIGHT": "17.5",
+      "DIMENSIONS": "NO APLICA",
+      "ENCLOSURE": "NO APLICA",
+      "VOLUME": "NO APLICA",
+      "ID_TECHNOLOGY": "NO APLICA",
+      "SPEED": "NO APLICA",
+      "THICKNESS": "NO APLICA"
+    }
+    
+  ]

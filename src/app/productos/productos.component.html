@@ -1,0 +1,96 @@
+<ng-container *ngIf="!cargandoDatos && !errorAlCargar">   
+    <div class="fondo">
+        <div class="contenedorColumnas">
+            <div class="spacer2"></div>
+            <div class="bordeAzul">
+                <div class="filas">
+                    <div class="contenedorColumnas">
+                    <div class="spacer2"></div>
+                        <div class="tresColumnas">
+                            <button mat-button [matMenuTriggerFor]="filtrosMenu" class="botonDesplegable" style="margin-left: 2%; margin-right: 2%; margin-top: 2%; margin-bottom:2%;">
+                                {{textoFiltro}}
+                            </button>
+                                            
+                            <mat-menu #filtrosMenu="matMenu">
+                                <button mat-menu-item *ngFor="let productType of productTypes" (click)="seleccionarTipo(productType)">
+                                    {{ productType.PRODUCT_TYPE }}
+                                </button>
+                            </mat-menu>
+                                            
+                            <button mat-button [matMenuTriggerFor]="ordenMenu" class="botonDesplegable" style="margin-left: 2%; margin-right: 2%; margin-top: 2%; margin-bottom:2%;">
+                                {{textoOrden}}
+                            </button>
+                                            
+                            <mat-menu #ordenMenu="matMenu">
+                                <button mat-menu-item *ngFor="let order of orders" (click)="seleccionarOrden(order)">
+                                    {{ order.ORDER_BY }}
+                                </button>
+                            </mat-menu>
+                                            
+                            <button mat-button [matMenuTriggerFor]="marcasMenu" class="botonDesplegable" style="margin-left: 2%; margin-right: 2%; margin-top: 2%; margin-bottom:2%;">
+                                {{textoMarca}}
+                            </button>
+                                            
+                            <mat-menu #marcasMenu="matMenu">
+                                <button mat-menu-item *ngFor="let supplier of suppliers" (click)="seleccionarProveedor(supplier)">
+                                    {{ supplier.NAME }}
+                                </button>
+                            </mat-menu>
+
+                            <input type="text" placeholder="Buscar" name="datoCorreo" style="color: black; background-color: white; border-color: #005f75; margin-left: 2%; margin-right: 2%; margin-top: 2%; margin-bottom:2%;">
+                        </div>                    
+                        <div class="spacer2"></div>
+                    </div> 
+                </div>
+                <div class="filas">
+                    <div class="lista-productos">
+                        <div *ngFor="let producto of productList" class="lista-tarjeta-productos" [routerLink]="['/producto',producto.ID_PRODUCT]">
+                            <div class="contenedor-imagen">
+                                <img [src]="getProductoImageUrl(producto.ID_PRODUCT)" alt="{{ producto.ID_REFERENCES }}">
+                                <div *ngIf="producto.DISCOUNT != 0" class="banner-oferta">
+                                    ¡Oferta!
+                                </div>   
+                            </div>
+                            
+                            <h3>{{ producto.ID_REFERENCES +' '+ producto.VERSION}}</h3>
+                            <p>Precio: {{ producto.PRICE - producto.DISCOUNT | currency:'USD':'symbol':'1.0-0' }}</p>
+                            <p *ngIf="producto.ID_PRODUCT_TYPE === 'PTS-KFQI7G6B'"> Color: {{ producto.COLOR }} </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="paginator-container">
+                    <mat-paginator 
+                    [length]="productList.length"
+                    [pageSize]="pageSize"
+                    [pageSizeOptions]="[3, 6, 9, 12]"
+                    [showFirstLastButtons]="true"
+                    (page)="handlePageEvent($event)">
+                    </mat-paginator>
+                </div>
+            <div class="spacer2"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11327971754"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-11327971754');
+    </script>
+</ng-container>
+
+<div *ngIf="cargandoDatos" class="loading-state">
+    <app-loading></app-loading>
+</div>
+
+<div *ngIf="errorAlCargar" class="error-state">
+ <app-error    
+    [titulo]="'Error de conexión'" 
+    [mensaje]="'No se pudo obtener la información del servidor.'"
+    (reintentar)="cargarDatosIniciales()">
+ </app-error>
+</div>

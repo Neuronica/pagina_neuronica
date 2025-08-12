@@ -15,7 +15,7 @@
           <i class="material-icons">{{ openMenu ? 'close' : 'menu' }}</i>
       </div>
       <div class="menu" [class.menuClass] = "menuCel" style="text-align: center;">
-          <ul >
+          <ul>
               <a mat-button routerLink = "" (click)="abrirMenu()">Inicio</a>
               <a mat-button routerLink = "quienes-somos-neuronica" routerLinkactive="active" (click)="abrirMenu()">Nosotros</a>
               <a mat-button [matMenuTriggerFor]="Servicios">
@@ -24,13 +24,15 @@
                     <i class="material-icons">arrow_drop_down</i>
                 </div>
               </a>
+              <a mat-button routerLink="productos" (click)="abrirMenu()">Productos</a>
               <!-- <a mat-button routerLink = "escogernos" (click)="abrirMenu()">
-                  <span class="material-symbols-outlined">shopping_cart_checkout</span>
-              </a> -->
+                  <span class="material-symbols-outlined">shopping_cart</span>
+              </a> 
+              <a mat-button routerLink = "login" (click)="abrirMenu()">
+                <span class="material-symbols-outlined">account_circle</span>
+              </a>-->
           </ul>
       </div>
-
-
   </mat-toolbar>
 </div>
 
@@ -58,12 +60,12 @@
         </a>
     </button>
 
-    <button mat-menu-item class="submenu" (click)="abrirMenu()">
+    <!--<button mat-menu-item class="submenu" (click)="abrirMenu()">
         <a mat-button routerLink="linea-servicio-iot" class="submenu" routerLinkactive="active" style="color: #005f75;">
             <span class="material-symbols-outlined">rss_feed</span>
             IoT
         </a>
-    </button>
+    </button>-->
 
     <!-- <button mat-menu-item class="submenu" (click)="abrirMenu()">
         <a mat-button routerLink="domotica-personalizada" class="submenu" routerLinkactive="active" style="color: #005f75;">

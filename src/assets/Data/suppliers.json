@@ -1,0 +1,18 @@
+[
+    {
+      "ID_SUPPLIER": "SPS-740EA1PS",
+      "NAME": "ELEGOO",
+      "ID_COUNTRY": "CHINA",
+      "LOGO": "NO-HAY",
+      "NIT": "5989949",
+      "EMAIL": "info@elegoo.com"
+    },
+    {
+      "ID_SUPPLIER": "SPS-740EA1PC",
+      "NAME": "NEURÓNICA",
+      "ID_COUNTRY": "COLOMBIA",
+      "LOGO": "NO-HAY",
+      "NIT": "901747839'7",
+      "EMAIL": "informacion@neuronica.co"
+    }
+  ]

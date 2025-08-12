@@ -1,0 +1,71 @@
+<div class="login-container">
+    <div class="spacer2"></div>
+    <div class="contenedorColumnas">
+        <div class="spacer2"></div>
+        <div class="bordeAzul">
+            <div class="filas">
+                <div class="dosColumnas">
+                    <form class="login-box" data-aos="fade-right" data-aos-duration="2000">
+                        <div class="spacer2"></div>
+                        <h2 class="login-title">Acceder</h2>
+                        <div class="linea-divisoria"></div>
+                        <div class="spacer2"></div>
+                        
+                        <div class="form-group">
+                            <label for="login-user">Usuario:</label>
+                            <input id="login-user" type="email" placeholder="ejemplo@gmail.com" name="datoCorreo">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="login-pass">Contraseña:</label>
+                            <div class="password-container">
+                                <input 
+                                  id="login-pass" 
+                                  [type]="passwordFieldType"  
+                                  placeholder="*****" 
+                                  name="datoPassword"
+                                >
+                                <button 
+                                  type="button" 
+                                  class="toggle-password-btn" 
+                                  (click)="togglePasswordVisibility()"
+                                  aria-label="Mostrar/Ocultar contraseña"
+                                >
+                                <i [ngClass]="{'fa-eye-slash': passwordVisible, 'fa-eye': !passwordVisible}"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="boton-acceder">Acceder</button>
+                    </form>
+                </div>
+
+                <div class="dosColumnas">
+                    <form class="register-box" data-aos="fade-right" data-aos-duration="2000">
+                        <div class="spacer2"></div>
+                        <h2 class="login-title">
+                            <i class="fa-solid fa-plus"></i> Registrarse
+                        </h2>
+                        <div class="linea-divisoria"></div>
+                        <div class="spacer2"></div>
+
+                        <div class="form-group">
+                            <label for="register-email">Correo electrónico:</label>
+                            <input id="register-email" type="email" placeholder="ejemplo@gmail.com" name="datoCorreo">
+                        </div>
+                        <div class="form-group">
+                            <label for="register-pass">Contraseña:</label>
+                            <input id="register-pass" type="password" placeholder="*****" name="datoPassword">
+                        </div>
+                        
+                        <button type="submit" class="boton-crear">Crear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="spacer2"></div>
+    </div>
+    <div class="spacer2"></div>
+    <app-footer-container></app-footer-container>
+    <div class="spacer2"></div>
+</div>

@@ -1,0 +1,196 @@
+[
+    {
+      "ID_IMAGE": "1",
+      "ID_PRODUCT": "1",
+      "URL": "assets/Imagenes/productos/1/1.jpg"
+    },
+    {
+      "ID_IMAGE": "2",
+      "ID_PRODUCT": "1",
+      "URL": "assets/Imagenes/productos/1/1-1.png"
+    },
+    {
+      "ID_IMAGE": "3",
+      "ID_PRODUCT": "1",
+      "URL": "assets/Imagenes/productos/1/1-2.png"
+    },
+    {
+      "ID_IMAGE": "4",
+      "ID_PRODUCT": "1",
+      "URL": "assets/Imagenes/productos/1/1-3.png"
+    },
+    {
+      "ID_IMAGE": "5",
+      "ID_PRODUCT": "2",
+      "URL": "assets/Imagenes/productos/2/2.jpg"
+    },
+    {
+      "ID_IMAGE": "6",
+      "ID_PRODUCT": "2",
+      "URL": "assets/Imagenes/productos/2/2-1.png"
+    },
+    {
+      "ID_IMAGE": "7",
+      "ID_PRODUCT": "2",
+      "URL": "assets/Imagenes/productos/2/2-2.png"
+    },
+    {
+      "ID_IMAGE": "8",
+      "ID_PRODUCT": "2",
+      "URL": "assets/Imagenes/productos/2/2-3.png"
+    },
+    {
+      "ID_IMAGE": "9",
+      "ID_PRODUCT": "3",
+      "URL": "assets/Imagenes/productos/3/3.jpg"
+    },
+    {
+      "ID_IMAGE": "10",
+      "ID_PRODUCT": "3",
+      "URL": "assets/Imagenes/productos/3/3-1.png"
+    },{
+      "ID_IMAGE": "11",
+      "ID_PRODUCT": "4",
+      "URL": "assets/Imagenes/productos/4/4.jpg"
+    },
+    {
+      "ID_IMAGE": "12",
+      "ID_PRODUCT": "4",
+      "URL": "assets/Imagenes/productos/4/4-1.png"
+    },
+    {
+      "ID_IMAGE": "13",
+      "ID_PRODUCT": "4",
+      "URL": "assets/Imagenes/productos/4/4-2.png"
+    },
+    {
+      "ID_IMAGE": "14",
+      "ID_PRODUCT": "4",
+      "URL": "assets/Imagenes/productos/4/4-3.png"
+    },
+    { 
+      "ID_IMAGE": "15",
+      "ID_PRODUCT": "5",
+      "URL": "assets/Imagenes/productos/5/5.jpg"
+    },
+    {
+      "ID_IMAGE": "16",
+      "ID_PRODUCT": "5",
+      "URL": "assets/Imagenes/productos/5/5-1.png"
+    },
+    {
+      "ID_IMAGE": "17",
+      "ID_PRODUCT": "5",
+      "URL": "assets/Imagenes/productos/5/5-2.png"
+    },
+    { 
+      "ID_IMAGE": "18",
+      "ID_PRODUCT": "6",
+      "URL": "assets/Imagenes/productos/6/6.jpg"
+    },
+    {
+      "ID_IMAGE": "19",
+      "ID_PRODUCT": "6",
+      "URL": "assets/Imagenes/productos/6/6-1.png"
+    },
+    {
+      "ID_IMAGE": "20",
+      "ID_PRODUCT": "6",
+      "URL": "assets/Imagenes/productos/6/6-2.png"
+    },
+    { 
+      "ID_IMAGE": "21",
+      "ID_PRODUCT": "7",
+      "URL": "assets/Imagenes/productos/7/7.jpg"
+    },
+    {
+      "ID_IMAGE": "22",
+      "ID_PRODUCT": "7",
+      "URL": "assets/Imagenes/productos/7/7-1.png"
+    },
+    {
+      "ID_IMAGE": "23",
+      "ID_PRODUCT": "7",
+      "URL": "assets/Imagenes/productos/7/7-2.png"
+    },
+    { 
+      "ID_IMAGE": "24",
+      "ID_PRODUCT": "7",
+      "URL": "assets/Imagenes/productos/7/7-3.png"
+    },
+    {
+      "ID_IMAGE": "25",
+      "ID_PRODUCT": "7",
+      "URL": "assets/Imagenes/productos/7/7-4.png"
+    },
+    {
+      "ID_IMAGE": "26",
+      "ID_PRODUCT": "7",
+      "URL": "assets/Imagenes/productos/7/7-5.png"
+    },
+    {
+      "ID_IMAGE": "27",
+      "ID_PRODUCT": "7",
+      "URL": "assets/Imagenes/productos/7/7-6.png"
+    },
+    { 
+      "ID_IMAGE": "28",
+      "ID_PRODUCT": "8",
+      "URL": "assets/Imagenes/productos/8/8.jpg"
+    },
+    {
+      "ID_IMAGE": "29",
+      "ID_PRODUCT": "8",
+      "URL": "assets/Imagenes/productos/8/8-1.png"
+    },
+    {
+      "ID_IMAGE": "30",
+      "ID_PRODUCT": "8",
+      "URL": "assets/Imagenes/productos/8/8-2.png"
+    },
+    { 
+      "ID_IMAGE": "31",
+      "ID_PRODUCT": "8",
+      "URL": "assets/Imagenes/productos/8/8-3.png"
+    },
+    {
+      "ID_IMAGE": "32",
+      "ID_PRODUCT": "8",
+      "URL": "assets/Imagenes/productos/8/8-4.png"
+    },
+    {
+      "ID_IMAGE": "33",
+      "ID_PRODUCT": "8",
+      "URL": "assets/Imagenes/productos/8/8-5.png"
+    },
+    {
+      "ID_IMAGE": "34",
+      "ID_PRODUCT": "8",
+      "URL": "assets/Imagenes/productos/8/8-6.png"
+    },
+    {
+      "ID_IMAGE": "35",
+      "ID_PRODUCT": "9",
+      "URL": "assets/Imagenes/productos/9/9.jpg"
+    },
+    {
+      "ID_IMAGE": "36",
+      "ID_PRODUCT": "10",
+      "URL": "assets/Imagenes/productos/10/10.jpg"
+    },
+    {
+      "ID_IMAGE": "37",
+      "ID_PRODUCT": "11",
+      "URL": "assets/Imagenes/productos/11/11.jpg"
+    },
+    {
+      "ID_IMAGE": "38",
+      "ID_PRODUCT": "12",
+      "URL": "assets/Imagenes/productos/12/12.jpg"
+    },
+    {
+      "ID_IMAGE": "39",
+      "ID_PRODUCT": "13",
+      "URL": "assets/Imagenes/productos/13/13.jpg"
+    }
+  ]

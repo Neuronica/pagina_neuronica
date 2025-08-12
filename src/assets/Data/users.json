@@ -1,0 +1,14 @@
+[
+    {
+      "ID_USER": "1",
+      "USERNAME": "CDMERCHANS",
+      "PASSWORD": "QWERTY",
+      "ROLE": "ADMIN"
+    },
+    {
+      "ID_USER": "2",
+      "USERNAME": "SFMERCHAN",
+      "PASSWORD": "12345678",
+      "ROLE": "ADMIN"
+    }
+  ]

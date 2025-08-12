@@ -1,0 +1,139 @@
+/* --- Nuevo CSS para el login mejorado --- */
+
+.login-container {
+    background: url("/assets/Imagenes/Fondo.png") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.bordeAzul {
+    border: 0.1rem solid #D37600;
+    border-radius: 3vw;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.dosColumnas {
+    flex: 1 1 45%; /* Permite que las columnas se ajusten */
+    max-width: 45%;
+}
+
+.login-box, .register-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 0.1rem solid #ccc;
+    border-radius: 3vw;
+    text-align: center;
+    height: 100%; /* Asegura que ambos cuadros tengan la misma altura */
+    justify-content: center;
+}
+
+.login-title {
+    color: #005f75;
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    margin: 0;
+}
+
+.linea-divisoria {
+    width: 90%;
+    height: 0.1rem;
+    background: #D37600;
+    margin: 10px 0;
+}
+
+.form-group {
+    width: 90%;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    color: #005f75;
+    font-family: 'Nunito', sans-serif;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    box-sizing: border-box; /* Crucial para que el padding no afecte el ancho */
+    padding: 10px;
+    border: 1px solid #005f75;
+    border-radius: 10px;
+    background-color: #fff;
+    color: black;
+    font-size: clamp(0.8rem, 1.8vw, 1.1rem);
+}
+
+.boton-acceder, .boton-crear {
+    background-color: #005f75;
+    color: white;
+    border: 1px solid white;
+    border-radius: 3rem;
+    padding: 10px 30px;
+    font-family: 'Nunito', sans-serif;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px;
+}
+
+.boton-acceder:hover, .boton-crear:hover {
+    background-color: white;
+    color: #005f75;
+    border: 1px solid #005f75;
+}
+
+/* Asegúrate de que el contenedor del campo de contraseña sea un 'relative' */
+.password-container {
+    position: relative;
+    width: 100%; /* O el ancho que desees para el campo */
+}
+
+/* Estilo para el botón */
+.toggle-password-btn {
+    position: absolute;
+    right: 10px;        /* Posición desde la derecha */
+    top: 50%;           /* Centrar verticalmente */
+    transform: translateY(-50%); /* Ajuste fino para centrar */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #005f75;   /* Color del ícono */
+    font-size: 1.2rem;
+}
+
+/* Evita que el botón cambie de color al hacer clic */
+.toggle-password-btn:focus {
+    outline: none;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media only screen and (max-width: 700px) {
+    .filas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dosColumnas {
+        width: 100%;
+        max-width: 90%;
+    }
+}
