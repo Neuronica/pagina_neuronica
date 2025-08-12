@@ -6,9 +6,12 @@
                 <div class="filas">
                     <div class="contenedorColumnas">
                     <div class="spacer2"></div>
-                        <div class="tresColumnas">
-                            <button mat-button [matMenuTriggerFor]="filtrosMenu" class="botonDesplegable" style="margin-left: 2%; margin-right: 2%; margin-top: 2%; margin-bottom:2%;">
+                        <div class="cuatroColumnas">
+                            <button mat-button [matMenuTriggerFor]="filtrosMenu" class="botonDesplegable" #filtrosMenuTrigger="matMenuTrigger">
                                 {{textoFiltro}}
+                                <span class="material-symbols-outlined">
+                                    {{ filtrosMenuTrigger.menuOpen ? 'arrow_drop_up' : 'arrow_drop_down' }}
+                                </span>
                             </button>
                                             
                             <mat-menu #filtrosMenu="matMenu">
@@ -17,8 +20,11 @@
                                 </button>
                             </mat-menu>
                                             
-                            <button mat-button [matMenuTriggerFor]="ordenMenu" class="botonDesplegable" style="margin-left: 2%; margin-right: 2%; margin-top: 2%; margin-bottom:2%;">
+                            <button mat-button [matMenuTriggerFor]="ordenMenu" class="botonDesplegable" #ordenMenuTrigger="matMenuTrigger">
                                 {{textoOrden}}
+                                <span class="material-symbols-outlined">
+                                    {{ ordenMenuTrigger.menuOpen ? 'arrow_drop_up' : 'arrow_drop_down' }}
+                                </span>
                             </button>
                                             
                             <mat-menu #ordenMenu="matMenu">
@@ -27,8 +33,11 @@
                                 </button>
                             </mat-menu>
                                             
-                            <button mat-button [matMenuTriggerFor]="marcasMenu" class="botonDesplegable" style="margin-left: 2%; margin-right: 2%; margin-top: 2%; margin-bottom:2%;">
+                            <button mat-button [matMenuTriggerFor]="marcasMenu" class="botonDesplegable" #marcasMenuTrigger="matMenuTrigger">
                                 {{textoMarca}}
+                                <span class="material-symbols-outlined">
+                                    {{ marcasMenuTrigger.menuOpen ? 'arrow_drop_up' : 'arrow_drop_down' }}
+                                </span>
                             </button>
                                             
                             <mat-menu #marcasMenu="matMenu">
@@ -37,7 +46,7 @@
                                 </button>
                             </mat-menu>
 
-                            <input type="text" placeholder="Buscar" name="datoCorreo" style="color: black; background-color: white; border-color: #005f75; margin-left: 2%; margin-right: 2%; margin-top: 2%; margin-bottom:2%;">
+                            <input type="text" placeholder="Buscar" name="datoCorreo" class="input-busqueda">
                         </div>                    
                         <div class="spacer2"></div>
                     </div> 
