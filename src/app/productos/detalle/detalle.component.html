@@ -149,6 +149,43 @@
             <div class="spacer2"></div>
         </div>
         <div class="spacer2"></div>
+       <div class="contenedorColumnas">
+            <div class="spacer2"></div>
+            <div class="bordeAzul">
+                <div class="filas">
+                    <div class="unaColumna">
+                        <div class="spacer2"></div>
+                        <h2 style="margin-left: 5%; margin-right: 5%; text-align: center;" data-aos="fade-right" data-aos-duration="2000">Relacionados</h2>
+                        <div class="cuadrado" style="margin-right: 5%; margin-left: 5%;" data-aos="fade-right" data-aos-duration="2000"></div>
+                        <div class="spacer2"></div>
+                        <div class="carrusel-productos-relacionados">
+                            <button class="carrusel-boton-nav" (click)="anteriorRelacionado()">&#10094;</button>
+                            
+                            <div class="carrusel-items-contenedor">
+                                <div class="carrusel-items-wrapper" [style.transform]="'translateX(-' + indiceRelacionadoActual * (100 / 3) + '%)'">
+                                    <div *ngFor="let relacionado of relatedProducts; let i = index" 
+                                        class="lista-tarjeta-productos" style="margin-left: 2%; margin-right: 2%;"
+                                        [routerLink]="['/producto', relacionado.ID_PRODUCT]">
+                                        <div class="contenedor-imagen">
+                                            <img [src]="getProductoImageUrl(relacionado.ID_PRODUCT)" alt="{{ relacionado.ID_REFERENCES }}">
+                                            <div *ngIf="relacionado.DISCOUNT != 0" class="banner-oferta">
+                                                ¡Oferta!
+                                            </div>
+                                        </div>
+                                        <h3>{{ relacionado.ID_REFERENCES +' '+ relacionado.VERSION}}</h3>
+                                        <p>Precio: {{ relacionado.PRICE - relacionado.DISCOUNT | currency:'USD':'symbol':'1.0-0' }}</p>
+                                    </div>
+                                </div>
+                            </div>     
+                            <button class="carrusel-boton-nav" (click)="siguienteRelacionado()">&#10095;</button>
+                        </div>
+                        <div class="spacer2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="spacer2"></div>
+        </div>
+        <div class="spacer2"></div>
         <app-footer-container></app-footer-container>
         <div class="spacer2"></div>
     </div>

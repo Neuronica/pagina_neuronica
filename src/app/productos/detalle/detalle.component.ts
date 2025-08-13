@@ -15,7 +15,11 @@ import { VideosService, lista_videos } from '../servicios/videos.service';
   styleUrl: './detalle.component.css'
 })
 export class DetalleComponent implements OnInit{
+
+  relatedProducts: product_list[] = []; 
+  indiceRelacionadoActual: number = 0; 
   images: image_list[] = [];
+  todasImagnes: image_list[] = [];
   caracteristica: lista_caracteristicas[] = [];
   producto: product_list[] = [];
   video: lista_videos[] = [];
@@ -73,6 +77,7 @@ export class DetalleComponent implements OnInit{
       })
     ).subscribe(
       ({ images, caracteristicas, productos, videos }) => {
+        this.todasImagnes = images;
         this.images = images.filter(img => img.ID_PRODUCT === id);
         this.caracteristica = caracteristicas.filter(c => c.ID_PRODUCT === id);
         this.producto = productos.filter(p => p.ID_PRODUCT === id);
@@ -86,6 +91,13 @@ export class DetalleComponent implements OnInit{
           const videoId = this.video[0].URL;
           const youtubeEmbedUrl = `https://www.youtube.com/embed/${videoId}`;
           this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(youtubeEmbedUrl);
+        }
+
+        const productoActual = this.producto[0];
+        if (productoActual) {
+          this.relatedProducts = productos.filter(p => 
+            p.ID_PRODUCT_TYPE === productoActual.ID_PRODUCT_TYPE && p.ID_PRODUCT !== productoActual.ID_PRODUCT
+          );
         }
 
         this.cargandoDatos = false; 
@@ -105,6 +117,20 @@ export class DetalleComponent implements OnInit{
       this.imagenActualIndex = (this.imagenActualIndex - 1 + this.images.length) % this.images.length;
       this.imagenActual = this.images[this.imagenActualIndex];
     }
+  }
+
+  siguienteRelacionado(): void {
+    this.indiceRelacionadoActual = (this.indiceRelacionadoActual + 1) % this.relatedProducts.length;
+  }
+
+  anteriorRelacionado(): void {
+    this.indiceRelacionadoActual = (this.indiceRelacionadoActual - 1 + this.relatedProducts.length) % this.relatedProducts.length;
+  }
+
+  getProductoImageUrl(idProducto: string): string {
+    const imagenProducto = this.todasImagnes.find(img => img.ID_PRODUCT === idProducto);
+    // Retorna la URL si se encuentra, de lo contrario, una URL de una imagen por defecto
+    return imagenProducto ? imagenProducto.URL : 'assets/default-product-image.png';
   }
 
   getColorCode(colorName: string): string {

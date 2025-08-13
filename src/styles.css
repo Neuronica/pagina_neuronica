@@ -127,6 +127,36 @@ a:hover{
   color: #D37600 !important;
 }
 
+
+.carrusel-productos-relacionados {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.carrusel-items-contenedor {
+    display: flex;
+    overflow: hidden; /* **Clave para que no se vean los productos fuera del contenedor** */
+    width: 100%;
+    margin: 0 10px;
+}
+
+/* 🚀 NUEVO ESTILO: Contenedor que se desplaza */
+.carrusel-items-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* 🚀 MODIFICACIÓN: Las tarjetas ahora ocupan un tercio del ancho */
+.carrusel-items-wrapper .lista-tarjeta-productos {
+    flex: 0 0 calc(100% / 3); /* **Cada tarjeta ocupa 1/3 del ancho** */
+    /* ... el resto de tus estilos para lista-tarjeta-productos ... */
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
 /* Nuevo contenedor para los cuadros */
 .contenedor-servicios {
   display: flex;

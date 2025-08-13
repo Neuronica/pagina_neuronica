@@ -9,6 +9,7 @@ import * as AOS from 'aos';
     styleUrls: ['./ingenieria-inversa.component.css'],
     standalone: false
 })
+
 export class IngenieriaInversaComponent implements OnInit{
 
   public getwidth: any;
