@@ -22,6 +22,20 @@ import { ErrorComponent } from './error/error.component';
 import { LoginComponent } from './login/login.component'; 
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { HardwareComponent } from './hardware/hardware.component';
+import { DisenoProductoComponent } from './hardware/diseno-producto/diseno-producto.component';
+import { PCBComponent } from './hardware/pcb/pcb.component';
+import { PCBAComponent } from './hardware/pcba/pcba.component';
+import { ComponentesComponent } from './hardware/componentes/componentes.component';
+import { IngenieriaInversaComponent } from './hardware/ingenieria-inversa/ingenieria-inversa.component';
+import { ManufacturaComponent } from './manufactura/manufactura.component';
+import { LaserComponent } from './manufactura/laser/laser.component';
+import { CncComponent } from './manufactura/cnc/cnc.component';
+import { FdmComponent } from './manufactura/fdm/fdm.component';
+import { SlaComponent } from './manufactura/sla/sla.component';
+import { SoftwareComponent } from './software/software.component';
+import { FirmwareComponent } from './software/firmware/firmware.component';
+import { RecopilacionDatosComponent } from './software/recopilacion-datos/recopilacion-datos.component';
+import { AutomatizacionComponent } from './software/automatizacion/automatizacion.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +49,20 @@ import { HardwareComponent } from './hardware/hardware.component';
     LoginComponent,
     NosotrosComponent,
     HardwareComponent,
+    DisenoProductoComponent,
+    PCBComponent,
+    PCBAComponent,
+    ComponentesComponent,
+    IngenieriaInversaComponent,
+    ManufacturaComponent,
+    LaserComponent,
+    CncComponent,
+    FdmComponent,
+    SlaComponent,
+    SoftwareComponent,
+    FirmwareComponent,
+    RecopilacionDatosComponent,
+    AutomatizacionComponent
   ],
   imports: [
     BrowserModule,
