@@ -2,13 +2,13 @@ import { createRequire } from 'module';const require = createRequire(import.meta
 import {
   EVENT_MANAGER_PLUGINS,
   EventManagerPlugin
-} from "./chunk-QFR7A6X7.js";
+} from "./chunk-KXRYXAFH.js";
 import {
   withHttpTransferCache
-} from "./chunk-X75O5LEY.js";
+} from "./chunk-5SVE7DCL.js";
 import {
   getDOM
-} from "./chunk-7OMST4CY.js";
+} from "./chunk-3J7NY7OU.js";
 import {
   ApplicationRef,
   Console,
@@ -49,7 +49,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-3SDP363E.js";
+} from "./chunk-RGVQJ564.js";
 
 // node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs
 var Meta = class _Meta {
@@ -819,4 +819,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-FFFI4NXC.js.map
+//# sourceMappingURL=chunk-L77DEGUJ.js.map

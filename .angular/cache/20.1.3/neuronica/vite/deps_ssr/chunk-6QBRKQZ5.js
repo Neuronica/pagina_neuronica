@@ -1,3 +1,4 @@
+import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   MAT_RIPPLE_GLOBAL_OPTIONS,
   MatRippleModule,
@@ -5,16 +6,16 @@ import {
   _StructuralStylesLoader,
   _animationsDisabled,
   defaultRippleAnimationConfig
-} from "./chunk-5H6XFYLL.js";
+} from "./chunk-JXRXOUZL.js";
 import {
   FocusMonitor,
   MatCommonModule,
   _CdkPrivateStyleLoader,
   _getEventTarget
-} from "./chunk-35HBINYC.js";
+} from "./chunk-JAINGKNI.js";
 import {
   Platform
-} from "./chunk-XDAVPHVH.js";
+} from "./chunk-2XZERX5Q.js";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -48,7 +49,7 @@ import {
   ɵɵdomElementStart,
   ɵɵprojection,
   ɵɵprojectionDef
-} from "./chunk-6I4SEJNY.js";
+} from "./chunk-RGVQJ564.js";
 
 // node_modules/@angular/material/fesm2022/ripple-loader-wNDzC_j6.mjs
 var eventListenerOptions = {
@@ -840,4 +841,4 @@ export {
   MatMiniFabAnchor,
   MatButtonModule
 };
-//# sourceMappingURL=chunk-6BSVW7IC.js.map
+//# sourceMappingURL=chunk-6QBRKQZ5.js.map
