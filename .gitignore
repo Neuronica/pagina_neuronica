@@ -1,3 +1,11 @@
 # Node
 /node_modules
-.angular/cache/
+
+# Visual
+.vscode/
+
+#Angular
+.angular/
+
+#Project
+dist/
