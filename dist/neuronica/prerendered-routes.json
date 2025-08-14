@@ -1,0 +1,23 @@
+{
+  "routes": {
+    "/": {},
+    "/PCB": {},
+    "/PCBA": {},
+    "/automatizaciones": {},
+    "/cnc": {},
+    "/diseno-producto": {},
+    "/domotica-personalizada": {},
+    "/fdm": {},
+    "/firmware": {},
+    "/importacion-componentes": {},
+    "/ingenieria-inversa": {},
+    "/laser": {},
+    "/linea-servicio-hardware": {},
+    "/linea-servicio-iot": {},
+    "/linea-servicio-manufactura": {},
+    "/linea-servicio-software": {},
+    "/quienes-somos-neuronica": {},
+    "/recopilacion-datos": {},
+    "/sla": {}
+  }
+}
