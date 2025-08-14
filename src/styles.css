@@ -259,6 +259,8 @@ input{
   margin: auto;
   width: 100%;
   height: auto;
+  justify-content: center !important;
+  gap: 30px;
 }
 
 .unaColumna{
@@ -501,6 +503,11 @@ input{
   margin-left: 5%;
   margin-right: 5%;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.subcuadro:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+    transition: transform 0.3s ease;
 }
 
 .imagen{

@@ -36,6 +36,7 @@ import { SoftwareComponent } from './software/software.component';
 import { FirmwareComponent } from './software/firmware/firmware.component';
 import { RecopilacionDatosComponent } from './software/recopilacion-datos/recopilacion-datos.component';
 import { AutomatizacionComponent } from './software/automatizacion/automatizacion.component';
+import { Impresion3dComponent } from './manufactura/impresion3d/impresion3d.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { AutomatizacionComponent } from './software/automatizacion/automatizacio
     SoftwareComponent,
     FirmwareComponent,
     RecopilacionDatosComponent,
-    AutomatizacionComponent
+    AutomatizacionComponent,
+    Impresion3dComponent,
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,7 @@ import { IngenieriaInversaComponent } from './hardware/ingenieria-inversa/ingeni
 import { PCBComponent } from './hardware/pcb/pcb.component';
 import { PCBAComponent } from './hardware/pcba/pcba.component';
 import { ManufacturaComponent } from './manufactura/manufactura.component'; //Linea
+import { Impresion3dComponent } from './manufactura/impresion3d/impresion3d.component';
 import { CncComponent } from './manufactura/cnc/cnc.component';
 import { FdmComponent } from './manufactura/fdm/fdm.component';
 import { LaserComponent } from './manufactura/laser/laser.component';
@@ -39,6 +40,7 @@ const routes: Routes = [
   { path:'PCB', component:PCBComponent},
   { path:'PCBA', component:PCBAComponent},
   { path:'linea-servicio-manufactura', component:ManufacturaComponent}, //Linea
+  { path: 'impresion-3d', component:Impresion3dComponent},
   { path: 'cnc', component:CncComponent},
   { path: 'fdm', component:FdmComponent},
   { path: 'laser', component:LaserComponent},
