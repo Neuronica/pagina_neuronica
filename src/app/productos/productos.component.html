@@ -27,8 +27,8 @@
                                 </span>
                             </button>
                                             
-                            <mat-menu #filtrosMenu="matMenu">
-                                <button mat-menu-item *ngFor="let productType of productTypes" (click)="seleccionarTipo(productType)">
+                            <mat-menu #filtrosMenu="matMenu" class="menuDesplegable">
+                                <button mat-menu-item *ngFor="let productType of productTypes" (click)="seleccionarTipo(productType)" style="color: white;">
                                     {{ productType.PRODUCT_TYPE }}
                                 </button>
                             </mat-menu>
@@ -40,8 +40,8 @@
                                 </span>
                             </button>
                                             
-                            <mat-menu #ordenMenu="matMenu">
-                                <button mat-menu-item *ngFor="let order of orders" (click)="seleccionarOrden(order)">
+                            <mat-menu #ordenMenu="matMenu" class="menuDesplegable">
+                                <button mat-menu-item *ngFor="let order of orders" (click)="seleccionarOrden(order)" style="color: white;">
                                     {{ order.ORDER_BY }}
                                 </button>
                             </mat-menu>
@@ -53,8 +53,8 @@
                                 </span>
                             </button>
                                             
-                            <mat-menu #marcasMenu="matMenu">
-                                <button mat-menu-item *ngFor="let supplier of suppliers" (click)="seleccionarProveedor(supplier)">
+                            <mat-menu #marcasMenu="matMenu" class="menuDesplegable">
+                                <button mat-menu-item *ngFor="let supplier of suppliers" (click)="seleccionarProveedor(supplier)" style="color: white;">
                                     {{ supplier.NAME }}
                                 </button>
                             </mat-menu>

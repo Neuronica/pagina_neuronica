@@ -417,6 +417,7 @@ input{
 .botonDesplegable{
   color: white !important;
   background-color: #005f75 !important;
+  border-radius: 2vh !important;
   border-color: white;
   display: flex;
   align-items: center;
@@ -429,7 +430,13 @@ input{
 
 .botonDesplegable .material-symbols-outlined {
   vertical-align: middle;
-  line-height: 1; /* Opcional, pero ayuda a controlar la altura */
+  line-height: 1;
+}
+
+.menuDesplegable{
+  background-color: rgba(0, 95, 117, 0.5) !important;
+  color: white !important;
+  border-radius: 2vh !important;
 }
 
 .paginator-container{
@@ -508,6 +515,18 @@ input{
 .subcuadro:hover {
     transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
     transition: transform 0.3s ease;
+}
+
+.banner-oferta {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    background-color: #D37600; 
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .imagen{

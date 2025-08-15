@@ -32,6 +32,7 @@ import { LaserComponent } from './manufactura/laser/laser.component';
 import { CncComponent } from './manufactura/cnc/cnc.component';
 import { FdmComponent } from './manufactura/fdm/fdm.component';
 import { SlaComponent } from './manufactura/sla/sla.component';
+import { DlpComponent } from './manufactura/dlp/dlp.component';
 import { SoftwareComponent } from './software/software.component';
 import { FirmwareComponent } from './software/firmware/firmware.component';
 import { RecopilacionDatosComponent } from './software/recopilacion-datos/recopilacion-datos.component';
@@ -60,6 +61,7 @@ import { Impresion3dComponent } from './manufactura/impresion3d/impresion3d.comp
     CncComponent,
     FdmComponent,
     SlaComponent,
+    DlpComponent,
     SoftwareComponent,
     FirmwareComponent,
     RecopilacionDatosComponent,

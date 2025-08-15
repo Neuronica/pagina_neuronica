@@ -1,23 +1,20 @@
 import { Component, HostListener, Inject, PLATFORM_ID, OnInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
-import { isPlatformBrowser } from '@angular/common';
 import { DomSanitizer } from '@angular/platform-browser';
 import { forkJoin} from 'rxjs';
 import { finalize } from 'rxjs/operators';
+import { isPlatformBrowser } from '@angular/common';
 import { ImagesService, image_list} from '../../productos/servicios/images.service';
-import { ProductListService, product_list } from '../../productos/servicios/product-list.service';
+import { ProductListService, product_list } from '../../productos/servicios/product-list.service';;
 import * as AOS from 'aos';
 
 @Component({
-    selector: 'app-sla',
-    templateUrl: './sla.component.html',
-    styleUrls: ['./sla.component.css'],
-    standalone: false
+  selector: 'app-dlp',
+  standalone: false,
+  templateUrl: './dlp.component.html',
+  styleUrl: './dlp.component.css'
 })
-export class SlaComponent implements OnInit{
-  public getwidth: any;
-  public getheight: any;
-  iconoVariable: boolean = false;
+export class DlpComponent implements OnInit{
   relatedProducts: product_list[] = []; 
   indiceRelacionadoActual: number = 0; 
   images: image_list[] = [];
@@ -36,9 +33,7 @@ export class SlaComponent implements OnInit{
   ngOnInit(){
     if(isPlatformBrowser(this.platformId)){
       AOS.init();
-      window.addEventListener('load', AOS.refresh);
-      this.getwidth = window.innerWidth;
-      this.getheight = window.innerHeight;
+      window.addEventListener('load', AOS.refresh);;
       this.title.setTitle("Impresión 3D en Bogotá con SLA | Neurónica");
       this.meta.addTag({name: 'description', content: 'Descubre la precisión y detalle de la tecnología SLA. Ideal para prototipos complejos y producciones que requieran acabados de alta calidad.'});
       this.meta.addTag({name: 'keywords', content: 'Impresión 3D Bogotá, SLA, Impresión resina, Ingeniería y fabricación personalizada'});
@@ -59,13 +54,6 @@ export class SlaComponent implements OnInit{
         this.errorAlCargar = true;
       }
     });
-  }
-
-  @HostListener('window:resize', ['$event'])
-
-  onWindowResize(){
-    this.getwidth = window.innerWidth;
-    this.getheight = window.innerHeight;
   }
 
 
@@ -89,4 +77,5 @@ export class SlaComponent implements OnInit{
     const imagenProducto = this.images.find(img => img.ID_PRODUCT === idProducto);
     return imagenProducto ? imagenProducto.URL : 'assets/default-product-image.png';
   }
+
 }

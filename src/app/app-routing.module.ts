@@ -20,6 +20,7 @@ import { CncComponent } from './manufactura/cnc/cnc.component';
 import { FdmComponent } from './manufactura/fdm/fdm.component';
 import { LaserComponent } from './manufactura/laser/laser.component';
 import { SlaComponent } from './manufactura/sla/sla.component';
+import { DlpComponent } from './manufactura/dlp/dlp.component';
 import { ProductosComponent } from './productos/productos.component'; //Lista de productos
 import { DetalleComponent } from './productos/detalle/detalle.component';
 import { LoginComponent } from './login/login.component'; //Inicio de sesion
@@ -44,7 +45,8 @@ const routes: Routes = [
   { path: 'cnc', component:CncComponent},
   { path: 'fdm', component:FdmComponent},
   { path: 'laser', component:LaserComponent},
-  { path: 'sla', component:SlaComponent},
+  { path: 'msla', component:SlaComponent},
+  {path: 'dlp', component:DlpComponent},
   { path: 'productos', component: ProductosComponent}, //Lista de productos
   { path: 'producto/:id', component: DetalleComponent},
   { path: 'login', component:LoginComponent}, //Inico de sesion
