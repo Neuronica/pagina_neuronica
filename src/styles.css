@@ -1,3 +1,5 @@
+@import 'aos/dist/aos.css';
+
 html,
 body {
   margin: 0;
@@ -7,7 +9,7 @@ body {
   display: flex; /* Convierte el contenedor en un contenedor Flex */
   flex-wrap: wrap; /* Permite que los ítems salten a la siguiente línea */
   gap: 20px;      /* Espacio entre las tarjetas */
-  justify-content: space-between; /* Distribuye el espacio entre las tarjetas */
+  justify-content: flex-start; /* Distribuye el espacio entre las tarjetas */
   padding: 20px 0;
   margin-left: 5%;
   margin-right: 5%;
@@ -23,6 +25,34 @@ body {
   margin-right: 5%;
 }
 
+.detalle-fila {
+  display: contents;
+  grid-template-columns: 2fr 1fr 1fr; /* 3 columnas: atributo, valor, unidad */
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd; /* Línea divisoria opcional */
+}
+
+.col-attr {
+  text-align: left !important;
+  font-weight: normal;
+  font-weight: bold;
+  color: #005f75;
+}
+
+.col-value {
+  font-weight: normal;
+  color: #000;
+  text-align: center;
+}
+
+.col-unit {
+  text-align: right;
+  font-weight: bold;
+  font-style: italic;
+  color: #005f75;
+}
+
 /* --- Estilos para cada tarjeta de producto --- */
 .tarjeta-producto {
   width: calc(33.33% - 20px); /* Para 3 columnas: 100%/3, ajustado con el gap */
@@ -35,7 +65,7 @@ body {
 }
 
 .lista-tarjeta-productos {
-  width: calc(33.33% - 20px); /* Para 3 columnas: 100%/3, ajustado con el gap */
+  width: calc((100% - 2*20px) / 3); /* Para 3 columnas: 100%/3, ajustado con el gap */
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 15px;
@@ -151,7 +181,7 @@ a:hover{
 
 /* 🚀 MODIFICACIÓN: Las tarjetas ahora ocupan un tercio del ancho */
 .carrusel-items-wrapper .lista-tarjeta-productos {
-    flex: 0 0 calc(100% / 3); /* **Cada tarjeta ocupa 1/3 del ancho** */
+    flex: 0 0 calc((100% - 20px) / 2); /* **Cada tarjeta ocupa 1/3 del ancho** */
     /* ... el resto de tus estilos para lista-tarjeta-productos ... */
     padding: 15px;
     box-sizing: border-box;
@@ -379,7 +409,7 @@ input{
 .carrusel-boton-nav {
   /* Posición y estilo para los botones de navegación */
   font-size: 2rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(211, 118, 0, 0.5);
   color: white;
   border: none;
   cursor: pointer;

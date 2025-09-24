@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
+import { CommonModule, CurrencyPipe } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -76,6 +77,7 @@ import { Impresion3dComponent } from './manufactura/impresion3d/impresion3d.comp
     MatPaginatorModule,
     MatButtonModule,
     MatIconModule,
+    FormsModule,
     MatMenuModule,
     BrowserAnimationsModule,
   ],

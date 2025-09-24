@@ -29,7 +29,7 @@
                                             
                             <mat-menu #filtrosMenu="matMenu" class="menuDesplegable">
                                 <button mat-menu-item *ngFor="let productType of productTypes" (click)="seleccionarTipo(productType)" style="color: white;">
-                                    {{ productType.PRODUCT_TYPE }}
+                                    {{ productType.name }}
                                 </button>
                             </mat-menu>
                                             
@@ -41,8 +41,8 @@
                             </button>
                                             
                             <mat-menu #ordenMenu="matMenu" class="menuDesplegable">
-                                <button mat-menu-item *ngFor="let order of orders" (click)="seleccionarOrden(order)" style="color: white;">
-                                    {{ order.ORDER_BY }}
+                                <button mat-menu-item *ngFor="let order of defaultOrderOption" (click)="seleccionarOrden(order)" style="color: white;">
+                                    {{ order.name }}
                                 </button>
                             </mat-menu>
                                             
@@ -54,36 +54,45 @@
                             </button>
                                             
                             <mat-menu #marcasMenu="matMenu" class="menuDesplegable">
-                                <button mat-menu-item *ngFor="let supplier of suppliers" (click)="seleccionarProveedor(supplier)" style="color: white;">
-                                    {{ supplier.NAME }}
+                                <button mat-menu-item *ngFor="let brand of brands" (click)="seleccionarProveedor(brand)" style="color: white;">
+                                    {{ brand.name }}
                                 </button>
                             </mat-menu>
 
-                            <input type="text" placeholder="Buscar" name="datoCorreo" class="input-busqueda">
+                            <div class="relative w-full max-w-xs">
+                            <input
+                                type="text"
+                                placeholder="Buscar productos..."
+                                class="input-busqueda"
+                                [(ngModel)]="searchTerm"
+                                (keyup.enter)="buscarProductos()"
+                            />
+                            </div>
                         </div>                    
                         <div class="spacer2"></div>
                     </div> 
                 </div>
                 <div class="filas">
                     <div class="lista-productos">
-                        <div *ngFor="let producto of productList" class="lista-tarjeta-productos" [routerLink]="['/producto',producto.ID_PRODUCT]">
+                        <div *ngFor="let producto of productList" class="lista-tarjeta-productos" [routerLink]="['/producto',producto.slug]">
                             <div class="contenedor-imagen">
-                                <img [src]="getProductoImageUrl(producto.ID_PRODUCT)" alt="{{ producto.ID_REFERENCES }}">
-                                <div *ngIf="producto.DISCOUNT != 0" class="banner-oferta">
+                                <img [src]="getProductoMediaUrl(producto.product_id)" alt="{{ getProductoMediaAlt(producto.product_id) }}"> 
+                                <div *ngIf="producto.offer == true" class="banner-oferta">
                                     ¡Oferta!
-                                </div>   
+                                </div>
                             </div>
                             
-                            <h3>{{ producto.ID_REFERENCES +' '+ producto.VERSION}}</h3>
-                            <p>Precio: {{ producto.PRICE - producto.DISCOUNT | currency:'USD':'symbol':'1.0-0' }}</p>
-                            <p *ngIf="producto.ID_PRODUCT_TYPE === 'PTS-KFQI7G6B'"> Color: {{ producto.COLOR }} </p>
+                            <h3>{{ producto.name}}</h3>
+                            <p>Precio: {{ producto.price_from | currency:'USD':'symbol':'1.0-0' }}</p>
+                            <!--<p *ngIf="producto.ID_PRODUCT_TYPE === 'PTS-KFQI7G6B'"> Color: {{ producto.COLOR }} </p> -->
                         </div>
                     </div>
                 </div>
                 <div class="paginator-container">
-                    <mat-paginator 
-                    [length]="productList.length"
+                <mat-paginator
+                    [length]="paginationMeta?.totalItems"
                     [pageSize]="pageSize"
+                    [pageIndex]="pageIndex - 1"
                     [pageSizeOptions]="[3, 6, 9, 12]"
                     [showFirstLastButtons]="true"
                     (page)="handlePageEvent($event)">

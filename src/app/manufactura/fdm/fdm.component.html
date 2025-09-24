@@ -47,7 +47,7 @@
                         <button class="carrusel-boton-nav" (click)="anteriorRelacionado()">&#10094;</button>            
                         <div class="carrusel-items-contenedor">
                             <div class="carrusel-items-wrapper" [style.transform]="'translateX(-' + indiceRelacionadoActual * (100 / 3) + '%)'">
-                                <div *ngFor="let relacionado of relatedProducts; let i = index" 
+                                <!-- <div *ngFor="let relacionado of relatedProducts; let i = index" 
                                     class="lista-tarjeta-productos" style="margin-left: 2%; margin-right: 2%;"
                                     [routerLink]="['/producto', relacionado.ID_PRODUCT]">
                                     <div class="contenedor-imagen">
@@ -58,7 +58,7 @@
                                     </div>
                                     <h3>{{ relacionado.ID_REFERENCES +' '+ relacionado.VERSION}}</h3>
                                     <p>Precio: {{ relacionado.PRICE - relacionado.DISCOUNT | currency:'USD':'symbol':'1.0-0' }}</p>
-                                </div>
+                                </div> -->
                             </div>
                         </div>     
                         <button class="carrusel-boton-nav" (click)="siguienteRelacionado()">&#10095;</button>

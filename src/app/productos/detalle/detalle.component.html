@@ -1,4 +1,4 @@
-<ng-container *ngIf="!cargandoDatos && !errorAlCargar">  
+ <ng-container *ngIf="!cargandoDatos && !errorAlCargar">  
     <div class="fondo">
         <div class="spacer2"></div>
             <div class="contenedorColumnas">
@@ -10,97 +10,87 @@
                             <div class="detalle-producto">
                                 <div class="tarjeta-producto" style="width: calc(50% - 10px);">
                                     <div class="carrusel-contenedor">
-                                        <button class="carrusel-boton-nav" (click)="anteriorImagen()" [disabled]="images.length <= 1">
+                                        <button *ngIf="informationProduct[0].type != 'material'" class="carrusel-boton-nav" (click)="anteriorImagen()" [disabled]="imagesList.length <= 1">
                                             &#10094;
                                         </button>
                                         <div class="carrusel-imagen">
-                                            <img *ngIf="imagenActual" [src]="imagenActual.URL" alt="Imagen del producto {{ idProducto }}">
+                                            <img *ngIf="imagenActual" [src]="imagenActual.url" alt="Imagen del producto {{ idProducto }}">
                                         </div>
-                                        <button class="carrusel-boton-nav" (click)="siguienteImagen()" [disabled]="images.length <= 1">
+                                        <button *ngIf="informationProduct[0].type != 'material'" class="carrusel-boton-nav" (click)="siguienteImagen()" [disabled]="imagesList.length <= 1">
                                             &#10095;
                                         </button>
                                     </div>
                                 </div>
                                 <div class="detalle-producto" style="width: calc(40% - 0px);">
-                                    <h1>{{producto[0].ID_REFERENCES +' '+ producto[0].VERSION}}</h1>
+                                    <h1 style="text-align: center;" data-aos="fade-right" data-aos-duration="2000">{{informationProduct[0].name}}</h1>
                                     <div class="precios">
-                                        <h3 *ngIf="producto[0].DISCOUNT != 0" style=" font-size: clamp(0.3rem, 3vw, 1.3rem); color: #D37600; font-weight: bold; text-decoration: line-through; opacity: 0.5;">{{producto[0].PRICE| currency:'USD':'symbol':'1.0-0'}}</h3>
-                                        <h3 style="font-size: clamp(0.3rem, 3vw, 1.3rem); color: #D37600; font-weight: bold;">{{producto[0].PRICE - producto[0].DISCOUNT| currency:'USD':'symbol':'1.0-0'}} IVA incluido</h3>
+                                        <h3 *ngIf="informationProduct[0].offer != null" style=" font-size: clamp(0.3rem, 3vw, 1.3rem); color: #D37600; font-weight: bold; text-decoration: line-through; opacity: 0.5; text-align: center;" data-aos="fade-right" data-aos-duration="2000">{{informationProduct[0].price| currency:'USD':'symbol':'1.0-0'}}</h3>
+                                        <h3 *ngIf="informationProduct[0].offer != null" style="font-size: clamp(0.3rem, 3vw, 1.3rem); color: #D37600; font-weight: bold; text-align: center;" data-aos="fade-right" data-aos-duration="2000">{{ informationProduct[0].offer | currency:'USD':'symbol':'1.0-0'}} IVA incluido</h3>
+                                        <h3 *ngIf="informationProduct[0].offer === null" style="font-size: clamp(0.3rem, 3vw, 1.3rem); color: #D37600; font-weight: bold; text-align: center;" data-aos="fade-right" data-aos-duration="2000">{{ informationProduct[0].price | currency:'USD':'symbol':'1.0-0'}} IVA incluido</h3>
                                     </div>
-                                    <div *ngIf="producto[0].ID_PRODUCT_TYPE === 'PTS-5DV1IHJS' && caracteristica[0].ID_TECHNOLOGY === 'FDM'" class="detalle-producto" style="display: block;" >
-                                        <h3 style="text-align: left; justify-content: center;">Peso: <span style="color: #000; font-weight: bold;">{{caracteristica[0].WEIGHT}}</span> kg</h3>
-                                        <h3 style="text-align: left;">Dimensiones: <span style="color: #000; font-weight: bold;">{{caracteristica[0].DIMENSIONS}}</span> mm</h3>
-                                        <h3 style="text-align: left;">Cerramiento: <span style="color: #000; font-weight: bold;">{{caracteristica[0].ENCLOSURE}}</span></h3>
-                                        <h3 style="text-align: left;">Volumen de trabajo: <span style="color: #000; font-weight: bold;">{{caracteristica[0].VOLUME}}</span> mm</h3>
-                                        <h3 style="text-align: left;">Tecnologia: <span style="color: #000; font-weight: bold;">{{caracteristica[0].ID_TECHNOLOGY}}</span></h3>
-                                        <h3 style="text-align: left;"> Velocidad desplasamiento:
-                                            <span style="color: #000; font-weight: bold;">
-                                                {{caracteristica[0].SPEED}}
+                                    
+                                    <div class="detalle-grid">
+                                        <div *ngFor="let a of attribute; let i = index" class="detalle-fila">
+                                            <span class="col-attr" style="text-align: center;" data-aos="fade-right" data-aos-duration="2000"> {{a.attribute}} </span>
+                                            <span class="col-value" style="text-align: center;" data-aos="fade-right" data-aos-duration="2000"> {{a.value}} </span>
+                                            <span class="col-unit" style="text-align: center;" data-aos="fade-right" data-aos-duration="2000"> {{a.unit}}</span>
+                                        </div>
+                                        <div class="detalle-fila">
+                                            <h3 style="margin: 0; color: #D37600;" data-aos="fade-right" data-aos-duration="2000">Disponibles</h3>
+                                            <span class="stock-badge" data-aos="fade-right" data-aos-duration="2000">
+                                            {{informationProduct[0].stock | number: '1.0-0'}}
                                             </span>
-                                            mm/s
-                                        </h3>
-                                        <h3 style="text-align: left;"> Alto de capa minimo: 
-                                            <span style="color: #000; font-weight: bold;">
-                                                {{caracteristica[0].THICKNESS}}
-                                            </span>
-                                            mm
-                                        </h3>
-                                        <h3 style="text-align: left;">Disponibles <span class="stock-badge">{{producto[0].STOCK}}</span></h3>
+                                        </div>
                                     </div>
-                                    <div *ngIf="producto[0].ID_PRODUCT_TYPE === 'PTS-5DV1IHJS' && (caracteristica[0].ID_TECHNOLOGY === 'DLP' || caracteristica[0].ID_TECHNOLOGY === 'SLA')" class="detalle-producto" style="display: block;" >
-                                        <h3 style="text-align: left; justify-content: center;">Peso: <span style="color: #000; font-weight: bold;">{{caracteristica[0].WEIGHT}}</span> kg</h3>
-                                        <h3 style="text-align: left;">Dimensiones: <span style="color: #000; font-weight: bold;">{{caracteristica[0].DIMENSIONS}}</span> mm</h3>
-                                        <h3 style="text-align: left;">Cerramiento: <span style="color: #000; font-weight: bold;">{{caracteristica[0].ENCLOSURE}}</span></h3>
-                                        <h3 style="text-align: left;">Volumen de trabajo: <span style="color: #000; font-weight: bold;">{{caracteristica[0].VOLUME}}</span> mm</h3>
-                                        <h3 style="text-align: left;">Tecnologia: <span style="color: #000; font-weight: bold;">{{caracteristica[0].ID_TECHNOLOGY}}</span></h3>
-                                        <h3 style="text-align: left;"> Velocidad de impresión:
-                                            <span style="color: #000; font-weight: bold;">
-                                                {{caracteristica[0].SPEED}}
-                                            </span>
-                                            mm/h
-                                        </h3>
-                                        <h3 style="text-align: left;"> Alto de capa minimo: 
-                                            <span style="color: #000; font-weight: bold;">
-                                                {{caracteristica[0].THICKNESS}}
-                                            </span>
-                                            mm
-                                        </h3>
-                                        <h3 style="text-align: left;">Disponibles <span class="stock-badge">{{producto[0].STOCK}}</span></h3>
-                                    </div>
-                                    <div *ngIf="producto[0].ID_PRODUCT_TYPE === 'PTS-5DV1IHJS' && caracteristica[0].ID_TECHNOLOGY === 'NO APLICA'" class="detalle-producto" style="display: block;" >
-                                        <h3 style="text-align: left; justify-content: center;">Peso: <span style="color: #000; font-weight: bold;">{{caracteristica[0].WEIGHT}}</span> kg</h3>
-                                        <h3 style="text-align: left;">Dimensiones: <span style="color: #000; font-weight: bold;">{{caracteristica[0].DIMENSIONS}}</span> mm</h3>
-                                        <h3 style="text-align: left;">Cerramiento: <span style="color: #000; font-weight: bold;">{{caracteristica[0].ENCLOSURE}}</span></h3>
-                                        <h3 style="text-align: left;">Volumen de trabajo: <span style="color: #000; font-weight: bold;">{{caracteristica[0].VOLUME}}</span> mm</h3>
-                                    </div>
-                                    <div *ngIf="producto[0].ID_PRODUCT_TYPE === 'PTS-KFQI7G6B' && caracteristica[0].WEIGHT === 'NO APLICA'" class="detalle-producto" style="display: block;" >
-                                        <h3 style="text-align: left; justify-content: center;">
-                                            Color: 
-                                            <span style="color: #000; font-weight: bold;">{{producto[0].COLOR}} 
-                                                <div class="color-bolita-test" [style.background-color]="getColorCode(producto[0].COLOR)" style="align-items: center;"></div>
-                                            </span> 
-                                        </h3>
-                                        <h3 style="text-align: left;">Volumen: <span style="color: #000; font-weight: bold;">{{caracteristica[0].VOLUME}}</span> ml</h3>
-                                        <h3 style="text-align: left;">Disponibles <span class="stock-badge">{{producto[0].STOCK}}</span></h3>
-                                    </div>
-                                    <div *ngIf="producto[0].ID_PRODUCT_TYPE === 'PTS-KFQI7G6B' && caracteristica[0].VOLUME === 'NO APLICA'" class="detalle-producto" style="display: block;" >
-                                        <h3 style="text-align: left; justify-content: center;">
-                                            Color: 
-                                            <span style="color: #000; font-weight: bold;">{{producto[0].COLOR}} 
-                                                <div class="color-bolita-test" [style.background-color]="getColorCode(producto[0].COLOR)" style="align-items: center;"></div>
-                                            </span> 
-                                        </h3>
-                                        <h3 style="text-align: left;">Peso: <span style="color: #000; font-weight: bold;">{{caracteristica[0].WEIGHT}}</span> kg</h3>
-                                        <h3 style="text-align: left;">Disponibles <span class="stock-badge">{{producto[0].STOCK}}</span></h3>
-                                    </div>
+                                    <div *ngIf="informationProduct[0].type === 'material'" class="color-container">
+                                        <span class="col-attr">Colores</span>
+                                        <div class="bolitas">
+                                            <div *ngFor="let p of informationProduct; let i = index">
+                                                <button  class="carrusel-boton-nav" style="background-color: white;" (click)="changeVariant(i)">
+                                                    <div 
+                                                    *ngIf = "i != actualImageMaterial"
+                                                    class="color-bolita-test"
+                                                    [style.backgroundColor]="getColorCode(p.json['color'])"
+                                                    (click) = "findStock(p.json['color'])"></div>                                                    
 
-                                    <a href="https://wa.me/573027218775?text=Hola, quiero comprar una impresora 3D" 
-                                    class="whatsapp-button" target="_blank" style=" width: calc(100% - 0px);">
-                                        <h2 class="whatsapp-text">
-                                            <i class="fa-regular fa-cart-shopping"></i> Comprar en WhatsApp
-                                        </h2>
+                                                    <div 
+                                                    *ngIf = "i === actualImageMaterial"
+                                                    class="color-bolita-test"
+                                                    style="border-color: #005f75;"
+                                                    [style.backgroundColor]="getColorCode(p.json['color'])"></div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="botones-container" data-aos="fade-right" data-aos-duration="2000">
+                                    <a href="https://wa.me/573027218775?text=Hola, quiero comprar una impresora 3D"
+                                    class="whatsapp-button"
+                                    target="_blank">
+                                    <span class="button-text">
+                                        Comprar en
+                                        <img src="./assets/Imagenes/WhatsApp.webp"
+                                            alt="WhatsApp"
+                                            width="40"
+                                            style="margin-left:8px;"/>
+                                    </span>
+                                    </a>
+
+                                    <a href="https://www.mercadolibre.com.co/perfil/tu-tienda"
+                                    class="mercadoLibre-button"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    <span class="button-text">
+                                        Comprar en
+                                        <img src="./assets/Imagenes/mercadolibre.webp"
+                                            alt="Mercado Libre"
+                                            width="40"
+                                            style="margin-left:8px;"/>
+                                    </span>
                                     </a>
                                 </div>
+
                             </div>
                         </div>
                         <div class="spacer2"></div>                  
@@ -116,11 +106,11 @@
                 <div class="filas">
                     <div class="unaColumna">
                         <div class="spacer2"></div>
-                        <h2 style="margin-left: 5%; margin-right: 5%; text-align: center;" data-aos="fade-right" data-aos-duration="2000">Descripción</h2>
+                        <h2 style="text-align: center;" data-aos="fade-right" data-aos-duration="2000">Descripción</h2>
                         <div class="cuadrado" style="margin-right: 5%; margin-left: 5%;" data-aos="fade-right" data-aos-duration="2000"></div>
                         <div class="spacer2"></div>
                         <p style="margin-left: 5%; margin-right: 5%; text-align:justify" data-aos="fade-right" data-aos-duration="2000">
-                            {{producto[0].DESCRIPTION}}
+                            {{informationProduct[0].description}}
                         </p>
                         <div class="spacer2"></div>
                     </div>
@@ -135,11 +125,13 @@
                 <div class="filas">
                     <div class="unaColumna">
                         <div class="video-responsive-contenedor"> 
-                            <iframe 
+                            <iframe
                             *ngIf="videoUrl"
-                            [src]="videoUrl" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            [src]="videoUrl"
+                            frameborder="0"
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen>
                             </iframe>
                         </div>
@@ -155,28 +147,51 @@
                 <div class="filas">
                     <div class="unaColumna">
                         <div class="spacer2"></div>
-                        <h2 style="margin-left: 5%; margin-right: 5%; text-align: center;" data-aos="fade-right" data-aos-duration="2000">Relacionados</h2>
+                        <h2 style="text-align: center;" data-aos="fade-right" data-aos-duration="2000">Relacionados</h2>
                         <div class="cuadrado" style="margin-right: 5%; margin-left: 5%;" data-aos="fade-right" data-aos-duration="2000"></div>
                         <div class="spacer2"></div>
-                        <div class="carrusel-productos-relacionados">
-                            <button class="carrusel-boton-nav" (click)="anteriorRelacionado()">&#10094;</button>
-                            
-                            <div class="carrusel-items-contenedor">
-                                <div class="carrusel-items-wrapper" [style.transform]="'translateX(-' + indiceRelacionadoActual * (100 / 3) + '%)'">
-                                    <div *ngFor="let relacionado of relatedProducts; let i = index" 
-                                        class="lista-tarjeta-productos" style="margin-left: 2%; margin-right: 2%;"
-                                        [routerLink]="['/producto', relacionado.ID_PRODUCT]">
-                                        <div class="contenedor-imagen">
-                                            <img [src]="getProductoImageUrl(relacionado.ID_PRODUCT)" alt="{{ relacionado.ID_REFERENCES }}">
-                                            <div *ngIf="relacionado.DISCOUNT != 0" class="banner-oferta">
-                                                ¡Oferta!
-                                            </div>
-                                        </div>
-                                        <h3>{{ relacionado.ID_REFERENCES +' '+ relacionado.VERSION}}</h3>
-                                        <p>Precio: {{ relacionado.PRICE - relacionado.DISCOUNT | currency:'USD':'symbol':'1.0-0' }}</p>
-                                    </div>
+                        <div class="carrusel-productos-relacionados" data-aos="fade-right" data-aos-duration="2000">
+                            <button class="carrusel-boton-nav" (click)="anteriorRelacionado()">&#10094;</button>             
+                            <div class="carrusel-items-contenedor" *ngIf="relatedProducts?.length as total">
+                            <!-- Caso: más de 3, carrusel de a 3 -->
+                            <div *ngIf="total > 3; else fewTpl"
+                                class="carrusel-items-wrapper"
+                                [style.transform]="'translateX(-' + indiceRelacionadoActual * (100 / 3) + '%)'">
+                                <div *ngFor="let relacionado of relatedProducts; trackBy: trackBySlug"
+                                    class="lista-tarjeta-productos"
+                                    style="margin: 0 2%;"
+                                    [style.flex]="'0 0 calc(100% / 3)'"
+                                    [routerLink]="['/producto', relacionado.slug]">
+                                <div class="contenedor-imagen">
+                                    <img [src]="getProductoImageUrl(relacionado.slug)" [alt]="relacionado.product">
+                                    <div *ngIf="relacionado.offer != null" class="banner-oferta">¡Oferta!</div>
                                 </div>
-                            </div>     
+                                <h3>{{ relacionado.product }}</h3>
+                                <p *ngIf="relacionado.offer === null">Precio: {{ relacionado.price | currency:'USD':'symbol':'1.0-0' }}</p>
+                                <p *ngIf="relacionado.offer != null">Precio: {{ relacionado.offer | currency:'USD':'symbol':'1.0-0' }}</p>
+                                </div>
+                            </div>
+
+                            <!-- Caso: 1 a 3, mostrar todos sin corte -->
+                            <ng-template #fewTpl>
+                                <div class="carrusel-items-wrapper">
+                                <div *ngFor="let relacionado of relatedProducts; trackBy: trackBySlug"
+                                    class="lista-tarjeta-productos"
+                                    style="margin: 0 2%;"
+                                    [style.flex]="'0 0 calc(100% / ' + total + ')'"
+                                    [routerLink]="['/producto', relacionado.slug]">
+                                    <div class="contenedor-imagen">
+                                    <img [src]="getProductoImageUrl(relacionado.slug)" [alt]="relacionado.product">
+                                    <div *ngIf="relacionado.offer != null" class="banner-oferta">¡Oferta!</div>
+                                    </div>
+                                    <h3>{{ relacionado.product }}</h3>
+                                    <p *ngIf="relacionado.offer === null">Precio: {{ relacionado.price | currency:'USD':'symbol':'1.0-0' }}</p>
+                                    <p *ngIf="relacionado.offer != null">Precio: {{ relacionado.offer | currency:'USD':'symbol':'1.0-0' }}</p>
+                                </div>
+                                </div>
+                            </ng-template>
+                            </div>
+   
                             <button class="carrusel-boton-nav" (click)="siguienteRelacionado()">&#10095;</button>
                         </div>
                         <div class="spacer2"></div>
@@ -190,7 +205,6 @@
         <div class="spacer2"></div>
     </div>
 
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11327971754"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
