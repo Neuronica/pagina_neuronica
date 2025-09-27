@@ -1,5 +1,9 @@
 import { Component, HostListener, PLATFORM_ID, Inject, OnInit } from '@angular/core';
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
+import { HTTP_INTERCEPTORS, HttpClientModule, HttpClient } from '@angular/common/http';
+
+const CLOUD_RUN_URL = 'https://pagina-neuronica-backend-490354620288.us-west1.run.app'; 
+const API_BASE = `${CLOUD_RUN_URL}/api`;
 
 @Component({
     selector: 'app-root',
@@ -7,6 +11,8 @@ import { isPlatformBrowser, isPlatformServer } from '@angular/common';
     styleUrls: ['./app.component.css'],
     standalone: false
 })
+
+
 export class AppComponent implements OnInit {
   title = 'neuronica';
   public getwidth: number | undefined;
@@ -16,8 +22,10 @@ export class AppComponent implements OnInit {
   public openMenu: boolean = false;
   public desplegar: boolean = false;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
-  }
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object, 
+    private http: HttpClient, // Inyectar HttpClient
+  ) {}
   
   abrirMenu(): void {
     if (isPlatformBrowser(this.platformId)) {
@@ -41,6 +49,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
     if (isPlatformBrowser(this.platformId)) {
       this.getwidth = window.innerWidth;
       this.getheight = window.innerHeight;

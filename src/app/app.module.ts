@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
+import { FormsModule } from '@angular/forms';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -32,6 +32,7 @@ import { LaserComponent } from './manufactura/laser/laser.component';
 import { CncComponent } from './manufactura/cnc/cnc.component';
 import { FdmComponent } from './manufactura/fdm/fdm.component';
 import { SlaComponent } from './manufactura/sla/sla.component';
+import { DlpComponent } from './manufactura/dlp/dlp.component';
 import { SoftwareComponent } from './software/software.component';
 import { FirmwareComponent } from './software/firmware/firmware.component';
 import { RecopilacionDatosComponent } from './software/recopilacion-datos/recopilacion-datos.component';
@@ -60,6 +61,7 @@ import { Impresion3dComponent } from './manufactura/impresion3d/impresion3d.comp
     CncComponent,
     FdmComponent,
     SlaComponent,
+    DlpComponent,
     SoftwareComponent,
     FirmwareComponent,
     RecopilacionDatosComponent,
@@ -74,12 +76,13 @@ import { Impresion3dComponent } from './manufactura/impresion3d/impresion3d.comp
     MatPaginatorModule,
     MatButtonModule,
     MatIconModule,
+    FormsModule,
     MatMenuModule,
     BrowserAnimationsModule,
   ],
   providers: [
     provideClientHydration(),
-    provideHttpClient(withInterceptorsFromDi())
+    provideHttpClient(withInterceptorsFromDi()), 
   ],
   bootstrap: [AppComponent]
 })

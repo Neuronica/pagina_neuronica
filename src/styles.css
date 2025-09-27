@@ -1,3 +1,5 @@
+@import 'aos/dist/aos.css';
+
 html,
 body {
   margin: 0;
@@ -7,7 +9,7 @@ body {
   display: flex; /* Convierte el contenedor en un contenedor Flex */
   flex-wrap: wrap; /* Permite que los ítems salten a la siguiente línea */
   gap: 20px;      /* Espacio entre las tarjetas */
-  justify-content: space-between; /* Distribuye el espacio entre las tarjetas */
+  justify-content: flex-start; /* Distribuye el espacio entre las tarjetas */
   padding: 20px 0;
   margin-left: 5%;
   margin-right: 5%;
@@ -23,6 +25,34 @@ body {
   margin-right: 5%;
 }
 
+.detalle-fila {
+  display: contents;
+  grid-template-columns: 2fr 1fr 1fr; /* 3 columnas: atributo, valor, unidad */
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd; /* Línea divisoria opcional */
+}
+
+.col-attr {
+  text-align: left !important;
+  font-weight: normal;
+  font-weight: bold;
+  color: #005f75;
+}
+
+.col-value {
+  font-weight: normal;
+  color: #000;
+  text-align: center;
+}
+
+.col-unit {
+  text-align: right;
+  font-weight: bold;
+  font-style: italic;
+  color: #005f75;
+}
+
 /* --- Estilos para cada tarjeta de producto --- */
 .tarjeta-producto {
   width: calc(33.33% - 20px); /* Para 3 columnas: 100%/3, ajustado con el gap */
@@ -35,7 +65,7 @@ body {
 }
 
 .lista-tarjeta-productos {
-  width: calc(33.33% - 20px); /* Para 3 columnas: 100%/3, ajustado con el gap */
+  width: calc((100% - 2*20px) / 3); /* Para 3 columnas: 100%/3, ajustado con el gap */
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 15px;
@@ -91,6 +121,8 @@ h4{
 p{
   font-family: 'Nunito Sans', sans-serif;
   font-size: clamp(0.4rem, 5vw ,1.1rem);
+  color: #444;
+  letter-spacing: 0.5px;
   line-height: 150%;
 }
 
@@ -151,7 +183,7 @@ a:hover{
 
 /* 🚀 MODIFICACIÓN: Las tarjetas ahora ocupan un tercio del ancho */
 .carrusel-items-wrapper .lista-tarjeta-productos {
-    flex: 0 0 calc(100% / 3); /* **Cada tarjeta ocupa 1/3 del ancho** */
+    flex: 0 0 calc((100% - 20px) / 2); /* **Cada tarjeta ocupa 1/3 del ancho** */
     /* ... el resto de tus estilos para lista-tarjeta-productos ... */
     padding: 15px;
     box-sizing: border-box;
@@ -163,7 +195,9 @@ a:hover{
   flex-wrap: wrap; /* Permite que los elementos salten de línea */
   gap: 20px;       /* Espacio entre los cuadros (filas y columnas) */
   justify-content: center; /* Centra los cuadros en el contenedor */
-  margin: 5%;      /* Margen para que no se pegue a los lados */
+  padding: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 /* Estilos para cada cuadro de servicio */
@@ -190,6 +224,7 @@ a:hover{
 
 .subcuadro:hover{
   background-color: rgba(0, 95, 117, 0.1) !important;
+  cursor: pointer;
 }
 
 /* Estilos para los elementos internos del subcuadro */
@@ -379,7 +414,7 @@ input{
 .carrusel-boton-nav {
   /* Posición y estilo para los botones de navegación */
   font-size: 2rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(211, 118, 0, 0.5);
   color: white;
   border: none;
   cursor: pointer;
@@ -417,6 +452,7 @@ input{
 .botonDesplegable{
   color: white !important;
   background-color: #005f75 !important;
+  border-radius: 2vh !important;
   border-color: white;
   display: flex;
   align-items: center;
@@ -429,7 +465,13 @@ input{
 
 .botonDesplegable .material-symbols-outlined {
   vertical-align: middle;
-  line-height: 1; /* Opcional, pero ayuda a controlar la altura */
+  line-height: 1;
+}
+
+.menuDesplegable{
+  background-color: rgba(0, 95, 117, 0.5) !important;
+  color: white !important;
+  border-radius: 2vh !important;
 }
 
 .paginator-container{
@@ -510,6 +552,18 @@ input{
     transition: transform 0.3s ease;
 }
 
+.banner-oferta {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    background-color: #D37600; 
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
 .imagen{
   margin-right: 5%;
   margin-left: 5%;
@@ -559,11 +613,10 @@ input{
   margin-right: 5%;
   margin-left: 5%;
   margin-bottom: 5%;
-  width: 20%;
-  height: 20%;
+  width: 45%;
+  height: 45%;
   float: inline-end;
   object-fit: cover;
-  object-position: bottom;
   border-radius: 5%
 }
 
@@ -577,6 +630,13 @@ input{
   color: black;
 }
 
+.menu,
+.menu-list,
+.mat-toolbar {
+  max-width: 100vw !important;
+  overflow-x: hidden;
+}
+
 .icon-button{
   background: none;
   padding: 0;
@@ -584,6 +644,8 @@ input{
   cursor: pointer;
   width: 0rem;
 }
+
+.menu-list > li { display: inline-flex; }
 
 .sticker{
   background: none;
@@ -611,18 +673,24 @@ input{
   justify-items: center;
 }
 
-.boton_flotante{
-  display: block;
+.boton_flotante {
   position: fixed;
   z-index: 1000;
-  right: 20px;
-  bottom: 20px;
-  border-radius: 50%;
+  right: clamp(10px, 3vw, 20px);  /* margen adaptable */
+  bottom: clamp(10px, 3vw, 20px); /* margen adaptable */
   
-  text-decoration: none;
-  color: #fff;
+  width: clamp(40px, 8vw, 60px);  /* tamaño adaptable */
+  aspect-ratio: 1 / 1;            /* siempre cuadrado = círculo */
+  
+  border-radius: 50%;
   background: #005f75;
-  padding: 22px;
+  color: white;
+  font-size: clamp(18px, 5vw, 32px); /* ícono escala con pantalla */
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .imagenFondo{
@@ -663,12 +731,29 @@ input{
     display: flex ;
     justify-content: center; 
     align-items: center;
-    margin-bottom: 5%;
+    padding: 5%;
+    margin-left: 25%;
+    width: 90%;
+    height: auto;
+    border-radius: 8px;
+    object-position: center;
   }
 
   .imagen{
     margin-right: 5%;
     margin-left: 5%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    float: none;
+    border-radius: 5%
+  }
+
+  .video{
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -688,11 +773,7 @@ input{
     border-radius: 5%
   }
 
-  .video{
-    display: none;
-  }
-
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'Nunito', sans-serif; }

@@ -192,6 +192,22 @@
       "ID_PART": "1",
       "PRICE": 23247,
       "DISCOUNT": 0,
+      "COLOR": "VAINILLA",
+      "STOCK": 12
+
+    },
+    {
+      "ID_PRODUCT": "13",
+      "ID_SUPPLIER": "1",
+      "ID_REFERENCES": "STANDAR",
+      "VERSION": "2.0",
+      "DATE_ENTRY": "NO APLICA",
+      "DESCRIPTION": "¡La reina de la alta resolución! 👑 La resina Standard 8K de Elegoo ha sido formulada para aprovechar al máximo las impresoras 8K. Logra detalles increíblemente finos, colores puros y superficies lisas que parecen obras de arte. La opción ideal para miniaturas, joyería y modelos de exhibición. #Standard8K #AltaResolución #Detalles",
+      "ID_CHARACTERISTIC": "NO APLICA",
+      "ID_PRODUCT_TYPE": "PTS-KFQI7G6B",
+      "ID_PART": "1",
+      "PRICE": 23247,
+      "DISCOUNT": 0,
       "COLOR": "GRIS",
       "STOCK": 12
 
@@ -200,7 +216,7 @@
       "ID_PRODUCT": "14",
       "ID_SUPPLIER": "1",
       "ID_REFERENCES": "STANDAR",
-      "VERSION": "8K",
+      "VERSION": "2.0",
       "DATE_ENTRY": "NO APLICA",
       "DESCRIPTION": "¡Fuerza y flexibilidad, en una sola resina! 🛡️ La resina Tough 8K de Elegoo está diseñada para soportar el estrés. Olvídate de las roturas por caídas o golpes. Con su alta resistencia a los impactos y su flexibilidad, es perfecta para piezas funcionales que necesitan un poco de 'rebote'. ¡Tu mejor aliada para la durabilidad! #ResinaTough #Elegoo #Durabilidad",
       "ID_CHARACTERISTIC": "NO APLICA",
@@ -228,3 +244,4 @@
       "STOCK": 12
     }
   ]
+

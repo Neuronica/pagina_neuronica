@@ -18,7 +18,7 @@ body{
 }
 
 .material-icons{
-    display: block;
+    display: inline-flex;
 }
 
 a{
@@ -59,15 +59,28 @@ mat-toolbar{
     margin-left: 30%;
 }
 
-.material-icons{
-    display: none;
+.menu { display: block; }
+.menu-list {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu-list > li { display: inline-flex; }
+
+.icono_menu {
+  display: none; /* visible solo en tablet/móvil */
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 8px;
+  line-height: 1;
 }
 
 @media only screen and (min-width: 701px) and (max-width: 1000px){
 
-    .material-icons{
-        display: none;
-    }
 
     .menu{
         position: relative;
@@ -77,26 +90,9 @@ mat-toolbar{
 }
 
 @media only screen and (max-width: 850px){
-    .material-icons{
-        display: block;
-    }
-
-    .menu{
-        position: absolute;
-        top: -200px;
-        right: 15vw;
-        width: 100%;
-        background: none;
-    }
-
-    a{
-        display: block;
-        text-align: left;
-        margin: 0;
-        font-size: 14px;
-    }
 
     .icono_menu {
+        display: inline-flex;
         margin-left: 80%;
         background: #005f75;
         border-radius: 5px;
@@ -104,6 +100,36 @@ mat-toolbar{
         align-items: center;
     }
 
+
+    .menu{
+        display: inline flex !important;
+        flex-direction: column;
+        align-items: center;        
+        top: -200px;
+        right: 15vw;
+        width: 90%;
+        background: none;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+  }
+
+    .menu-list > li,
+    .menu-list .submenu {
+        width: 100%;
+        text-align: center;
+        padding: 12px 16px;
+    }
+
+    a{
+        display: inline-flex;
+        text-align: left;
+        margin: 0;
+        font-size: 14px;
+    }
       
     .icono_menu_open {
         background: #D37600;
@@ -126,19 +152,5 @@ mat-toolbar{
         background-color: white;
         animation-duration: 2s;
         animation-name: slidein;
-    }
-
-    .boton_flotante{
-        display: block;
-        position: fixed;
-        z-index: 1000;
-        right: 20px;
-        bottom: 20px;
-        border-radius: 50%;
-        
-        text-decoration: none;
-        color: #fff;
-        background: #005f75;
-        padding: 15px;
     }
 }

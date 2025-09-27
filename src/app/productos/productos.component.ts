@@ -1,11 +1,10 @@
-import { Component, OnInit} from '@angular/core';
-import { forkJoin } from 'rxjs'; // Importamos 'forkJoin' para manejar múltiples observables
-import { finalize } from 'rxjs/operators'; // Importamos 'finalize'
+import { Component, OnInit } from '@angular/core';
+import { forkJoin } from 'rxjs';
+import { finalize } from 'rxjs/operators';
 import { ProductTypesService, product_types } from './servicios/product-types.service';
-import { OrderService, order_by } from './servicios/order.service';
-import { SuppliersService, supplier_list } from './servicios/suppliers.service';
-import { ProductListService, product_list } from './servicios/product-list.service';
-import { ImagesService, image_list } from './servicios/images.service';
+import { BrandsService, brands_list } from './servicios/brands.service';
+import { ProductListService, product_list, PaginationMeta } from './servicios/product-list.service';
+import { ProductMediaService, product_cover_list } from './servicios/product_media.service';
 
 @Component({
   selector: 'app-productos',
@@ -15,47 +14,59 @@ import { ImagesService, image_list } from './servicios/images.service';
 })
 
 export class ProductosComponent implements OnInit{
-  defaultOrderOption = { 
-    ID_ORDER_BY: "ORB-1", 
-    ORDER_BY: "Ordenar por"
-  };
+  defaultOrderOption = [
+    {
+      order_id: "ORB-1", 
+      name: "Ordenar Por"
+    },
+    {
+      order_id: "ORB-2",
+      name: "Mayor Precio"
+    },
+    {
+      order_id: "ORB-3",
+      name: "Menor Precio"
+    },
+    {
+      order_id: "ORB-5",
+      name: "Oferta"
+    }
+  ];
   defaultFilterOption = { 
-    ID_PRODUCT_TYPE: "PTS-1", 
-    PRODUCT_TYPE: "Filrar por"
+    product_type_id: "PTS-1", 
+    name: "Filrar por"
   };
-  defaultSupplierOption = {
-      ID_SUPPLIER: "SPS-1",
-      NAME: "Marca",
-      ID_COUNTRY: "NO APLICA",
-      LOGO: "NO APLICA",
-      NIT: "NO APLICA",
-      EMAIL: "NO APLICA"
-    };
+  defaultBrandOption = {
+      brand_id: "SPS-1",
+      name: "Marca",
+  };
 
   productTypes: product_types[] = [];
-  images: image_list[] = [];
-  suppliers: supplier_list[] = [];
-  orders: order_by[] = [];
+  media: product_cover_list[] = [];
+  brands: brands_list[] = [];
+  order: any[] = [];
   test = null;
   productList: product_list[] = [];
   selectedType: product_types | null = null;
-  selectedOrder: order_by | null = null;
-  selectedSupplier: supplier_list | null = null;
+  selectedOrder: any | null = null;
+  selectedBrand: brands_list | null = null;
   textoFiltro = "Filtar por";
   textoOrden = "Ordenar por";
   textoMarca = "Marca";
+  paginationMeta: PaginationMeta | null = null;
   paginatedList: product_list[] = [];
-  pageSize = 9; 
-  pageIndex = 0;
+  pageSize = 12; 
+  pageIndex = 1;
+  searchTerm = '';
   cargandoDatos = true;
-  errorAlCargar = false; 
+  errorAlCargar = false;
+  coverImage: any;
 
   constructor(
     private productypeservice: ProductTypesService, 
-    private orderservice: OrderService,
-    private supplierservice: SuppliersService,
+    private brandservice: BrandsService,
     private productlistservice: ProductListService,
-    private imagesservice: ImagesService,
+    private ProductMediaService: ProductMediaService,
   ){}
 
   ngOnInit(): void {
@@ -67,23 +78,21 @@ export class ProductosComponent implements OnInit{
     this.errorAlCargar = false;
 
     forkJoin({
-      images: this.imagesservice.getList(),
+      media: this.ProductMediaService.getCovers(),
       types: this.productypeservice.getList(),
-      orders: this.orderservice.getList(),
-      suppliers: this.supplierservice.getList(),
-      products: this.productlistservice.getList()
+      brands: this.brandservice.getList(),
+      products: this.productlistservice.getList(this.pageIndex, this.pageSize)
     }).pipe(
       finalize(() => this.cargandoDatos = false)
     ).subscribe({
       next: (results) => {
-        this.images = results.images;
+        this.media = results.media;
         this.productTypes = results.types;
         this.productTypes.unshift(this.defaultFilterOption);
-        this.orders = results.orders;
-        this.orders.unshift(this.defaultOrderOption);
-        this.suppliers = results.suppliers;
-        this.suppliers.unshift(this.defaultSupplierOption);
-        this.productList = results.products;
+        this.brands = results.brands;
+        this.brands.unshift(this.defaultBrandOption);
+        this.productList = results.products.data;
+        this.paginationMeta = results.products.meta;
         this.updatePagination();
       },
       error: (err) => {
@@ -95,39 +104,65 @@ export class ProductosComponent implements OnInit{
 
   seleccionarTipo(productType: product_types): void {
     this.selectedType = productType;
-    this.textoFiltro = productType.PRODUCT_TYPE;
-
-    console.log('Has seleccionado a:', productType.PRODUCT_TYPE);
+    this.textoFiltro = productType.name;
+    this.updatePagination();
   }
 
-  seleccionarOrden(order: order_by): void {
-    this.selectedOrder = order;
-    this.textoOrden = order.ORDER_BY;
-    console.log('Has seleccionado a:', order.ORDER_BY);
+  seleccionarOrden(order: any): void {
+    this.selectedOrder = order.name;
+    this.textoOrden = order.name;
+    this.updatePagination();
   }
 
-  seleccionarProveedor(supplier: supplier_list): void {
-    this.selectedSupplier = supplier;
-    this.textoMarca = supplier.NAME;
-    console.log('Has seleccionado a:', supplier.NAME);
+  seleccionarProveedor(brand: brands_list): void {
+    this.selectedBrand = brand;
+    this.textoMarca = brand.name;
+    console.log("Marca");
+    console.log(brand);
+    this.updatePagination();
   }
 
   handlePageEvent(event: any): void {
-    this.pageIndex = event.pageIndex;
+    this.pageIndex = event.pageIndex + 1;
     this.pageSize = event.pageSize;
     this.updatePagination();
   }
 
-  // Función para actualizar la lista de productos a mostrar
+  buscarProductos(): void {
+    this.pageIndex = 1; 
+    this.updatePagination();
+  }
+
   updatePagination(): void {
-    const startIndex = this.pageIndex * this.pageSize;
-    const endIndex = startIndex + this.pageSize;
-    this.paginatedList = this.productList.slice(startIndex, endIndex);
+    this.cargandoDatos = true;
+    this.errorAlCargar = false;
+
+    const searchTerm = this.searchTerm.trim() !== '' ? this.searchTerm : undefined;
+    const brandId = this.selectedBrand && this.selectedBrand.brand_id !== "SPS-1" ? this.selectedBrand.brand_id : undefined;
+    const typeId = this.selectedType && this.selectedType.product_type_id !== "PTS-1" ? this.selectedType.product_type_id : undefined;
+    const orderName = this.selectedOrder;
+
+    this.productlistservice.getList(this.pageIndex, this.pageSize, searchTerm, brandId, typeId, orderName).pipe(
+      finalize(() => this.cargandoDatos = false)
+    ).subscribe({
+      next: (response) => {
+        this.productList = response.data;
+        this.paginationMeta = response.meta;
+      },
+      error: (err) => {
+        console.error('Error al cargar productos:', err);
+        this.errorAlCargar = true;
+      }
+    });
   }
 
-  getProductoImageUrl(idProducto: string): string {
-    const image = this.images.find(imagen => imagen.ID_PRODUCT === idProducto);
-    return image ? image.URL : '';
+  getProductoMediaUrl(idProducto: string): string {
+    this.coverImage = this.media.find(m => m.product_id === idProducto);
+    return this.coverImage ? this.coverImage.url: '';
   }
 
+  getProductoMediaAlt(idProducto: string): string {
+    const media = this.media.find(m => (m.product_id === idProducto));
+    return media ? media.alt : '';
+  }
 }

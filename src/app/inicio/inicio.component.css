@@ -4,10 +4,17 @@ body{
     background-color: white;
 }
 
-.backimg{
-    background: url("/assets/Imagenes/Inicio.jpg");
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
+.backimg {
+  background: linear-gradient(
+                rgba(0, 95, 117, 0.25),
+                rgba(211, 118, 0, 0.25)
+              ),
+              url("/assets/Imagenes/Inicio.jpg");
+
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: white;
 }

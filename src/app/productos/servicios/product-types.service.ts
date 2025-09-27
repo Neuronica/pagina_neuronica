@@ -3,15 +3,15 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface product_types {
-  ID_PRODUCT_TYPE: string;
-  PRODUCT_TYPE: string;
+  product_type_id: string;
+  name: string;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductTypesService {
-  private jsonURL = 'assets/Data/product_types.json';
+  private jsonURL = 'https://pagina-neuronica-backend-490354620288.us-west1.run.app/api/product-types/';
 
   constructor(private http:HttpClient){}
 

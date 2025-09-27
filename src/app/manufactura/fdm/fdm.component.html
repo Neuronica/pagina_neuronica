@@ -1,22 +1,21 @@
 <div class="fondo">
     <div class="spacer2"></div>
-        <div class="contenedorColumnas">
-           <div class="spacer2"></div>
-           <div class="bordeAzul">
-               <div class="filas">
-                   <div class="unaColumna">
-                       <div class="spacer2"></div>
-                       <h2 style="margin-left: 5%; margin-right: 5%; text-align: center;" data-aos="fade-right" data-aos-duration="2000">FDM: Impresión 3D en Bogotá</h2>
-                       <div class="cuadrado" data-aos="fade-right" data-aos-duration="2000" style="margin-left: 5%; margin-right: 5%;"></div>
-                       <div class="spacer2"></div>
-                   </div>
-
-                    <div class="spacer2"></div>
-
-                    <div class="unaColumna">
-                        <div class="contenedorImagen">
-                            <img class="imagen" src="./assets/Imagenes/impresión-3d-fdm.jpg" alt="Piezas impresas en 3D a travez de la tecnología FDM" data-aos="fade-right" data-aos-duration="3000" style="width: 35%; height: 35%; margin-bottom: 5%;">      
-                        </div>
+    <div class="contenedorColumnas">
+       <div class="spacer2"></div>
+        <div class="bordeAzul">
+            <div class="filas">
+                <div class="unaColumna">
+                   <div class="spacer2"></div>
+                   <h2 style="margin-left: 5%; margin-right: 5%; text-align: center;" data-aos="fade-right" data-aos-duration="2000">FDM: Impresión 3D en Bogotá</h2>
+                   <div class="cuadrado" data-aos="fade-right" data-aos-duration="2000" style="margin-left: 5%; margin-right: 5%;"></div>
+                   <div class="spacer2"></div>
+                </div>
+                <div class="spacer2"></div>
+                <div class="unaColumna">
+                    <figure class="contenedorImagen">
+                        <img class="imagen" src="./assets/Imagenes/impresión-3d-fdm.jpg" alt="Piezas impresas en 3D a travez de la tecnología FDM" data-aos="fade-right" data-aos-duration="3000" style="width: 35%; height: 35%; margin-bottom: 5%;">      
+                    </figure>
+                    <div style="margin-left: 5%; margin-right: 12.5%; justify-content: center;">
                         <p style="margin-left: 5%; margin-right: 5%;text-align: justify;" data-aos="fade-right" data-aos-duration="2000">
                             En Neurónica, ofrecemos impresión 3D en Bogotá mediante tecnología FDM, ideal 
                             para prototipados rápidos y pequeñas producciones. Esta técnica permite obtener 
@@ -24,17 +23,59 @@
                             competitivo. Materiales disponibles:
                         </p>
                         <ul class="lista-informacion" data-aos="fade-right" data-aos-duration="2000">
-                            <li>PLA: Opción económica, perfecta para prototipos iniciales.</li>
-                            <li>PETG: Mayor resistencia y durabilidad, soporta temperaturas más altas.</li>
-                            <li>TPU: Material flexible, ideal para componentes que requieran elasticidad y absorción de impactos.</li>
+                            <li> <strong style="color: #005f75; font-weight: bold; font-family: 'Nunito', sans-serif;"> PLA:</strong> Opción económica, perfecta para prototipos iniciales.</li>
+                            <li> <strong style="color: #005f75; font-weight: bold; font-family: 'Nunito', sans-serif;">PETG:</strong>  Mayor resistencia y durabilidad, soporta temperaturas más altas.</li>
+                            <li> <strong style="color: #005f75; font-weight: bold; font-family: 'Nunito', sans-serif;">TPU:</strong>  Material flexible, ideal para componentes que requieran elasticidad y absorción de impactos.</li>
+                            <li> <strong style="color: #005f75; font-weight: bold; font-family: 'Nunito', sans-serif;">ABS:</strong>  Material resistente, con aplias aplicaciones en la industria.</li>
                         </ul>
-                   </div>
-                   <div class="spacer2"></div>
-               </div>
-           </div>
-           <div class="spacer2"></div>
-       </div>
+                    </div>
+                </div>
+                <div class="spacer2"></div>
+            </div>
+        </div>
+        <div class="spacer2"></div>
+    </div>
 
+    <div class="spacer2"></div>
+   <div class="contenedorColumnas">
+        <div class="spacer2"></div>
+        <div class="bordeAzul">
+            <div class="filas">
+                <div class="unaColumna">
+                    <div class="spacer2"></div>
+                    <h2 style="margin-left: 5%; margin-right: 5%; text-align: center;" data-aos="fade-right" data-aos-duration="2000">Relacionados</h2>
+                    <div class="cuadrado" style="margin-right: 5%; margin-left: 5%;" data-aos="fade-right" data-aos-duration="2000"></div>
+                    <div class="spacer2"></div>
+                    <div class="carrusel-productos-relacionados">
+                        <button class="carrusel-boton-nav" (click)="anteriorRelacionado()">&#10094;</button>            
+                        <div class="carrusel-items-contenedor">
+                            <div class="carrusel-items-wrapper" [style.transform]="'translateX(-' + indiceRelacionadoActual * (100 / 3) + '%)'">
+                                <div class="carrusel-items-wrapper"
+                                    [style.transform]="'translateX(-' + indiceRelacionadoActual * (100 / 3) + '%)'">
+                                    <div *ngFor="let relacionado of relatedProducts; trackBy: trackBySlug"
+                                        class="lista-tarjeta-productos"
+                                        style="margin: 0 2%;"
+                                        [style.flex]="'0 0 calc(100% / 3)'"
+                                        [routerLink]="['/producto', relacionado.slug]">
+                                    <div class="contenedor-imagen">
+                                        <img [src]="getProductoImageUrl(relacionado.slug)" [alt]="relacionado.product">
+                                        <div *ngIf="relacionado.offer != null" class="banner-oferta">¡Oferta!</div>
+                                    </div>
+                                    <h3>{{ relacionado.product }}</h3>
+                                    <p *ngIf="relacionado.offer === null">Precio: {{ relacionado.price | currency:'USD':'symbol':'1.0-0' }}</p>
+                                    <p *ngIf="relacionado.offer != null">Precio: {{ relacionado.offer | currency:'USD':'symbol':'1.0-0' }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>     
+                        <button class="carrusel-boton-nav" (click)="siguienteRelacionado()">&#10095;</button>
+                    </div>
+                    <div class="spacer2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="spacer2"></div>
+    </div>
     <div class="spacer2"></div>
 
     <div class="contenedorColumnas">

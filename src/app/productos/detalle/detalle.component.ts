@@ -1,12 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { forkJoin, throwError, Subscription, of } from 'rxjs';
-import { catchError, switchMap } from 'rxjs/operators';
-import { ImagesService, image_list } from '../servicios/images.service';
-import { CaracteristicasService, lista_caracteristicas } from '../servicios/caracteristicas.service';
-import { ProductListService, product_list } from '../servicios/product-list.service';
-import { VideosService, lista_videos } from '../servicios/videos.service';
+import { forkJoin, throwError, Subscription, of, map, switchMap, shareReplay } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { ProductMediaService, product_cover_list, videos_byId, images_by_slug } from '../servicios/product_media.service';
+import { AttibutesService, attributes_list } from '../servicios/attributes.service';
+import { ProductListService, product_list, ProductInformation, RelatedProductsList } from '../servicios/product-list.service';
+import { isPlatformBrowser } from '@angular/common';
+import { PLATFORM_ID, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-detalle',
@@ -16,23 +17,30 @@ import { VideosService, lista_videos } from '../servicios/videos.service';
 })
 export class DetalleComponent implements OnInit, OnDestroy {
 
-  relatedProducts: product_list[] = []; 
+  actualImageMaterial = 0;
+  variableTotalItems = 0;
+  relatedProducts: RelatedProductsList[] = []; 
   indiceRelacionadoActual: number = 0; 
-  images: image_list[] = [];
-  todasLasImagenes: image_list[] = [];
-  caracteristica: lista_caracteristicas[] = [];
+  todasLasImagenes: product_cover_list[] = [];
+  attribute: attributes_list[] = [];
   producto: product_list[] = [];
-  video: lista_videos[] = [];
+  informationProduct: ProductInformation[] = [];
+  video: videos_byId[] = [];
+  imagesList: images_by_slug[] = [];
   idProducto: string | null = null;
   imagenActualIndex = 0;
-  imagenActual: image_list | undefined;
+  imagenActual: images_by_slug | undefined;
   videoUrl: SafeResourceUrl | null = null;
+  variantStock: number = 0;
+  trackBySlug = (_: number, item: RelatedProductsList) => item.slug;
+
+
   colorMap: { [key: string]: string } = {
     'ROJO': '#FF0000',
-    'VAINILLA': '#F9E5BC',
-    'GRIS': '#8A9597',
+    'vainilla': '#F9E5BC',
+    'gris': '#8A9597',
     'NEGRO': '#000000',
-    'BLANCO': '#FFFFFF',
+    'blanco': '#FFFFFF',
   };
 
   cargandoDatos = true;
@@ -42,11 +50,11 @@ export class DetalleComponent implements OnInit, OnDestroy {
   constructor(
     private route: ActivatedRoute,
     private sanitizer: DomSanitizer,
-    private imagesservice: ImagesService,
-    private carcateristicaservice: CaracteristicasService,
+    private ProductMediaService: ProductMediaService,
+    private attributesservice: AttibutesService,
     private productoservice: ProductListService,
-    private videoservice: VideosService,
-  ){}
+    @Inject(PLATFORM_ID) private platformId: Object,
+  ) {}
 
   ngOnInit(): void {
     // Usamos switchMap para gestionar los cambios de la URL
@@ -59,15 +67,66 @@ export class DetalleComponent implements OnInit, OnDestroy {
 
         // Si no hay ID, retornamos un observable vacío
         if (!this.idProducto) {
-          return of({ images: [], caracteristicas: [], productos: [], videos: [] });
+          return of({
+            imagesList: [],
+            attributes: [],
+            productos: [],
+            relatedProducts: [],
+            informationProduct: [],
+            video: [],
+            todasLasImagenes: [],
+          });
         }
 
+        // 1) Petición base de info del producto, se comparte en varios lugares
+        const info$ = this.productoservice.getById(this.idProducto).pipe(
+          shareReplay(1) // cachea la respuesta para reutilizar
+        );
+
+        const selected$ = this.productoservice.getById(this.idProducto).pipe(
+          // si tu API ya devuelve array:
+          map(list => Array.isArray(list) ? (list.find(p => (p as any).is_default) ?? list[0] ?? null) : null),
+          shareReplay(1)
+        );
+
+
+        const related$ = selected$.pipe(
+          switchMap(p => {
+            if (!p) {
+              return of<RelatedProductsList[]>([]);
+            }
+
+            // Caso A: materiales → relacionados de materiales
+            if (p.type === 'material') {
+              return this.productoservice.getRelatedMaterials().pipe(
+                catchError(() => of<RelatedProductsList[]>([]))
+              );
+            }
+
+            // Caso B: máquinas → relacionados por tecnología (solo si existe technology)
+            if (p.type === 'machine' && p.technology) {
+              return this.productoservice.getRelatedMachines(p.technology).pipe(
+                catchError(() => of<RelatedProductsList[]>([]))
+              );
+            }
+
+            // Fallback: nada
+            return of<RelatedProductsList[]>([]);
+          })
+        );
+
+
+        // 3) El forkJoin final
         const requests = {
-          images: this.imagesservice.getList(),
-          caracteristicas: this.carcateristicaservice.getList(),
+          imagesList: this.ProductMediaService.getImagesBySlug(this.idProducto),
+          attributes: this.attributesservice.getAttributesBySlug(this.idProducto),
           productos: this.productoservice.getList(),
-          videos: this.videoservice.getList()
+          informationProduct: info$.pipe(shareReplay(1)),
+          relatedProducts: related$,
+          video: this.ProductMediaService.getVideoByid(this.idProducto),
+          todasLasImagenes: this.ProductMediaService.getCovers(),
         };
+
 
         return forkJoin(requests).pipe(
           catchError(error => {
@@ -79,46 +138,66 @@ export class DetalleComponent implements OnInit, OnDestroy {
         );
       })
     ).subscribe(
-      ({ images, caracteristicas, productos, videos }) => {
+      ({ imagesList, attributes, productos, relatedProducts, informationProduct, video, todasLasImagenes }) => {
         // Reiniciamos los datos para evitar que se mezclen
-        this.images = [];
-        this.caracteristica = [];
+        this.imagesList = [];
+        this.attribute = [];
         this.producto = [];
+        this.relatedProducts = [];
+        this.informationProduct = [];
         this.video = [];
+        this.todasLasImagenes = [];
         this.relatedProducts = [];
         this.imagenActual = undefined;
         this.videoUrl = null;
         this.indiceRelacionadoActual = 0;
-        
+
         // Ahora asignamos los nuevos datos del producto
         if (this.idProducto) {
-          this.todasLasImagenes = images;
-          this.images = images.filter(img => img.ID_PRODUCT === this.idProducto);
-          this.caracteristica = caracteristicas.filter(c => c.ID_PRODUCT === this.idProducto);
-          this.producto = productos.filter(p => p.ID_PRODUCT === this.idProducto);
-          this.video = videos.filter(v => v.ID_PRODUCT === this.idProducto);
-  
-          if (this.images.length > 0) {
-            this.imagenActual = this.images[0];
+          this.imagesList = imagesList;
+          this.attribute = attributes;
+          this.relatedProducts = relatedProducts;
+          this.variableTotalItems = this.relatedProducts.length;
+          this.informationProduct = informationProduct;
+          this.variantStock = informationProduct[0].stock;
+          this.video = video;
+          this.todasLasImagenes = todasLasImagenes;
+
+          if (this.imagesList.length > 0) {
+            this.imagenActual = this.imagesList[0];
           }
-  
+
           if (this.video && this.video.length > 0) {
-            const videoId = this.video[0].URL;
-            const youtubeEmbedUrl = `https://www.youtube.com/embed/${videoId}`;
-            this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(youtubeEmbedUrl);
+            this.videoUrl = this.buildYouTubeUrl(video[0].url);
           }
-  
+
           const productoActual = this.producto[0];
-          if (productoActual) {
-            this.relatedProducts = productos.filter(p => 
-              p.ID_PRODUCT_TYPE === productoActual.ID_PRODUCT_TYPE && p.ID_PRODUCT !== productoActual.ID_PRODUCT
-            );
+          for(let i=0; i < this.relatedProducts.length; i++){
+            console.log('Producto ' + this.relatedProducts[i].product);
           }
+          //console.log('Relacionados' + this.relatedProducts[5].product);
         }
-        this.cargandoDatos = false; 
+
+        this.cargandoDatos = false;
+
+        this.refreshAosClientOnly();
       }
     );
   }
+
+  private refreshAosClientOnly(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+    import('aos').then(({ default: AOS }) => {
+      // pequeño delay para asegurar DOM ya actualizado
+      setTimeout(() => (AOS.refreshHard ?? AOS.refresh)?.(), 0);
+    }).catch(() => { /* opcional: silenciar si AOS no está */ });
+  }
+
+  private buildYouTubeUrl(id: string): SafeResourceUrl {
+    const embed = `https://www.youtube-nocookie.com/embed/${id}?rel=0&modestbranding=1`;
+    return this.sanitizer.bypassSecurityTrustResourceUrl(embed);
+  }
+
 
   ngOnDestroy(): void {
     // Es crucial desuscribirse para evitar fugas de memoria
@@ -126,38 +205,48 @@ export class DetalleComponent implements OnInit, OnDestroy {
   }
 
   siguienteImagen(): void {
-    if (this.images.length > 0) {
-      this.imagenActualIndex = (this.imagenActualIndex + 1) % this.images.length;
-      this.imagenActual = this.images[this.imagenActualIndex];
+    if (this.imagesList.length > 0) {
+      this.imagenActualIndex = (this.imagenActualIndex + 1) % this.imagesList.length;
+      this.imagenActual = this.imagesList[this.imagenActualIndex];
     }
   }
 
   anteriorImagen(): void {
-    if (this.images.length > 0) {
-      this.imagenActualIndex = (this.imagenActualIndex - 1 + this.images.length) % this.images.length;
-      this.imagenActual = this.images[this.imagenActualIndex];
+    if (this.imagesList.length > 0) {
+      this.imagenActualIndex = (this.imagenActualIndex - 1 + this.imagesList.length) % this.imagesList.length;
+      this.imagenActual = this.imagesList[this.imagenActualIndex];
     }
+  }
+
+  changeVariant(variantNumbre: number, colorName: string): void {
+    this.actualImageMaterial = variantNumbre;
+    this.imagenActual = this.imagesList[variantNumbre];
+
+    this.variantStock = this.informationProduct[variantNumbre].stock;
+
   }
 
   siguienteRelacionado(): void {
     const totalItems = this.relatedProducts.length;
-    const itemsPerSlide = 3;
+    this.variableTotalItems = totalItems;
+    const itemsPerSlide = 1;
     if (totalItems > 0) {
       this.indiceRelacionadoActual = (this.indiceRelacionadoActual + itemsPerSlide) % totalItems;
     }
   }
-  
+
   anteriorRelacionado(): void {
     const totalItems = this.relatedProducts.length;
-    const itemsPerSlide = 3;
+    this.variableTotalItems = totalItems;
+    const itemsPerSlide = 1;
     if (totalItems > 0) {
       this.indiceRelacionadoActual = (this.indiceRelacionadoActual - itemsPerSlide + totalItems) % totalItems;
     }
   }
 
   getProductoImageUrl(idProducto: string): string {
-    const imagenProducto = this.todasLasImagenes.find(img => img.ID_PRODUCT === idProducto);
-    return imagenProducto ? imagenProducto.URL : 'assets/default-product-image.png';
+    const imagenProducto = this.todasLasImagenes.find(img => img.slug === idProducto);
+    return imagenProducto ? imagenProducto.url : 'assets/default-product-image.png';
   }
 
   getColorCode(colorName: string): string {

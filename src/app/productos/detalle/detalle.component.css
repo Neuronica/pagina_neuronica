@@ -8,7 +8,34 @@
   align-items: center;
   border: 1px solid #ccc;
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-  background-color: #FFFFFF; /* Bolita blanca fija */
+}
+
+.button-text {
+  display: inline-flex;
+  align-items: center;   /* centra verticalmente texto e imagen */
+  gap: 8px;              /* espacio entre el texto y el icono */
+  font-size: clamp(1.2rem, 2vw, 2rem); /* tamaño ajustable */
+  font-weight: bold;
+  color: inherit;        /* hereda el color del botón */
+}
+
+
+.i{
+  .fa-brands { font-family: "Font Awesome 6 Brands" !important; font-weight: 400; }
+.fa-solid  { font-family: "Font Awesome 6 Free" !important; font-weight: 900; }
+
+}
+
+.color-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espacio entre el texto "Colores" y las bolitas */
+}
+
+.bolitas {
+  display: flex;
+  flex-wrap: wrap;  /* si hay muchas, se bajan en otra fila */
+  gap: 8px;         /* espacio entre bolitas */
 }
 
 h1{
@@ -50,6 +77,26 @@ h2 {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px); /* Pequeño efecto para que el botón "salga" un poco */
 }
+
+.mercadoLibre-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    background-color: #ffe400; /* Color de fondo de WhatsApp */
+    color: white; /* Color del texto */
+    font-weight: bold;
+    padding: 15px; /* Relleno para que el botón sea más grande */
+    border-radius: 15px; /* Bordes redondeados para un aspecto moderno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease; /* Transición suave para el efecto de hover */
+}
+
+.mercadoLibre-button:hover {
+    background-color: #ffe60073; /* Un tono más oscuro de verde al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px); /* Pequeño efecto para que el botón "salga" un poco */
+}
 .stock-badge {
     background-color: #fff; /* Color naranja más sólido */
     color: black; /* Texto blanco para mayor contraste */
@@ -58,7 +105,10 @@ h2 {
     border-radius: 20px; /* Bordes más redondeados para un aspecto moderno (puedes usar px en vez de vh) */
     text-align: center;
     min-width: 40px; /* Ancho mínimo para que el recuadro se vea uniforme */
+    max-height: 20px;
     box-shadow: 0 2px 4px rgba(211, 118, 0, 0.5); /* Sombra suave para un efecto 3D */
+    align-items: center;
+    margin-bottom: 10%;
 }
 
 .precios {
@@ -67,14 +117,19 @@ h2 {
     gap: 10px; /* Espacio entre los elementos */
 }
 
-.banner-oferta {
-    position: absolute;
-    top: 10px; 
-    right: 10px; 
-    background-color: #D37600; 
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 14px;
+.detalle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* tres columnas iguales */
+  gap: 8px; /* espacio entre columnas */
+  text-align: center;
 }
+
+.botones-container {
+  display: flex;
+  flex-direction: row; /* uno debajo del otro */
+  gap: 20px;              /* espacio entre botones */
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+
