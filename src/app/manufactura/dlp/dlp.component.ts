@@ -5,7 +5,7 @@ import { forkJoin} from 'rxjs';
 import { finalize } from 'rxjs/operators';
 import { isPlatformBrowser } from '@angular/common';
 import { ProductMediaService, product_cover_list} from '../../productos/servicios/product_media.service';
-import { ProductListService, product_list } from '../../productos/servicios/product-list.service';;
+import { ProductListService, RelatedProductsList } from '../../productos/servicios/product-list.service';
 import * as AOS from 'aos';
 
 @Component({
@@ -15,7 +15,7 @@ import * as AOS from 'aos';
   styleUrl: './dlp.component.css'
 })
 export class DlpComponent implements OnInit{
-  relatedProducts: product_list[] = []; 
+  relatedProducts: RelatedProductsList[] = []; 
   indiceRelacionadoActual: number = 0; 
   images: product_cover_list[] = [];
   todasLasImagenes: product_cover_list[] = [];
@@ -40,14 +40,14 @@ export class DlpComponent implements OnInit{
     }
 
     forkJoin({
-      images: this.ProductMediaService.getCovers(),
-      relatedProducts: this.productoservice.getList()
+      todasLasImagenes: this.ProductMediaService.getCovers(),
+      relatedProducts: this.productoservice.getRelatedMachines('DLP')
     }).pipe(
       finalize(() => this.cargandoDatos = false)
     ).subscribe({
       next: (results) => {
-        this.images = results.images;
-        //this.relatedProducts = results.relatedProducts.filter(pro => pro.ID_PRODUCT_TYPE === 'PTS-5DV1IHJS');
+        this.todasLasImagenes = results.todasLasImagenes;
+        this.relatedProducts = results.relatedProducts;
       },
       error: (err) => {
         console.error('Error al cargar datos iniciales:', err);
@@ -59,7 +59,7 @@ export class DlpComponent implements OnInit{
 
   siguienteRelacionado(): void {
     const totalItems = this.relatedProducts.length;
-    const itemsPerSlide = 3;
+    const itemsPerSlide = 1;
     if (totalItems > 0) {
       this.indiceRelacionadoActual = (this.indiceRelacionadoActual + itemsPerSlide) % totalItems;
     }
@@ -67,14 +67,14 @@ export class DlpComponent implements OnInit{
   
   anteriorRelacionado(): void {
     const totalItems = this.relatedProducts.length;
-    const itemsPerSlide = 3;
+    const itemsPerSlide = 1;
     if (totalItems > 0) {
       this.indiceRelacionadoActual = (this.indiceRelacionadoActual - itemsPerSlide + totalItems) % totalItems;
     }
   }
 
   getProductoImageUrl(idProducto: string): string {
-    const imagenProducto = this.images.find(img => img.product_id === idProducto);
+    const imagenProducto = this.todasLasImagenes.find(img => img.slug === idProducto);
     return imagenProducto ? imagenProducto.url : 'assets/default-product-image.png';
   }
 

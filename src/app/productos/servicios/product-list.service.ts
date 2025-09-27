@@ -12,7 +12,7 @@ export interface ProductInformation {
   offer: number,
   brand: string;
   type: string;
-  stock: string;
+  stock: number;
   technology: string | null;
 }
 
@@ -51,7 +51,7 @@ export interface product_list{
 })
 
 export class ProductListService {
-  private jsonURL = 'http://localhost:8080/api/products/';
+  private jsonURL = 'https://pagina-neuronica-backend-490354620288.us-west1.run.app/api/products/';
 
   constructor(private http: HttpClient){}
 

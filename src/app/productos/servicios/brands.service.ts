@@ -12,7 +12,7 @@ export interface brands_list{
 })
 
 export class BrandsService {
-  private jsonURL = 'http://localhost:8080/api/brands/';
+  private jsonURL = 'https://pagina-neuronica-backend-490354620288.us-west1.run.app/api/brands/';
 
   constructor(private http: HttpClient){}
 

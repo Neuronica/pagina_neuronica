@@ -22,8 +22,8 @@ export class InicioComponent implements OnInit {
       window.addEventListener('load', AOS.refresh);
       this.getwidth = window.innerWidth;
       this.getheight = window.innerHeight;
-      this.title.setTitle("Neurónica S.A.S - Ingeniería a la Medida en Bogotá");
-      this.meta.addTag({name: 'description', content: 'Descubre Neurónica, tu aliado confiable en ingeniería a la medida en Bogotá. Soluciones integrales en software, hardware, IoT y manufactura ajustadas a tus necesidades y presupuesto'});
+      this.title.setTitle("Neurónica S.A.S - Ingeniería Personalizada en Bogotá");
+      this.meta.addTag({name: 'description', content: 'Descubre Neurónica, tu aliado confiable en ingeniería personalizada en Bogotá. Soluciones integrales en software, hardware, IoT y manufactura ajustadas a tus necesidades y presupuesto'});
       this.meta.addTag({name: 'keywords', content: 'Neurónica, Ingeniería a medida, Bogotá, Neuronica'});
     }
   }

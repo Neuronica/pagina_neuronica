@@ -11,20 +11,20 @@
       <div class="spacer"></div>
 
 
-      <div class="icono_menu" [ngClass]="{'icono_menu_open': openMenu}" (click)="abrirMenu()">
+      <button class="icono_menu" [ngClass]="{'icono_menu_open': openMenu}" (click)="abrirMenu()">
           <i class="material-icons">{{ openMenu ? 'close' : 'menu' }}</i>
-      </div>
+      </button>
       <div class="menu" [class.menuClass] = "menuCel" style="text-align: center;">
-          <ul>
-              <a mat-button routerLink = "" (click)="abrirMenu()">Inicio</a>
-              <a mat-button routerLink = "quienes-somos-neuronica" routerLinkactive="active" (click)="abrirMenu()">Nosotros</a>
-              <a mat-button [matMenuTriggerFor]="Servicios">
+          <ul class="menu-list">
+              <a mat-button routerLink = "" class="submenu" (click)="abrirMenu()">Inicio</a>
+              <a mat-button routerLink = "quienes-somos-neuronica" class="submenu" routerLinkActive="active" (click)="abrirMenu()">Nosotros</a>
+              <a mat-button [matMenuTriggerFor]="Servicios" class="submenu">
                 <div class="deplegable">
                     <span> Servicios </span>
                     <i class="material-icons">arrow_drop_down</i>
                 </div>
               </a>
-              <a mat-button routerLink="productos" (click)="abrirMenu()">Productos</a>
+              <a mat-button routerLink="productos" class="submenu" (click)="abrirMenu()">Productos</a>
               <!-- <a mat-button routerLink = "escogernos" (click)="abrirMenu()">
                   <span class="material-symbols-outlined">shopping_cart</span>
               </a> 
@@ -40,35 +40,35 @@
 
 <mat-menu #Servicios="matMenu">
     <button mat-menu-item class="submenu" (click)="abrirMenu()">
-        <a  mat-button routerLink = "linea-servicio-hardware" class="submenu" routerLinkactive="active" style="color: #005f75;">
+        <a  mat-button routerLink = "linea-servicio-hardware" class="submenu" routerLinkActive="active" style="color: #005f75;">
             <span class="material-symbols-outlined">memory</span>            
             Hardware
         </a>
      </button>
 
     <button mat-menu-item class="submenu" (click)="abrirMenu()">
-        <a  mat-button routerLink = "linea-servicio-manufactura" class="submenu" routerLinkactive="active" style="color: #005f75;">
+        <a  mat-button routerLink = "linea-servicio-manufactura" class="submenu" routerLinkActive="active" style="color: #005f75;">
             <span class="material-symbols-outlined">manufacturing</span>
             Manufactura
         </a>      
     </button>
 
-    <button mat-menu-item class="submenu" (click)="abrirMenu()">
-        <a mat-button routerLink="linea-servicio-software" class="submenu" routerLinkactive="active" style="color: #005f75;">
+    <!--<button mat-menu-item class="submenu" (click)="abrirMenu()">
+        <a mat-button routerLink="linea-servicio-software" class="submenu" routerLinActive="active" style="color: #005f75;">
             <span class="material-symbols-outlined">terminal</span>
             Software
         </a>
     </button>
 
-    <!--<button mat-menu-item class="submenu" (click)="abrirMenu()">
-        <a mat-button routerLink="linea-servicio-iot" class="submenu" routerLinkactive="active" style="color: #005f75;">
+    <button mat-menu-item class="submenu" (click)="abrirMenu()">
+        <a mat-button routerLink="linea-servicio-iot" class="submenu" routerLinkActive="active" style="color: #005f75;">
             <span class="material-symbols-outlined">rss_feed</span>
             IoT
         </a>
     </button>-->
 
     <!-- <button mat-menu-item class="submenu" (click)="abrirMenu()">
-        <a mat-button routerLink="domotica-personalizada" class="submenu" routerLinkactive="active" style="color: #005f75;">
+        <a mat-button routerLink="domotica-personalizada" class="submenu" routerLinkActive="active" style="color: #005f75;">
             <span class="material-symbols-outlined">scene</span>
             Domótica
         </a>
@@ -76,7 +76,7 @@
 </mat-menu>
 
 <a href="https://wa.me/573027218775">
-  <button class="material-icons boton_flotante" style="display: block;">call</button>
+  <button class="material-icons boton_flotante" >call</button>
 </a>
 
 <div class="contenedorcolumnas" color = "secundary" style="width: 100%;">

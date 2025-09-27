@@ -31,6 +31,7 @@ export class DetalleComponent implements OnInit, OnDestroy {
   imagenActualIndex = 0;
   imagenActual: images_by_slug | undefined;
   videoUrl: SafeResourceUrl | null = null;
+  variantStock: number = 0;
   trackBySlug = (_: number, item: RelatedProductsList) => item.slug;
 
 
@@ -158,6 +159,7 @@ export class DetalleComponent implements OnInit, OnDestroy {
           this.relatedProducts = relatedProducts;
           this.variableTotalItems = this.relatedProducts.length;
           this.informationProduct = informationProduct;
+          this.variantStock = informationProduct[0].stock;
           this.video = video;
           this.todasLasImagenes = todasLasImagenes;
 
@@ -216,9 +218,12 @@ export class DetalleComponent implements OnInit, OnDestroy {
     }
   }
 
-  changeVariant(variantNumbre: number): void {
+  changeVariant(variantNumbre: number, colorName: string): void {
     this.actualImageMaterial = variantNumbre;
     this.imagenActual = this.imagesList[variantNumbre];
+
+    this.variantStock = this.informationProduct[variantNumbre].stock;
+
   }
 
   siguienteRelacionado(): void {
@@ -246,9 +251,5 @@ export class DetalleComponent implements OnInit, OnDestroy {
 
   getColorCode(colorName: string): string {
     return this.colorMap[colorName] || '#000000';
-  }
-
-  findStock(colorName: string){
-    console.log(colorName);
   }
 }

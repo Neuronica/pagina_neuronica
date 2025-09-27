@@ -38,7 +38,7 @@
                                         <div class="detalle-fila">
                                             <h3 style="margin: 0; color: #D37600;" data-aos="fade-right" data-aos-duration="2000">Disponibles</h3>
                                             <span class="stock-badge" data-aos="fade-right" data-aos-duration="2000">
-                                            {{informationProduct[0].stock | number: '1.0-0'}}
+                                            {{variantStock | number: '1.0-0'}}
                                             </span>
                                         </div>
                                     </div>
@@ -46,12 +46,11 @@
                                         <span class="col-attr">Colores</span>
                                         <div class="bolitas">
                                             <div *ngFor="let p of informationProduct; let i = index">
-                                                <button  class="carrusel-boton-nav" style="background-color: white;" (click)="changeVariant(i)">
+                                                <button  class="carrusel-boton-nav" style="background-color: white;" (click)="changeVariant(i, p.json['color'])">
                                                     <div 
                                                     *ngIf = "i != actualImageMaterial"
                                                     class="color-bolita-test"
-                                                    [style.backgroundColor]="getColorCode(p.json['color'])"
-                                                    (click) = "findStock(p.json['color'])"></div>                                                    
+                                                    [style.backgroundColor]="getColorCode(p.json['color'])"></div>                                                    
 
                                                     <div 
                                                     *ngIf = "i === actualImageMaterial"

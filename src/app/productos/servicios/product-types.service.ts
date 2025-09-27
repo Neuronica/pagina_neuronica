@@ -11,7 +11,7 @@ export interface product_types {
   providedIn: 'root'
 })
 export class ProductTypesService {
-  private jsonURL = 'http://localhost:8080/api/product-types/';
+  private jsonURL = 'https://pagina-neuronica-backend-490354620288.us-west1.run.app/api/product-types/';
 
   constructor(private http:HttpClient){}
 

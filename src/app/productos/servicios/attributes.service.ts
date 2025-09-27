@@ -14,7 +14,7 @@ export interface attributes_list{
   providedIn: 'root'
 })
 export class AttibutesService {
-    private jsonURL = 'http://localhost:8080/api/attribute-variant/';
+    private jsonURL = 'https://pagina-neuronica-backend-490354620288.us-west1.run.app/api/attribute-variant/';
   
     constructor(private http: HttpClient){}
   

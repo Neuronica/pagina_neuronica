@@ -121,6 +121,8 @@ h4{
 p{
   font-family: 'Nunito Sans', sans-serif;
   font-size: clamp(0.4rem, 5vw ,1.1rem);
+  color: #444;
+  letter-spacing: 0.5px;
   line-height: 150%;
 }
 
@@ -193,7 +195,9 @@ a:hover{
   flex-wrap: wrap; /* Permite que los elementos salten de línea */
   gap: 20px;       /* Espacio entre los cuadros (filas y columnas) */
   justify-content: center; /* Centra los cuadros en el contenedor */
-  margin: 5%;      /* Margen para que no se pegue a los lados */
+  padding: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 /* Estilos para cada cuadro de servicio */
@@ -220,6 +224,7 @@ a:hover{
 
 .subcuadro:hover{
   background-color: rgba(0, 95, 117, 0.1) !important;
+  cursor: pointer;
 }
 
 /* Estilos para los elementos internos del subcuadro */
@@ -608,11 +613,10 @@ input{
   margin-right: 5%;
   margin-left: 5%;
   margin-bottom: 5%;
-  width: 20%;
-  height: 20%;
+  width: 45%;
+  height: 45%;
   float: inline-end;
   object-fit: cover;
-  object-position: bottom;
   border-radius: 5%
 }
 
@@ -626,6 +630,13 @@ input{
   color: black;
 }
 
+.menu,
+.menu-list,
+.mat-toolbar {
+  max-width: 100vw !important;
+  overflow-x: hidden;
+}
+
 .icon-button{
   background: none;
   padding: 0;
@@ -633,6 +644,8 @@ input{
   cursor: pointer;
   width: 0rem;
 }
+
+.menu-list > li { display: inline-flex; }
 
 .sticker{
   background: none;
@@ -660,18 +673,24 @@ input{
   justify-items: center;
 }
 
-.boton_flotante{
-  display: block;
+.boton_flotante {
   position: fixed;
   z-index: 1000;
-  right: 20px;
-  bottom: 20px;
-  border-radius: 50%;
+  right: clamp(10px, 3vw, 20px);  /* margen adaptable */
+  bottom: clamp(10px, 3vw, 20px); /* margen adaptable */
   
-  text-decoration: none;
-  color: #fff;
+  width: clamp(40px, 8vw, 60px);  /* tamaño adaptable */
+  aspect-ratio: 1 / 1;            /* siempre cuadrado = círculo */
+  
+  border-radius: 50%;
   background: #005f75;
-  padding: 22px;
+  color: white;
+  font-size: clamp(18px, 5vw, 32px); /* ícono escala con pantalla */
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .imagenFondo{
@@ -712,12 +731,29 @@ input{
     display: flex ;
     justify-content: center; 
     align-items: center;
-    margin-bottom: 5%;
+    padding: 5%;
+    margin-left: 25%;
+    width: 90%;
+    height: auto;
+    border-radius: 8px;
+    object-position: center;
   }
 
   .imagen{
     margin-right: 5%;
     margin-left: 5%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    float: none;
+    border-radius: 5%
+  }
+
+  .video{
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -737,11 +773,7 @@ input{
     border-radius: 5%
   }
 
-  .video{
-    display: none;
-  }
-
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'Nunito', sans-serif; }
