@@ -16,50 +16,48 @@
         <div class="contenedorColumnas">
             <div class="spacer2"></div>
             <div class="bordeAzul">
-                <div class="filas">
-                    <div class="contenedorColumnas">
-                    <div class="spacer2"></div>
-                        <div class="cuatroColumnas">
-                            <button mat-button [matMenuTriggerFor]="filtrosMenu" class="botonDesplegable" #filtrosMenuTrigger="matMenuTrigger">
-                                {{textoFiltro}}
-                                <span class="material-symbols-outlined">
-                                    {{ filtrosMenuTrigger.menuOpen ? 'arrow_drop_up' : 'arrow_drop_down' }}
-                                </span>
+                <div class="contenedorColumnas">
+                    <div class="cuatroColumnas">
+                        <button mat-button [matMenuTriggerFor]="filtrosMenu" class="botonDesplegable" #filtrosMenuTrigger="matMenuTrigger">
+                            {{textoFiltro}}
+                            <span class="material-symbols-outlined">
+                                {{ filtrosMenuTrigger.menuOpen ? 'arrow_drop_up' : 'arrow_drop_down' }}
+                            </span>
+                        </button>
+                                            
+                        <mat-menu #filtrosMenu="matMenu" class="menuDesplegable">
+                            <button mat-menu-item *ngFor="let productType of productTypes" (click)="seleccionarTipo(productType)" style="color: white;">
+                                {{ productType.name }}
                             </button>
+                        </mat-menu>
                                             
-                            <mat-menu #filtrosMenu="matMenu" class="menuDesplegable">
-                                <button mat-menu-item *ngFor="let productType of productTypes" (click)="seleccionarTipo(productType)" style="color: white;">
-                                    {{ productType.name }}
-                                </button>
-                            </mat-menu>
-                                            
-                            <button mat-button [matMenuTriggerFor]="ordenMenu" class="botonDesplegable" #ordenMenuTrigger="matMenuTrigger">
-                                {{textoOrden}}
-                                <span class="material-symbols-outlined">
-                                    {{ ordenMenuTrigger.menuOpen ? 'arrow_drop_up' : 'arrow_drop_down' }}
-                                </span>
+                        <button mat-button [matMenuTriggerFor]="ordenMenu" class="botonDesplegable" #ordenMenuTrigger="matMenuTrigger">
+                            {{textoOrden}}
+                            <span class="material-symbols-outlined">
+                                {{ ordenMenuTrigger.menuOpen ? 'arrow_drop_up' : 'arrow_drop_down' }}
+                            </span>
+                        </button>
+                                        
+                        <mat-menu #ordenMenu="matMenu" class="menuDesplegable">
+                            <button mat-menu-item *ngFor="let order of defaultOrderOption" (click)="seleccionarOrden(order)" style="color: white;">
+                                {{ order.name }}
                             </button>
-                                            
-                            <mat-menu #ordenMenu="matMenu" class="menuDesplegable">
-                                <button mat-menu-item *ngFor="let order of defaultOrderOption" (click)="seleccionarOrden(order)" style="color: white;">
-                                    {{ order.name }}
-                                </button>
-                            </mat-menu>
-                                            
-                            <button mat-button [matMenuTriggerFor]="marcasMenu" class="botonDesplegable" #marcasMenuTrigger="matMenuTrigger">
-                                {{textoMarca}}
-                                <span class="material-symbols-outlined">
-                                    {{ marcasMenuTrigger.menuOpen ? 'arrow_drop_up' : 'arrow_drop_down' }}
-                                </span>
+                        </mat-menu>
+                                        
+                        <button mat-button [matMenuTriggerFor]="marcasMenu" class="botonDesplegable" #marcasMenuTrigger="matMenuTrigger">
+                            {{textoMarca}}
+                            <span class="material-symbols-outlined">
+                                {{ marcasMenuTrigger.menuOpen ? 'arrow_drop_up' : 'arrow_drop_down' }}
+                            </span>
+                        </button>
+                                        
+                        <mat-menu #marcasMenu="matMenu" class="menuDesplegable">
+                            <button mat-menu-item *ngFor="let brand of brands" (click)="seleccionarProveedor(brand)" style="color: white;">
+                                {{ brand.name }}
                             </button>
-                                            
-                            <mat-menu #marcasMenu="matMenu" class="menuDesplegable">
-                                <button mat-menu-item *ngFor="let brand of brands" (click)="seleccionarProveedor(brand)" style="color: white;">
-                                    {{ brand.name }}
-                                </button>
-                            </mat-menu>
+                        </mat-menu>
 
-                            <div class="relative w-full max-w-xs">
+                        <div class="botonDesplegable">
                             <input
                                 type="text"
                                 placeholder="Buscar productos..."
@@ -67,11 +65,10 @@
                                 [(ngModel)]="searchTerm"
                                 (keyup.enter)="buscarProductos()"
                             />
-                            </div>
-                        </div>                    
-                        <div class="spacer2"></div>
-                    </div> 
-                </div>
+                        </div>
+                    </div>                    
+                    <div class="spacer2"></div>
+                </div> 
                 <div class="filas">
                     <div class="lista-productos">
                         <div *ngFor="let producto of productList" class="lista-tarjeta-productos" [routerLink]="['/producto',producto.slug]">

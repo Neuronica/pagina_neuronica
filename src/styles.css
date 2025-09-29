@@ -339,28 +339,27 @@ input{
 }
 
 .cuatroColumnas{
-  width: 100%;
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between; 
+  flex-wrap: wrap; /* Permite que los elementos salten de línea */
+  justify-content: center; /* Centra los cuadros en el contenedor */
   align-items: center;
-  gap: 1.8vw; 
-  padding: 2%;
+  width: 100%;   
 }
 
 .input-busqueda {
-  /* Haz que ocupe el mismo espacio flexible que los botones */
-  flex: 1 1 200px; /* Crece, se encoge, con un ancho base de 200px */
-  min-width: 150px;
+  width: 100%;
   box-sizing: border-box;
   color: black;
   background-color: white;
   border-color: #005f75;
   border-radius: 10px;
-  height: 4rem; /* Establece una altura fija o relativa para que coincida con los botones */
+  height: 3rem; /* Establece una altura fija o relativa para que coincida con los botones */
   font-family: 'Nunito', sans-serif;
-  font-size: clamp(0.3rem, 2vw, 1.1rem);
-  padding: 0 10px;
+  font-size: clamp(0.4rem, 5vw ,1.1rem);
+  text-align: center;
+  display: block; /* Para que el 'a' sea un bloque y ocupe el espacio */  
+  align-items: center;
+  justify-content: center;
 }
 
 .dosColumnasFormulario{
@@ -492,18 +491,18 @@ input{
 
 
 .botonDesplegable{
+  font-size: clamp(0.4rem, 5vw ,1.1rem);
   color: white !important;
   background-color: #005f75 !important;
-  border-radius: 2vh !important;
-  border-color: white;
-  display: flex;
+  border-radius: 2vh ;
+  border-color: white ;
+  max-width: calc(20%); /* Asegura que no se estire más de 50% */
+  display: block; /* Para que el 'a' sea un bloque y ocupe el espacio */  
   align-items: center;
-  justify-content: center;
-  margin-left: 1%;
-  margin-right: 1%;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin:2%;
+  width: 100%;
 }
+
 
 .botonDesplegable .material-symbols-outlined {
   vertical-align: middle;
@@ -512,6 +511,7 @@ input{
 
 .menuDesplegable{
   background-color: rgba(0, 95, 117, 0.5) !important;
+  width: 100%;
   color: white !important;
   border-radius: 2vh !important;
 }
@@ -723,6 +723,19 @@ input{
 }
 
 @media only screen and (max-width: 800px){
+  .lista-tarjeta-productos {
+    width: calc((100% - 2*20px) / 2); /* Para 3 columnas: 100%/3, ajustado con el gap */
+  }
+
+  .cuatroColumnas{
+    flex: 1 1 100%; /* Ocupa el 100% del ancho para una sola columna */
+    max-width: 100%;
+  }
+
+  .botonDesplegable{
+        flex: 1 1 100%; /* Ocupa el 100% del ancho para una sola columna */
+    max-width: 100%;
+  }
 
   .tarjeta-descripcion {
     width: 100%;
@@ -800,6 +813,14 @@ input{
   }
 
 }
+
+@media only screen and (max-width: 500px){
+
+  .lista-tarjeta-productos {
+    width: calc((100% - 2*20px) / 1);
+  }
+}
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Nunito', sans-serif; }

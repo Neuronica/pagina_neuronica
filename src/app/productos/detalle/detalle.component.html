@@ -46,7 +46,7 @@
                                         <span class="col-attr">Colores</span>
                                         <div class="bolitas">
                                             <div *ngFor="let p of informationProduct; let i = index">
-                                                <button  class="carrusel-boton-nav" style="background-color: white;" (click)="changeVariant(i, p.json['color'])">
+                                                <button  class="color-card" style="background-color: white;" (click)="changeVariant(i, p.json['color'])">
                                                     <div 
                                                     *ngIf = "i != actualImageMaterial"
                                                     class="color-bolita-test"
