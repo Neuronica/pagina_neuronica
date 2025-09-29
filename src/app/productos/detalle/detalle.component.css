@@ -13,6 +13,7 @@
 .button-text {
   display: inline-flex;
   align-items: center;   /* centra verticalmente texto e imagen */
+  justify-content: center ;
   gap: 8px;              /* espacio entre el texto y el icono */
   font-size: clamp(1.2rem, 2vw, 2rem); /* tamaño ajustable */
   font-weight: bold;
@@ -126,10 +127,44 @@ h2 {
 
 .botones-container {
   display: flex;
-  flex-direction: row; /* uno debajo del otro */
-  gap: 20px;              /* espacio entre botones */
-  margin-left: 20%;
-  margin-right: 20%;
+  flex-wrap: wrap;
+  gap: 10px;   
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
+.botones-container .whatsapp-button {
+  flex: 1 1 calc(50% - 10px); /* 50% del ancho, ajustado por el gap */
+  max-width: calc(50% - 10px); /* Asegura que no se estire más de 50% */
+  display: block; /* Para que el 'a' sea un bloque y ocupe el espacio */
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.botones-container .mercadoLibre-button {
+  flex: 1 1 calc(50% - 10px); /* 50% del ancho, ajustado por el gap */
+  max-width: calc(50% - 10px); /* Asegura que no se estire más de 50% */
+  display: block; /* Para que el 'a' sea un bloque y ocupe el espacio */
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media only screen and (max-width: 700px){
+  .botones-container .whatsapp-button {
+    flex: 1 1 100%; /* Ocupa el 100% del ancho para una sola columna */
+    max-width: 100%;
+  }
+
+  .botones-container .mercadoLibre-button {
+    flex: 1 1 100%; /* Ocupa el 100% del ancho para una sola columna */
+    max-width: 100%;
+  }
+}
 

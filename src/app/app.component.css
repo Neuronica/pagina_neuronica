@@ -79,16 +79,6 @@ mat-toolbar{
   line-height: 1;
 }
 
-@media only screen and (min-width: 701px) and (max-width: 1000px){
-
-
-    .menu{
-        position: relative;
-        background: none;
-        margin-left: 30%
-    }
-}
-
 @media only screen and (max-width: 700px){
 
     .icono_menu {

@@ -60,14 +60,24 @@ body {
 }
 
 /* --- Estilos para cada tarjeta de producto --- */
+.tarjeta-descripcion {
+  width: calc(50% - 20px);  /*Para 3 columnas: 100%/3, ajustado con el gap */
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 15px;
+  box-sizing: border-box;  /*Asegura que el padding no afecte el ancho */
+  text-align: center;
+  transition: width 0.3s ease; /* Suaviza la transición al cambiar el ancho*/
+}
+
 .tarjeta-producto {
-  width: calc(33.33% - 20px); /* Para 3 columnas: 100%/3, ajustado con el gap */
+  width: calc(33.33% - 20px);  /*Para 3 columnas: 100%/3, ajustado con el gap */
   border: 1px solid #fff;
   border-radius: 8px;
   padding: 15px;
-  box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+  box-sizing: border-box;  /*Asegura que el padding no afecte el ancho */
   text-align: center;
-  transition: width 0.3s ease; /* Suaviza la transición al cambiar el ancho */
+  transition: width 0.3s ease; /* Suaviza la transición al cambiar el ancho*/
 }
 
 .lista-tarjeta-productos {
@@ -115,7 +125,7 @@ h3{
   font-family: 'Nunito', sans-serif;
   text-align: center;
   color: #005f75;
-  font-size: clamp(0.3rem, 2.5vw, 1rem);
+  font-size: clamp(0.4rem, 5vw ,1.1rem);
 }
 
 h4{
@@ -201,7 +211,7 @@ a:hover{
   flex-wrap: wrap; /* Permite que los elementos salten de línea */
   gap: 20px;       /* Espacio entre los cuadros (filas y columnas) */
   justify-content: center; /* Centra los cuadros en el contenedor */
-  padding: 5%;
+  padding: 2%;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -221,6 +231,7 @@ a:hover{
   align-items: center;
   border: 0.1rem solid #D37600;
   border-radius: 3vw;
+  width: 100%;
   height: 100%; /* Ocupa la altura completa del contenedor del enlace */
   padding: 20px;
   box-sizing: border-box;
@@ -231,6 +242,25 @@ a:hover{
 .subcuadro:hover{
   background-color: rgba(0, 95, 117, 0.1) !important;
   cursor: pointer;
+  transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+  transition: transform 0.3s ease;
+}
+
+.subcuadro-hardware{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem solid #D37600;
+  border-radius: 3vw;
+  width: 85%;
+  height: 100%; /* Ocupa la altura completa del contenedor del enlace */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 1) !important;
+
+  /*position: relative;margin: auto; height: auto; width: 85%;*/
 }
 
 /* Estilos para los elementos internos del subcuadro */
@@ -243,15 +273,6 @@ a:hover{
   margin: 10px 0 0 0; /* Espacio arriba del párrafo */
   text-align: justify;
 }
-
-/* Media Query para pantallas pequeñas (menos de 700px) */
-@media only screen and (max-width: 700px) {
-  .contenedor-servicios .servicio-link {
-    flex: 1 1 100%; /* Ocupa el 100% del ancho para una sola columna */
-    max-width: 100%;
-  }
-}
-
 
 
 input{
@@ -393,17 +414,17 @@ input{
 .carrusel-contenedor {
   position: relative; /* Es importante para posicionar los botones de forma absoluta */
   display: flex; /* Usamos Flexbox para alinear los elementos */
+  overflow: hidden;
   align-items: center; /* Centra los botones y la imagen verticalmente */
-  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  /*justify-content: space-between; /* Distribuye el espacio entre los elementos */
   width: 100%;
+  height: 100%;
+  justify-content: center;
 }
 
 .carrusel-imagen {
-  flex-grow: 1;
-  text-align: center;
-  padding: 0 40px;
-  min-height: 300px;
-  min-width: 40px; 
+  width: 100%;              /* ocupa ancho completo */
+  height: 100%;             /* ocupa alto completo */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -411,23 +432,38 @@ input{
 
 /* Estilos de la imagen dentro del carrusel */
 .carrusel-imagen img {
-  max-width: 500%;
-  max-height: 400px; 
-  object-fit: contain;
+  display: flex;
+  max-width: 100%;          /* nunca más grande que su contenedor */
+  max-height: 100%;        /* límite vertical */
+  object-fit: contain;      /* ajusta sin recortar */
+  display: block;
+
 }
 
 /* Estilos para los botones de navegación */
 .carrusel-boton-nav {
-  /* Posición y estilo para los botones de navegación */
-  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   background-color: rgba(211, 118, 0, 0.5);
   color: white;
   border: none;
+  font-size: 2rem;
   cursor: pointer;
-  padding: 10px;
+  padding: 8px 12px;
   border-radius: 50%;
-  transition: background-color 0.3s;
   z-index: 10; /* Asegura que los botones estén por encima de la imagen */
+  border-radius: 50%;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Izquierda y derecha */
+.carrusel-boton-nav:first-of-type {
+  left: 8px;
+}
+
+.carrusel-boton-nav:last-of-type {
+  right: 8px;
 }
 
 /* Agrega estos estilos a tu archivo CSS */
@@ -451,7 +487,7 @@ input{
 }
 
 .carrusel-boton-nav:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(0, 95, 117, 0.5);
 }
 
 
@@ -497,7 +533,7 @@ input{
   height: auto;
   width: 85%;
   border-radius: 3vw;
-  border: 0.1rem solid #D37600;
+  border: 1px solid #D37600;
 }
 
 .islaTitulo{
@@ -535,27 +571,8 @@ input{
 
 .cuadrado{
   width: 90%; 
-  height: 0.1rem; 
+  height: 1px; 
   background: #D37600;
-}
-
-.subcuadro{
-  border: 0.1rem solid #D37600;
-  text-align: justify;
-  display: block;
-  flex: 0 1 50%;
-  height: 90%;
-  border-radius: 3vw;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  margin-left: 5%;
-  margin-right: 5%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.subcuadro:hover {
-    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
-    transition: transform 0.3s ease;
 }
 
 .banner-oferta {
@@ -705,18 +722,20 @@ input{
   text-align: center;
 }
 
-@media only screen and (max-width: 950px){
-  .dosColumnasFormulario{
-    width: 100%;
-    float: none;
-  }
+@media only screen and (max-width: 800px){
 
-  .tarjeta-producto {
-    width: calc(50% - 20px); /* 2 columnas en pantallas más estrechas */
+  .tarjeta-descripcion {
+    width: 100%;
   }
 }
 
 @media only screen and (max-width: 700px){
+
+  .contenedor-servicios .servicio-link {
+    flex: 1 1 100%; /* Ocupa el 100% del ancho para una sola columna */
+    max-width: 100%;
+  }
+
   .dosColumnas{
     width: 100%;
     float: none;
@@ -734,8 +753,6 @@ input{
   .tarjeta-producto {
     width: 100%; /* Una sola columna en pantallas muy pequeñas */
   }
-
-  
 
   .contenedorImagen{
     display: flex ;

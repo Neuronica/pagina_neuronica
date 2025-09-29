@@ -9,17 +9,3 @@ body{
     background-size: cover;
     text-align: center;
 }
-
-
-/* Estilos para pantallas pequeñas (Media Query) */
-@media (max-width: 800px) {
-    .contenedor-servicios {
-        flex-direction: column; /* Cambia a una columna en pantallas pequeñas */
-        align-items: stretch; /* Estira los botones para que ocupen todo el ancho */
-    }
-
-    .subcuadro {
-        width: 100%; /* El botón ocupa todo el ancho disponible */
-        margin-bottom: 15px; /* Agrega espacio entre los botones */
-    }
-}

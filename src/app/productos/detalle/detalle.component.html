@@ -8,25 +8,25 @@
                     <div class="unaColumna">
                         <div class="filas">
                             <div class="detalle-producto">
-                                <div class="tarjeta-producto" style="width: calc(50% - 10px);">
+                                <div class="tarjeta-descripcion">
                                     <div class="carrusel-contenedor">
-                                        <button *ngIf="informationProduct[0].type != 'material'" class="carrusel-boton-nav" (click)="anteriorImagen()" [disabled]="imagesList.length <= 1">
-                                            &#10094;
-                                        </button>
                                         <div class="carrusel-imagen">
+                                            <button *ngIf="informationProduct[0].type != 'material'" class="carrusel-boton-nav" (click)="anteriorImagen()" [disabled]="imagesList.length <= 1">
+                                                &#10094;
+                                            </button>
                                             <img *ngIf="imagenActual" [src]="imagenActual.url" alt="Imagen del producto {{ idProducto }}">
+                                            <button *ngIf="informationProduct[0].type != 'material'" class="carrusel-boton-nav" (click)="siguienteImagen()" [disabled]="imagesList.length <= 1">
+                                                &#10095;
+                                            </button>
                                         </div>
-                                        <button *ngIf="informationProduct[0].type != 'material'" class="carrusel-boton-nav" (click)="siguienteImagen()" [disabled]="imagesList.length <= 1">
-                                            &#10095;
-                                        </button>
                                     </div>
                                 </div>
-                                <div class="detalle-producto" style="width: calc(40% - 0px);">
+                                <div class="tarjeta-descripcion">
                                     <h1 style="text-align: center;" data-aos="fade-right" data-aos-duration="2000">{{informationProduct[0].name}}</h1>
                                     <div class="precios">
-                                        <h3 *ngIf="informationProduct[0].offer != null" style=" font-size: clamp(0.3rem, 3vw, 1.3rem); color: #D37600; font-weight: bold; text-decoration: line-through; opacity: 0.5; text-align: center;" data-aos="fade-right" data-aos-duration="2000">{{informationProduct[0].price| currency:'USD':'symbol':'1.0-0'}}</h3>
-                                        <h3 *ngIf="informationProduct[0].offer != null" style="font-size: clamp(0.3rem, 3vw, 1.3rem); color: #D37600; font-weight: bold; text-align: center;" data-aos="fade-right" data-aos-duration="2000">{{ informationProduct[0].offer | currency:'USD':'symbol':'1.0-0'}} IVA incluido</h3>
-                                        <h3 *ngIf="informationProduct[0].offer === null" style="font-size: clamp(0.3rem, 3vw, 1.3rem); color: #D37600; font-weight: bold; text-align: center;" data-aos="fade-right" data-aos-duration="2000">{{ informationProduct[0].price | currency:'USD':'symbol':'1.0-0'}} IVA incluido</h3>
+                                        <h3 *ngIf="informationProduct[0].offer != null" style=" color: #D37600; font-weight: bold; text-decoration: line-through; opacity: 0.5; text-align: center;" data-aos="fade-right" data-aos-duration="2000">{{informationProduct[0].price| currency:'USD':'symbol':'1.0-0'}}</h3>
+                                        <h3 *ngIf="informationProduct[0].offer != null" style=" color: #D37600; font-weight: bold; text-align: center;" data-aos="fade-right" data-aos-duration="2000">{{ informationProduct[0].offer | currency:'USD':'symbol':'1.0-0'}} IVA incluido</h3>
+                                        <h3 *ngIf="informationProduct[0].offer === null" style=" color: #D37600; font-weight: bold; text-align: center;" data-aos="fade-right" data-aos-duration="2000">{{ informationProduct[0].price | currency:'USD':'symbol':'1.0-0'}} IVA incluido</h3>
                                     </div>
                                     
                                     <div class="detalle-grid">
@@ -75,7 +75,7 @@
                                             style="margin-left:8px;"/>
                                     </span>
                                     </a>
-
+                                    
                                     <a href="https://www.mercadolibre.com.co/perfil/tu-tienda"
                                     class="mercadoLibre-button"
                                     target="_blank"
