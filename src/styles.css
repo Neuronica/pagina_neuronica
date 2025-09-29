@@ -1,5 +1,11 @@
 @import 'aos/dist/aos.css';
 
+/* >>> GLOBAL: mejor box model para evitar que padding / margin rompan el 50/50 */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
 html,
 body {
   margin: 0;
@@ -299,6 +305,8 @@ input{
 }
 
 .unaColumna{
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -310,8 +318,6 @@ input{
 }
 
 .cuatroColumnas{
-
-
   width: 100%;
   display: flex;
   flex-wrap: wrap; 
@@ -567,6 +573,7 @@ input{
 .imagen{
   margin-right: 5%;
   margin-left: 5%;
+  margin-bottom: 5%;
   width: 50%;
   height: 50%;
   float: inline-start;
@@ -578,6 +585,7 @@ input{
 .imagenUbicacionInferior{
   margin-right: 5%;
   margin-left: 5%;
+  margin-bottom: 5%;
   width: 40%;
   height: 40%;
   float: inline-end;
@@ -734,7 +742,6 @@ input{
     justify-content: center; 
     align-items: center;
     padding: 5%;
-    margin-left: 25%;
     width: 90%;
     height: auto;
     border-radius: 8px;
