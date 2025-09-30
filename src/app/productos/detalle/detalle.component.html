@@ -152,43 +152,44 @@
                         <div class="carrusel-productos-relacionados" data-aos="fade-right" data-aos-duration="2000">
                             <button class="carrusel-boton-nav" (click)="anteriorRelacionado()">&#10094;</button>             
                             <div class="carrusel-items-contenedor" *ngIf="relatedProducts?.length as total">
-                            <!-- Caso: más de 3, carrusel de a 3 -->
-                            <div *ngIf="total > 3; else fewTpl"
-                                class="carrusel-items-wrapper"
-                                [style.transform]="'translateX(-' + indiceRelacionadoActual * (100 / 3) + '%)'">
-                                <div *ngFor="let relacionado of relatedProducts; trackBy: trackBySlug"
-                                    class="lista-tarjeta-productos"
-                                    style="margin: 0 2%;"
-                                    [style.flex]="'0 0 calc(100% / 3)'"
-                                    [routerLink]="['/producto', relacionado.slug]">
-                                <div class="contenedor-imagen">
-                                    <img [src]="getProductoImageUrl(relacionado.slug)" [alt]="relacionado.product">
-                                    <div *ngIf="relacionado.offer != null" class="banner-oferta">¡Oferta!</div>
-                                </div>
-                                <h3>{{ relacionado.product }}</h3>
-                                <p *ngIf="relacionado.offer === null">Precio: {{ relacionado.price | currency:'USD':'symbol':'1.0-0' }}</p>
-                                <p *ngIf="relacionado.offer != null">Precio: {{ relacionado.offer | currency:'USD':'symbol':'1.0-0' }}</p>
-                                </div>
-                            </div>
-
-                            <!-- Caso: 1 a 3, mostrar todos sin corte -->
-                            <ng-template #fewTpl>
-                                <div class="carrusel-items-wrapper">
-                                <div *ngFor="let relacionado of relatedProducts; trackBy: trackBySlug"
-                                    class="lista-tarjeta-productos"
-                                    style="margin: 0 2%;"
-                                    [style.flex]="'0 0 calc(100% / ' + total + ')'"
-                                    [routerLink]="['/producto', relacionado.slug]">
-                                    <div class="contenedor-imagen">
-                                    <img [src]="getProductoImageUrl(relacionado.slug)" [alt]="relacionado.product">
-                                    <div *ngIf="relacionado.offer != null" class="banner-oferta">¡Oferta!</div>
+                                <!-- Caso: más de 3, carrusel de a 3 -->
+                                <div *ngIf="total > 3; else fewTpl"
+                                    class="carrusel-items-wrapper"
+                                    [style.transform]="'translateX(-' + indiceRelacionadoActual * (100 / 3) + '%)'">
+                                    <div *ngFor="let relacionado of relatedProducts; trackBy: trackBySlug"
+                                        class="lista-tarjeta-productos"
+                                        style="margin: 0 2%;"
+                                        [style.flex]="'0 0 calc(100% / 3)'"
+                                        [routerLink]="['/producto', relacionado.slug]">
+                                        <div class="contenedor-imagen-carrusel">
+                                            <img [src]="getProductoImageUrl(relacionado.slug)" [alt]="relacionado.product">
+                                            <div *ngIf="relacionado.offer != null" class="banner-oferta">¡Oferta!</div>
+                                        </div>
+                                        <h3>{{ relacionado.product }}</h3>
+                                        <p *ngIf="relacionado.offer === null">Precio: {{ relacionado.price | currency:'USD':'symbol':'1.0-0' }}</p>
+                                        <p *ngIf="relacionado.offer != null">Precio: {{ relacionado.offer | currency:'USD':'symbol':'1.0-0' }}</p>
                                     </div>
-                                    <h3>{{ relacionado.product }}</h3>
-                                    <p *ngIf="relacionado.offer === null">Precio: {{ relacionado.price | currency:'USD':'symbol':'1.0-0' }}</p>
-                                    <p *ngIf="relacionado.offer != null">Precio: {{ relacionado.offer | currency:'USD':'symbol':'1.0-0' }}</p>
                                 </div>
-                                </div>
-                            </ng-template>
+
+                                <!-- Caso: 1 a 3, mostrar todos sin corte -->
+                                <ng-template #fewTpl>
+                                    <div class="carrusel-items-wrapper"
+                                    [style.transform]="'translateX(-' + indiceRelacionadoActual * (100 / 3) + '%)'">
+                                    <div *ngFor="let relacionado of relatedProducts; trackBy: trackBySlug"
+                                        class="lista-tarjeta-productos"
+                                        style="margin: 0 2%;"
+                                        [style.flex]="'0 0 calc(100% / 3)'"
+                                        [routerLink]="['/producto', relacionado.slug]">
+                                        <div class="contenedor-imagen-carrusel">
+                                        <img [src]="getProductoImageUrl(relacionado.slug)" [alt]="relacionado.product">
+                                        <div *ngIf="relacionado.offer != null" class="banner-oferta">¡Oferta!</div>
+                                        </div>
+                                        <h3>{{ relacionado.product }}</h3>
+                                        <p *ngIf="relacionado.offer === null">Precio: {{ relacionado.price | currency:'USD':'symbol':'1.0-0' }}</p>
+                                        <p *ngIf="relacionado.offer != null">Precio: {{ relacionado.offer | currency:'USD':'symbol':'1.0-0' }}</p>
+                                    </div>
+                                    </div>
+                                </ng-template>
                             </div>
    
                             <button class="carrusel-boton-nav" (click)="siguienteRelacionado()">&#10095;</button>

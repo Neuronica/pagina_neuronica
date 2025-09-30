@@ -229,6 +229,7 @@ export class DetalleComponent implements OnInit, OnDestroy {
   siguienteRelacionado(): void {
     const totalItems = this.relatedProducts.length;
     this.variableTotalItems = totalItems;
+    console.log('Sumar');
     const itemsPerSlide = 1;
     if (totalItems > 0) {
       this.indiceRelacionadoActual = (this.indiceRelacionadoActual + itemsPerSlide) % totalItems;
@@ -238,6 +239,7 @@ export class DetalleComponent implements OnInit, OnDestroy {
   anteriorRelacionado(): void {
     const totalItems = this.relatedProducts.length;
     this.variableTotalItems = totalItems;
+    console.log('Restar');
     const itemsPerSlide = 1;
     if (totalItems > 0) {
       this.indiceRelacionadoActual = (this.indiceRelacionadoActual - itemsPerSlide + totalItems) % totalItems;

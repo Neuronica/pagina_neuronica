@@ -91,26 +91,27 @@ body {
 }
 
 .contenedor-imagen {
+  display: none;
+}
+
+.contenedor-imagen-carrusel {
+  position: relative;
+}
+
+.contenedor-imagen-carrusel img{
   display: flex;
   position: relative;
-  justify-content: center; 
-  align-items: center; 
-  width: 100%; 
-  height: auto; 
-  margin-bottom: 10px; 
-}
-  
-  .contenedor-imagen img {
   max-width: 100%;
-  max-height: 200px; 
-  object-fit: contain; 
-  }
+  object-fit: cover;
+  z-index: 2;
+}
 
 h1{
   font-family: 'Nunito', sans-serif;
   text-align: center;
   color: #005f75;
   font-size: clamp(3rem, 6vw, 4rem);
+  line-height: 100%;
 }
 
 h2{
@@ -585,6 +586,7 @@ input{
     border-radius: 5px;
     font-weight: bold;
     font-size: 14px;
+    z-index: 3;
 }
 
 .imagen{
@@ -744,6 +746,30 @@ input{
 
 @media only screen and (max-width: 700px){
 
+  .contenedorImagen{
+    width: 100%;
+    padding: 0 5%;       /* respiración lateral */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contenedorImagen img,
+  .imagen,
+  .imagenUbicacionInferior,
+  .video{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;           /* ← elimina los 5% que causaban overflow */
+    float: none;         /* ya lo tenías, lo reafirmo */
+  }
+
+  .unaColumna{
+    max-width: 100%;
+  }
+
   .contenedor-servicios .servicio-link {
     flex: 1 1 100%; /* Ocupa el 100% del ancho para una sola columna */
     max-width: 100%;
@@ -767,17 +793,6 @@ input{
     width: 100%; /* Una sola columna en pantallas muy pequeñas */
   }
 
-  .contenedorImagen{
-    display: flex ;
-    justify-content: center; 
-    align-items: center;
-    padding: 5%;
-    width: 90%;
-    height: auto;
-    border-radius: 8px;
-    object-position: center;
-  }
-
   .imagen{
     margin-right: 5%;
     margin-left: 5%;
@@ -789,28 +804,6 @@ input{
     border-radius: 5%
   }
 
-  .video{
-    margin-right: 5%;
-    margin-left: 5%;
-    margin-bottom: 5%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: bottom;
-    float: none;
-    border-radius: 5%
-  }
-
-  .imagenUbicacionInferior{
-    margin-right: 5%;
-    margin-left: 5%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: bottom;
-    float: none;
-    border-radius: 5%
-  }
 
 }
 

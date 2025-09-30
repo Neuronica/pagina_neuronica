@@ -13,7 +13,7 @@
                 <div class="spacer2"></div>
                 <div class="unaColumna">
                     <figure class="contenedorImagen">
-                        <img class="imagen" src="./assets/Imagenes/impresión-3d-fdm.jpg" alt="Piezas impresas en 3D a travez de la tecnología FDM" data-aos="fade-right" data-aos-duration="3000" style="width: 35%; height: 35%; margin-bottom: 5%;">      
+                        <img class="imagen" src="./assets/Imagenes/impresión-3d-fdm.jpg" alt="Piezas impresas en 3D a travez de la tecnología FDM" data-aos="fade-right" data-aos-duration="3000" style="margin-bottom: 5%;">      
                     </figure>
                     <div style="margin-left: 5%; margin-right: 5%; justify-content: center;">
                         <p style="text-align: justify;" data-aos="fade-right" data-aos-duration="2000">
@@ -57,7 +57,7 @@
                                         style="margin: 0 2%;"
                                         [style.flex]="'0 0 calc(100% / 3)'"
                                         [routerLink]="['/producto', relacionado.slug]">
-                                    <div class="contenedor-imagen">
+                                    <div class="contenedor-imagen-carrusel">
                                         <img [src]="getProductoImageUrl(relacionado.slug)" [alt]="relacionado.product">
                                         <div *ngIf="relacionado.offer != null" class="banner-oferta">¡Oferta!</div>
                                     </div>

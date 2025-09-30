@@ -72,7 +72,7 @@
                 <div class="filas">
                     <div class="lista-productos">
                         <div *ngFor="let producto of productList" class="lista-tarjeta-productos" [routerLink]="['/producto',producto.slug]">
-                            <div class="contenedor-imagen">
+                            <div class="contenedor-imagen-carrusel">
                                 <img [src]="getProductoMediaUrl(producto.product_id)" alt="{{ getProductoMediaAlt(producto.product_id) }}"> 
                                 <div *ngIf="producto.offer == true" class="banner-oferta">
                                     ¡Oferta!
