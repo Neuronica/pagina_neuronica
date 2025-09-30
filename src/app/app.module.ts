@@ -3,6 +3,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { FormsModule } from '@angular/forms';
+import {GoogleMap, MapAdvancedMarker} from '@angular/google-maps';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -79,6 +80,8 @@ import { Impresion3dComponent } from './manufactura/impresion3d/impresion3d.comp
     FormsModule,
     MatMenuModule,
     BrowserAnimationsModule,
+    GoogleMap,
+    MapAdvancedMarker
   ],
   providers: [
     provideClientHydration(),

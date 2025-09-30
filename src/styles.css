@@ -332,11 +332,34 @@ input{
   width: 100%;
 }
 
+.contenedor-maps {
+  max-width: 100%;
+}
+
+google-map {
+  display: block;          /* importante: que reserve espacio */
+  border-radius: 5vw;
+  overflow: hidden;
+}
+
+
 .dosColumnas{
   width: 50%;
   float: left;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
+}
+
+.contenedor-footer {
+  position: relative;
+  width: 50%;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra los cuadros en el contenedor */
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos salten de línea */
+  gap: 20px;       /* Espacio entre los cuadros (filas y columnas) */
+  padding: 2%;
 }
 
 .cuatroColumnas{
@@ -723,6 +746,8 @@ input{
   background-size: cover;
   text-align: center;
 }
+
+
 
 @media only screen and (max-width: 800px){
   .lista-tarjeta-productos {

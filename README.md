@@ -1,30 +1,31 @@
 # Pagina web - Neuronica 
 
 ## Versiones:
-Angular CLI: 16.2.16
-Node: 18.13.0
-Package Manager: npm 9.2.0
+Angular CLI: 20.3.2
+Node: 20.19.4
+Package Manager: npm 10.8.2
 OS: linux arm64
+    
 
-Angular: 16.2.12
+Angular: 20.3.1
 ... animations, common, compiler, compiler-cli, core, forms
 ... platform-browser, platform-browser-dynamic, platform-server
 ... router
 
-Package                         Version
----------------------------------------------------------
-@angular-devkit/architect       0.1602.16
-@angular-devkit/build-angular   16.2.16
-@angular-devkit/core            16.2.16
-@angular-devkit/schematics      16.2.16
-@angular/cdk                    16.2.14
-@angular/cli                    16.2.16
-@angular/material               16.2.14
-@nguniversal/express-engine     16.2.0
-@schematics/angular             16.2.16
-rxjs                            7.8.1
-typescript                      5.1.6
-zone.js                         0.13.3
+Package                      Version
+------------------------------------
+@angular-devkit/architect    0.2003.2
+@angular-devkit/core         20.3.2
+@angular-devkit/schematics   20.3.2
+@angular/build               20.3.2
+@angular/cdk                 20.2.4
+@angular/cli                 20.3.2
+@angular/material            20.2.4
+@angular/ssr                 20.3.2
+@schematics/angular          20.3.2
+rxjs                         7.8.2
+typescript                   5.8.3
+zone.js                      0.15.1
 
 # Para descargar la aplicacion Web se deben seguir los siguientes pasos:
 

@@ -42,6 +42,16 @@
                 <p style="margin-right: 5%; margin-left: 5%;">Pronto estaremos en contacto contigo.</p>
             </div>
         </div>
+        <div class="contenedor-maps">
+            <google-map
+            [height]="'35vh'"
+            [width]="'100%'"
+            mapId="1ed9f09e69a956f91d752990"
+            [center]="center"
+            [zoom]="zoom">
+            <map-advanced-marker [position]="shop"></map-advanced-marker>
+            </google-map>
+        </div>
     </div>
     <div class="spacer2"></div>
  </div>
