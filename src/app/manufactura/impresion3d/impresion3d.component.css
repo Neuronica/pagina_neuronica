@@ -3,7 +3,7 @@ body{
 }
 
 .backimg{
-    background: url("/assets/Imagenes/impresion-3d.png");
+    background: url("/assets/Imagenes/impresion-3d.webp");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;

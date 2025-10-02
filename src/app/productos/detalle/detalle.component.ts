@@ -32,6 +32,7 @@ export class DetalleComponent implements OnInit, OnDestroy {
   imagenActual: images_by_slug | undefined;
   videoUrl: SafeResourceUrl | null = null;
   variantStock: number = 0;
+  url_mercado_libre: string = '';
   trackBySlug = (_: number, item: RelatedProductsList) => item.slug;
 
 
@@ -162,6 +163,7 @@ export class DetalleComponent implements OnInit, OnDestroy {
           this.variantStock = informationProduct[0].stock;
           this.video = video;
           this.todasLasImagenes = todasLasImagenes;
+          this.url_mercado_libre = informationProduct[0].mercadoLibre;
 
           if (this.imagesList.length > 0) {
             this.imagenActual = this.imagesList[0];

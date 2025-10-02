@@ -13,6 +13,7 @@ export interface ProductInformation {
   brand: string;
   type: string;
   stock: number;
+  mercadoLibre: string;
   technology: string | null;
 }
 

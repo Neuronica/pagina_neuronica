@@ -4,7 +4,7 @@
         <div class="islaTitulo2">
             <div class="spacer3"></div>
                  <h1 data-aos="fade-right" data-aos-duration="3000">Productos</h1>
-                 <h4 data-aos="fade-right"  data-aos-duration="2000">Tienda de productos</h4>
+                 <h4 data-aos="fade-left"  data-aos-duration="2000">Tienda de productos</h4>
             <div class="spacer3"></div>
         </div>
         <div class="spacerTopImage"></div>
@@ -18,7 +18,7 @@
             <div class="bordeAzul">
                 <div class="contenedorColumnas">
                     <div class="cuatroColumnas">
-                        <button mat-button [matMenuTriggerFor]="filtrosMenu" class="botonDesplegable" #filtrosMenuTrigger="matMenuTrigger">
+                        <button mat-button [matMenuTriggerFor]="filtrosMenu" class="botonDesplegable" #filtrosMenuTrigger="matMenuTrigger" data-aos="fade-right" data-aos-duration="3000">
                             {{textoFiltro}}
                             <span class="material-symbols-outlined">
                                 {{ filtrosMenuTrigger.menuOpen ? 'arrow_drop_up' : 'arrow_drop_down' }}
@@ -31,7 +31,7 @@
                             </button>
                         </mat-menu>
                                             
-                        <button mat-button [matMenuTriggerFor]="ordenMenu" class="botonDesplegable" #ordenMenuTrigger="matMenuTrigger">
+                        <button mat-button [matMenuTriggerFor]="ordenMenu" class="botonDesplegable" #ordenMenuTrigger="matMenuTrigger" data-aos="fade-left" data-aos-duration="3000">
                             {{textoOrden}}
                             <span class="material-symbols-outlined">
                                 {{ ordenMenuTrigger.menuOpen ? 'arrow_drop_up' : 'arrow_drop_down' }}
@@ -44,7 +44,7 @@
                             </button>
                         </mat-menu>
                                         
-                        <button mat-button [matMenuTriggerFor]="marcasMenu" class="botonDesplegable" #marcasMenuTrigger="matMenuTrigger">
+                        <button mat-button [matMenuTriggerFor]="marcasMenu" class="botonDesplegable" #marcasMenuTrigger="matMenuTrigger" data-aos="fade-right" data-aos-duration="3000">
                             {{textoMarca}}
                             <span class="material-symbols-outlined">
                                 {{ marcasMenuTrigger.menuOpen ? 'arrow_drop_up' : 'arrow_drop_down' }}
@@ -57,7 +57,7 @@
                             </button>
                         </mat-menu>
 
-                        <div class="botonDesplegable">
+                        <div class="botonDesplegable" data-aos="fade-left" data-aos-duration="3000">
                             <input
                                 type="text"
                                 placeholder="Buscar productos..."
@@ -72,15 +72,15 @@
                 <div class="filas">
                     <div class="lista-productos">
                         <div *ngFor="let producto of productList" class="lista-tarjeta-productos" [routerLink]="['/producto',producto.slug]">
-                            <div class="contenedor-imagen-carrusel">
+                            <div class="contenedor-imagen-carrusel" data-aos="fade-right" data-aos-duration="3000">
                                 <img [src]="getProductoMediaUrl(producto.product_id)" alt="{{ getProductoMediaAlt(producto.product_id) }}"> 
-                                <div *ngIf="producto.offer == true" class="banner-oferta">
+                                <div *ngIf="producto.offer == true" class="banner-oferta" data-aos="fade-left" data-aos-duration="3000">
                                     ¡Oferta!
                                 </div>
                             </div>
                             
-                            <h3>{{ producto.name}}</h3>
-                            <p>Precio: {{ producto.price_from | currency:'USD':'symbol':'1.0-0' }}</p>
+                            <h3 data-aos="fade-right" data-aos-duration="3000">{{ producto.name}}</h3>
+                            <p data-aos="fade-left" data-aos-duration="3000">Precio: {{ producto.price_from | currency:'USD':'symbol':'1.0-0' }}</p>
                         </div>
                     </div>
                 </div>

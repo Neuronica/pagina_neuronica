@@ -136,11 +136,16 @@ h4{
 }
 
 p{
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: clamp(0.4rem, 5vw ,1.1rem);
   color: #444;
   letter-spacing: 0.5px;
   line-height: 150%;
+}
+
+p strong {
+  color: #005f75;
+  font-weight: bold;
 }
 
 ul{
@@ -150,7 +155,7 @@ ul{
   align-items: flex-start;
   flex-direction: row;
   padding: 0%;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: clamp(0.4rem, 5vw ,1.1rem);
   line-height: 150%;
 }
@@ -746,8 +751,6 @@ google-map {
   background-size: cover;
   text-align: center;
 }
-
-
 
 @media only screen and (max-width: 800px){
   .lista-tarjeta-productos {
