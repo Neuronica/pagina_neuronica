@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, PLATFORM_ID, OnInit } from '@angular/core';
 import { forkJoin } from 'rxjs';
 import { finalize } from 'rxjs/operators';
+import { isPlatformBrowser } from '@angular/common';
+import { Title, Meta } from '@angular/platform-browser';
 import { ProductTypesService, product_types } from './servicios/product-types.service';
 import { BrandsService, brands_list } from './servicios/brands.service';
 import { ProductListService, product_list, PaginationMeta } from './servicios/product-list.service';
@@ -63,6 +65,9 @@ export class ProductosComponent implements OnInit{
   coverImage: any;
 
   constructor(
+    @Inject(PLATFORM_ID) private platformId:Object, 
+    private title:Title, 
+    private meta:Meta,
     private productypeservice: ProductTypesService, 
     private brandservice: BrandsService,
     private productlistservice: ProductListService,
@@ -71,6 +76,11 @@ export class ProductosComponent implements OnInit{
 
   ngOnInit(): void {
     this.cargarDatosIniciales();
+    if(isPlatformBrowser(this.platformId)){
+      this.title.setTitle("Tienda De Productos Impresión 3D Neurónica");
+      this.meta.addTag({name: 'description', content: 'Descubre todos los productos que Neurónica tiene para ti, tenemos materiales de impresión 3D, maquinas para hogar e industriales'});
+      this.meta.addTag({name: 'keywords', content: 'Neurónica, Impresión 3D Bogotá, FDM, MSLA, DLP, Filamentos, Resinas, Repuestos impresión 3D, Tienda de productos, Tiendas impresión 3D'});
+    }
   }
 
   cargarDatosIniciales(): void {
@@ -117,8 +127,6 @@ export class ProductosComponent implements OnInit{
   seleccionarProveedor(brand: brands_list): void {
     this.selectedBrand = brand;
     this.textoMarca = brand.name;
-    console.log("Marca");
-    console.log(brand);
     this.updatePagination();
   }
 

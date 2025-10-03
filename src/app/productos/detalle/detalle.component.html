@@ -14,7 +14,7 @@
                                             <button *ngIf="informationProduct[0].type != 'material'" class="carrusel-boton-nav" (click)="anteriorImagen()" [disabled]="imagesList.length <= 1">
                                                 &#10094;
                                             </button>
-                                            <img *ngIf="imagenActual" [src]="imagenActual.url" alt="Imagen del producto {{ idProducto }}">
+                                            <img *ngIf="imagenActual" [src]="imagenActual.url" [alt]="imagenActual.alt">
                                             <button *ngIf="informationProduct[0].type != 'material'" class="carrusel-boton-nav" (click)="siguienteImagen()" [disabled]="imagesList.length <= 1">
                                                 &#10095;
                                             </button>

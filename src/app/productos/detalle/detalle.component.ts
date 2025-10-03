@@ -1,4 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, Inject, PLATFORM_ID, OnInit, OnDestroy } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Title, Meta } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { forkJoin, throwError, Subscription, of, map, switchMap, shareReplay } from 'rxjs';
@@ -6,8 +8,6 @@ import { catchError } from 'rxjs/operators';
 import { ProductMediaService, product_cover_list, videos_byId, images_by_slug } from '../servicios/product_media.service';
 import { AttibutesService, attributes_list } from '../servicios/attributes.service';
 import { ProductListService, product_list, ProductInformation, RelatedProductsList } from '../servicios/product-list.service';
-import { isPlatformBrowser } from '@angular/common';
-import { PLATFORM_ID, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-detalle',
@@ -49,12 +49,14 @@ export class DetalleComponent implements OnInit, OnDestroy {
   private routeSubscription!: Subscription;
 
   constructor(
+    @Inject(PLATFORM_ID) private platformId:Object, 
+    private title:Title, 
+    private meta:Meta,
     private route: ActivatedRoute,
     private sanitizer: DomSanitizer,
     private ProductMediaService: ProductMediaService,
     private attributesservice: AttibutesService,
     private productoservice: ProductListService,
-    @Inject(PLATFORM_ID) private platformId: Object,
   ) {}
 
   ngOnInit(): void {
@@ -172,12 +174,6 @@ export class DetalleComponent implements OnInit, OnDestroy {
           if (this.video && this.video.length > 0) {
             this.videoUrl = this.buildYouTubeUrl(video[0].url);
           }
-
-          const productoActual = this.producto[0];
-          for(let i=0; i < this.relatedProducts.length; i++){
-            console.log('Producto ' + this.relatedProducts[i].product);
-          }
-          //console.log('Relacionados' + this.relatedProducts[5].product);
         }
 
         this.cargandoDatos = false;
@@ -188,10 +184,13 @@ export class DetalleComponent implements OnInit, OnDestroy {
   }
 
   private refreshAosClientOnly(): void {
-    if (!isPlatformBrowser(this.platformId)) return;
+    if (!isPlatformBrowser(this.platformId))return;
     import('aos').then(({ default: AOS }) => {
       // pequeño delay para asegurar DOM ya actualizado
       setTimeout(() => (AOS.refreshHard ?? AOS.refresh)?.(), 0);
+            this.title.setTitle(this.informationProduct[0].name + ' Neuronica');
+      this.meta.addTag({name: 'description', content: this.informationProduct[0].description});
+      this.meta.addTag({name: 'keywords', content: 'Neurónica, Impresión 3D Bogotá, FDM, MSLA, DLP, Filamentos, Resinas, Repuestos impresión 3D, Tienda de productos, Tiendas impresión 3D'});
     }).catch(() => { /* opcional: silenciar si AOS no está */ });
   }
 
@@ -231,7 +230,6 @@ export class DetalleComponent implements OnInit, OnDestroy {
   siguienteRelacionado(): void {
     const totalItems = this.relatedProducts.length;
     this.variableTotalItems = totalItems;
-    console.log('Sumar');
     const itemsPerSlide = 1;
     if (totalItems > 0) {
       this.indiceRelacionadoActual = (this.indiceRelacionadoActual + itemsPerSlide) % totalItems;
@@ -241,7 +239,6 @@ export class DetalleComponent implements OnInit, OnDestroy {
   anteriorRelacionado(): void {
     const totalItems = this.relatedProducts.length;
     this.variableTotalItems = totalItems;
-    console.log('Restar');
     const itemsPerSlide = 1;
     if (totalItems > 0) {
       this.indiceRelacionadoActual = (this.indiceRelacionadoActual - itemsPerSlide + totalItems) % totalItems;

@@ -25,7 +25,7 @@ export class PCBAComponent implements OnInit{
       this.getheight = window.innerHeight
       this.title.setTitle("Ensamble de Placas de Circuito Impreso (PCBA) | Neurónica");
       this.meta.addTag({name: 'description', content: 'Ofrecemos servicio integral de PCBA: ensamble de tarjetas, suministro de componentes y manufactura de PCB. Asegura fiabilidad en tus productos electrónicos.'});
-      this.meta.addTag({name: 'keywords', content: 'PCBA, Ensamble de tarjetas, Suministros electrónicos, PCB, Servicios integrales'});
+      this.meta.addTag({name: 'keywords', content: 'Neurónica, PCBA, Ensamble de tarjetas, Suministros electrónicos, PCB, Servicios integrales'});
     }
   }
 

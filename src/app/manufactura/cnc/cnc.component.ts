@@ -24,7 +24,7 @@ export class CncComponent implements OnInit{
       this.getheight = window.innerHeight;
       this.title.setTitle("Corte CNC en Bogotá | Neurónica");
       this.meta.addTag({name: 'description', content: 'Realizamos corte y fresado de metales y plásticos con alta precisión. Ideal para prototipado o producción masiva. Calidad y repetibilidad garantizadas.'});
-      this.meta.addTag({name: 'keywords', content: 'Corte CNC Bogotá, Fresado, Corte metales, Manufactura'});
+      this.meta.addTag({name: 'keywords', content: 'Neurónica, Corte CNC Bogotá, Fresado, Corte metales, Manufactura'});
     }
   }
 

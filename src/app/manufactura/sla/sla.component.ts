@@ -39,9 +39,9 @@ export class SlaComponent implements OnInit{
       window.addEventListener('load', AOS.refresh);
       this.getwidth = window.innerWidth;
       this.getheight = window.innerHeight;
-      this.title.setTitle("Impresión 3D en Bogotá con SLA | Neurónica");
-      this.meta.addTag({name: 'description', content: 'Descubre la precisión y detalle de la tecnología SLA. Ideal para prototipos complejos y producciones que requieran acabados de alta calidad.'});
-      this.meta.addTag({name: 'keywords', content: 'Impresión 3D Bogotá, SLA, Impresión resina, Ingeniería y fabricación personalizada'});
+      this.title.setTitle("Impresión 3D en Bogotá con MSLA | Neurónica");
+      this.meta.addTag({name: 'description', content: 'Descubre la precisión y detalle de la tecnología MSLA. Ideal para prototipos complejos y producciones que requieran acabados de alta calidad.'});
+      this.meta.addTag({name: 'keywords', content: 'Neurónica, Impresión 3D Bogotá, SLA, Impresión resina, Ingeniería y fabricación personalizada, Resinas'});
     }
 
     forkJoin({

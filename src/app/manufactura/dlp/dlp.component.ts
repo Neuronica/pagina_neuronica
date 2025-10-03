@@ -34,9 +34,9 @@ export class DlpComponent implements OnInit{
     if(isPlatformBrowser(this.platformId)){
       AOS.init();
       window.addEventListener('load', AOS.refresh);;
-      this.title.setTitle("Impresión 3D en Bogotá con SLA | Neurónica");
-      this.meta.addTag({name: 'description', content: 'Descubre la precisión y detalle de la tecnología SLA. Ideal para prototipos complejos y producciones que requieran acabados de alta calidad.'});
-      this.meta.addTag({name: 'keywords', content: 'Impresión 3D Bogotá, SLA, Impresión resina, Ingeniería y fabricación personalizada'});
+      this.title.setTitle("Impresión 3D en Bogotá con DLP | Neurónica");
+      this.meta.addTag({name: 'description', content: 'Descubre la impresión de resina DLP. Idonea para prototipos o productos de alta complejidad, o que requieren acabados de muy alta calidad.'});
+      this.meta.addTag({name: 'keywords', content: 'Neurónica, Impresión 3D Bogotá, DLP, Impresión resina, Ingeniería y fabricación personalizada, Resinas'});
     }
 
     forkJoin({

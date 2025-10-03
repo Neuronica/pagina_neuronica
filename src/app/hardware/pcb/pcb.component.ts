@@ -24,7 +24,7 @@ export class PCBComponent implements OnInit{
       this.getheight = window.innerHeight
       this.title.setTitle("Diseño y Manufactura de PCB | Neurónica");
       this.meta.addTag({name: 'description', content: 'Especialistas en placas de circuito impreso: diseñamos y fabricamos PCB para optimizar tus productos electrónicos. Calidad y soporte integral asegurados.'});
-      this.meta.addTag({name: 'keywords', content: 'Diseño de PCB, Placas electrónicas, Placas de circuito impreso'});
+      this.meta.addTag({name: 'keywords', content: 'Neurónica, Diseño de PCB, Placas electrónicas, Placas de circuito impreso'});
     }
   }
 

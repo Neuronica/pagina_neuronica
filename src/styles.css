@@ -343,7 +343,7 @@ input{
 
 google-map {
   display: block;          /* importante: que reserve espacio */
-  border-radius: 5vw;
+  border-radius: 3vw;
   overflow: hidden;
 }
 

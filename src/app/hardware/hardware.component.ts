@@ -24,7 +24,7 @@ export class HardwareComponent implements OnInit{
       this.getheight = window.innerHeight
       this.title.setTitle("Diseño y Desarrollo Electrónico en Bogotá | Neurónica");
       this.meta.addTag({name: 'description', content: 'Explora servicios integrales de ingeniería en Bogotá. En Neurónica convertimos tus ideas en soluciones tecnológicas con PCB, PCBA y prototipado rápido. '});
-      this.meta.addTag({name: 'keywords', content: 'Explora servicios integrales de ingeniería en Bogotá. En Neurónica convertimos tus ideas en soluciones tecnológicas con PCB, PCBA y prototipado rápido.'});
+      this.meta.addTag({name: 'keywords', content: 'Neurónica, Ingeniería Electrónica, Diseño Electrónico, Desarrollo electrónico, desarrollo de producto, diseño de PCB, Ensamble de PCB'});
     }
   }
 

@@ -24,7 +24,7 @@ export class ManufacturaComponent implements OnInit{
       this.getheight = window.innerHeight;
       this.title.setTitle("Servicio de Manufactura en Bogotá | Neurónica");
       this.meta.addTag({name: 'description', content: 'Descubre nuestra gama de tecnologías de manufactura: impresión 3D (FDM, SLA), corte láser y CNC. Transforma tus ideas en prototipos o producciones en serie.'});
-      this.meta.addTag({name: 'keywords', content: 'Impresión 3D Bogotá, Tecnología FDM, Tecnología SLA, Láser, CNC, Fresado'});
+      this.meta.addTag({name: 'keywords', content: 'Neurónica, Impresión 3D Bogotá, Tecnología FDM, Tecnología SLA, Láser, CNC, Fresado'});
     }
   }
 

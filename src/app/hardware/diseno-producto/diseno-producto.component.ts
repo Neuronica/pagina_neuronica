@@ -24,7 +24,7 @@ export class DisenoProductoComponent {
       this.getheight = window.innerHeight
       this.title.setTitle("Diseño de Producto Electrónico en Bogotá | Neurónica");
       this.meta.addTag({name: 'description', content: 'Convierte tu idea en realidad con nuestro servicio integral. Acompañamos todo el proceso: requerimientos, prototipado, pruebas de campo y producción masiva.'});
-      this.meta.addTag({name: 'keywords', content: 'Diseño electrónico y prototipado Bogotá, Soluciones de ingeniería electrónica, Producción electrónica, Eficiencia y rendimiento del hardware'});
+      this.meta.addTag({name: 'keywords', content: 'Neurónica, Diseño electrónico y prototipado Bogotá, Soluciones de ingeniería electrónica, Producción electrónica, Eficiencia y rendimiento del hardware'});
     }
   }
 

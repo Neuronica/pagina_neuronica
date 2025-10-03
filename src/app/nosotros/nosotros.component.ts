@@ -25,7 +25,7 @@ export class NosotrosComponent implements OnInit{
       this.getheight = window.innerHeight;
       this.title.setTitle("Descubre a Neurónica S.A.S: Soluciones de Ingeniería Personalizada en Bogotá");
       this.meta.addTag({name: 'description', content: 'Conoce a Neurónica S.A.S, líderes en ingeniería personalizada. Nuestra empresa se destaca en la integración de tecnologías avanzadas en áreas de hardware, software, IoT y manufactura. Descubre cómo nuestras soluciones personalizadas abordan tus necesidades específicas'});
-      this.meta.addTag({name: 'keywords', content: 'Ingeniería a la medida, Neurónica'});
+      this.meta.addTag({name: 'keywords', content: 'Neurónica, Ingeniería a la medida, Neurónica, Ingeniería Personalizada'});
     }
   }
 

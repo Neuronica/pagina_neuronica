@@ -26,7 +26,7 @@ export class IngenieriaInversaComponent implements OnInit{
       this.getheight = window.innerHeight
       this.title.setTitle("Ingeniería Inversa en Bogotá: Adaptamos Tecnologías Existentes a tus Necesidades | Neurónica");
       this.meta.addTag({name: 'description', content: 'Aprovecha la ingeniería inversa para optimizar dispositivos, reducir costos y migrar a nuevas tecnologías. Con Neurónica, transforma hardware y software existentes según tus requerimientos.'});
-      this.meta.addTag({name: 'keywords', content: 'Ingeniería inversa, Migración de tecnologías, Adaptabilidad, Ingeniería a la medida, Bogotá'});
+      this.meta.addTag({name: 'keywords', content: 'Neurónica, Ingeniería inversa, Migración de tecnologías, Adaptabilidad, Ingeniería a la medida, Bogotá'});
     }
   }
 

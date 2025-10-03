@@ -42,7 +42,7 @@ export class FdmComponent implements OnInit{
       this.getheight = window.innerHeight;
       this.title.setTitle("Impresión 3D en Bogotá con FDM | Neurónica");
       this.meta.addTag({name: 'description', content: 'Optimiza tus proyectos con impresión 3D FDM en PLA, PETG o TPU. Ofrecemos prototipado y producción escalable para ingeniería y fabricación personalizada.'});
-      this.meta.addTag({name: 'keywords', content: 'Impresión 3D Bogotá, FDM, PLA, PETG, TPU, Ingeniería y fabricación personalizada'});
+      this.meta.addTag({name: 'keywords', content: 'Neurónica, Impresión 3D Bogotá, FDM, PLA, PETG, TPU, ABS, Ingeniería y fabricación personalizada'});
     }
 
     forkJoin({
