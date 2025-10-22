@@ -11,11 +11,11 @@
                                 <div class="tarjeta-descripcion">
                                     <div class="carrusel-contenedor" data-aos="fade-right" data-aos-duration="2000">
                                         <div class="carrusel-imagen">
-                                            <button *ngIf="informationProduct[0].type != 'material'" class="carrusel-boton-nav" (click)="anteriorImagen()" [disabled]="imagesList.length <= 1">
+                                            <button *ngIf="informationProduct[0].type != 'Materiales'" class="carrusel-boton-nav" (click)="anteriorImagen()" [disabled]="imagesList.length <= 1">
                                                 &#10094;
                                             </button>
                                             <img *ngIf="imagenActual" [src]="imagenActual.url" [alt]="imagenActual.alt">
-                                            <button *ngIf="informationProduct[0].type != 'material'" class="carrusel-boton-nav" (click)="siguienteImagen()" [disabled]="imagesList.length <= 1">
+                                            <button *ngIf="informationProduct[0].type != 'Materiales'" class="carrusel-boton-nav" (click)="siguienteImagen()" [disabled]="imagesList.length <= 1">
                                                 &#10095;
                                             </button>
                                         </div>
@@ -42,7 +42,7 @@
                                             </span>
                                         </div>
                                     </div>
-                                    <div *ngIf="informationProduct[0].type === 'material'" class="color-container">
+                                    <div *ngIf="informationProduct[0].type === 'Materiales'" class="color-container">
                                         <span class="col-attr">Colores</span>
                                         <div class="bolitas">
                                             <div *ngFor="let p of informationProduct; let i = index">
@@ -105,12 +105,11 @@
                 <div class="filas">
                     <div class="unaColumna">
                         <div class="spacer2"></div>
-                        <h2 style="text-align: center;" data-aos="fade-left" data-aos-duration="2000">Descripción</h2>
-                        <div class="cuadrado" style="margin-right: 5%; margin-left: 5%;" data-aos="fade-right" data-aos-duration="2000"></div>
-                        <div class="spacer2"></div>
-                        <p style="margin-left: 5%; margin-right: 5%; text-align:justify" data-aos="fade-left" data-aos-duration="2000">
-                            {{informationProduct[0].description}}
-                        </p>
+                        <div style="flex-direction: column;">
+                            <p style="margin-left: 5%; margin-right: 5%; text-align:justify" data-aos="fade-left" data-aos-duration="2000"
+                            [innerHTML]="informationProduct[0].description">
+                            </p>
+                        </div>
                         <div class="spacer2"></div>
                     </div>
                 </div>
@@ -163,7 +162,7 @@
                                         [routerLink]="['/producto', relacionado.slug]">
                                         <div class="contenedor-imagen-carrusel">
                                             <img [src]="getProductoImageUrl(relacionado.slug)" [alt]="relacionado.product">
-                                            <div *ngIf="relacionado.offer != null" class="banner-oferta">¡Oferta!</div>
+                                            <div *ngIf="relacionado.offer != null" class="banner-oferta pulse">¡Oferta!</div>
                                         </div>
                                         <h3>{{ relacionado.product }}</h3>
                                         <p *ngIf="relacionado.offer === null">Precio: {{ relacionado.price | currency:'USD':'symbol':'1.0-0' }}</p>

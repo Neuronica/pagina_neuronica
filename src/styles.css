@@ -1,5 +1,30 @@
 @import 'aos/dist/aos.css';
 
+/* Animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
 /* >>> GLOBAL: mejor box model para evitar que padding / margin rompan el 50/50 */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -127,6 +152,10 @@ h3{
   text-align: center;
   color: #005f75;
   font-size: clamp(0.4rem, 5vw ,1.1rem);
+}
+
+.h3-description{
+  text-align: left;
 }
 
 h4{
@@ -319,6 +348,7 @@ input{
   margin: auto;
   width: 80%;
   height: 100%;
+  overflow-x: clip;
 }
 
 .filas{
@@ -353,6 +383,7 @@ google-map {
   float: left;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
+  overflow-x: clip;
 }
 
 .contenedor-footer {
@@ -480,7 +511,7 @@ google-map {
   cursor: pointer;
   padding: 8px 12px;
   border-radius: 50%;
-  z-index: 10; /* Asegura que los botones estén por encima de la imagen */
+  z-index: 4; /* Asegura que los botones estén por encima de la imagen */
   border-radius: 50%;
   transition: background 0.2s ease-in-out;
 }
@@ -581,6 +612,7 @@ google-map {
   margin-left: 10%;
   margin-right: 10%;
   border-radius: 3vw;
+  overflow-x: clip;
 }
 
 .boton{
@@ -615,6 +647,10 @@ google-map {
     font-weight: bold;
     font-size: 14px;
     z-index: 3;
+}
+
+.pulse {
+  animation: pulse 2s linear infinite;
 }
 
 .imagen{
@@ -708,6 +744,10 @@ google-map {
   transform: rotate(330deg);
 }
 
+.rotate{
+  animation: updown 1s ease-out infinite;
+}
+
 .icon-button .icon {
   width: 60px;
 }
@@ -727,7 +767,7 @@ google-map {
 
 .boton_flotante {
   position: fixed;
-  z-index: 1000;
+  z-index: 6;
   right: clamp(10px, 3vw, 20px);  /* margen adaptable */
   bottom: clamp(10px, 3vw, 20px); /* margen adaptable */
   

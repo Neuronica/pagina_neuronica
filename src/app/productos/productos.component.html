@@ -70,11 +70,11 @@
                     <div class="spacer2"></div>
                 </div> 
                 <div class="filas">
-                    <div class="lista-productos">
+                    <div class="lista-productos" (scroll)="onListScroll()">
                         <div *ngFor="let producto of productList" class="lista-tarjeta-productos" [routerLink]="['/producto',producto.slug]">
                             <div class="contenedor-imagen-carrusel" data-aos="fade-right" data-aos-duration="3000">
                                 <img [src]="getProductoMediaUrl(producto.product_id)" alt="{{ getProductoMediaAlt(producto.product_id) }}"> 
-                                <div *ngIf="producto.offer == true" class="banner-oferta" data-aos="fade-left" data-aos-duration="3000">
+                                <div *ngIf="producto.offer == true" class="banner-oferta pulse" data-aos="fade-left" data-aos-duration="3000">
                                     ¡Oferta!
                                 </div>
                             </div>

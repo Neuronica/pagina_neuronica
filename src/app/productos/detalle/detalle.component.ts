@@ -1,8 +1,8 @@
-import { Component, Inject, PLATFORM_ID, OnInit, OnDestroy } from '@angular/core';
+import { Component, Inject, PLATFORM_ID, OnInit, OnDestroy, Pipe, PipeTransform } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { Title, Meta } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl, SafeHtml } from '@angular/platform-browser';
 import { forkJoin, throwError, Subscription, of, map, switchMap, shareReplay } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { ProductMediaService, product_cover_list, videos_byId, images_by_slug } from '../servicios/product_media.service';
@@ -15,6 +15,7 @@ import { ProductListService, product_list, ProductInformation, RelatedProductsLi
   templateUrl: './detalle.component.html',
   styleUrl: './detalle.component.css'
 })
+
 export class DetalleComponent implements OnInit, OnDestroy {
 
   actualImageMaterial = 0;
@@ -100,14 +101,14 @@ export class DetalleComponent implements OnInit, OnDestroy {
             }
 
             // Caso A: materiales → relacionados de materiales
-            if (p.type === 'material') {
+            if (p.type === 'Materiales') {
               return this.productoservice.getRelatedMaterials().pipe(
                 catchError(() => of<RelatedProductsList[]>([]))
               );
             }
 
             // Caso B: máquinas → relacionados por tecnología (solo si existe technology)
-            if (p.type === 'machine' && p.technology) {
+            if (p.type === 'Máquinas' && p.technology) {
               return this.productoservice.getRelatedMachines(p.technology).pipe(
                 catchError(() => of<RelatedProductsList[]>([]))
               );
@@ -252,5 +253,13 @@ export class DetalleComponent implements OnInit, OnDestroy {
 
   getColorCode(colorName: string): string {
     return this.colorMap[colorName] || '#000000';
+  }
+}
+
+@Pipe({ name: 'safeHtml' })
+export class SafeHtmlPipe implements PipeTransform {
+  constructor(private sanitizer: DomSanitizer) {}
+  transform(value: string): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(value || '');
   }
 }

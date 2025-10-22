@@ -1,6 +1,8 @@
-import { Component, HostListener, PLATFORM_ID, Inject, OnInit } from '@angular/core';
+import { Component, HostListener, PLATFORM_ID, Inject, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 import { HTTP_INTERCEPTORS, HttpClientModule, HttpClient } from '@angular/common/http';
+import * as AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const CLOUD_RUN_URL = 'https://pagina-neuronica-backend-490354620288.us-west1.run.app'; 
 const API_BASE = `${CLOUD_RUN_URL}/api`;
