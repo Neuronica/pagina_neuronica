@@ -649,6 +649,19 @@ google-map {
     z-index: 3;
 }
 
+.banner-dias-oferta {
+    position: absolute;
+    bottom: 10px; 
+    right: 10px; 
+    background-color: #D37600; 
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 3;
+}
+
 .pulse {
   animation: pulse 2s linear infinite;
 }

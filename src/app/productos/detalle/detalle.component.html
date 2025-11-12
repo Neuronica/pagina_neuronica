@@ -11,6 +11,9 @@
                                 <div class="tarjeta-descripcion">
                                     <div class="carrusel-contenedor" data-aos="fade-right" data-aos-duration="2000">
                                         <div class="carrusel-imagen">
+                                            <div class="banner-dias-oferta pulse">
+                                                Quedan {{diasOferta}} dias
+                                            </div>
                                             <button *ngIf="informationProduct[0].type != 'Materiales'" class="carrusel-boton-nav" (click)="anteriorImagen()" [disabled]="imagesList.length <= 1">
                                                 &#10094;
                                             </button>
@@ -162,7 +165,8 @@
                                         [routerLink]="['/producto', relacionado.slug]">
                                         <div class="contenedor-imagen-carrusel">
                                             <img [src]="getProductoImageUrl(relacionado.slug)" [alt]="relacionado.product">
-                                            <div *ngIf="relacionado.offer != null" class="banner-oferta pulse">¡Oferta!</div>
+                                            <!--<div *ngIf="relacionado.offer != null" class="banner-oferta pulse">¡Oferta!</div>-->
+                                            <div class="banner-oferta pulse">Preventa</div>
                                         </div>
                                         <h3>{{ relacionado.product }}</h3>
                                         <p *ngIf="relacionado.offer === null">Precio: {{ relacionado.price | currency:'USD':'symbol':'1.0-0' }}</p>

@@ -28,8 +28,6 @@ export class CncComponent implements OnInit{
     }
   }
 
-  @HostListener('window:resize', ['$event'])
-
   onWindowResize(){
     this.getwidth = window.innerWidth;
     this.getheight = window.innerHeight;

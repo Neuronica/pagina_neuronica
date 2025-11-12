@@ -74,8 +74,11 @@
                         <div *ngFor="let producto of productList" class="lista-tarjeta-productos" [routerLink]="['/producto',producto.slug]">
                             <div class="contenedor-imagen-carrusel" data-aos="fade-right" data-aos-duration="3000">
                                 <img [src]="getProductoMediaUrl(producto.product_id)" alt="{{ getProductoMediaAlt(producto.product_id) }}"> 
-                                <div *ngIf="producto.offer == true" class="banner-oferta pulse" data-aos="fade-left" data-aos-duration="3000">
+                                <!--<div *ngIf="producto.offer == true" class="banner-oferta pulse" data-aos="fade-left" data-aos-duration="3000">
                                     ¡Oferta!
+                                </div> -->
+                                <div class="banner-oferta pulse" data-aos="fade-left" data-aos-duration="2000">
+                                    Preventa
                                 </div>
                             </div>
                             

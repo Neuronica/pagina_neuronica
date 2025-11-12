@@ -15,7 +15,7 @@ const API_BASE = `${CLOUD_RUN_URL}/api`;
 })
 
 
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit{
   title = 'neuronica';
   public getwidth: number | undefined;
   public getheight: number | undefined;
@@ -50,20 +50,22 @@ export class AppComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-
+  ngOnInit(): void { 
+    // Restauramos la lógica que tenías antes (obtener el tamaño de ventana)
     if (isPlatformBrowser(this.platformId)) {
       this.getwidth = window.innerWidth;
       this.getheight = window.innerHeight;
     }
   }
 
-  // Solo añadimos el HostListener si estamos en el navegador
-  @HostListener('window:resize', ['$event'])
-  onWindowResize(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      this.getwidth = window.innerWidth;
-      this.getheight = window.innerHeight;
-    }
+  ngAfterViewInit(): void { // <-- ¡Agrega este método!
+      if (isPlatformBrowser(this.platformId)) {
+        // Inicializar AOS solo en el navegador
+        AOS.init({
+          // Opciones de configuración (si es necesario)
+          duration: 800,
+          once: true,
+        });
+      }
   }
 }

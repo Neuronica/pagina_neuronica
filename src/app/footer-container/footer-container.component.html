@@ -35,7 +35,7 @@
                 <form  action="https://script.google.com/macros/s/AKfycbyzClLtMAzHG9fktzxccG7W7vNtpt7K5fp4XM0r8xs_kQQp73TjexLL3QZusqWzPoMXyg/exec"                      
                 method="post" data-aos="fade-right" data-aos-duration="2000">
                     <div class="spacer2"></div>     
-                    <input type="correo" placeholder="ejemplo@gmail.com" name="datoCorreo" style="color: black; background-color: white; border-color: #005f75">
+                    <input type="email" placeholder="ejemplo@gmail.com" name="datoCorreo" style="color: black; background-color: white; border-color: #005f75">
                     <input type="submit" value="Enviar" style="color: white; background-color: #005f75;border-color: white;">        
                 </form>
                 <div class="spacer2"></div>
@@ -43,14 +43,16 @@
             </div>
         </div>
         <div class="contenedor-maps" data-aos="fade-right" data-aos-duration="2000">
-            <google-map
-            [height]="'35vh'"
-            [width]="'100%'"
-            mapId="1ed9f09e69a956f91d752990"
-            [center]="center"
-            [zoom]="zoom">
-            <map-advanced-marker [position]="shop"></map-advanced-marker>
-            </google-map>
+             <a href="https://www.google.com/maps?q=4.674478121982566,-74.0529947876805" target="_blank" rel="noopener noreferrer">
+                <google-map
+                [height]="'35vh'"
+                [width]="'100%'"
+                mapId="1ed9f09e69a956f91d752990"
+                [center]="center"
+                [zoom]="zoom">
+                <map-advanced-marker [position]="shop"></map-advanced-marker>
+                </google-map>
+            </a>
         </div>
     </div>
     <div class="spacer2"></div>

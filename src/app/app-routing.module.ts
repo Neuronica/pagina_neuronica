@@ -1,4 +1,5 @@
 import { importProvidersFrom, NgModule } from '@angular/core';
+import { provideRouter, withEnabledBlockingInitialNavigation } from '@angular/router';
 import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './inicio/inicio.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
@@ -25,7 +26,7 @@ import { ProductosComponent } from './productos/productos.component'; //Lista de
 import { DetalleComponent } from './productos/detalle/detalle.component';
 import { LoginComponent } from './login/login.component'; //Inicio de sesion
 
-const routes: Routes = [
+export const routes: Routes = [
   { path:'', component:InicioComponent},
   { path:'quienes-somos-neuronica', component:NosotrosComponent},
   { path: 'domotica-personalizada', component:DomoticaComponent},
@@ -46,13 +47,16 @@ const routes: Routes = [
   { path: 'fdm', component:FdmComponent},
   { path: 'laser', component:LaserComponent},
   { path: 'msla', component:SlaComponent},
-  {path: 'dlp', component:DlpComponent},
+  { path: 'dlp', component:DlpComponent},
   { path: 'productos', component: ProductosComponent}, //Lista de productos
   { path: 'producto/:id', component: DetalleComponent},
   { path: 'login', component:LoginComponent}, //Inico de sesion
 ];
 
 @NgModule({
+  providers: [
+    provideRouter(routes, withEnabledBlockingInitialNavigation())
+  ],
   imports: [
     RouterModule.forRoot(routes, {
       scrollPositionRestoration: 'enabled',
@@ -62,4 +66,5 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

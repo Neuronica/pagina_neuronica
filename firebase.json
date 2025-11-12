@@ -24,6 +24,23 @@
     ],
     "frameworksBackend": {
       "region": "us-west1"
-    }
+    },
+      "rewrites": [
+      {
+        "source": "/api/**",
+        "run": {
+          "serviceId": "pagina-neuronica-backend",
+          "region": "us-west1"
+        }
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(js|css|woff2|png|jpg|svg)",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        ]
+      }
+    ]
   }
 }

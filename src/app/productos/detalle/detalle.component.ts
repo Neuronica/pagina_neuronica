@@ -36,6 +36,10 @@ export class DetalleComponent implements OnInit, OnDestroy {
   url_mercado_libre: string = '';
   trackBySlug = (_: number, item: RelatedProductsList) => item.slug;
 
+  finPreventa = new Date(2025,11,6);
+  hoy = new Date();
+  diasOferta = Math.floor((this.finPreventa.getTime() - this.hoy.getTime())/(1000*60*60*24));
+
 
   colorMap: { [key: string]: string } = {
     'ROJO': '#FF0000',
@@ -61,6 +65,9 @@ export class DetalleComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
+    console.log(this.finPreventa);
+    console.log(this.hoy);
+    console.log(this.diasOferta);
     // Usamos switchMap para gestionar los cambios de la URL
     this.routeSubscription = this.route.paramMap.pipe(
       // switchMap cancela la petición anterior si hay una nueva
