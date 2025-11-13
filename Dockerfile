@@ -1,22 +1,14 @@
-# Runtime deps (solo prod)
 FROM node:20-alpine AS deps
 WORKDIR /srv
 COPY package*.json ./
-RUN npm ci --omit=dev
+RUN npm install --omit=dev
 
-# Runtime
 FROM node:20-alpine
 WORKDIR /srv
-
 ENV NODE_ENV=production
 ENV PORT=8080
-
-# deps
 COPY --from=deps /srv/node_modules ./node_modules
-
-# Copia TODO el build (browser + server) — importante para SSR
 COPY dist/neuronica ./dist/neuronica
-
-# El entrypoint correcto en Angular 20 SSR:
+COPY boot.mjs ./boot.mjs
 EXPOSE 8080
-CMD ["node", "dist/neuronica/server/main.server.mjs"]
+CMD ["node", "--trace-uncaught", "--enable-source-maps", "boot.mjs"]
