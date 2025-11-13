@@ -1,5 +1,4 @@
-import { importProvidersFrom, NgModule } from '@angular/core';
-import { provideRouter, withEnabledBlockingInitialNavigation } from '@angular/router';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './inicio/inicio.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
@@ -54,17 +53,14 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  providers: [
-    provideRouter(routes, withEnabledBlockingInitialNavigation())
-  ],
   imports: [
     RouterModule.forRoot(routes, {
       scrollPositionRestoration: 'enabled',
       anchorScrolling: 'enabled',
       scrollOffset: [0, 0],
+      // IMPORTANTE: sin initialNavigation: 'enabledBlocking'
     }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-
-export class AppRoutingModule { }
+export class AppRoutingModule {}

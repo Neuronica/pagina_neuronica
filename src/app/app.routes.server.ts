@@ -1,4 +1,20 @@
-import { Routes } from '@angular/router';
-import { routes as clientRoutes } from './app-routing.module';
+import { RenderMode, ServerRoute } from '@angular/ssr';
 
-export const routes: Routes = clientRoutes;
+export const serverRoutes: ServerRoute[] = [
+  { path: '', renderMode: RenderMode.Prerender },
+  {
+    path: 'proyecto/:id',
+    renderMode: RenderMode.Prerender,
+    getPrerenderParams: async () => [
+      { id: 'neuronica' },
+      { id: 'iot' },
+      { id: 'software' },
+    ],
+  },
+
+  {
+    path: '**',
+    renderMode: RenderMode.Server,
+  },
+  { path: '**', renderMode: RenderMode.Server },
+];

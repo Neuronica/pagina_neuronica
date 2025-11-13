@@ -1,3 +1,1 @@
-import { provideServerRendering } from '@angular/platform-server';
-
-export default provideServerRendering();
+export { AppServerModule as default } from './app/app.module.server';
